@@ -1,0 +1,48 @@
+*{
+  color:#FFFFFF;
+  margin: 0; 
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// header/Cabeçalho
+mat-toolbar-row{
+    font-size: 1.5rem; 
+    height: 80px;
+  }
+  
+  mat-toolbar-row .logo{
+    padding-top: 8%;
+    width: 80%;
+  height: auto;
+  }
+  
+  #cadastro{
+    width: 10%;
+    height: auto;
+    font-size: 70%;
+    text-align: center;
+    border-radius: 0px;
+    padding-right: 1%;
+    background-color: #7dbf3b;
+    border:none;
+    color: #FFFFFF; 
+  }
+
+  mat-toolbar{
+      background-color:#010d01;
+  
+  }
+  #Acessibilidade_header{
+  width: 15%;
+  margin-left: 50%;  
+}
+  
+  #Acessibilidade_header span .icone{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: auto;
+  }
+
+  
