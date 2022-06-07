@@ -6,6 +6,7 @@ exports.handler = async (event) => {
   const lineItems = [
     {
       currency: 'BRL',
+      name: donation.name,
       amount: `${donation.price}00`,
       quantity: 1,
     },
