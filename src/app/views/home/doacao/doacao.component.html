@@ -1,0 +1,27 @@
+  <section>
+  <!--Segunda Grid-->
+    <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
+      <h1>Realize uma doação</h1>
+      <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" >
+        <div>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
+        </div>
+        <div>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
+        </div>
+        <div>
+          <h2>Escolha um valor abaixo:</h2>
+          <div class="donations">
+            <div class="donations-list">
+              <div class="donation-item" *ngFor="let donation of donation">
+                <button (click)="triggerCreateCheckout(donation)">{{donation.price | currency }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+</section>

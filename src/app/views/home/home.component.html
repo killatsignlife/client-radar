@@ -1,9 +1,16 @@
 <section>
 <!--Primeira Grid-->
-  <div class="Fundo_cinza" fxLayout="column" fxLayoutAlign="center center" >
-    <h1>Frase de Impacto</h1>
-      <button routerLink="descricao" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
+  <div class="Fundo_bg" fxLayout="column" fxLayoutAlign="center center" >
+    <h3>Em média, duas pessoas desaparecem a cada hora em São Paulo</h3>
+    <h1>Ajude-nos a encontra-los</h1>
+      <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
   </div>
+
+<!--Doacoes-->
+<div class="Fundo_cinza" fxLayout="column" fxLayoutAlign="center center" >
+  <h1>Mantenha este ideal doando!</h1>
+    <button routerLink="/doacao" id="voluntario" mat-raised-button>Doar</button>
+</div>
 
 <!--Segunda Grid-->
   <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="start start" >
@@ -13,22 +20,22 @@
 <!--Cards-->
 <div class="Fundo_verde" >
   <div fxLayout="row wrap" fxLayoutAlign="center center" >
-  <div fxFlex="30%" fxFlex.xs="50%" fxFlex.sm="100%" *ngFor="let num of [1,2,3]">
-<mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
-<mat-card-header >
-  <div  mat-card-avatar class="example-header-image"></div>
-    </mat-card-header>
-      <mat-card-content>
-        <img mat-card-image src="../../../assets/img/Branco.png" alt="Photo of a Shiba Inu">
-      </mat-card-content>
-<mat-card-title>Shiba Inu</mat-card-title>
-</mat-card>
+  <div fxFlex="30%" fxFlex.xs="50%" fxFlex.sm="100%" *ngFor="let desaparecido of desaparecidos | slice:0:3">
+    <mat-card (click)="detailDesaparecido(desaparecido.id)" fxLayout="column" fxLayoutAlign="center center" class="example-card">
+      <mat-card-header >
+        <div  mat-card-avatar class="example-header-image"></div>
+          </mat-card-header>
+            <mat-card-content>
+              <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}">
+            </mat-card-content>
+            <mat-card-title>{{desaparecido.nomeCompletoDesaparecido}}</mat-card-title>
+      </mat-card>
 </div>
 </div>
 </div>
-  
+
   <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="center center" >
-    <p id="mais"><a routerLink="desaparecidos">Ver Mais</a></p>
+    <p id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
   </div>
 
   </section>

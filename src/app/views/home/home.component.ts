@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router'
+import { ApiService } from 'src/app/api.service';
+import { Desaparecido } from 'src/app/desaparecido.model';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +10,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  desaparecidos: Desaparecido[] = []
 
-  constructor() { }
+  constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit(): void {
+    this.data();
   }
 
+  data() {
+    this.service.getDesaparecidosHome().subscribe((item) =>{
+      this.desaparecidos = item;
+    });
+    console.log(this.desaparecidos);
+  }
+
+  detailDesaparecido(id: number) {
+    this.router.navigate(['descricao', id])
+  }
 }
