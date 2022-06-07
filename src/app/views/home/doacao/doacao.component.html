@@ -2,7 +2,7 @@
   <!--Segunda Grid-->
     <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
       <h1>Realize uma doação</h1>
-      <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" >
+      <form id="formulario" fxLayout="column" >
         <div>
           <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
           <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
