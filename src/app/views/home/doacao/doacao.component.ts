@@ -21,7 +21,7 @@ export class DoacaoComponent implements OnInit {
 
   async triggerCreateCheckout(eventDonation: any) {
     this.response = await this.http
-      .post('/.netlify/functions/createCheckout', eventDonation, {
+      .post('./netlify/functions/createCheckout', eventDonation, {
         headers: {
           'Content-Type': 'application/json',
         },
