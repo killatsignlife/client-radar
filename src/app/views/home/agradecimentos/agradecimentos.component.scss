@@ -18,13 +18,13 @@
     margin-top: 1%;
     font-size: 20px;
     padding: 1%;
-    margin-right: 40px;
   }
 
-  #reportar {
-    margin-top: 1%;
-    padding: 1%;
-    margin-right: 40px;
+  .Fundo_cinza{
+    text-align: center;
+    align-items: center;
+    background-color: #494949;
+    padding-bottom: 4%;
   }
 
   .Fundo_verde{
@@ -32,52 +32,14 @@
     color: #FFFFFF;
     background-color: #567339;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 1343px;
+    height: 900px;
     padding-bottom: 1%;
   }
 
   .Fundo_verde h1{
     font-size: 60px;
-    text-align: center;
-  }
 
-  .parent {
-    display: flex;
-    width: 50%;
-  }
-
-  .child {
-    flex: 1;
-    margin: 20px;
-  }
-
-  .child img {
-    width: 340px;
-    height: 330px;
-  }
-
-  .child-element:first-child {
-    margin-right: 20px;
-  }
-
-  #foto_principal img {
-    width: 320px;
-    height: 330px;
-    margin-right: 20px;
-  }
-
-  .column {
-    float: left;
-    width: 20%;
-    padding: 5px;
-  }
-
-/* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
   }
 
   #mais{
@@ -90,6 +52,13 @@
 
 
   // Card das pessoas
+    .example-card {
+      margin-left:5%;
+      margin-right: 5%;
+      background-color: #7dbf3b;
+      margin-bottom:6%;
+      height: 25%;
+    }
 
     mat-card-content{
       border-bottom-style: solid;

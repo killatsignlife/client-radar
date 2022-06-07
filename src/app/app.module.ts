@@ -25,6 +25,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
+import { ReportarComponent } from './views/home/reportar/reportar.component';
+import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { DoacaoComponent } from './views/home/doacao/doacao.component';
     HeaderComponent,
     DesaparecidosComponent,
     DescricaoComponent,
-    DoacaoComponent
+    DoacaoComponent,
+    ReportarComponent,
+    AgradecimentosComponent
   ],
   imports: [
     BrowserModule,

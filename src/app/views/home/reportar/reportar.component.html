@@ -1,0 +1,36 @@
+<section>
+  <!--Segunda Grid-->
+    <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
+      <h1>Reporte sobre o desaparecido</h1>
+      <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" >
+        <div>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
+          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
+        </div>
+        <div>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
+        </div>
+        <div>
+          <input matInput type="email" class="form-control" [(ngModel)]="voluntario.email" name="email" id="Email" placeholder="Email" required>
+        </div>
+        <div >
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cep" name="cep" id="CEP" placeholder="CEP" required>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.logradouro" name="logradouro" id="Logradouro" placeholder="Logradouro" required>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.bairro" name="bairro" id="Bairro" placeholder="Bairro" required>
+        </div>
+        <div>
+          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cidade" name="cidade" id="Cidade" placeholder="Cidade" required>
+          <textarea name="mensagem" placeholder="Digite aqui a sua mensagem..."></textarea><br />
+
+          <input type="checkbox"  name="concordo" id="concordo" required><label>Concordo com as CONDIÇÕES DE USO</label>
+          <input type="checkbox"  name="declaro" id="declaro" required><label>Declaro legitimidade nas informações</label>
+        </div>
+        <button type="submit" id="Cadastrar" mat-raised-button>Reportar</button>
+      </form>
+  </div>
+</section>
+<div [hidden]="!submitted">
+  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
+</div>

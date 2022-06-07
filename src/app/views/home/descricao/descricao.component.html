@@ -1,7 +1,37 @@
 <section>
     <!--Cards-->
-        <div class="Fundo_verde" >
-         
+        <div  class="Fundo_verde" >
+          <h1 id="titulo">{{desaparecido.nomeCompletoDesaparecido}}</h1>
+          <div class="parent">
+            <div class="child" >
+              <img src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}">
+            </div>
+            <div class="child">
+              <p>{{desaparecido.dataEHoraDesaparecimento}}</p>
+              <p>{{desaparecido.dataDeNascimento}}</p>
+              <p>{{desaparecido.recompensa}}</p>
+              <p>{{desaparecido.descricaoDesaparecimento}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
+            </div>
+            <div class="column">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
+            </div>
+            <div class="column">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
+            </div>
+            <div class="column">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
+            </div>
+          </div>
+          <div id="reportar">
+            <button routerLink="/reportar" id="voluntario" mat-raised-button>Reportar</button>
+          </div>
+         <div *ngFor="let foto in desaparecido.fotos">
+           <img src={{foto}} alt="Foto com mais detalhes sobre o desaparecido">
+         </div>
       </div>
       </section>
-    

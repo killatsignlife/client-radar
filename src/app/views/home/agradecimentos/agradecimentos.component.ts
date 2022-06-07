@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-agradecimentos',
+  templateUrl: './agradecimentos.component.html',
+  styleUrls: ['./agradecimentos.component.scss']
+})
+export class AgradecimentosComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

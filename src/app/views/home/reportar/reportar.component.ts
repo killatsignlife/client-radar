@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Voluntario } from 'src/app/voluntario.model';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.scss']
+  selector: 'app-reportar',
+  templateUrl: './reportar.component.html',
+  styleUrls: ['./reportar.component.scss']
 })
-export class FormularioComponent implements OnInit {
+export class ReportarComponent implements OnInit {
+
   voluntario: Voluntario = new Voluntario();
   submitted = false;
 
@@ -27,7 +29,7 @@ export class FormularioComponent implements OnInit {
       error => console.log(error)
     );
     this.voluntario = new Voluntario();
-    this.gotoAgradecimentos();
+    this.gotoGreeting();
   }
 
   onSubmit() {
@@ -35,7 +37,8 @@ export class FormularioComponent implements OnInit {
     this.save();
   }
 
-  gotoAgradecimentos() {
-    this.router.navigate(['/agradecimento'])
+  gotoGreeting() {
+    this.router.navigate(['/agradecimentos'])
   }
+
 }
