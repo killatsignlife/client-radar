@@ -27,10 +27,7 @@
           <input type="checkbox"  name="concordo" id="concordo" required><label>Concordo com as CONDIÇÕES DE USO</label>
           <input type="checkbox"  name="declaro" id="declaro" required><label>Declaro legitimidade nas informações</label>
         </div>
-        <button type="submit" id="Cadastrar" mat-raised-button>Reportar</button>
+        <button routerLink="/agradecimento" id="Cadastrar" mat-raised-button>Reportar</button>
       </form>
   </div>
 </section>
-<div [hidden]="!submitted">
-  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
-</div>
