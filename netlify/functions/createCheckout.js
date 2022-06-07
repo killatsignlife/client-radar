@@ -1,4 +1,5 @@
-const stripe = require('stripes')(process.env.STRIPE_SECRET_KEY);
+require("dotenv").config();
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   const donation = JSON.parse(event.body);
