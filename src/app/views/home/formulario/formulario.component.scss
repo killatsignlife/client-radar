@@ -1,29 +1,29 @@
 *{
     color:#FFFFFF;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
+
   .example-icon {
       padding: 0 14px;
     }
     .example-spacer {
       flex: 1 1 auto;
   }
-  
+
   // header/Cabeçalho
   mat-toolbar-row{
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     height: 80px;
   }
-  
+
   mat-toolbar-row .logo{
     padding-top: 8%;
     width: 70%;
   height: auto;
   }
-  
+
   #cadastro{
     width: 10%;
     height: auto;
@@ -33,7 +33,7 @@
   }
   mat-toolbar{
       background-color:#010d01;
-  
+
   }
   #Acessibilidade_header{
   width: 15%;
@@ -42,7 +42,7 @@
    #Cadastrar{
     background-color: #7dbf3b;
     border:none;
-    color: #FFFFFF; 
+    color: #FFFFFF;
   }
   #Acessibilidade_header span .icone{
     margin: 0;
@@ -52,29 +52,29 @@
   }
   #mais{
     border:none;
-    color: #000000; 
+    color: #000000;
     background-color: #567339;
     font-weight: bold;
   }
-  
+
   //-------------------------------//
   #voluntario, #Cadastrar{
     margin-top: 1%;
     font-size: 20px;
     padding: 1%;
   }
-   
+
   .Fundo_verde{
-    padding-top: 4%; 
+    padding-top: 4%;
     color: #FFFFFF;
     background-color: #567339;
     align-items: center;
     width: 100%;
-    height: auto;    
+    height: auto;
     padding-bottom: 4%;
   }
   .Fundo_verde h1{
-    font-size: 60px;
+    font-size: 25px;
     margin-bottom: 5%;
   }
 
@@ -109,7 +109,7 @@
   }
 
   //-------------------------------//
-  
+
   //Footer/Rodapé
     .footer{
       background-color:#010d01;
@@ -120,16 +120,16 @@
       bottom: 0;
       text-align: center;
       width: 100%;
-      height: auto;    
-      font-size: 1.5rem; 
+      height: auto;
+      font-size: 1.5rem;
     }
-     
+
     #redes_sociais span .icone{
       margin: 0;
       padding: 0;
       width: 80%;
-    } 
-  
+    }
+
     footer span .icone{
       margin: 0;
       padding: 0;
@@ -143,5 +143,5 @@
     #redes_sociais{
       width: 20%;
     }
-  
+
   //-------------------------------//

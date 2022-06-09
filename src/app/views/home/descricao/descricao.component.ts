@@ -22,4 +22,8 @@ export class DescricaoComponent implements OnInit {
     }, error => console.log(error));
   }
 
+  detailDesaparecido(id: number) {
+    this.router.navigate(['reportar', id])
+  }
+
 }

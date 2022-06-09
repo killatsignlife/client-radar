@@ -18,13 +18,10 @@
     margin-top: 1%;
     font-size: 20px;
     padding: 1%;
-    margin-right: 40px;
-  }
-
-  #reportar {
-    margin-top: 1%;
-    padding: 1%;
-    margin-right: 40px;
+    background-color: #7dbf3b;
+    border:none;
+    color: #FFFFFF;
+    margin-left: 540px;
   }
 
   .Fundo_verde{
@@ -39,45 +36,7 @@
 
   .Fundo_verde h1{
     font-size: 60px;
-    text-align: center;
-  }
 
-  .parent {
-    display: flex;
-    width: 50%;
-  }
-
-  .child {
-    flex: 1;
-    margin: 20px;
-  }
-
-  .child img {
-    width: 340px;
-    height: 330px;
-  }
-
-  .child-element:first-child {
-    margin-right: 20px;
-  }
-
-  #foto_principal img {
-    width: 320px;
-    height: 330px;
-    margin-right: 20px;
-  }
-
-  .column {
-    float: left;
-    width: 20%;
-    padding: 5px;
-  }
-
-/* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
   }
 
   #mais{
@@ -86,24 +45,70 @@
     background-color: #567339;
     font-weight: bold;
   }
+
+  #nome_desaparecido{
+    text-align: center;
+  }
+
+  #foto_principal{
+    width: 200px;
+    height: 200px;
+    margin: 0px 5% 0px 5%;
+    shape-outside: circle();
+    clip-path: circle();
+    background-color: #000000;
+  }
+
+  .Fundo_verde p{
+    text-align: start;
+  }
+
+  #Descricoes{
+    list-style-type: none;
+    padding-top: 2%;
+    font-size: 22px;
+  }
+
+  #Descricoes li{
+    margin-top:4%;
+  }
+
+   .Titulo_Detalhes_desaparecimento{
+     margin-top: 4%;
+     margin-left: 4%;
+   }
+
+   #Detalhes_desaparecimento{
+     background-color: #7dbf3b;
+     margin: 0% 6% 0% 6%;
+
+   }
+
+   #Detalhes_desaparecimento p{
+    vertical-align: middle;
+    display: table-cell;
+    margin:1%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+   }
   //-------------------------------//
 
 
   // Card das pessoas
 
-    mat-card-content{
-      border-bottom-style: solid;
-      border-bottom-color: #FFFFFF;
-    }
+  .example-card {
+    height: auto;
+    background-color: #7dbf3b;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 6%;
+  }
 
-    .example-header-image {
-      background-size: cover;
-    }
-    #voluntario, #Cadastrar{
-      background-color: #7dbf3b;
-      border:none;
-      color: #FFFFFF;
-    }
+  .example-header-image {
+    background-size: cover;
+  }
+
     .Fundo_verde h2{
       padding-left: 2%;
     }

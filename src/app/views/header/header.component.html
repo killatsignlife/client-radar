@@ -1,19 +1,15 @@
 <!--Cabeçalho-->
 <header id="topo">
-  <a routerLink="/home"><img mat-card-image id="logo" src="../../../assets/img/Branco.png" ></a>
-  <mat-toolbar  fxLayout="column" fxLayoutAlign="space-between center" >
+  <mat-toolbar fxFlex  fxLayout="column" fxLayoutAlign="space-between center" >
     <mat-toolbar-row >
-      <ul id="atalhos">
-        <li><a href="#conteudo" accesskey="1" title="Ir para o conteúdo da página">Ir para o conteúdo [1]</a></li>
-        <li><a href="#menu" accesskey="2" title="Ir para o menu da página">Ir para o menu [2]</a></li>
-        <li><a href="#rodape" accesskey="3" title="Ir para o rodapé da página">Ir para o rodapé [3]</a></li>
-    </ul>
+      <a routerLink="/home"><img mat-card-image id="logo" src="../../../assets/img/Branco.png" ></a>
       <div fxLayout="row"  id="Acessibilidade_header" fxHide.xs>
         <span><img mat-card-image class="icone" src="../../../assets/img/Acessibilidade.png" ></span>
         <span><img mat-card-image class="icone" src="../../../assets/img/Mudar_cor.png" ></span>
         <span><img mat-card-image class="icone" src="../../../assets/img/Amenos.png" ></span>
         <span><img mat-card-image class="icone" src="../../../assets/img/A.png"></span>
       </div>
+      <span><a routerLink="/desaparecidos" id="cadastro" mat-raised-button>Desaparecidos</a></span>
       <span><a routerLink="/formulario" id="cadastro" mat-raised-button>Cadastre-se</a></span>
       <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
         <mat-icon>more_vert</mat-icon>
@@ -29,4 +25,5 @@
   </mat-toolbar-row>
   </mat-toolbar>
 </header>
+
 

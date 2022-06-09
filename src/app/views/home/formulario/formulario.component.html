@@ -1,27 +1,61 @@
   <section>
   <!--Segunda Grid-->
-    <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
+    <div [hidden]="submitted" fxFlex  fxLayoutGap="0px" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
       <h1>Se torne um voluntário</h1>
-      <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" >
-        <div>
-          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
-          <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
+      <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" fxLayoutAlign="center">
+        <div class="form-group" fxLayout="row wrap">
+          <mat-form-field appearance="fill">
+            <mat-label for="name" class="col-lg-2 control-label">Nome</mat-label>
+            <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
+            <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
           <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
+          </mat-form-field>
+
         </div>
-        <div>
+        <div class="form-group" fxLayout="row wrap">
+          <mat-form-field appearance="fill">
+            <mat-label for="cpf" class="col-lg-2 control-label">CPF</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="phone" class="col-lg-2 control-label">Telefone</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
+          </mat-form-field>
         </div>
-        <div>
-          <input matInput type="email" class="form-control" [(ngModel)]="voluntario.email" name="email" id="Email" placeholder="Email" required>
+        <div class="form-group" fxLayout="row wrap">
+          <mat-form-field appearance="fill">
+            <mat-label for="email" class="col-lg-2 control-label">Email</mat-label>
+            <input matInput type="email" class="form-control" [(ngModel)]="voluntario.email" name="email" id="Email" placeholder="Email" required>
+          </mat-form-field>
+
         </div>
-        <div >
-          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cep" name="cep" id="CEP" placeholder="CEP" required>
-          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.logradouro" name="logradouro" id="Logradouro" placeholder="Logradouro" required>
-          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.bairro" name="bairro" id="Bairro" placeholder="Bairro" required>
+        <div class="form-group" fxLayout="row wrap">
+          <mat-form-field appearance="fill">
+            <mat-label for="cep" class="col-lg-2 control-label">CEP</mat-label>
+            <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cep" name="cep" id="CEP" placeholder="CEP" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="logradouro" class="col-lg-2 control-label">Logradouro</mat-label>
+            <input matInput type="text" class="form-control" [(ngModel)]="voluntario.logradouro" name="logradouro" id="Logradouro" placeholder="Logradouro" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="bairro" class="col-lg-2 control-label">Bairro</mat-label>
+            <input matInput type="text" class="form-control" [(ngModel)]="voluntario.bairro" name="bairro" id="Bairro" placeholder="Bairro" required>
+          </mat-form-field>
         </div>
-        <div>
-          <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cidade" name="cidade" id="Cidade" placeholder="Cidade" required>
+        <div class="form-group" fxLayout="row wrap">
+          <mat-form-field appearance="fill">
+            <mat-label for="cidade" class="col-lg-2 control-label">Cidade</mat-label>
+            <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cidade" name="cidade" id="Cidade" placeholder="Cidade" required>
+          </mat-form-field>
+        </div>
+        <div class="form-group" fxLayout="row wrap">
           <input type="checkbox"  name="concordo" id="concordo" required><label>Concordo com as CONDIÇÕES DE USO</label>
           <input type="checkbox"  name="declaro" id="declaro" required><label>Declaro legitimidade nas informações</label>
         </div>

@@ -7,8 +7,8 @@
 
 
 #logo {
-    height: 100px;
-    width: 200px;
+    width: 100%;
+    height: auto;
     margin: auto;
     display: block;
 }
@@ -50,7 +50,12 @@ mat-toolbar-row{
   #Acessibilidade_header{
   width: 15%;
   margin-left: 50%;
+
 }
+
+  mat-toolbar-row span {
+    margin: 2px;
+  }
 
   #Acessibilidade_header span .icone{
     margin: 0;

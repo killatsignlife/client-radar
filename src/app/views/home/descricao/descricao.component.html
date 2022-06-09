@@ -1,37 +1,41 @@
 <section>
     <!--Cards-->
-        <div  class="Fundo_verde" >
-          <h1 id="titulo">{{desaparecido.nomeCompletoDesaparecido}}</h1>
-          <div class="parent">
-            <div class="child" >
-              <img src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}">
+        <div class="Fundo_verde" >
+          <h1 id="nome_desaparecido">{{desaparecido.nomeCompletoDesaparecido}}</h1>
+
+          <div fxLayout="row" fxLayoutAlign="start start" >
+            <div id="foto_principal" >
+              <img src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}" >
             </div>
-            <div class="child">
-              <p>{{desaparecido.dataEHoraDesaparecimento}}</p>
-              <p>{{desaparecido.dataDeNascimento}}</p>
-              <p>{{desaparecido.recompensa}}</p>
-              <p>{{desaparecido.descricaoDesaparecimento}}</p>
-            </div>
+              <ul id="Descricoes">
+                <li><strong>Data de Nascimento: </strong>{{desaparecido.dataDeNascimento}}</li>
+                <!--<li>Endereço onde morava: {{desaparecido.logradouro}} , {{desaparecido.bairro}}, {{desaparecido.cep}}, {{desaparecido.cidade}} - SP</li>-->
+                <li><strong>Sexo: </strong> {{desaparecido.sexo}}</li>
+                <li><strong>Cor de Pele: </strong> {{desaparecido.corDePele}}</li>
+                <li><strong>Possui alguma doença? </strong>{{desaparecido.doenca}} </li>
+                <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataEHoraDesaparecimento}}</li>
+              </ul>
+
+              <button id="voluntario" (click)="detailDesaparecido(desaparecido.id)">Reportar</button>
           </div>
-          <div class="row">
-            <div class="column">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
-            </div>
-            <div class="column">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
-            </div>
-            <div class="column">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
-            </div>
-            <div class="column">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hi1FohJFhYlLh-B2-kL3dK5tDbekWZ3K2w&usqp=CAU" alt="Foto exemplo">
-            </div>
-          </div>
-          <div id="reportar">
-            <button routerLink="/reportar" id="voluntario" mat-raised-button>Reportar</button>
-          </div>
-         <div *ngFor="let foto in desaparecido.fotos">
-           <img src={{foto}} alt="Foto com mais detalhes sobre o desaparecido">
-         </div>
-      </div>
+
+          <h2 class="Titulo_Detalhes_desaparecimento">Detalhes do Desaparecimento</h2>
+            <table id="Detalhes_desaparecimento" fxLayout="column" >
+            <p>{{desaparecido.descricaoDesaparecimento}}
+            </p>
+            </table>
+
+            <h2 class="Titulo_Detalhes_desaparecimento">Imagens do desaparecido</h2>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" >
+             <div fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="100%" *ngFor="let num of [1,2,3]">
+           <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
+
+                 <mat-card-content>
+                   <img mat-card-image src="../../../assets/img/Branco.png" alt="Photo of a Shiba Inu">
+                 </mat-card-content>
+           </mat-card>
+           </div>
+           <br />
+           </div>
+        </div>
       </section>

@@ -30,4 +30,8 @@ export class ApiService {
   createVoluntario(voluntario: Object) : Observable<Object> {
     return this.http.post(`${this.voluntarioUrl}`, voluntario);
   }
+
+  createMensagem(id: number, mensagem: Object): Observable<Object> {
+    return this.http.post(`${this.desaparecidoUrl}/${id}/mensagem`, mensagem);
+  }
 }

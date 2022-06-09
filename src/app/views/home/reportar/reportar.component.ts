@@ -1,35 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { Voluntario } from 'src/app/voluntario.model';
-import { Router } from '@angular/router';
-
+import { Mensagem } from 'src/app/mensagem.model';
+import { ActivatedRoute,Router } from '@angular/router';
+import { Desaparecido } from 'src/app/desaparecido.model';
 @Component({
   selector: 'app-reportar',
   templateUrl: './reportar.component.html',
   styleUrls: ['./reportar.component.scss']
 })
 export class ReportarComponent implements OnInit {
-
-  voluntario: Voluntario = new Voluntario();
+  id: number;
+  desaparecido: Desaparecido;
+  mensagem: Mensagem = new Mensagem();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private service: ApiService, private router: Router) { }
 
   ngOnInit() {
+    this.desaparecido = new Desaparecido();
+    this.id = this.route.snapshot.params['id'];
+    this.service.getDesaparecido(this.id).subscribe(data => {
+      console.log(data);
+      this.desaparecido = data;
+    }, error => console.log(error));
   }
 
-  newVoluntario(): void {
+  newMensagem(): void {
     this.submitted = false;
-    this.voluntario = new Voluntario();
+    this.mensagem = new Mensagem();
   }
 
   save() {
-    this.service.createVoluntario(this.voluntario).subscribe(
+    this.service.createMensagem(this.id, this.mensagem).subscribe(
       data => console.log(data),
       error => console.log(error)
     );
-    this.voluntario = new Voluntario();
-    this.gotoGreeting();
+    this.mensagem = new Mensagem();
+    this.gotoAgradecimentos();
   }
 
   onSubmit() {
@@ -37,8 +44,8 @@ export class ReportarComponent implements OnInit {
     this.save();
   }
 
-  gotoGreeting() {
-    this.router.navigate(['/agradecimentos'])
+  gotoAgradecimentos() {
+    this.router.navigate(['/agradecimento'])
   }
 
 }
