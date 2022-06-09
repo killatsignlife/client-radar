@@ -1,44 +1,44 @@
 <section>
   <!--Segunda Grid-->
     <div [hidden]="submitted" fxFlex   class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
-      <h1>Reporte sobre o desaparecido</h1>
+      <h1 style="font-size: 4rem">Reporte sobre o desaparecido</h1>
       <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" fxLayoutAlign="center">
         <div class="form-group" fxLayout="row wrap">
           <mat-form-field appearance="fill">
-            <mat-label for="name" class="col-lg-2 control-label">Nome</mat-label>
+            <mat-label style="font-size: 1rem" for="name" class="col-lg-2 control-label">Nome</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="mensagem.name" name="name" id="nome" placeholder="Nome" required>
           </mat-form-field>
          <mat-form-field appearance="fill">
-          <mat-label for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
+          <mat-label style="font-size: 1rem" for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
           <input matInput  type="text" class="form-control" [(ngModel)]="mensagem.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
          </mat-form-field>
          <mat-form-field appearance="fill">
-          <mat-label for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
+          <mat-label style="font-size: 1rem" for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
           <input matInput  type="text" class="form-control" [(ngModel)]="mensagem.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
          </mat-form-field>
         </div>
         <div class="form-group" fxLayout="row wrap">
           <mat-form-field appearance="fill">
-            <mat-label for="cpf" class="col-lg-2 control-label">CPF</mat-label>
+            <mat-label style="font-size: 1rem" for="cpf" class="col-lg-2 control-label">CPF</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="mensagem.cpf" name="cpf" id="CPF" placeholder="CPF" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label for="phone" class="col-lg-2 control-label">Telefone</mat-label>
+            <mat-label  style="font-size: 1rem" for="phone" class="col-lg-2 control-label">Telefone</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="mensagem.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label for="email" class="col-lg-2 control-label">Email</mat-label>
+            <mat-label style="font-size: 1rem" for="email" class="col-lg-2 control-label">Email</mat-label>
             <input matInput type="email" class="form-control" [(ngModel)]="mensagem.email" name="email" id="Email" placeholder="Email" required>
           </mat-form-field>
         </div>
         <div>
-          <mat-label for="email" class="col-lg-2 control-label">Email</mat-label>
+          <mat-label style="font-size: 1rem" for="email" class="col-lg-2 control-label">Email</mat-label>
           <textarea matInput type="text" class="form-control" [(ngModel)]="mensagem.mensagem" name="mensagem" id="Mensagem" placeholder="Digite aqui a sua mensagem..."></textarea><br />
 
           <input type="checkbox"  name="concordo" id="concordo" required><label>Concordo com as CONDIÇÕES DE USO</label>
           <input type="checkbox"  name="declaro" id="declaro" required><label>Declaro legitimidade nas informações</label>
         </div>
-        <button type="submit" id="Cadastrar" mat-raised-button>Reportar</button>
+        <button style="font-size: 1rem" type="submit" id="Cadastrar" mat-raised-button>Reportar</button>
       </form>
   </div>
 </section>

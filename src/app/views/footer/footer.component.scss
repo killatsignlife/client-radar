@@ -41,4 +41,39 @@
     width: 20%;
   }
 
-//-------------------------------//
+@media screen and (max-width: 375px) {
+  .footer{
+    background-color:#010d01;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    position: static;
+    bottom: 0;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  #redes_sociais span .icone{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  footer span .icone{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  footer span {
+        margin: 0;
+        padding:0;
+        width: 30%;
+    }
+
+  #redes_sociais{
+    width: 20%;
+  }
+}

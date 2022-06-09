@@ -10,7 +10,7 @@ import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimen
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
-  { path:'', redirectTo: '/home', pathMatch: 'full'},
+  { path:'', redirectTo: 'home',pathMatch: 'full'},
   { path:'formulario', component: FormularioComponent},
   { path: 'doacao', component: DoacaoComponent },
   { path: 'reportar/:id', component: ReportarComponent },

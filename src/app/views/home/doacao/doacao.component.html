@@ -1,38 +1,38 @@
   <section>
   <!--Segunda Grid-->
     <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
-      <h1>Realize uma doação</h1>
+      <h1 style="font-size: 1rem">Realize uma doação</h1>
       <form id="formulario" fxLayout="column" >
         <div class="form-group" fxLayout="row wrap">
           <mat-form-field appearance="fill">
-            <mat-label for="name" class="col-lg-2 control-label">Nome</mat-label>
+            <mat-label style="font-size: 1rem" for="name" class="col-lg-2 control-label">Nome</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
+            <mat-label style="font-size: 1rem" for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
+            <mat-label style="font-size: 1rem" for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
           </mat-form-field>
         </div>
         <div class="form-group" fxLayout="row wrap">
           <mat-form-field appearance="fill">
-            <mat-label for="cpf" class="col-lg-2 control-label">CPF</mat-label>
+            <mat-label style="font-size: 1rem" for="cpf" class="col-lg-2 control-label">CPF</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label for="phone" class="col-lg-2 control-label">Telefone</mat-label>
+            <mat-label style="font-size: 1rem" for="phone" class="col-lg-2 control-label">Telefone</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
           </mat-form-field>
         </div>
         <div>
-          <h2>Escolha um valor abaixo:</h2><br />
+          <h2 style="font-size: 3rem">Escolha um valor abaixo:</h2><br />
           <div class="donations">
             <div class="donations-list">
               <div class="donation-item" *ngFor="let donation of donation">
-                <button (click)="triggerCreateCheckout(donation)">{{donation.price | currency }}</button>
+                <button style="font-size: 1rem" (click)="triggerCreateCheckout(donation)">{{donation.price | currency }}</button>
               </div>
             </div>
           </div>

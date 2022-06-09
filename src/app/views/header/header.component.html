@@ -5,9 +5,10 @@
       <a routerLink="/home"><img mat-card-image id="logo" src="../../../assets/img/Branco.png" ></a>
       <div fxLayout="row"  id="Acessibilidade_header" fxHide.xs>
         <span><img mat-card-image class="icone" src="../../../assets/img/Acessibilidade.png" ></span>
-        <span><img mat-card-image class="icone" src="../../../assets/img/Mudar_cor.png" ></span>
-        <span><img mat-card-image class="icone" src="../../../assets/img/Amenos.png" ></span>
-        <span><img mat-card-image class="icone" src="../../../assets/img/A.png"></span>
+        <span><input type="checkbox" [checked]="darkMode$ | async" (change)="onToggle()"></span>
+        <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
+        <span><button mat-menu-item (click)="setFontSize('a')">A</button></span>
+        <span><button mat-menu-item (click)="setFontSize('a+')">A+</button></span>
       </div>
       <span><a routerLink="/desaparecidos" id="cadastro" mat-raised-button>Desaparecidos</a></span>
       <span><a routerLink="/formulario" id="cadastro" mat-raised-button>Cadastre-se</a></span>
@@ -18,8 +19,9 @@
         <ng-container>
           <button mat-menu-item><mat-icon class="mr">accessibility_new</mat-icon>Acessibilidade</button>
           <button mat-menu-item><mat-icon class="mr">contrast</mat-icon>Contraste</button>
-          <button mat-menu-item><mat-icon class="mr">text_increase</mat-icon>Aumentar Texto</button>
-          <button mat-menu-item><mat-icon class="mr">text_decrease</mat-icon>Diminuir Texto</button>
+          <button mat-menu-item (click)="setFontSize('a-')">A-</button>
+          <button mat-menu-item (click)="setFontSize('a')">A</button>
+          <button mat-menu-item (click)="setFontSize('a+')">A+</button>
         </ng-container>
       </mat-menu>
   </mat-toolbar-row>

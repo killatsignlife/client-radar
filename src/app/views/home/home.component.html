@@ -1,20 +1,20 @@
 <section>
 <!--Primeira Grid-->
   <div class="Fundo_bg" fxLayout="column" fxLayoutAlign="center center" >
-    <h3>Em média, duas pessoas desaparecem a cada hora em São Paulo</h3>
-    <h1>Ajude-nos a encontra-los</h1>
-      <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
+    <h3 style="font-size: 1rem">Em média, duas pessoas desaparecem a cada hora em São Paulo</h3>
+    <h1 style="font-size: 4rem">Ajude-nos a encontra-los</h1>
+      <button style="font-size: 1rem" routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
   </div>
 
 <!--Doacoes-->
 <div class="Fundo_cinza" fxLayout="column" fxLayoutAlign="center center" >
-  <h1>Mantenha este ideal doando!</h1>
-    <button routerLink="/doacao" id="voluntario" mat-raised-button>Doar</button>
+  <h2 style="font-size: 2rem">Mantenha este ideal doando!</h2>
+    <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" mat-raised-button>Doar</button>
 </div>
 
 <!--Segunda Grid-->
   <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="start start" >
-      <h2>Desaparecidos</h2>
+      <h2 style="font-size: 2rem">Desaparecidos</h2>
     </div>
 
 <!--Cards-->
@@ -25,14 +25,14 @@
             <mat-card-content>
               <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}">
             </mat-card-content>
-            <mat-card-title>{{desaparecido.nomeCompletoDesaparecido}}</mat-card-title>
+            <mat-card-title style="font-size: 1rem">{{desaparecido.nomeCompletoDesaparecido}}</mat-card-title>
       </mat-card>
 </div>
 </div>
 </div>
 
   <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="center center" >
-    <p id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
+    <p style="font-size: 1rem" id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
   </div>
 
   </section>
