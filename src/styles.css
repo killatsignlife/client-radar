@@ -26,7 +26,6 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 :root .contraste{
-  filter: invert(1);
   --primary: #000;
   --secondary: #000;
   --tertiary: #000;
@@ -38,4 +37,6 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --menu: yellow;
 }
 
-
+:root .contraste img {
+  filter: invert(1);
+}
