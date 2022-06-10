@@ -36,7 +36,3 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-to-see: #010d01;
   --menu: yellow;
 }
-
-:root .contraste img {
-  filter: invert(1);
-}
