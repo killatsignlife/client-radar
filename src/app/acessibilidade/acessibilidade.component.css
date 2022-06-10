@@ -1,0 +1,78 @@
+*{
+  color: var(--continuos-white);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+}
+
+#voluntario{
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 1%;
+}
+
+.Fundo_cinza{
+  text-align: center;
+  align-items: center;
+  background-color: var(--secondary);
+  padding-bottom: 4%;
+}
+
+.Fundo_verde{
+  padding-top: 2%;
+  color: var(--white);
+  background-color: var(--primary);
+  padding-bottom: 1%;
+}
+
+.Fundo_verde h1{
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+
+.Fundo_verde p{
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#mais{
+  border:none;
+  color: var(--back);
+  background-color: var(--tertiary);
+  font-weight: bold;
+}
+
+
+  .example-card {
+    margin-left:5%;
+    margin-right: 5%;
+    background-color: var(--primary);
+    margin-bottom:6%;
+    height: 25%;
+  }
+
+  mat-card-content{
+    border-bottom-style: solid;
+    border-bottom-color: var(--white);
+  }
+
+  .example-header-image {
+    background-size: cover;
+  }
+  #voluntario, #Cadastrar{
+    background-color: var(--primary);
+    border:none;
+    color: var(--white);
+  }
+  .Fundo_verde h2{
+    padding-left: 2%;
+  }
+

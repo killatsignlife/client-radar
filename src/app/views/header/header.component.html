@@ -4,8 +4,8 @@
     <mat-toolbar-row >
       <a routerLink="/home"><img mat-card-image id="logo" src="../../../assets/img/Branco.png" ></a>
       <div fxLayout="row"  id="Acessibilidade_header" fxHide.xs>
-        <span><img mat-card-image class="icone" src="../../../assets/img/Acessibilidade.png" ></span>
-        <span><input type="checkbox" [checked]="darkMode$ | async" (change)="onToggle()"></span>
+        <span><button mat-menu-item routerLink="/acessibilidade" >Acessibilidade</button></span>
+        <span><button mat-menu-item (click)="toogle()">{{nome}}</button></span>
         <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
         <span><button mat-menu-item (click)="setFontSize('a')">A</button></span>
         <span><button mat-menu-item (click)="setFontSize('a+')">A+</button></span>
@@ -15,10 +15,10 @@
       <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
         <mat-icon>more_vert</mat-icon>
       </button>
-      <mat-menu #dropMenu="matMenu" id="menu" >
+      <mat-menu #dropMenu="matMenu" id="menu">
         <ng-container>
-          <button mat-menu-item><mat-icon class="mr">accessibility_new</mat-icon>Acessibilidade</button>
-          <button mat-menu-item><mat-icon class="mr">contrast</mat-icon>Contraste</button>
+          <button mat-menu-item routerLink="/acessibilidade" >Acessibilidade</button>
+          <button mat-menu-item (click)="toogle()">{{nome}}</button>
           <button mat-menu-item (click)="setFontSize('a-')">A-</button>
           <button mat-menu-item (click)="setFontSize('a')">A</button>
           <button mat-menu-item (click)="setFontSize('a+')">A+</button>

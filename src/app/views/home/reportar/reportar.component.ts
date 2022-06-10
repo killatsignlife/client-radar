@@ -6,9 +6,10 @@ import { Desaparecido } from 'src/app/desaparecido.model';
 @Component({
   selector: 'app-reportar',
   templateUrl: './reportar.component.html',
-  styleUrls: ['./reportar.component.scss']
+  styleUrls: ['./reportar.component.css']
 })
 export class ReportarComponent implements OnInit {
+  title = 'Reportar';
   id: number;
   desaparecido: Desaparecido;
   mensagem: Mensagem = new Mensagem();

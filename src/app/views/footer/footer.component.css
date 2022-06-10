@@ -1,13 +1,12 @@
 *{
-    color:#FFFFFF;
+    color: var(--continuos-white);
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-//Footer/Rodapé
 .footer{
-    background-color:#010d01;
+    background-color:var(--dark);
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0;
@@ -43,15 +42,15 @@
 
 @media screen and (max-width: 375px) {
   .footer{
-    background-color:#010d01;
+    background-color: var(--dark);
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0;
     position: static;
     bottom: 0;
     text-align: center;
-    width: 100px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     font-size: 1.5rem;
   }
 

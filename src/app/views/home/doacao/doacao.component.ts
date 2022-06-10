@@ -9,9 +9,10 @@ import donations from './donations.json';
 @Component({
   selector: 'app-doacao',
   templateUrl: './doacao.component.html',
-  styleUrls: ['./doacao.component.scss']
+  styleUrls: ['./doacao.component.css']
 })
 export class DoacaoComponent implements OnInit {
+  title = 'Doar';
   donation: any = donations;
   private response: any;
   voluntario: Voluntario = new Voluntario();

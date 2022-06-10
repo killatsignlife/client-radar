@@ -7,6 +7,7 @@ import { DescricaoComponent } from './views/home/descricao/descricao.component';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
 import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'doacao', component: DoacaoComponent },
   { path: 'reportar/:id', component: ReportarComponent },
   { path: 'agradecimento', component: AgradecimentosComponent },
+  { path: 'acessibilidade', component: AcessibilidadeComponent },
   { path:'desaparecidos', component: DesaparecidosComponent},
   { path:'descricao/:id', component: DescricaoComponent}
 ];

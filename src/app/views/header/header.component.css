@@ -1,0 +1,139 @@
+*{
+  color: var(--menu);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#logo {
+    width: 250px;
+    height: 140px;
+    margin: auto;
+    display: block;
+}
+
+#topo {
+    background-color:var(--dark);
+
+}
+
+#menu {
+  background-color: var(--dark);
+}
+
+mat-toolbar-row{
+    font-size: 1.5rem;
+    height: 80px;
+  }
+
+  mat-toolbar-row .logo{
+    padding-top: 8%;
+    width: 80%;
+  height: auto;
+  }
+
+  #cadastro{
+    width: 100%;
+    height: auto;
+    font-size: 70%;
+    text-align: center;
+    border-radius: 0px;
+    background-color: var(--primary);
+    border:none;
+    color: var(--white);
+  }
+
+  mat-toolbar{
+      background-color: var(--dark);
+  }
+
+  #Acessibilidade_header{
+  width: 15%;
+  margin-left: 220px;
+  margin-right: 340px;
+}
+
+  mat-toolbar-row span {
+    margin: 2px;
+  }
+
+  #Acessibilidade_header span .button{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: auto;
+  }
+
+  #atalhos {
+    list-style: none;
+    padding-left: 2%;
+  }
+
+  #atalhos li {
+    display: inline;
+    margin: 1px;
+    font-size: 12px;
+}
+
+#atalhos li a {
+    color: var(--white);
+}
+
+@media screen and (max-width: 375px) {
+  #logo {
+    width: 80px;
+    height: 20px;
+    margin: auto;
+    display: block;
+}
+
+#topo {
+    background-color:var(--dark);
+
+}
+
+mat-toolbar-row{
+    font-size: 1.5rem;
+    height: 80px;
+  }
+
+  mat-toolbar-row .logo{
+    padding-top: 8%;
+    width: 80%;
+  height: auto;
+  }
+
+  #cadastro{
+    width: 90%;
+    height: auto;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 0px;
+    background-color: var(--primary);
+    border:none;
+    color: var(--white);
+  }
+
+  mat-toolbar{
+      background-color: var(--dark);
+  }
+
+  #Acessibilidade_header{
+  width: 15%;
+  margin-left: 220px;
+  margin-right: 340px;
+}
+
+  mat-toolbar-row span {
+    margin: 2px;
+  }
+
+  #Acessibilidade_header span .button{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: auto;
+  }
+}
+

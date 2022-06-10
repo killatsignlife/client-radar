@@ -27,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
 import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimen
     DescricaoComponent,
     DoacaoComponent,
     ReportarComponent,
-    AgradecimentosComponent
+    AgradecimentosComponent,
+    AcessibilidadeComponent
   ],
   imports: [
     BrowserModule,

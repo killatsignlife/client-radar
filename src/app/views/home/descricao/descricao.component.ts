@@ -5,11 +5,13 @@ import { Desaparecido } from 'src/app/desaparecido.model';
 @Component({
   selector: 'app-descricao',
   templateUrl: './descricao.component.html',
-  styleUrls: ['./descricao.component.scss']
+  styleUrls: ['./descricao.component.css']
 })
 export class DescricaoComponent implements OnInit {
+
   id: number;
   desaparecido: Desaparecido;
+  title = 'Descrição'
 
   constructor(private route: ActivatedRoute, private router: Router, private service: ApiService) { }
 

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { DarkModeService } from 'angular-dark-mode';
 import { Observable } from 'rxjs';
+import { ETheme } from './enums/ETheme.enum';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+  public nome: string = ETheme.NOME_COM_CONTRASTE;
 
   font_size = 16;
 
@@ -30,14 +31,22 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  constructor(private darkModeService: DarkModeService) { }
+  constructor() {
 
-  onToggle(): void {
-    this.darkModeService.toggle();
-  }
+   }
 
   ngOnInit() {
 
+  }
+
+  public toogle() {
+    const theme = document.body.classList.toggle('contraste');
+
+    if (theme) {
+      return (this.nome = ETheme.NOME_SEM_CONTRASTE);
+    }
+
+    return (this.nome = ETheme.NOME_COM_CONTRASTE)
   }
 
 }

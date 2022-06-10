@@ -1,5 +1,5 @@
 *{
-  color:#FFFFFF;
+  color:var(--continuos-white);
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,8 +12,6 @@
     flex: 1 1 auto;
 }
 
-
-//-------------------------------//
 #voluntario{
   margin-top: 1%;
   font-size: 20px;
@@ -23,7 +21,7 @@
 .Fundo_cinza{
   text-align: center;
   align-items: center;
-  background-color: #494949;
+  background-color: var(--tertiary);
   padding-bottom: 4%;
 }
 
@@ -40,29 +38,29 @@
 
 .Fundo_bg h1{
   padding-top: 2%;
-  color: #FFFFFF;
+  color: var(--continuos-white);
   font-size: 40px;
   font-weight: bold;
 }
 
 .Fundo_bg h3{
   padding-top: 2%;
-  color: #FFFFFF;
+  color: var(--continuos-white);
   font-size: 20px;
   font-weight: light;
 }
 
 .Fundo_cinza h1{
   padding-top: 2%;
-  color: #FFFFFF;
+  color: var(--continuos-white);
   font-size: 40px;
   font-weight: bold;
 }
 
 .Fundo_verde{
   padding-top: 2%;
-  color: #FFFFFF;
-  background-color: #567339;
+  color: var(--continuos-white);
+  background-color: var(--secondary);
   align-items: center;
   width: 100%;
   height: auto;
@@ -76,18 +74,16 @@
 
 #mais{
   border:none;
-  color: #000000;
-  background-color: #567339;
+  color: var(--back);
+  background-color: var(--secondary);
   font-weight: bold;
   margin-top: -2%;
 }
-//-------------------------------//
 
 
-// Card das pessoas
   .example-card {
     height: 25%;
-    background-color: #7dbf3b;
+    background-color: var(--primary);;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 6%;
@@ -95,18 +91,17 @@
 
   mat-card-content{
     border-bottom-style: solid;
-    border-bottom-color: #FFFFFF;
+    border-bottom-color: var(--white);
   }
 
   .example-header-image {
     background-size: cover;
   }
 
-
   #voluntario, #Cadastrar{
-    background-color: #7dbf3b;
+    background-color: var(--primary);
     border:none;
-    color: #FFFFFF;
+    color: var(--white);
   }
   .Fundo_verde h2{
     padding-left: 2%;
@@ -126,15 +121,15 @@
 
 .Fundo_bg h1{
   padding-top: 2%;
-  color: #FFFFFF;
-  font-size: 30px;
+  color: var(--continuos-white);
+  font-size: 15px;
   font-weight: bold;
 }
 
 .Fundo_bg h3{
   padding-top: 2%;
-  color: #FFFFFF;
-  font-size: 15px;
+  color: var(--continuos-white);
+  font-size: 14px;
   font-weight: light;
 }
 #voluntario{

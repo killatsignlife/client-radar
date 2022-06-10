@@ -6,9 +6,10 @@ import { Desaparecido } from 'src/app/desaparecido.model';
 @Component({
   selector: 'app-desaparecidos',
   templateUrl: './desaparecidos.component.html',
-  styleUrls: ['./desaparecidos.component.scss']
+  styleUrls: ['./desaparecidos.component.css']
 })
 export class DesaparecidosComponent implements OnInit {
+  title = 'Desaparecidos';
   desaparecidos: Observable<Desaparecido[]>;
 
   constructor(private service: ApiService, private router: Router) { }
