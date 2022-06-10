@@ -1,103 +1,149 @@
 *{
-    color:var(--continuous-white);
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:var(--continuos-white);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.example-icon {
+    padding: 0 14px;
   }
-
-  .example-icon {
-      padding: 0 14px;
-    }
-    .example-spacer {
-      flex: 1 1 auto;
-  }
+  .example-spacer {
+    flex: 1 1 auto;
+}
 
 
-  mat-toolbar-row{
-    font-size: 1.5rem;
-    height: 80px;
-  }
+mat-toolbar-row{
+  font-size: 1.5rem;
+  height: 80px;
+}
 
-  mat-toolbar-row .logo{
-    padding-top: 8%;
-    width: 70%;
+mat-toolbar-row .logo{
+  padding-top: 8%;
+  width: 70%;
+height: auto;
+}
+
+#cadastro{
+  width: 10%;
   height: auto;
-  }
+  font-size: 70%;
+  text-align: center;
+  border-radius: 0px;
+}
+mat-toolbar{
+    background-color:var(--dark);
 
-  #cadastro{
-    width: 10%;
-    height: auto;
-    font-size: 70%;
-    text-align: center;
-    border-radius: 0px;
-  }
-  mat-toolbar{
-      background-color:var(--dark);
+}
+#Acessibilidade_header{
+width: 15%;
+}
 
-  }
-  #Acessibilidade_header{
-  width: 15%;
-  }
+ #Cadastrar{
+  background-color: var(--primary);
+  border:none;
+  color: var(--white);
+}
+#Acessibilidade_header span .icone{
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: auto;
+}
+#mais{
+  border:none;
+  color: var(--dark);
+  background-color: var(--tertiary);
+  font-weight: bold;
+}
 
-   #Cadastrar{
-    background-color: var(--primary);
-    border:none;
-    color: var(--white);
-  }
-  #Acessibilidade_header span .icone{
+
+#voluntario, #Cadastrar{
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 1%;
+}
+
+.Fundo_verde{
+  padding-top: 4%;
+  color: var(--white);
+  background-color: var(--secondary);
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4%;
+}
+.Fundo_verde h1{
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+
+#formulario{
+  width: 70%;
+  margin-left: 10%;
+}
+
+.Fundo_verde h2{
+  font-weight:bold;
+}
+
+.Fundo_verde input{
+  color: var(--color-to-see);
+  font-size: 150%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 50px;
+  border-color: var(--primary);
+  text-indent:5%;
+}
+
+.Fundo_verde input[type=checkbox]{
+  margin-right: 0.5%;
+  padding: 0;
+  height: 12px;
+}
+
+.Fundo_verde label{
+  font-size: 16px;
+  margin-right: 2%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+
+  .footer{
+    background-color:var(--dark);
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0;
-    padding: 0;
-    width: 60%;
-    height: auto;
-  }
-  #mais{
-    border:none;
-    color: var(--continuous-white);
-    background-color: var(--secondary);
-    font-weight: bold;
-  }
-
-
-  #voluntario, #Cadastrar{
-    margin-top: 1%;
-    font-size: 20px;
-    padding: 1%;
-  }
-
-  .Fundo_verde{
-    padding-top: 4%;
-    color: var(--continuous-white);
-    background-color: var(--secondary);
-    align-items: center;
+    position: static;
+    bottom: 0;
+    text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 4%;
-  }
-  
-  .Fundo_verde h1{
-    font-size: 25px;
-    margin-bottom: 5%;
-    color: var(--continuous-white);
+    font-size: 1.5rem;
   }
 
-  #formulario{
-    width: 70%;
-    margin-left: 10%;
+  #redes_sociais span .icone{
+    margin: 0;
+    padding: 0;
+    width: 80%;
   }
 
-  .Fundo_verde h2{
-    font-weight:bold;
+  footer span .icone{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+ footer span {
+margin: 0;
+padding:0;
+width: 20%;
+ }
+  #redes_sociais{
+    width: 20%;
   }
 
-  .Fundo_verde input{
-    color: var(--color-to-see);
-    font-size: 150%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    height: 50px;
-    border-color: var(--primary);
-    text-indent:5%;
-  }
+
 
   .Fundo_verde textarea{
     color:var(--primary);
@@ -110,49 +156,4 @@
     border: 3px solid var(--continuous-white);
   }
 
-  .Fundo_verde input[type=checkbox]{
-    margin-right: 0.5%;
-    padding: 0;
-    height: 12px;
-  }
-
-  .Fundo_verde label{
-    font-size: 16px;
-    margin-right: 2%;
-    font-family:Arial, Helvetica, sans-serif;
-  }
-
-
-    .footer{
-      background-color: var(--white);
-      padding-top: 20px;
-      padding-bottom: 20px;
-      margin: 0;
-      position: static;
-      bottom: 0;
-      text-align: center;
-      width: 100%;
-      height: auto;
-      font-size: 1.5rem;
-    }
-
-    #redes_sociais span .icone{
-      margin: 0;
-      padding: 0;
-      width: 80%;
-    }
-
-    footer span .icone{
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-   footer span {
-  margin: 0;
-  padding:0;
-  width: 20%;
-   }
-    #redes_sociais{
-      width: 20%;
-    }
 
