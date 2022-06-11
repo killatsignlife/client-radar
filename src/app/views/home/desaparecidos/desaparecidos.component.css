@@ -57,6 +57,13 @@
 
     }
 
+    .example-card img{
+      height: 200px;
+      width: 320px;
+      margin-top: 1px;
+      margin-bottom: 5px;
+    }
+    
     mat-card-content{
       border-bottom-style: solid;
       border-bottom-color: var(--white);
