@@ -39,7 +39,7 @@
 .Fundo_bg h1{
   padding-top: 2%;
   color: var(--continuos-white);
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -112,6 +112,21 @@
     padding-left: 2%;
   }
 
+  @media screen and (min-width: 375px) {
+    .example-card img{
+      height: 120px;
+      width: 140px;
+      margin-top: 1px;
+      margin-bottom: 5px;
+    }
+
+    .Fundo_bg h1{
+      padding-top: 2%;
+      color: var(--continuos-white);
+      font-size:2rem;
+      font-weight: bold;
+    }
+  }
 @media screen and (max-width: 600px) {
   .Fundo_bg{
   text-align: center;
@@ -127,7 +142,6 @@
 .Fundo_bg h1{
   padding-top: 2%;
   color: var(--continuos-white);
-  font-size: 15px;
   font-weight: bold;
 }
 
