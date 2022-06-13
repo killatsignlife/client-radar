@@ -46,7 +46,8 @@
 .Fundo_bg h3{
   padding-top: 2%;
   color: var(--continuos-white);
-  font-size: 20px;
+  font-size: 1rem;
+  width: 90%;
   font-weight: light;
 }
 
@@ -121,8 +122,17 @@
     .Fundo_bg h1{
       padding-top: 2%;
       color: var(--continuos-white);
-      font-size:2rem;
+      font-size:2em;
       font-weight: bold;
+    }
+
+    .Fundo_bg #voluntario{
+      width: 45%;
+      font-size: 1em;
+    }
+
+    .Fundo_cinza h2{
+      font-size: 1.5em;
     }
   }
 @media screen and (max-width: 600px) {
