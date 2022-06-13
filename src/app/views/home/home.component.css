@@ -111,6 +111,7 @@
     padding-left: 2%;
   }
 
+  /*Responsividade*/
   @media screen and (max-width: 375px) {
     .example-card img{
       height: 120px;
@@ -135,6 +136,7 @@
       font-size: 1.5em;
     }
   }
+
 @media screen and (max-width: 600px) {
   .Fundo_bg{
   text-align: center;
@@ -165,3 +167,22 @@
   padding: 1%;
 }
 }
+
+@media screen and (max-width: 1024px) {
+  .example-card {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+  }
+  
+  .example-card img{
+    height: 200px;
+    width: 250px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+  }
+
+  .Fundo_cinza h2{
+    font-size: 3em;
+  }
+  }
