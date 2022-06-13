@@ -6,13 +6,7 @@
 }
 
 
-#logo {
-    
-    height: 140px;
-    margin: auto;
-    display: block;
-    
-}
+
 
 #topo {
     background-color:var(--dark);
@@ -28,11 +22,11 @@ mat-toolbar-row{
     height: 80px;
   }
 
-  mat-toolbar-row .logo{
-    padding-top: 8%;
+  mat-toolbar-row #logo{
     width: 80%;
   height: auto;
-  }
+    display: block;
+      }
 
   .example-spacer{
     width: 50%;
