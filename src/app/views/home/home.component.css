@@ -50,11 +50,9 @@
   font-weight: light;
 }
 
-.Fundo_cinza h1{
+.Fundo_cinza h2{
   padding-top: 2%;
   color: var(--continuos-white);
-  font-size: 40px;
-  font-weight: bold;
 }
 
 .Fundo_verde{
@@ -112,7 +110,7 @@
     padding-left: 2%;
   }
 
-  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 375px) {
     .example-card img{
       height: 120px;
       width: 140px;
