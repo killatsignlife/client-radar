@@ -4,53 +4,53 @@
       <h1 style="font-size: 3rem">Se torne um voluntário</h1>
       <form (ngSubmit)="onSubmit()" id="formulario" fxLayout="column" fxLayoutAlign="center">
         <div class="form-group" fxLayout="row wrap">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="name" class="col-lg-2 control-label">Nome</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="lastname" class="col-lg-2 control-label">Sobrenome</mat-label>
             <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="dataNascimento" class="col-lg-2 control-label">Data de Nascimento</mat-label>
           <input matInput  type="text" class="form-control" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
           </mat-form-field>
 
         </div>
         <div class="form-group" fxLayout="row wrap">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="cpf" class="col-lg-2 control-label">CPF</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="phone" class="col-lg-2 control-label">Telefone</mat-label>
           <input matInput type="text" class="form-control" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
           </mat-form-field>
         </div>
         <div class="form-group" fxLayout="row wrap">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="email" class="col-lg-2 control-label">Email</mat-label>
             <input matInput type="email" class="form-control" [(ngModel)]="voluntario.email" name="email" id="Email" placeholder="Email" required>
           </mat-form-field>
 
         </div>
         <div class="form-group" fxLayout="row wrap">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="col-lg-2 control-label">CEP</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cep" name="cep" id="CEP" placeholder="CEP" required>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="logradouro" class="col-lg-2 control-label">Logradouro</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="voluntario.logradouro" name="logradouro" id="Logradouro" placeholder="Logradouro" required>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="bairro" class="col-lg-2 control-label">Bairro</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="voluntario.bairro" name="bairro" id="Bairro" placeholder="Bairro" required>
           </mat-form-field>
         </div>
         <div class="form-group" fxLayout="row wrap">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="outline">
             <mat-label style="font-size: 1rem" for="cidade" class="col-lg-2 control-label">Cidade</mat-label>
             <input matInput type="text" class="form-control" [(ngModel)]="voluntario.cidade" name="cidade" id="Cidade" placeholder="Cidade" required>
           </mat-form-field>
