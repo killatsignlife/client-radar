@@ -12,6 +12,10 @@
     flex: 1 1 auto;
 }
 
+form{    
+  margin-top: 2%;
+  
+}
 
 mat-toolbar-row{
   font-size: 1.5rem;
@@ -156,4 +160,16 @@ width: 20%;
     border: 3px solid var(--continuous-white);
   }
 
+  mat-form-field + mat-form-field{
+    margin-left: 2%;
+  
+    }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: var(--continuos-white);
+    
+  }
+  
+  
 
