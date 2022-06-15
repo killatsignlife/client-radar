@@ -112,7 +112,7 @@
   }
 
   /*Responsividade*/
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     .example-card img{
       height: 120px;
       width: 140px;
@@ -168,7 +168,7 @@
 }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .example-card {
     margin-left: 3%;
     margin-right: 3%;
