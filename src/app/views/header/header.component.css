@@ -32,7 +32,7 @@ mat-toolbar-row{
     width: 50%;
   }
 
-  #cadastro{
+  .cadastro{
     width: 100%;
     height: auto;
     font-size: 70%;
@@ -101,7 +101,7 @@ mat-toolbar-row{
   display: block;
   }
 
-  #cadastro{
+  .cadastro{
     width: 100%;
     height: auto;
     font-size: 40%;
@@ -138,7 +138,7 @@ mat-toolbar-row{
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
  
   mat-toolbar-row{
       font-size: 2rem;
@@ -149,7 +149,7 @@ mat-toolbar-row{
       height: 100%;
     }
   
-    #cadastro{
+    .cadastro{
       width: 100%;
       height: auto;
       font-size: 50%;
