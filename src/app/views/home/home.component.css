@@ -181,12 +181,12 @@
 
 @media screen and (min-width: 600px) and (max-width: 768px){
   .example-card img{
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 500px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
   .example-card {
     margin-left: 3%;
     margin-right: 3%;
