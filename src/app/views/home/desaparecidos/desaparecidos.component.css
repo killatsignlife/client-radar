@@ -81,3 +81,13 @@
     .Fundo_verde h2{
       padding-left: 2%;
     }
+
+    /*Responsividade*/
+ @media screen and (min-width: 376px) and (max-width: 599px){
+  .example-card img{
+    height: 120px;
+    width: 140px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+      }
+}
