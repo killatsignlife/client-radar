@@ -28,7 +28,7 @@
     color: var(--white);
     background-color: var(--secondary);
     align-items: center;
-    width: 100%;
+    width:100%;
     height: auto;
     padding-bottom: 1%;
   }
@@ -60,6 +60,10 @@
 
   .Fundo_verde p{
     text-align: start;
+  }
+
+  .Titulo_Detalhes_desaparecimento{
+    font-size: 3rem;
   }
 
   #Descricoes{
@@ -109,12 +113,62 @@
     background-size: cover;
   }
 
+  mat-card-content img{
+    width: 100%;
+    height: 100%;
+  }
+
+  mat-card-content{
+    height: 180px;
+  }
+
     .Fundo_verde h2{
       padding-left: 2%;
     }
 
-    @media screen and (max-width: 1024px) {
-      li strong{
-        width: 1000px;
-      }
+
+
+      /*Responsividade*/
+  @media screen and (max-width: 376px) {
+   #foto_principal{
+   }
+   #Descricoes{
+    display: inline-block;
+   }
+   /*além do 376px*/
+  .Titulo_Detalhes_desaparecimento{
+    font-size: 1.5rem;
+  }
+  #voluntario{
+    margin-left: 80%;
+    margin-top: -10%;
+  }
+  }
+  
+@media screen and (min-width: 600px) {
+  
+
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 1024px) {
+  li strong{
+    width: 1000px;
+  }
+
+  }
+
+  @media screen and (min-width: 1280px) {
+ 
+    }
+
+    @media screen and (min-width: 1440px) {
+ 
       }
