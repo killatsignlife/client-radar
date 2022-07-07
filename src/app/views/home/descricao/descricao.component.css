@@ -1,139 +1,136 @@
 *{
-    color:var(--continuos-white);
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:var(--continuos-white);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.example-icon {
+    padding: 0 14px;
   }
+  .example-spacer {
+    flex: 1 1 auto;
+}
 
-  .example-icon {
-      padding: 0 14px;
-    }
-    .example-spacer {
-      flex: 1 1 auto;
+#voluntario{
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 1%;
+  background-color: var(--primary);
+  border:none;
+  color: var(--white);
+  margin-left: 90%;
+  position:absolute;
+}
+
+.Fundo_verde{
+  padding-top: 2%;
+  color: var(--white);
+  background-color: var(--secondary);
+  align-items: center;
+  width:100%;
+  height: auto;
+  padding-bottom: 1%;
+}
+
+.Fundo_verde h1{
+  font-size: 60px;
+
+}
+
+#mais{
+  border:none;
+  color: var(--white);
+  background-color:  var(--secondary);
+  font-weight: bold;
+}
+
+#nome_desaparecido{
+  text-align: center;
+}
+
+#foto_principal{
+  width: 200px;
+  height: 200px;
+  margin: 0px 5% 0px 5%;
+  shape-outside: circle();
+  clip-path: circle();
+  background-color: var(--secondary);
+}
+
+.Fundo_verde p{
+  text-align: start;
+}
+
+.Titulo_Detalhes_desaparecimento{
+  font-size: 3rem;
+}
+
+#Descricoes{
+  list-style-type: none;
+  padding-top: 2%;
+  font-size: 22px;
+}
+
+#Descricoes li{
+  margin-top:4%;
+}
+
+ .Titulo_Detalhes_desaparecimento{
+   margin-top: 4%;
+   margin-left: 4%;
+   margin-bottom: 2%;
+ }
+
+ #Detalhes_desaparecimento{
+   background-color: var(--primary);
+   margin: 0% 6% 0% 6%;
+
+ }
+
+ #Detalhes_desaparecimento p{
+  vertical-align: middle;
+  display: table-cell;
+  margin:1%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+ }
+ li{
+  font-size: 1rem
+ }
+
+.example-card {
+  height: auto;
+  background-color: var(--primary);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 6%;
+
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+mat-card img{
+  width: 100%;
+  height: 300px;
+  margin: 0.1% 0px 0px 0px;
+}
+
+mat-card-content{
+}
+
+  .Fundo_verde h2{
+    padding-left: 2%;
   }
-
-  #voluntario{
-    margin-top: 1%;
-    font-size: 20px;
-    padding: 1%;
-    background-color: var(--primary);
-    border:none;
-    color: var(--white);
-    margin-left: 90%;
-    position:absolute;
-  }
-
-  .Fundo_verde{
-    padding-top: 2%;
-    color: var(--white);
-    background-color: var(--secondary);
-    align-items: center;
-    width:100%;
-    height: auto;
-    padding-bottom: 1%;
-  }
-
-  .Fundo_verde h1{
-    font-size: 60px;
-
-  }
-
-  #mais{
-    border:none;
-    color: var(--white);
-    background-color:  var(--secondary);
-    font-weight: bold;
-  }
-
-  #nome_desaparecido{
-    text-align: center;
-  }
-
-  #foto_principal{
-    width: 200px;
-    height: 200px;
-    margin: 0px 5% 0px 5%;
-    shape-outside: circle();
-    clip-path: circle();
-    background-color: var(--secondary);
-  }
-
-  .Fundo_verde p{
-    text-align: start;
-  }
-
-  .Titulo_Detalhes_desaparecimento{
-    font-size: 3rem;
-  }
-
-  #Descricoes{
-    list-style-type: none;
-    padding-top: 2%;
-    font-size: 22px;
-  }
-
-  #Descricoes li{
-    margin-top:4%;
-  }
-
-   .Titulo_Detalhes_desaparecimento{
-     margin-top: 4%;
-     margin-left: 4%;
-     margin-bottom: 2%;
-   }
-
-   #Detalhes_desaparecimento{
-     background-color: var(--primary);
-     margin: 0% 6% 0% 6%;
-
-   }
-
-   #Detalhes_desaparecimento p{
-    vertical-align: middle;
-    display: table-cell;
-    margin:1%;
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-   }
-   li{
-    font-size: 1rem
-   }
-
-  .example-card {
-    height: auto;
-    background-color: var(--primary);
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 6%;
-
-  }
-
-  .example-header-image {
-    background-size: cover;
-  }
-
-  mat-card img{
-    width: 100%;
-    height: 300px;
-    margin: 0.1% 0px 0px 0px;
-  }
-
-  mat-card-content{
-  }
-
-    .Fundo_verde h2{
-      padding-left: 2%;
-    }
-
-
 
       /*Responsividade*/
   @media screen and (min-width: 1px) and (max-width: 376px) {
-   .quebra_linha{
-    position: relative;
-    display: inline-block;
-   }
+    section{
+      width: 376px;
+    }
 
    #Descricoes{
     display: inline-block; 
