@@ -40,39 +40,17 @@
     width: 20%;
   }
 
-@media screen and (max-width: 375px) {
-  .footer{
-    background-color: var(--dark);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 0;
-    position: static;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    font-size: 1.5rem;
+
+/*Responsividade*/
+@media screen and (min-width: 1px) and (max-width: 376px) {
+  footer{
+    width: 376px ;
   }
 
-  #redes_sociais span .icone{
-    margin: 0;
-    padding: 0;
-    width: 50%;
   }
-
-  footer span .icone{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  footer span {
-        margin: 0;
-        padding:0;
-        width: 30%;
+  
+  @media screen and (min-width: 1024px) {
+   
+  
+  
     }
-
-  #redes_sociais{
-    width: 20%;
-  }
-}
