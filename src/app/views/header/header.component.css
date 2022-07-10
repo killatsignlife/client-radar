@@ -101,15 +101,13 @@ mat-toolbar-row{
   display: block;
   }
 
-  .cadastro{
+  #cadastro{
     width: 100%;
     height: auto;
     font-size: 40%;
     text-align: center;
     border-radius: 0px;
-    background-color: var(--primary);
     border:none;
-    color: var(--white);
   }
 
   .example-spacer{
@@ -149,15 +147,13 @@ mat-toolbar-row{
       height: 100%;
     }
   
-    .cadastro{
+    #cadastro{
       width: 100%;
       height: auto;
       font-size: 50%;
       text-align: center;
       border-radius: 0px;
-      background-color: var(--primary);
       border:none;
-      color: var(--white);
     }
 
   }
