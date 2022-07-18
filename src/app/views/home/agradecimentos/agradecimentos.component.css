@@ -28,7 +28,7 @@
   .Fundo_verde{
     padding-top: 2%;
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     align-items: center;
     width: 100%;
     height: 900px;
