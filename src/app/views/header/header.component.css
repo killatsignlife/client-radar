@@ -76,6 +76,9 @@ mat-toolbar-row{
     color: var(--white);
 }
 
+span a{
+  color: var(--secondary);
+}
 /*Responsividade*/
   @media screen and (min-width: 1px) and (max-width: 376px) {
     header{
