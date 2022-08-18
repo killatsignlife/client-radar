@@ -41,16 +41,26 @@
   }
 
 
-/*Responsividade*/
-@media screen and (min-width: 1px) and (max-width: 376px) {
-  footer{
-    width: 376px ;
-  }
+/*Responsividade*/  
+  @media screen and (max-width: 900px) {
 
-  }
-  
-  @media screen and (min-width: 1024px) {
-   
-  
+    footer{
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer span{
+      width: 100%;
+    }
+
+    .logo{
+     width: 100%;
+    }
+
+    div:first-of-type{
+      align-items: center;
+      justify-content: center;
+      
+    }
   
     }
