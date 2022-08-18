@@ -62,7 +62,7 @@
   }
  
      mat-form-field + mat-form-field{
-  margin-left: 2%;
+       margin-left: 2%;
 
   }
 
@@ -72,23 +72,41 @@
 }
 
  /*Responsividade*/
- @media screen and (min-width: 376px) and (max-width:574px){
-  mat-form-field + mat-form-field{
-    margin-left: 0%;
-    }     
-}
 
-@media screen and (min-width: 880px) {
-  mat-form-field + mat-form-field + mat-form-field{
-    flex-basis: 40%;
-    }  
-}
-
-@media screen and (min-width: 900px) {
-  mat-form-field + mat-form-field + mat-form-field{
-    flex-basis: 0%;
-    margin-left: 2%;
+@media screen and (max-width: 900px) {
+  form div{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
   }
- 
-}
+  
+  h1{
+    text-align: center;
+    justify-content: center;
+    line-height: 3rem;
+  }
 
+  #formulario{
+    display: flex ;
+    margin: 0;
+    width: 90%;
+  }
+
+  mat-form-field + mat-form-field{
+    margin-left: 0;
+  }
+
+  mat-form-field{
+    width: 100%;
+  }
+
+  form div:last-of-type{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+}
+ 
