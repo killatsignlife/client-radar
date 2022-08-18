@@ -68,7 +68,12 @@
       border-bottom-style: solid;
       border-bottom-color: var(--white);
     }
-
+    .mat-card>:first-child{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .example-header-image {
       background-size: cover;
     }
@@ -85,8 +90,8 @@
     /*Responsividade*/
  @media screen and (min-width: 376px) and (max-width: 599px){
   .example-card img{
-    height: 120px;
-    width: 140px;
+    height: 300px;;
+    width: 100%;
     margin-top: 1px;
     margin-bottom: 5px;
       }
