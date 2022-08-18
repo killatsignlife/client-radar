@@ -140,6 +140,12 @@
       font-size: 1.5em;
     }
   }
+
+  @media screen and (max-width: 599px) {
+  .Fundo_bg h1:first-of-type{
+    line-height: 4rem;
+  }
+  }
   
 @media screen and (min-width: 600px) {
   .Fundo_bg{
