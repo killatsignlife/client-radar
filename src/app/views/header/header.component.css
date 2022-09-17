@@ -6,12 +6,12 @@
 }
 
 #topo {
-    background-color:var(--dark);
+    background-color:var(gray);
 
 }
 
 #menu {
-  background-color: var(--dark);
+  background-color: var(gray);
 }
 
 mat-toolbar-row{
@@ -23,6 +23,7 @@ mat-toolbar-row{
     width: 80%;
     height: auto;
     display: block;
+    margin-top: -5%;
       }
 
   .example-spacer{
@@ -34,14 +35,14 @@ mat-toolbar-row{
     height: auto;
     font-size: 70%;
     text-align: center;
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: var(--primary);
     border:none;
     color: var(--white);
   }
 
   mat-toolbar{
-      background-color: var(--dark);
+      background-color: var(--gray);
   }
 
   #Acessibilidade_header{
@@ -109,8 +110,7 @@ mat-toolbar-row{
     height: auto;
     font-size: 40%;
     text-align: center;
-    border-radius: 0px;
-    border:none;
+    border-radius: 10px;
   }
 
   .example-spacer{
@@ -155,8 +155,7 @@ mat-toolbar-row{
       height: auto;
       font-size: 50%;
       text-align: center;
-      border-radius: 0px;
-      border:none;
+      border-radius: 10px;
     }
 
   }
