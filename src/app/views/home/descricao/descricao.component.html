@@ -3,8 +3,10 @@
         <div class="Fundo_verde" >
           <h1 style="font-size: 3rem" id="nome_desaparecido">{{desaparecido.nomeCompletoDesaparecido}}</h1>
 
-          <div class="quebra_linha" fxLayout="row" fxLayoutAlign="start start" >
+          <div class="quebra_linha" fxLayout="column" fxLayoutAlign="start start" >
+            <div fxLayout="row" fxLayoutAlign="center center" >
               <img id="foto_principal" src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}" >
+          </div>
               <span class="caption"><ul id="Descricoes">
                 <li><strong>Data de Nascimento: </strong>{{desaparecido.dataDeNascimento}}</li>
                 <!--<li>Endereço onde morava: {{desaparecido.logradouro}} , {{desaparecido.bairro}}, {{desaparecido.cep}}, {{desaparecido.cidade}} - SP</li>-->

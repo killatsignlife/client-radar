@@ -127,9 +127,9 @@ mat-card-content{
   }
 
       /*Responsividade*/
-  @media screen and (min-width: 1px) and (max-width: 376px) {
+  @media screen and (max-width: 900px) {
     section{
-      width: 376px;
+      width: 100%;
     }
 
    #Descricoes{
@@ -137,10 +137,11 @@ mat-card-content{
     position: relative;
    }
    
-   /*além do 376px*/
-  .Titulo_Detalhes_desaparecimento{
+
+   .Titulo_Detalhes_desaparecimento{
     font-size: 1.5rem;
   }
+
   #voluntario{
     margin-left: -170px;
     margin-top:-400px;
@@ -150,26 +151,16 @@ mat-card-content{
   div.quebra_linha{
     vertical-align: top;
     display: inline-block !important;
-    text-align: center;
+    text-align: start;
+    justify-items: center;
   }
 
   .caption{
     display: block;
 
   }
-  #foto_principal{
+
   }
-  }
-  
-@media screen and (min-width: 600px) {
-  
-
-}
-
-@media screen and (min-width: 480px) {
-
-}
-
 @media screen and (min-width: 600px) and (max-width: 768px){
 
 }
