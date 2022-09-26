@@ -38,6 +38,25 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
 
   }
+  
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if(event.key == '+'){
+      // Your row selection code
+      console.log(event.key);
+      this.setFontSize("a+")
+    }
+    if(event.key == '-'){
+      // Your row selection code
+      console.log(event.key);
+      this.setFontSize("a-")
+    }
+    if(event.key == 'c'){
+      // Your row selection code
+      console.log(event.key);
+      this.toogle();
+    }
+  }
 
   public toogle() {
     const theme = document.body.classList.toggle('contraste');
