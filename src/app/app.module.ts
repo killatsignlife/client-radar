@@ -28,6 +28,10 @@ import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
 import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
 import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
+import { BlogComponent } from './views/blog/blog.component';
+import { CategoryComponent } from './views/category/category.component';
+import { AllBlogsComponent } from './views/all-blogs/all-blogs.component';
+import { LoginComponent } from './views/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +44,11 @@ import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.compone
     DoacaoComponent,
     ReportarComponent,
     AgradecimentosComponent,
-    AcessibilidadeComponent
+    AcessibilidadeComponent,
+    BlogComponent,
+    CategoryComponent,
+    AllBlogsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+.card{
+  height: 70vh;
+  background-color: var(--primary);
+}
+
+
+
+.display-3 {
+  margin-top: 5px;
+  color: var(--white);
+}
+
+.form-label {
+  color: var(--white);
+}
+
+.col-6 {
+  display: flex;
+  justify-content: center;
+}
+
+
+#login {
+  margin-top: 15px;
+  color: var(--white);
+  font-size: 30px;
+}

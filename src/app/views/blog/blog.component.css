@@ -1,0 +1,87 @@
+.img-section {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.img-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.author .btn-sm {
+  background-color: #f0f0f0;
+}
+.blogBody {
+  text-align: justify;
+  word-wrap: break-word;
+}
+.react-section .btn {
+  margin-right: 7px;
+  font-size: 14px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.react-section .reactBtn {
+  background-color: #ebebeb;
+}
+.react-section .reactBtn:hover {
+  background-color: #dcdcdc;
+}
+.react-section i {
+  margin-right: 5px;
+}
+.react-section .reacted {
+  background-color: #757575 !important;
+  color: white;
+}
+.react-section .reacted .badge {
+  background-color: #d5d5d5 !important;
+  color: black;
+}
+.react-section .badge {
+  margin-left: 5px;
+}
+.react-section .bg-secondary {
+  background-color: var(--primary) !important;
+}
+.comments-section {
+  margin-top: 10px;
+}
+.comments-section .img {
+  width: 100%;
+}
+.comments-section .img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 5px;
+  padding: 0px !important;
+}
+.comments-section h3 {
+  font-size: 17px;
+  color: #535353;
+}
+.comments-section small {
+  font-size: 12px;
+  font-style: italic;
+  color: #747474;
+}
+.comments-section p {
+  font-size: 14px;
+  text-align: justify;
+}
+.noBlog {
+  padding-top: 70px;
+  padding-bottom: 330px;
+}
+
+@media only screen and (max-width: 400px) {
+  .img-section {
+    height: 200px;
+ }
+  .author {
+    display: none;
+ }
+}

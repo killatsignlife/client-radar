@@ -8,6 +8,9 @@ import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
 import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
 import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
+import { AllBlogsComponent } from './views/all-blogs/all-blogs.component';
+import { BlogComponent } from './views/blog/blog.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -18,7 +21,10 @@ const routes: Routes = [
   { path: 'agradecimento', component: AgradecimentosComponent },
   { path: 'acessibilidade', component: AcessibilidadeComponent },
   { path:'desaparecidos', component: DesaparecidosComponent},
-  { path:'descricao/:id', component: DescricaoComponent}
+  { path:'descricao/:id', component: DescricaoComponent},
+  { path:'blogs', component: AllBlogsComponent},
+  { path:'blog', component: BlogComponent},
+  { path:'login', component: LoginComponent},
 ];
 
 @NgModule({

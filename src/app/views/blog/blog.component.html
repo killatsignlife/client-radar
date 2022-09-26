@@ -1,0 +1,123 @@
+<div class="img-section">
+  <img src="https://s4.static.brasilescola.uol.com.br/be/2021/05/cidade-sp.jpg" alt="Cidade de São Paulo vista de cima">
+</div>
+
+<div class="container">
+  <div class="row py-5">
+
+      <div class="col-md-2 col-12 author mb-4">
+          <p class="section-title"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>Autor:</p>
+          <div class="card">
+              <div class="card-body text-center">
+                  <b>
+                      Joselino
+                  </b>
+              </div>
+            </div>
+      </div>
+
+      <div class="col-md-7 col-12">
+          <!-- blog -->
+          <h2>
+              Sistema para divulgar pessoas desaparecidas e cadastrar voluntarios
+          </h2>
+          <p>
+              <i class="me-2">
+                  <i class="fa fa-bookmark me-1" aria-hidden="true"></i> Anuncio
+              </i>
+              <i>
+                  <i class="fa fa-calendar mx-1" aria-hidden="true"></i> 25/09/2022
+              </i>
+          </p>
+          <p class="blogBody">
+              Primeiro post do RADAR! Este blog trará anuncios sobre algum recurso novo da plataforma,
+              anuncio de eventos, historias de crianças ou adultos que foram encontrados e muito mais!
+          </p>
+
+
+          <!-- reacts -->
+          <hr class="mt-4">
+          <div class="react-section">
+              <a class="btn reactBtn">
+                  <i class="fa fa-thumbs-up-o" aria-hidden="true"></i>
+                   Like
+                   <span class="badge bg-secondary">
+                       45
+                   </span>
+              </a>
+              <a class="btn reactBtn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  Love
+                  <span class="badge bg-secondary">
+                      95
+                  </span>
+              </a>
+              <a class="btn reactBtn">
+                  <i class="fa fa-smile-o" aria-hidden="true"></i>
+                  Haha
+                  <span class="badge bg-secondary">
+                      80
+                  </span>
+              </a>
+              <a class="btn reactBtn">
+                  <i class="fa fa-frown-o" aria-hidden="true"></i>
+                  Sad
+                  <span class="badge bg-secondary">
+                      10
+                  </span>
+              </a>
+              <a class="btn reactBtn">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  Informative
+                  <span class="badge bg-secondary">
+                      10
+                  </span>
+              </a>
+          </div>
+          <hr>
+
+          <!-- write comment -->
+          <form class="row g-3 mb-3" #commentForm="ngForm" >
+              <div class="col-md-10 col-8">
+                  <input type="text" required  name="comment" class="form-control" placeholder="Write comment...">
+                  <!--<small class="text-danger" >
+                      <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Comentario não pode estar vazio!
+                  </small>
+                  <small class="text-danger">
+                      <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Erro ao postar o comentario
+                  </small>
+                  <small class="text-success">
+                      <i class="fa fa-check me-1" aria-hidden="true"></i> Comentario postado!
+                  </small>-->
+              </div>
+          </form>
+
+          <!-- blogs comments -->
+          <div class="row comments-section mb-3">
+              <div class="col-md-2 col-3">
+                  <div class="img">
+                      <img src="https://media.npr.org/assets/img/2021/09/28/gettyimages-1212850264-3a49e3799da51192512a00ed0161f7065964bfe1-s1100-c50.jpg" alt="Foto do usuario que comentou">
+                  </div>
+              </div>
+
+              <div class="col-md-10 col-9">
+                  <h3> <i class="fa fa-comment me-1" aria-hidden="true"></i>
+                  <b>
+                      Ednaldo Pereira
+                  </b>
+                  </h3>
+                  <small> 18:09 </small>
+                  <p>
+                      Muito bom!
+                  </p>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="col-md-3 col-12">
+          <app-category></app-category>
+      </div>
+
+  </div>
+</div>
