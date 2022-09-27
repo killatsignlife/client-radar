@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener  } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ETheme } from './enums/ETheme.enum';
 
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
 
   }
-  
+
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if(event.key == '+'){
