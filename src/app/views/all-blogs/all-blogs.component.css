@@ -113,7 +113,7 @@
   }
 
   .post-comment input{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 10px;
   }
@@ -169,10 +169,4 @@
   .comment-body{
     font-size: 1.125em;
 	  line-height: 1.4em;
-  }
-
-  @media screen and (max-width: 800px){
-    .post-comment input{
-      width: 100%;
-    }
   }
