@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container-blogs">
 
   <div class="leftcolumn">
     <!--Post 1-->
@@ -40,7 +40,60 @@
         Amet suscipit accusantium dolorem recusandae fugiat inventore consequuntur. Aliquam odio numquam deleniti ut corrupti vero, dignissimos magnam ducimus labore natus consectetur, voluptates, sequi nemo voluptas. Ex vitae distinctio provident architecto?
         Tenetur doloribus distinctio minus praesentium corporis. Nobis placeat excepturi ut cumque reprehenderit esse sit quae magni autem voluptatum mollitia doloribus, soluta totam omnis sint officiis sunt hic. Voluptate, officiis eum.</p>        
       </div>
-    </div>
+
+      <hr class="line">
+
+      <!-- write comment -->
+      <form class="post-comment" #commentForm="ngForm" >
+        <div>
+          <input type="text" required  name="comment" class="form-control" placeholder="Write comment...">
+          <!--<small class="text-danger" >
+              <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Comentario não pode estar vazio!
+          </small>
+          <small class="text-danger">
+              <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Erro ao postar o comentario
+          </small>
+          <small class="text-success">
+              <i class="fa fa-check me-1" aria-hidden="true"></i> Comentario postado!
+          </small>-->
+        </div>
+      </form>
+
+      <!-- blogs comments -->
+      <div class="comment-section">
+
+        <div class="comment-item">
+          <div class="img">
+            <img src="https://media.npr.org/assets/img/2021/09/28/gettyimages-1212850264-3a49e3799da51192512a00ed0161f7065964bfe1-s1100-c50.jpg" alt="Foto do usuario que comentou">
+          </div>
+          <div class="comment-data">
+            <div class="comment-author">
+              <h3>Ednaldo Pereira</h3>
+              <p>18:09</p>
+            </div>
+            <div class="comment-body">
+              <p>Muito Bom!</p>
+            </div>            
+          </div>
+        </div>
+
+        <div class="comment-item">
+            <div class="img">
+              <img src="https://media.npr.org/assets/img/2021/09/28/gettyimages-1212850264-3a49e3799da51192512a00ed0161f7065964bfe1-s1100-c50.jpg" alt="Foto do usuario que comentou">
+            </div>
+            <div class="comment-data">
+              <div class="comment-author">
+                <h3>Ednaldo Pereira</h3>
+                <p>18:09</p>
+              </div>
+              <div class="comment-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum totam officiis neque, deleniti sit rerum ullam. Unde provident, deserunt vero reprehenderit sint totam vel dicta quia laudantium, numquam, similique aut?.</p>
+              </div>              
+            </div>
+        </div>
+
+      </div>
+    </div> <!--End post 1-->
 
     <!--Post 2-->
     <div class="card">
@@ -76,9 +129,48 @@
         Amet suscipit accusantium dolorem recusandae fugiat inventore consequuntur. Aliquam odio numquam deleniti ut corrupti vero, dignissimos magnam ducimus labore natus consectetur, voluptates, sequi nemo voluptas. Ex vitae distinctio provident architecto?
         Tenetur doloribus distinctio minus praesentium corporis. Nobis placeat excepturi ut cumque reprehenderit esse sit quae magni autem voluptatum mollitia doloribus, soluta totam omnis sint officiis sunt hic. Voluptate, officiis eum.</p>        
       </div>
-    </div>
 
-  </div>
+      <hr class="line">
+
+      <!-- write comment -->
+      <form class="post-comment" #commentForm="ngForm" >
+        <div>
+          <input type="text" required  name="comment" class="form-control" placeholder="Write comment...">
+          <!--<small class="text-danger" >
+              <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Comentario não pode estar vazio!
+          </small>
+          <small class="text-danger">
+              <i class="fa fa-exclamation-triangle me-1" aria-hidden="true"></i> Erro ao postar o comentario
+          </small>
+          <small class="text-success">
+              <i class="fa fa-check me-1" aria-hidden="true"></i> Comentario postado!
+          </small>-->
+        </div>
+      </form>
+
+      <!-- blogs comments -->
+      <div class="comment-section">
+
+        <div class="comment-item">
+          <div class="img">
+            <img src="https://media.npr.org/assets/img/2021/09/28/gettyimages-1212850264-3a49e3799da51192512a00ed0161f7065964bfe1-s1100-c50.jpg" alt="Foto do usuario que comentou">
+          </div>
+          <div class="comment-data">
+            <div class="comment-author">
+              <h3>Ednaldo Pereira</h3>
+              <p>18:09</p>
+            </div>
+            <div class="comment-body">
+              <p>Muito Bom!</p>
+            </div>            
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!--End post 2-->
+
+  </div> <!--End Left Column-->
 
   <div class="rightcolumn">
     <app-category></app-category>

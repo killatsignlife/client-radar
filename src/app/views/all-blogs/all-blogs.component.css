@@ -9,7 +9,7 @@
     margin: 0;
   }
   
-  .container{
+  .container-blogs{
     padding: 10px;
     width: 100%;
     display: flex;
@@ -25,7 +25,7 @@
   }
 
   @media screen and (max-width: 800px){
-    .container{
+    .container-blogs{
       flex-direction: column-reverse;
     }
     .leftcolumn{
@@ -104,4 +104,75 @@
   .post-text{
     font-size: 1.125em;
 	  line-height: 1.4em;
+  }
+
+  /* Post comment */
+  .post-comment{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .post-comment input{
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  /* Comments */
+
+  .comment-section{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comment-item{
+    margin: 5px 10px;
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(92, 92, 92, .2);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .img{
+    flex-shrink: 0;
+  }
+
+  .img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 5px;
+    padding: 0px !important;
+  }
+
+  .comment-data{
+    flex: auto;
+    margin-left: 10px;
+  }
+
+  .comment-author{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comment-author p{
+    margin: 0;
+  }
+
+  .comment-body{
+    font-size: 1.125em;
+	  line-height: 1.4em;
+  }
+
+  @media screen and (max-width: 800px){
+    .post-comment input{
+      width: 100%;
+    }
   }
