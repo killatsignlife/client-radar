@@ -171,3 +171,70 @@ mat-toolbar-row{
     }
 
   }
+
+  @media screen and (max-width: 900px) {
+ 
+
+    mat-toolbar {
+      height:250px;
+      align-items: none;
+     
+    }
+
+    mat-toolbar-row{
+        font-size: 1.5rem;
+        width: 300px;
+        flex-wrap: wrap-reverse;
+        align-items: none;
+        margin-bottom: 1%; 
+        
+      }
+
+    
+
+      #cadastro{
+        width: 150px;
+        height: auto;
+        font-size: 50%;
+        text-align: center;
+        border-radius: 10px;
+      }
+  
+    }
+
+    @media screen and (max-width: 599px) {
+ 
+
+      mat-toolbar {
+        height:200px;
+        padding: 20%;
+
+      }
+  
+      mat-toolbar-row{
+          font-size: 1.5rem;
+          width: 150px;
+     
+        }
+
+        mat-toolbar-row #logo2 {
+          width: 110px;
+          flex-direction: row-reverse;
+        }
+
+        .mat-icon-button  {
+          width: 0;
+        }
+
+  
+        #cadastro{
+          width: 135px;
+          height: auto;
+          font-size: 50%;
+          text-align: center;
+          border-radius: 10px;
+        }
+
+        
+    
+      }
