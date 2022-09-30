@@ -1,0 +1,107 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+  img{
+    display: block;
+    max-width: 100%;
+  }
+
+  h2, h3{
+    margin: 0;
+  }
+  
+  .container{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+  }
+
+  .leftcolumn{
+    flex-basis: Calc(75% - 10px);
+    margin-right: 10px;
+  }
+  .rightcolumn{
+    flex-basis: calc(25% - 10px);
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: 800px){
+    .container{
+      flex-direction: column-reverse;
+    }
+    .leftcolumn{
+      margin: 0 0 10px 0;
+    }
+    .rightcolumn{
+      margin: 10px 0 0 0;
+    }
+  }
+
+  /* Post configs */
+  .card{
+    border: 1px solid rgba(92, 92, 92, .2);
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .post-title{
+    background-color: var(--primary);
+    text-align: center;
+    color: var(--white);
+    width: 100%;
+    border-radius: 9px 9px 0 0;
+    padding: 5px 0;
+  }
+
+  .post-title h2{
+    font-size: 2em;
+  }
+
+  .post-description, .post-img, .post-text, .line{
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .post-info{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    flex-wrap: wrap;
+  }
+
+  .tag{
+    display: flex;
+    gap: 5px;
+  }
+
+  .tag-item{
+    align-self: center;
+    margin: 0;
+    padding: 0 5px;
+    color: var (--primary);
+    border: 1px dashed rgba(92, 92, 92, .4);
+    border-radius: 10px;
+  }
+
+  .post-description{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+    flex-wrap: wrap;
+  }
+
+  .line{
+    height: 1px;
+    background-color: rgba(92, 92, 92, .4);
+    margin-top: 5px;
+  }
+
+  .post-img img{
+    margin: 0 auto;
+  }
+
+  .post-text{
+    font-size: 1.125em;
+	  line-height: 1.4em;
+  }
