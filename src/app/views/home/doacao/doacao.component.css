@@ -65,7 +65,7 @@
   .Fundo_verde{
     padding-top: 4%;
     color: var(--white);
-    background-color: var(--secondary);
+    background-color: var(--primary);
     align-items: center;
     width: 100%;
     height: auto;
@@ -124,9 +124,10 @@
     padding: 15px;
     margin-top: 10px;
     border-radius: 10px;
-    background-color: var(--primary);
+    background-color: var(--continuos-white);
     border:none;
-    color: var(--white);
+    color: var(--primary);
+    font-weight: bold;
     
   }
 
