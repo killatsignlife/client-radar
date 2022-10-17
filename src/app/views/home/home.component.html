@@ -7,20 +7,20 @@
   </div>
 
 <!--Doacoes-->
-<div class="Fundo_cinza" fxLayout="column" fxLayoutAlign="center center" >
+<div class="Fundo_verde" fxLayout="column" fxLayoutAlign="center center" >
   <h2>Mantenha este ideal doando!</h2>
     <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
 </div>
 
 <!--Segunda Grid-->
-<div class="Fundo_verde" >
+<div class="Fundo_branco" >
 
-  <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="start start" >
+  <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="start start" >
       <h2 style="font-size: 2rem">Desaparecidos</h2>
     </div>
 
 <!--Cards-->
-<div class="Fundo_verde" >
+<div class="Fundo_branco" >
   <div fxLayout="row wrap" fxLayoutAlign="center center" >
   <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%"   *ngFor="let desaparecido of desaparecidos | slice:0:3">
     <mat-card (click)="detailDesaparecido(desaparecido.id)" fxLayout="column" fxLayoutAlign="center center" class="example-card">
@@ -33,7 +33,7 @@
 </div>
 </div>
 
-  <div class="Fundo_verde" fxLayout="column" fxLayoutAlign="center center" >
+  <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="center center" >
     <p style="font-size: 1rem" id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
   </div>
 </div>
