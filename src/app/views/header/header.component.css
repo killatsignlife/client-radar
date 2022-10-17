@@ -1,22 +1,14 @@
 *{
-  color: var(--menu);
+  color: var(--primary);
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#topo {
-    background-color:var(gray);
-
 }
 
 mat-toolbar-row #logo2{
   display: none;
    
  }
-#menu {
-  background-color: var(gray);
-}
 
 mat-toolbar-row{
     font-size: 1.5rem;
@@ -50,10 +42,11 @@ mat-toolbar-row{
   }
 
   #Acessibilidade_header{
-  width: 15%;
-  margin-left: 220px;
-  margin-right: 340px;
-}
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+  }
 
   mat-toolbar-row span {
     margin: 2px;
@@ -82,7 +75,7 @@ mat-toolbar-row{
 }
 
 span a{
-  color: var(--secondary);
+  color: var(--primary);
 }
 /*Responsividade*/
   @media screen and (max-width: 900px) {
@@ -132,12 +125,6 @@ mat-toolbar-row{
   .example-spacer{
   position: absolute;
   }
-
-  #Acessibilidade_header{
-  width: 15%;
-  margin-left: 220px;
-  margin-right: 340px;
-}
 
   mat-toolbar-row span {
     margin: 2px;
