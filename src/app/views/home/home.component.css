@@ -97,7 +97,7 @@
 
 .example-card img{
   height: 200px;
-  width: 320px;
+  width: 100%;
   margin-top: 1px;
   margin-bottom: 5px;
 }
@@ -133,7 +133,6 @@ mat-card-content{
   @media screen and (max-width: 376px) {
     .example-card img{
       height: 120px;
-      width: 140px;
       margin-top: 1px;
       margin-bottom: 5px;
         }
@@ -193,16 +192,9 @@ mat-card-content{
 }
 }
 
-@media screen and (min-width: 480px) {
-  .example-card img{
-    width: 200px;
-  }
-}
-
 @media screen and (min-width: 600px) and (max-width: 768px){
   .example-card img{
     height: 400px;
-    width: 500px;
   }
 }
 
@@ -215,7 +207,6 @@ mat-card-content{
   
   .example-card img{
     height: 200px;
-    width: 250px;
     margin-top: 1px;
     margin-bottom: 5px;
   }
@@ -227,13 +218,10 @@ mat-card-content{
 
   @media screen and (min-width: 1280px) {
     .Fundo_branco{
-      background-color: var(--secondary);
       height: 10%;
     }
     .example-card img{
       height: 200px;
-      width: 310px;
-      
     }
 
     .Fundo_bg h3{
@@ -245,7 +233,6 @@ mat-card-content{
     @media screen and (min-width: 1440px) {
       .example-card img{
         height: 200px;
-        width: 350px;
      
       }
     
