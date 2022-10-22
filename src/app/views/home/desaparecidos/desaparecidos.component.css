@@ -26,19 +26,20 @@
     padding-bottom: 4%;
   }
 
-  .Fundo_verde{
+  .Fundo_branco{
     padding-top: 2%;
-    color: var(--white);
-    background-color: var(--secondary);
+    color: var(--dark);
+    background-color: var(--white);
     align-items: center;
     width: 100%;
     height: auto;
     padding-bottom: 1%;
   }
 
-  .Fundo_verde h1{
+  .Fundo_branco h1{
     font-size: 30px;
-
+    padding-top: 2%;
+    color:var(--dark)
   }
 
   #mais{
@@ -58,8 +59,8 @@
     }
 
     .example-card img{
-      height: 200px;
-      width: 320px;
+      height: 20rem;
+      width: 100%;
       margin-top: 1px;
       margin-bottom: 5px;
     }
@@ -74,6 +75,11 @@
       align-items: center;
       justify-content: center;
     }
+
+    .mat-card{
+      border-radius: 5%;
+    }
+
     .example-header-image {
       background-size: cover;
     }
@@ -83,7 +89,7 @@
       border:none;
       color: var(--white);
     }
-    .Fundo_verde h2{
+    .Fundo_branco h2{
       padding-left: 2%;
     }
 
@@ -100,7 +106,6 @@
 @media screen and (min-width: 960px) and (max-width: 1240px){
   .example-card img{
     height: 120px;
-    width: calc(100px + 140px);
     margin-top: 1px;
     margin-bottom: 5px;
       }
