@@ -83,9 +83,10 @@
  }
 
  #Detalhes_desaparecimento{
-   background-color: var(--primary);
+   background-color: var(--white);
    margin: 0% 6% 0% 6%;
-
+  color: var(--dark);
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.15);
  }
 
  #Detalhes_desaparecimento p{
@@ -95,7 +96,9 @@
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  color: var(--dark);
  }
+
  li{
   font-size: 1rem
  }
