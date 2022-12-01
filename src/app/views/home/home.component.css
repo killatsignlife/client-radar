@@ -163,7 +163,7 @@ mat-card-content{
     line-height: 4rem;
   }
   }
-  
+
 @media screen and (min-width: 600px) {
   .Fundo_bg{
   text-align: center;
@@ -208,7 +208,7 @@ mat-card-content{
     margin-right: 3%;
     width: 94%;
   }
-  
+
   .example-card img{
     height: 200px;
     margin-top: 1px;
@@ -231,14 +231,14 @@ mat-card-content{
     .Fundo_bg h3{
       font-size: calc(18px + 30%);
     }
-  
+
     }
 
     @media screen and (min-width: 1440px) {
       .example-card img{
         height: 200px;
-     
+
       }
-    
+
       }
-  
+

@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@stripe/stripe-js": "^1.31.0",
+    "angular-cli-ghpages": "^1.0.5",
     "angular-dark-mode": "^3.0.2",
     "bootstrap": "^3.4.1",
     "dotenv": "^16.0.1",
