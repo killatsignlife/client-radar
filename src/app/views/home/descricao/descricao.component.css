@@ -19,7 +19,7 @@
   background-color: var(--primary);
   border:none;
   color: var(--white);
-  margin-left: 90%;
+  margin-left: 90% !important;
   position:absolute;
 }
 
@@ -152,8 +152,7 @@ mat-card-content{
   }
 
   div.quebra_linha{
-    vertical-align: top;
-    display: inline-block !important;
+    vertical-align: top; 
     text-align: start;
     justify-items: center;
   }
