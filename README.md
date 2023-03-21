@@ -21,4 +21,4 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 ![image](https://user-images.githubusercontent.com/91156801/203405449-a12b1e0d-7b7f-42bc-9e7c-40728aada77e.png)
 
 ## Diagrama de classe de dominio
-![image](https://user-image.githubusercontent.com/91156801/203404882-cf9498e3-7d94-4c2b-97d5-2246395dcca8.png)
+![Capturar](https://user-images.githubusercontent.com/91156801/226623318-abef3e33-fe6a-4045-b58c-f28771798e05.PNG)
