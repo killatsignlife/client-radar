@@ -1,119 +1,129 @@
-*{
-    color:var(--continuos-white);
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  form{    
-    margin-top: 2%;
-    
-  }
+* {
+  color: var(--continuos-white);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-   #Cadastrar{
-    background-color: var(--primary);
-    border:none;
-    color: var(--white);
-    margin-top: 2%;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-  }
+.container-forms {
+  width: 600px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--primary);
+}
 
-  .Fundo_verde{
-    padding-top: 4%;
-    color: var(--white);
-    background-color: var(--secondary);
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4%;
-  }
+.container-forms h1{
+  text-align: center;
+}
 
-  .Fundo_verde h1{
-    font-size: 25px;
-    margin-bottom: 5%;
-  }
+form {
+  margin-top: 2%;
+}
+
+#Cadastrar {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+  margin-top: 2%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.Fundo_verde {
+  padding-top: 4%;
+  color: var(--white);
+  background-color: var(--secondary);
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4%;
+}
+
+.Fundo_verde h1 {
+  font-size: 25px;
+  margin-bottom: 5%;
+}
 
 
-  .Fundo_verde h2{
-    font-weight:bold;
-  }
+.Fundo_verde h2 {
+  font-weight: bold;
+}
 
-  .Fundo_verde input{
-    color: var(--white);
-    font-size: 150%;
-    margin-right: 2%;
-    border-color: var(--secondary);
-  }
-  
-  .Fundo_verde input[type=checkbox]{
-    margin-right: 0.5%;
-    padding: 0;
-    height: 12px;
-  }
+.Fundo_verde input {
+  color: var(--white);
+  font-size: 150%;
+  margin-right: 2%;
+  border-color: var(--secondary);
+}
 
-  .Fundo_verde label{
-    font-size: 16px;
-    margin-right: 2%;
-    font-family:Arial, Helvetica, sans-serif;
-    
-  }
-    
-    mat-form-field{
-      display: inline-block;
-      position: relative;
-      width: 30%;
-      text-align: left;
-    }
+.Fundo_verde input[type=checkbox] {
+  margin-right: 0.5%;
+  padding: 0;
+  height: 12px;
+}
 
-     mat-form-field + mat-form-field{
-       margin-left: 2%;
+.Fundo_verde label {
+  font-size: 16px;
+  margin-right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
 
-  }
+}
+
+mat-form-field {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  text-align: left;
+}
+
+mat-form-field+mat-form-field {
+  margin-left: 2%;
+
+}
+
 
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   color: var(--continuos-white);
 }
 
- /*Responsividade*/
+/*Responsividade*/
 
 @media screen and (max-width: 900px) {
-  form div{
-    display: flex ;
-    flex-direction: column ;
+  form div {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
     text-align: center;
   }
-  
-  h1{
+
+  h1 {
     text-align: center;
     justify-content: center;
     line-height: 3rem;
   }
 
-  #formulario{
-    display: flex ;
+  #formulario {
+    display: flex;
     margin: 0;
     width: 90%;
   }
 
-  mat-form-field + mat-form-field{
+  mat-form-field+mat-form-field {
     margin-left: 0;
   }
 
-  mat-form-field{
+  mat-form-field {
     width: 100%;
   }
 
-  form div:last-of-type{
+  form div:last-of-type {
     display: grid;
     grid-template-columns: auto auto;
-    
+
   }
 }
- 
