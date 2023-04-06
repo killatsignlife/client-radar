@@ -1,23 +1,32 @@
 * {
-  color: var(--continuos-white);
+  color: #000;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container-forms {
-  width: 600px;
-  padding: 15px;
+  width: 50%;
   border-radius: 15px;
-  background-color: var(--primary);
+  background-color: var(--continuos-white);
 }
 
 .container-forms h1{
   text-align: center;
+  color: var(--continuos-white);
+  background-color:var(--primary);
+  padding: 2rem 0 2rem 0;
+  border-radius: 15px 15px 0 0;
 }
 
 form {
   margin-top: 2%;
+}
+
+.form-group{
+  padding: 0 15px 0 15px;
+  border-radius: 15px;
+
 }
 
 #Cadastrar {
@@ -29,11 +38,12 @@ form {
   display: flex;
   justify-content: center;
   align-self: center;
+  margin: 15px 0 20px 0;
 }
 
 .Fundo_verde {
   padding-top: 4%;
-  color: var(--white);
+  color: #000;
   background-color: var(--secondary);
   align-items: center;
   width: 100%;
@@ -52,7 +62,7 @@ form {
 }
 
 .Fundo_verde input {
-  color: var(--white);
+  color: #000;
   font-size: 150%;
   margin-right: 2%;
   border-color: var(--secondary);
@@ -83,10 +93,8 @@ mat-form-field+mat-form-field {
 
 }
 
-
-
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: var(--continuos-white);
+  color: #000;
 }
 
 /*Responsividade*/
