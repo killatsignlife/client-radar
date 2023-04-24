@@ -14,11 +14,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormularioComponent } from './views/home/formulario/formulario.component';
 import { HeaderComponent } from './views/header/header.component';
 import { DesaparecidosComponent } from './views/home/desaparecidos/desaparecidos.component';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { DescricaoComponent } from './views/home/descricao/descricao.component';
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
@@ -32,6 +32,7 @@ import { BlogComponent } from './views/blog/blog.component';
 import { CategoryComponent } from './views/category/category.component';
 import { AllBlogsComponent } from './views/all-blogs/all-blogs.component';
 import { LoginComponent } from './views/login/login.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,7 @@ import { LoginComponent } from './views/login/login.component';
     BlogComponent,
     CategoryComponent,
     AllBlogsComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,13 +71,10 @@ import { LoginComponent } from './views/login/login.component';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
-  ] ,
-  exports: [
-  MatToolbarModule,
-  MatIconModule,
-  MatButtonModule
-],
+    MatCheckboxModule,
+  ],
+  exports: [MatToolbarModule, MatIconModule, MatButtonModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
