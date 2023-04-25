@@ -9,4 +9,6 @@ export class Voluntario {
   bairro?: string;
   cidade?: string;
   cep?: string;
+  condicoes?: boolean;
+  legitimidade?: boolean;
 }

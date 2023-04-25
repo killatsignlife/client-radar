@@ -2,11 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Voluntario } from 'src/app/voluntario.model';
 import { Router } from '@angular/router';
+
+//---------------------------------------------------------------------------
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
+
+//----------------------------------------------------------------------------
+
 export class FormularioComponent implements OnInit {
   title = 'Cadastra-se';
   voluntario: Voluntario = new Voluntario();
