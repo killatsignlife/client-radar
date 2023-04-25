@@ -1,27 +1,48 @@
-.card{
-  height: 70vh;
-  background-color: var(--primary);
+.card {
+  height: 80vh;
+  background-color: var(--white);
 }
 
-
+.card-body {
+  background-color: var(--primary);
+  padding: 0px;
+  border-radius: 10px 0 0 0;
+  margin: 0px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
+}
 
 .display-3 {
-  margin-top: 5px;
-  color: var(--white);
+  padding-top: 10px;
+  color: var(--continuos-white);
+  border-radius: 15px;
+}
+
+.row {
+  background-color: var(--continuos-white);
+  padding: 10px;
 }
 
 .form-label {
-  color: var(--white);
+  color: #000;
 }
 
 .col-6 {
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  margin: 1em auto 0 auto;
+  text-align: center;
 }
 
+.logar {
+  background-color: var(--primary);
+  box-shadow: none;
+}
+
+.logar:hover {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
 
 #login {
-  margin-top: 15px;
   color: var(--white);
-  font-size: 30px;
+  font-size: 25px;
 }
