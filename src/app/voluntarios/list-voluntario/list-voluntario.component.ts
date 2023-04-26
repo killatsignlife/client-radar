@@ -1,19 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router'
-import { ApiService } from 'src/app/api.service';
-import { Desaparecido } from 'src/app/desaparecido.model';
-
-//---------------------------------------------------------------------------
 
 @Component({
-  selector: 'app-desaparecidos',
-  templateUrl: './desaparecidos.component.html',
-  styleUrls: ['./desaparecidos.component.css']
+  selector: 'app-list-voluntario',
+  templateUrl: './list-voluntario.component.html',
+  styleUrls: ['./list-voluntario.component.css']
 })
+export class ListVoluntarioComponent implements OnInit {
 
-//----------------------------------------------------------------------------
-export class DesaparecidosComponent implements OnInit {
   title = 'Desaparecidos';
   desaparecidos: Observable<Desaparecido[]>;
 
@@ -44,4 +37,5 @@ export class DesaparecidosComponent implements OnInit {
   deletarDesaparecido(id: number) {
     this.router.navigate(['desaparecido/deletar', id]);
   }
+
 }

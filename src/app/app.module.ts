@@ -33,6 +33,13 @@ import { CategoryComponent } from './views/category/category.component';
 import { AllBlogsComponent } from './views/all-blogs/all-blogs.component';
 import { LoginComponent } from './views/login/login.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
+import { UpdateDesaparecidoComponent } from './desaparecidos/update-desaparecido/update-desaparecido.component';
+import { DeleteDesaparecidoComponent } from './desaparecidos/delete-desaparecido/delete-desaparecido.component';
+import { SucessoComponent } from './components/sucesso/sucesso.component';
+import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
+import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
+import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +57,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CategoryComponent,
     AllBlogsComponent,
     LoginComponent,
+    AddDesaparecidoComponent,
+    UpdateDesaparecidoComponent,
+    DeleteDesaparecidoComponent,
+    SucessoComponent,
+    UpdateVoluntarioComponent,
+    DeleteVoluntarioComponent,
+    ListVoluntarioComponent,
   ],
   imports: [
     BrowserModule,

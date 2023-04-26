@@ -11,6 +11,12 @@ import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.compone
 import { AllBlogsComponent } from './views/all-blogs/all-blogs.component';
 import { BlogComponent } from './views/blog/blog.component';
 import { LoginComponent } from './views/login/login.component';
+import { DeleteDesaparecidoComponent } from './desaparecidos/delete-desaparecido/delete-desaparecido.component';
+import { UpdateDesaparecidoComponent } from './desaparecidos/update-desaparecido/update-desaparecido.component';
+import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
+import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
+import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
+import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -25,6 +31,12 @@ const routes: Routes = [
   { path:'blogs', component: AllBlogsComponent},
   { path:'blog', component: BlogComponent},
   { path:'login', component: LoginComponent},
+  { path: 'desaparecido/deletar/:id', component: DeleteDesaparecidoComponent},
+  { path: 'desaparecido/atualizar/:id', component: UpdateDesaparecidoComponent},
+  { path: 'desaparecido/adicionar', component: AddDesaparecidoComponent},
+  { path: 'voluntarios', component: ListVoluntarioComponent},
+  { path: 'voluntarios/deletar/:id', component: DeleteVoluntarioComponent},
+  { path: 'voluntarios/atualizar/:id', component: UpdateVoluntarioComponent}
 ];
 
 @NgModule({

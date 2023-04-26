@@ -97,6 +97,10 @@
       padding-left: 2%;
     }
 
+button {
+   color: green;
+}
+
     /*Responsividade*/
  @media screen and (min-width: 376px) and (max-width: 599px){
   .example-card img{

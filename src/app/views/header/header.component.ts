@@ -41,17 +41,17 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    if(event.key == '+'){
+    if(event.altKey && event.key == '+'){
       // Your row selection code
       console.log(event.key);
       this.setFontSize("a+")
     }
-    if(event.key == '-'){
+    if(event.altKey && event.key == '-'){
       // Your row selection code
       console.log(event.key);
       this.setFontSize("a-")
     }
-    if(event.key == 'c'){
+    if(event.altKey && event.key == 'c'){
       // Your row selection code
       console.log(event.key);
       this.toogle();

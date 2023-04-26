@@ -1,0 +1,252 @@
+<section>
+  <!--Segunda Grid-->
+  <div
+    [hidden]="submitted"
+    fxFlex
+    fxLayoutGap="0px"
+    class="Fundo_verde"
+    fxLayout="column"
+    fxLayoutAlign=" center"
+  >
+    <div class="container-forms">
+      <h1 style="font-size: 2rem">Se torne um voluntário</h1>
+      <form
+        (ngSubmit)="onSubmit()"
+        id="formulario"
+        fxLayout="column"
+        fxLayoutAlign="center"
+      >
+        <div
+          class="form-group"
+          fxLayout="row wrap center"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="name" class="control-label"
+              >Nome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.name"
+              name="name"
+              id="nome"
+              placeholder="Nome"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="lastname"
+              class="control-label"
+              >Sobrenome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.lastname"
+              name="lastname"
+              id="Sobrenome"
+              placeholder="Sobrenome"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="dataNascimento"
+              class="control-label"
+              >Data de Nascimento</mat-label
+            >
+            <input
+              matInput
+              type="date"
+              [(ngModel)]="voluntario.dataNascimento"
+              name="dataNascimento"
+              id="Data"
+              placeholder="Data de Nascimento"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cpf" class="control-label"
+              >CPF</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.cpf"
+              name="cpf"
+              id="CPF"
+              placeholder="CPF"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="email" class="control-label"
+              >Email</mat-label
+            >
+            <input
+              matInput
+              type="email"
+              [(ngModel)]="voluntario.email"
+              name="email"
+              id="Email"
+              placeholder="Email"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="phone" class="control-label"
+              >Telefone</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.phone"
+              name="phone"
+              id="Tel"
+              placeholder="Telefone Celular"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cep" class="control-label"
+              >CEP</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.cep"
+              name="cep"
+              id="CEP"
+              placeholder="CEP"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="cidade"
+              class="control-label"
+              >Cidade</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.cidade"
+              name="cidade"
+              id="Cidade"
+              placeholder="Cidade"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="bairro"
+              class="control-label"
+              >Bairro</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.bairro"
+              name="bairro"
+              id="Bairro"
+              placeholder="Bairro"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="logradouro"
+              class="control-label"
+              >Logradouro</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="voluntario.logradouro"
+              name="logradouro"
+              id="Logradouro"
+              placeholder="Logradouro"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div class="campo-checkboxes">
+          <div
+            class="form-group"
+            fxLayout="row wrap"
+            fxLayoutAlign="space-around center"
+          >
+            <mat-checkbox 
+              [(ngModel)]="voluntario.condicoes"
+              name="condicoes"
+              id="Condicoes"
+              required 
+              class="checkbox">
+               Aceito as CONDIÇÕES DO TERMO DE USO
+            </mat-checkbox>
+          </div>
+
+          <div class="form-group" fxLayout="row wrap">
+            <mat-checkbox 
+              [(ngModel)]="voluntario.legitimidade"
+              name="legitimidade"
+              id="Legitimidade"
+              required 
+              class="checkbox">
+             Declaro legitimidade nas informações
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          style="font-size: 1rem"
+          id="Cadastrar"
+          mat-raised-button
+        >
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+<div [hidden]="!submitted">
+  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
+</div>

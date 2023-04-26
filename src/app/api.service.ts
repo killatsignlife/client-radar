@@ -16,23 +16,54 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getDesaparecidos() : Observable<any> {
-    return this.http.get(`${this.desaparecidoUrl}`);
+  // Desaparecidos  
+  createDesaparecido(desaparecido: Object): Observable<Object> {
+    return this.http.post(`${this.desaparecidoUrl}`, desaparecido);
   }
 
-  getDesaparecidosHome() {
-    return this.http.get<Desaparecido[]>(`${this.desaparecidoUrl}`);
+  getDesaparecidos() : Observable<any> {
+    return this.http.get(`${this.desaparecidoUrl}`);
   }
 
   getDesaparecido(id: number) : Observable<any> {
     return this.http.get(`${this.desaparecidoUrl}/${id}`);
   }
 
+  updateDesaparecido(id: number, desaparecido: Object) : Observable<any> {
+    return this.http.put(`${this.desaparecidoUrl}/${id}`, desaparecido);
+  }
 
+  deleteDesaparecido(id: number) {
+    return this.http.delete(`${this.desaparecidoUrl}/${id}`);
+  }
+
+  getDesaparecidosHome() {
+    return this.http.get<Desaparecido[]>(`${this.desaparecidoUrl}`);
+  }
+
+  
+  // Voluntarios
   createVoluntario(voluntario: Object) : Observable<Object> {
     return this.http.post(`${this.voluntarioUrl}`, voluntario);
   }
 
+  getVoluntarios(): Observable<any> {
+    return this.http.get(`${this.voluntarioUrl}`);
+  }
+
+  getVoluntarioById(id: number) : Observable<any> {
+    return this.http.get(`${this.desaparecidoUrl}/${id}`);
+  }
+
+  updateVoluntario(id: number, voluntario: Object) : Observable<any> {
+    return this.http.put(`${this.voluntarioUrl}/${id}`, voluntario);
+  }
+
+  deleteVoluntario(id: number) {
+    return this.http.delete(`${this.voluntarioUrl}/${id}`);
+  }
+
+  // Mensagem
   createMensagem(id: number, mensagem: Object): Observable<Object> {
     return this.http.post(`${this.desaparecidoUrl}/${id}/mensagem`, mensagem);
   }
