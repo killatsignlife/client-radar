@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { Desaparecido } from 'src/app/desaparecido.model';
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDesaparecidoComponent implements OnInit {
 
-  constructor() { }
+  title = 'Cadastrar';
+  desaparecido: Desaparecido = new Desaparecido();
+  submitted = false;
 
-  ngOnInit(): void {
+  constructor(private service: ApiService, private router: Router) { }
+
+  ngOnInit() {
+  }
+
+  newDesaparecido(): void {
+    this.submitted = false;
+    this.desaparecido = new Desaparecido();
+  }
+
+  save() {
+    this.service.createDesaparecido(this.desaparecido).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+    this.desaparecido = new Desaparecido();
+    this.gotoAgradecimentos();
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this.save();
+  }
+
+  gotoAgradecimentos() {
+    this.router.navigate(['/sucesso'])
   }
 
 }

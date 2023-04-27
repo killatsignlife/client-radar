@@ -1,7 +1,6 @@
 <section>
   <!--Segunda Grid-->
   <div
-    [hidden]="submitted"
     fxFlex
     fxLayoutGap="0px"
     class="Fundo_verde"
@@ -9,9 +8,9 @@
     fxLayoutAlign=" center"
   >
     <div class="container-forms">
-      <h1 style="font-size: 2rem">Se torne um voluntário</h1>
+      <h1 style="font-size: 2rem">Exclua um registro</h1>
       <form
-        (ngSubmit)="onSubmit()"
+    
         id="formulario"
         fxLayout="column"
         fxLayoutAlign="center"
@@ -206,47 +205,25 @@
             />
           </mat-form-field>
         </div>
-
-        <div class="campo-checkboxes">
-          <div
-            class="form-group"
-            fxLayout="row wrap"
-            fxLayoutAlign="space-around center"
-          >
-            <mat-checkbox 
-              [(ngModel)]="voluntario.condicoes"
-              name="condicoes"
-              id="Condicoes"
-              required 
-              class="checkbox">
-               Aceito as CONDIÇÕES DO TERMO DE USO
-            </mat-checkbox>
-          </div>
-
-          <div class="form-group" fxLayout="row wrap">
-            <mat-checkbox 
-              [(ngModel)]="voluntario.legitimidade"
-              name="legitimidade"
-              id="Legitimidade"
-              required 
-              class="checkbox">
-             Declaro legitimidade nas informações
-            </mat-checkbox>
-          </div>
-        </div>
-
+    
         <button
-          type="submit"
+          (click)="deleteVoluntario()"
           style="font-size: 1rem"
           id="Cadastrar"
           mat-raised-button
         >
-          Cadastrar
+          Deletar
+        </button>
+
+        <button
+          (click)="cancel()"
+          style="font-size: 1rem"
+          id="Cadastrar"
+          mat-raised-button
+        >
+          Cancelar
         </button>
       </form>
     </div>
   </div>
 </section>
-<div [hidden]="!submitted">
-  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
-</div>

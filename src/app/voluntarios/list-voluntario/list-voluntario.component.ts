@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/api.service';
+import { Voluntario } from 'src/app/voluntario.model';
 
 @Component({
   selector: 'app-list-voluntario',
@@ -7,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListVoluntarioComponent implements OnInit {
 
-  title = 'Desaparecidos';
-  desaparecidos: Observable<Desaparecido[]>;
+  title = 'Voluntarios';
+  voluntarios: Observable<Voluntario[]>;
 
   constructor(private service: ApiService, private router: Router) { }
 
@@ -17,25 +21,21 @@ export class ListVoluntarioComponent implements OnInit {
   }
 
   data() {
-    this.desaparecidos = this.service.getDesaparecidos();
-    console.log(this.desaparecidos);
+    this.voluntarios = this.service.getVoluntarios();
+    console.log(this.voluntarios);
 
   }
 
-  addDesaparecido() {
-    this.router.navigate(['desaparecido/adicionar'])
+  addVoluntario() {
+    this.router.navigate(['/formulario'])
   }
 
-  detailDesaparecido(id: number) {
-    this.router.navigate(['descricao', id])
+  atualizar(id: number) {
+    this.router.navigate(['/voluntarios/atualizar', id]);
   }
 
-  atualizarDesaparecido(id: number) {
-    this.router.navigate(['desaparecido/atualizar', id]);
-  }
-
-  deletarDesaparecido(id: number) {
-    this.router.navigate(['desaparecido/deletar', id]);
+  deletar(id: number) {
+    this.router.navigate(['/voluntarios/deletar', id]);
   }
 
 }

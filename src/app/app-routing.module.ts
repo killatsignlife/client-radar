@@ -17,6 +17,7 @@ import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-volu
 import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
 import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
 import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
+import { SucessoComponent } from './components/sucesso/sucesso.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'acessibilidade', component: AcessibilidadeComponent },
   { path:'desaparecidos', component: DesaparecidosComponent},
   { path:'descricao/:id', component: DescricaoComponent},
+  { path: 'sucesso', component: SucessoComponent},
   { path:'blogs', component: AllBlogsComponent},
   { path:'blog', component: BlogComponent},
   { path:'login', component: LoginComponent},

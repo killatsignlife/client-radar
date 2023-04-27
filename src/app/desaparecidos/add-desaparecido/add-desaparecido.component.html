@@ -9,7 +9,7 @@
     fxLayoutAlign=" center"
   >
     <div class="container-forms">
-      <h1 style="font-size: 2rem">Se torne um voluntário</h1>
+      <h1 style="font-size: 2rem">Cadastre uma criança, adolescente ou adulto desaparecido</h1>
       <form
         (ngSubmit)="onSubmit()"
         id="formulario"
@@ -28,10 +28,10 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.name"
+              [(ngModel)]="desaparecido.nomeCompletoDesaparecido"
               name="name"
               id="nome"
-              placeholder="Nome"
+              placeholder="Nome completo"
               required
             />
           </mat-form-field>
@@ -41,88 +41,15 @@
               style="font-size: 1rem"
               for="lastname"
               class="control-label"
-              >Sobrenome</mat-label
+              >Data e Hora do Desaparecimento</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.lastname"
+              [(ngModel)]="desaparecido.dataEHoraDesaparecimento"
               name="lastname"
               id="Sobrenome"
-              placeholder="Sobrenome"
-              required
-            />
-          </mat-form-field>
-        </div>
-
-        <div
-          class="form-group"
-          fxLayout="row wrap"
-          fxLayoutAlign="space-around center"
-        >
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="dataNascimento"
-              class="control-label"
-              >Data de Nascimento</mat-label
-            >
-            <input
-              matInput
-              type="date"
-              [(ngModel)]="voluntario.dataNascimento"
-              name="dataNascimento"
-              id="Data"
-              placeholder="Data de Nascimento"
-              required
-            />
-          </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="cpf" class="control-label"
-              >CPF</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="voluntario.cpf"
-              name="cpf"
-              id="CPF"
-              placeholder="CPF"
-              required
-            />
-          </mat-form-field>
-        </div>
-
-        <div
-          class="form-group"
-          fxLayout="row wrap"
-          fxLayoutAlign="space-around center"
-        >
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="email" class="control-label"
-              >Email</mat-label
-            >
-            <input
-              matInput
-              type="email"
-              [(ngModel)]="voluntario.email"
-              name="email"
-              id="Email"
-              placeholder="Email"
-              required
-            />
-          </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="phone" class="control-label"
-              >Telefone</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="voluntario.phone"
-              name="phone"
-              id="Tel"
-              placeholder="Telefone Celular"
+              placeholder="Data e Hora desaparecimento"
               required
             />
           </mat-form-field>
@@ -140,7 +67,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.cep"
+              [(ngModel)]="desaparecido.cep"
               name="cep"
               id="CEP"
               placeholder="CEP"
@@ -157,7 +84,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.cidade"
+              [(ngModel)]="desaparecido.cidade"
               name="cidade"
               id="Cidade"
               placeholder="Cidade"
@@ -181,7 +108,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.bairro"
+              [(ngModel)]="desaparecido.bairro"
               name="bairro"
               id="Bairro"
               placeholder="Bairro"
@@ -198,7 +125,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.logradouro"
+              [(ngModel)]="desaparecido.logradouro"
               name="logradouro"
               id="Logradouro"
               placeholder="Logradouro"
@@ -214,7 +141,6 @@
             fxLayoutAlign="space-around center"
           >
             <mat-checkbox 
-              [(ngModel)]="voluntario.condicoes"
               name="condicoes"
               id="Condicoes"
               required 
@@ -225,7 +151,6 @@
 
           <div class="form-group" fxLayout="row wrap">
             <mat-checkbox 
-              [(ngModel)]="voluntario.legitimidade"
               name="legitimidade"
               id="Legitimidade"
               required 
@@ -248,5 +173,5 @@
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
+  <button id="Cadastrar" (click)="newDesaparecido()">Cadastrar</button>
 </div>

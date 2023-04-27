@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { Desaparecido } from 'src/app/desaparecido.model';
 
 @Component({
   selector: 'app-update-desaparecido',
@@ -7,9 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateDesaparecidoComponent implements OnInit {
 
-  constructor() { }
+  // @ts-ignore: Object is possibly 'undefined'.
+  desaparecido: Desaparecido;
+  // @ts-ignore: Object is possibly 'undefined'.
+  desaparecidoId: number;
 
-  ngOnInit(): void {
+  constructor(private api: ApiService, private route: ActivatedRoute, private router: Router) { }
+
+  ngOnInit() {
+    this.desaparecido = new Desaparecido();
+      this.desaparecidoId = this.route.snapshot.params['id'];
+  
+      this.api.getDesaparecido(this.desaparecidoId)
+        .subscribe(data => {
+          console.log(data);
+          this.desaparecido = data;
+        }, error => console.log(error));
+
+  }
+
+  updateDesaparecido() {
+    this.api.updateDesaparecido(this.desaparecidoId, this.desaparecido)
+      .subscribe(data => console.log(data), error => console.log(error));
+      this.desaparecido = new Desaparecido();
+
+      this.router.navigate(['/desaparecidos']);
+  }
+
+  onSubmit() {
+    this.updateDesaparecido();
   }
 
 }

@@ -1,7 +1,6 @@
 <section>
   <!--Segunda Grid-->
   <div
-    [hidden]="submitted"
     fxFlex
     fxLayoutGap="0px"
     class="Fundo_verde"
@@ -9,7 +8,7 @@
     fxLayoutAlign=" center"
   >
     <div class="container-forms">
-      <h1 style="font-size: 2rem">Se torne um voluntário</h1>
+      <h1 style="font-size: 2rem">Atualizar</h1>
       <form
         (ngSubmit)="onSubmit()"
         id="formulario"
@@ -241,12 +240,9 @@
           id="Cadastrar"
           mat-raised-button
         >
-          Cadastrar
+          Atualizar
         </button>
       </form>
     </div>
   </div>
 </section>
-<div [hidden]="!submitted">
-  <button id="Cadastrar" (click)="newVoluntario()">Cadastrar</button>
-</div>
