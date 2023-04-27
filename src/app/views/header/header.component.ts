@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
   setFontSize(idd: string) {
 
     //calc font size
-    if(idd === 'a+'){
+    if(idd === 'a+' && this.font_size < 24){
       this.font_size += 1;
-    } else if(idd === 'a-') {
+    } else if(idd === 'a-' && this.font_size > 9) {
       this.font_size -= 1;
     } else {
       this.font_size = 16;
