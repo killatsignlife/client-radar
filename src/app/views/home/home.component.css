@@ -74,6 +74,7 @@
 
 .Fundo_branco h2{
   font-weight:bold;
+  color: var(--dark);
 }
 
 .Fundo_branco a{
@@ -90,14 +91,14 @@
   height: 25%;
   margin-left:5%;
   margin-right: 5%;
-  background-color: var(--primary);
+  background-color: var(--white);
   margin-bottom:6%;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.15);
 
 }
 
 .example-card img{
-  height: 200px;
+  height: 400px;
   width: 100%;
   margin-top: 1px;
   margin-bottom: 5px;
@@ -109,7 +110,7 @@
 
 mat-card-content{
   border-bottom-style: solid;
-  border-bottom-color: var(--white);
+  border-bottom-color: var(--primary);
 }
 
 .mat-card>:first-child{
@@ -119,6 +120,9 @@ mat-card-content{
   justify-content: center;
 }
 
+.mat-card-title{
+  color: var(--dark);
+}
   .example-header-image {
     background-size: cover;
   }
@@ -130,7 +134,7 @@ mat-card-content{
     box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
   .Fundo_branco h2{
-    color: var(--primary);
+    color: var(--dark);
     padding-left: 2%;
   }
 
@@ -226,7 +230,7 @@ mat-card-content{
       height: 10%;
     }
     .example-card img{
-      height: 200px;
+      height: 300px;
     }
 
     .Fundo_bg h3{
@@ -237,7 +241,7 @@ mat-card-content{
 
     @media screen and (min-width: 1440px) {
       .example-card img{
-        height: 200px;
+        height: 400px;
 
       }
 

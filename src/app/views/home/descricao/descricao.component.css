@@ -1,5 +1,5 @@
 *{
-  color:var(--continuos-white);
+  color:var(--dark);
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,10 +23,10 @@
   position:absolute;
 }
 
-.Fundo_verde{
+.Fundo_branco{
   padding-top: 2%;
   color: var(--white);
-  background-color: var(--secondary);
+  background-color: var(--continuos-white);
   align-items: center;
   width:100%;
   height: auto;
@@ -40,7 +40,7 @@
 
 #mais{
   border:none;
-  color: var(--white);
+  color: var(--dark);
   background-color:  var(--secondary);
   font-weight: bold;
 }
