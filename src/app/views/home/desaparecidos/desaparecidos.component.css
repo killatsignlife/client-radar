@@ -22,14 +22,14 @@
   .Fundo_cinza{
     text-align: center;
     align-items: center;
-    background-color: var(--tertiary);
+    background-color: var(--continuos-white);
     padding-bottom: 4%;
   }
 
   .Fundo_branco{
     padding-top: 2%;
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--continuos-white);
     align-items: center;
     width: 100%;
     height: auto;
@@ -39,6 +39,7 @@
   .Fundo_branco h1{
     font-size: 30px;
       padding-top: 2%;
+      color: var(--dark);
 
   }
 
@@ -62,7 +63,7 @@
     }
 
     .example-card img{
-      height: 20rem;
+      height: 25rem;
       width: 100%;
       margin-top: 1px;
       margin-bottom: 5px;
@@ -89,7 +90,7 @@
     }
 
     #voluntario, #Cadastrar{
-      background-color: var(--primary);
+      background-color: var(--white);
       border:none;
       color: var(--white);
     }
@@ -98,7 +99,15 @@
     }
 
 button {
-   color: green;
+  margin-top: -6%;
+  font-size: 20px;
+  padding: 1%;
+  background-color: var(--primary);
+  border:none;
+  color: var(--white);
+  margin-left: 90% !important;
+  position:absolute;
+  border-radius: 4%;
 }
 
     /*Responsividade*/
