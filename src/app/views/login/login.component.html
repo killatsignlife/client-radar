@@ -1,38 +1,78 @@
-<div class="card bgLight pb-5">
-  <div class="container py-5">
-    <div class="card-body">
-      <div class="text-center mx-auto">
-        <h1 class="display-3">Área do Funcionario</h1>
-      </div>
+<section>
+  <!--Segunda Grid-->
+  <div
+    [hidden]="submitted"
+    fxFlex
+    fxLayoutGap="0px"
+    class="Fundo_verde"
+    fxLayout="column"
+    fxLayoutAlign=" center"
+  >
+    <div class="container-forms">
+      <h1 style="font-size: 2rem">Se torne um voluntário</h1>
+      <form
+        id="formulario"
+        fxLayout="column"
+        fxLayoutAlign="center"
+      >
 
-      <form class="row g-3 mx-auto mt-2 maxW400">
-        <div class="col-12">
-          <label class="form-label">Email</label>
-          <input type="email" required name="email" class="form-control" />
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="email" class="control-label"
+              >Email</mat-label
+            >
+            <input
+              matInput
+              type="email"
+              name="email"
+              id="Email"
+              placeholder="Email"
+              required
+            />
+          </mat-form-field>
+      
         </div>
 
-        <div class="col-12">
-          <label class="form-label">Senha</label>
-          <input
-            type="password"
-            required
-            name="password"
-            class="form-control"
-          />
+        <div
+          class="form-group"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-around center"
+        >
+         
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="senha"
+              class="control-label"
+              >Senha</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              name="senha"
+              id="Senha"
+              placeholder="Senha"
+              required
+            />
+          </mat-form-field>
         </div>
-
-        <div class="col-6">
-          <button
-            class="logar"
-            type="submit"
-            style="font-size: 1.5rem"
-            id="Cadastrar"
-            mat-raised-button
-          >
-            <a id="login" href="https://radar-management.netlify.app/">Logar</a>
-          </button>
-        </div>
+        
+        <button
+          type="submit"
+          style="font-size: 1rem"
+          id="Cadastrar"
+          mat-raised-button
+        >
+          Cadastrar
+        </button>
       </form>
     </div>
   </div>
+</section>
+<div [hidden]="!submitted">
+  <button id="Cadastrar" >Cadastrar</button>
 </div>
