@@ -40,6 +40,8 @@ import { SucessoComponent } from './components/sucesso/sucesso.component';
 import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
 import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
 import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
+import { CreateVoluntarioComponent } from './voluntarios/create-voluntario/create-voluntario.component';
+import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-voluntario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +66,8 @@ import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-volu
     UpdateVoluntarioComponent,
     DeleteVoluntarioComponent,
     ListVoluntarioComponent,
+    CreateVoluntarioComponent,
+    AddVoluntarioComponent,
   ],
   imports: [
     BrowserModule,
