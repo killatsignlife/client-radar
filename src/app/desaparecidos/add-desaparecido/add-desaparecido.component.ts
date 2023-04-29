@@ -8,6 +8,7 @@ import { Desaparecido } from 'src/app/desaparecido.model';
   templateUrl: './add-desaparecido.component.html',
   styleUrls: ['./add-desaparecido.component.css']
 })
+
 export class AddDesaparecidoComponent implements OnInit {
 
   title = 'Cadastrar';

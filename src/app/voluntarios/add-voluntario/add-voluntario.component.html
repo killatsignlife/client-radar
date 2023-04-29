@@ -1,6 +1,7 @@
 <section>
     <!--Segunda Grid-->
     <div
+    [hidden]="submitted"
       fxFlex
       fxLayoutGap="0px"
       class="Fundo_verde"
@@ -233,15 +234,18 @@
               </mat-checkbox>
             </div>
           </div>
-  
+        
+        <div [hidden]="!submitted">
           <button
             type="submit"
+            (click)="newVoluntario()"
             style="font-size: 1rem"
             id="Cadastrar"
             mat-raised-button
           >
             Atualizar
           </button>
+        </div>
         </form>
       </div>
     </div>
