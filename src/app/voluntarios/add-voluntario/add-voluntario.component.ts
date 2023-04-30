@@ -9,7 +9,7 @@ import { Voluntario } from 'src/app/voluntario.model';
   styleUrls: ['./add-voluntario.component.css']
 })
 export class AddVoluntarioComponent implements OnInit {
-
+    title = 'Cadastra-se';
     voluntario: Voluntario = new Voluntario();
     submitted = false;
 
