@@ -9,6 +9,7 @@ import { Voluntario } from 'src/app/voluntario.model';
   templateUrl: './delete-desaparecido.component.html',
   styleUrls: ['./delete-desaparecido.component.css']
 })
+
 export class DeleteDesaparecidoComponent implements OnInit {
 
     // @ts-ignore: Object is possibly 'undefined'.

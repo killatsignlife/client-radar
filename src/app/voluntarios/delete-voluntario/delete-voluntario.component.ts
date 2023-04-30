@@ -8,6 +8,7 @@ import { Voluntario } from 'src/app/voluntario.model';
   templateUrl: './delete-voluntario.component.html',
   styleUrls: ['./delete-voluntario.component.css']
 })
+
 export class DeleteVoluntarioComponent implements OnInit {
    // @ts-ignore: Object is possibly 'undefined'.
   voluntario: Voluntario;
@@ -31,12 +32,12 @@ export class DeleteVoluntarioComponent implements OnInit {
 
   deleteVoluntario(): void {
     this.api.deleteVoluntario(this.voluntarioId).subscribe(() => {
-      this.router.navigate(["voluntarios"]);
+      this.router.navigate(["/voluntarios"]);
     });
   }
 
   cancel(): void {
-    this.router.navigate(['voluntarios']);
+    this.router.navigate(['/voluntarios']);
   }
 
 }
