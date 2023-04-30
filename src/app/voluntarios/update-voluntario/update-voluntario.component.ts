@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { Desaparecido } from 'src/app/desaparecido.model';
 import { Voluntario } from 'src/app/voluntario.model';
 
 @Component({
@@ -33,7 +32,7 @@ export class UpdateVoluntarioComponent implements OnInit {
   updateVoluntario() {
     this.api.updateVoluntario(this.voluntarioId, this.voluntario)
       .subscribe(data => console.log(data), error => console.log(error));
-      this.voluntario = new Desaparecido();
+      this.voluntario = new Voluntario();
 
       this.router.navigate(['/voluntarios']);
   }

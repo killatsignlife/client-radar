@@ -1,5 +1,5 @@
 export class Voluntario {
-  id?: number;
+  id: number;
   name?: string;
   lastname?: string;
   dataNascimento?:string
