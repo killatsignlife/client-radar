@@ -11,7 +11,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormularioComponent } from './views/home/formulario/formulario.component';
 import { HeaderComponent } from './views/header/header.component';
 import { DesaparecidosComponent } from './views/home/desaparecidos/desaparecidos.component';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -45,7 +44,6 @@ import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-volunta
   declarations: [
     AppComponent,
     HomeComponent,
-    FormularioComponent,
     FooterComponent,
     HeaderComponent,
     DesaparecidosComponent,
