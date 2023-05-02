@@ -1,199 +1,189 @@
-*{
-    color:var(--continuos-white);
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+* {
+  color: var(--continuos-white);
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  /*  .example-icon {
+/*  .example-icon {
       padding: 0 14px;
     }
     .example-spacer {
       flex: 1 1 auto;
   }*/
 
-  .Fundo_verde{
-    padding-top: 4%;
-    color: var(--white);
-    background-color: var(--white);
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4%;
-  }
+.Fundo_verde {
+  padding-top: 4%;
+  color: var(--white);
+  background-color: var(--white);
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4%;
+}
 
-  #formulario{
-    box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
-  }
+#formulario {
+  box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
+  border-radius: 15px;
+}
 
-  .titulo{
-    text-align: center;
-    background-color: var(--primary);
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    padding: 10px;
-  }
+.titulo {
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  padding: 10px;
+}
 
-  .form-container{
-    display: flex;
-    justify-content: center;
-    color: #000;
-  }
+.form-container {
+  display: flex;
+  justify-content: center;
+  color: #000;
+}
 
-  .form-group{
-    padding: 7px;
-    margin: 5px;
-  }
+.form-group {
+  padding: 7px;
+  margin: 5px;
+}
 
+.form-group .control-label {
+  color: var(--dark);
+  border-color: var(--dark);
+}
 
+mat-toolbar-row {
+  font-size: 1.5rem;
+  height: 80px;
+}
 
-  .form-group .control-label {
-    color: var(--back);
-    border-color: var(--back );
-  }
+mat-toolbar-row .logo {
+  padding-top: 8%;
+  width: 70%;
+  height: auto;
+}
 
-  mat-toolbar-row{
-    font-size: 1.5rem;
-    height: 80px;
-  }
-
-  mat-toolbar-row .logo{
-    padding-top: 8%;
-    width: 70%;
-    height: auto;
-  }
-
-  #cadastro{
-    width: 10%;
-    height: auto;
-    font-size: 70%;
-    text-align: center;
-    border-radius: 0px;
-  }
-  mat-toolbar{
-      background-color: var(--dark);
-
-  }
-  #Acessibilidade_header{
+#cadastro {
+  width: 10%;
+  height: auto;
+  font-size: 70%;
+  text-align: center;
+  border-radius: 0px;
+}
+mat-toolbar {
+  background-color: var(--dark);
+}
+#Acessibilidade_header {
   width: 15%;
-  }
+}
 
-   #Cadastrar{
-    background-color:  var(--primary);
+#Cadastrar {
+  background-color: var(--primary);
+}
 
-  }
-  
-  #Acessibilidade_header span .icone{
-    margin: 0;
-    padding: 0;
-    width: 60%;
-    height: auto;
-  }
-  #mais{
-    border:none;
-    color: var(--back);
-    background-color: var(--secondary);
-    font-weight: bold;
-  }
+#Acessibilidade_header span .icone {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: auto;
+}
 
-  #voluntario, #Cadastrar{
-    margin-top: 1%;
-    font-size: 20px;
-    padding: 1%;
-  }
+#voluntario,
+#Cadastrar {
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 1%;
+}
 
+.Fundo_verde h1 {
+  font-size: 30px;
+}
 
-  .Fundo_verde h1{
-    font-size: 30px;
-  }
+.Fundo_verde h2 {
+  font-weight: bold;
+}
 
-  .Fundo_verde h2{
-    font-weight:bold;
-  }
+.Fundo_verde input {
+  color: var(--dark);
+  font-size: 1rem;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  height: 50px;
+}
 
-  .Fundo_verde input{
-    color: var(--back);
-    font-size: 150%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    height: 50px;
-    text-indent:5%;
-  }
+.Fundo_verde input[type="checkbox"] {
+  margin-right: 0.5%;
+  padding: 0;
+  height: 12px;
+}
 
-  .Fundo_verde input[type=checkbox]{
-    margin-right: 0.5%;
-    padding: 0;
-    height: 12px;
-  }
+.Fundo_verde label {
+  font-size: 16px;
+  margin-right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  .Fundo_verde label{
-    font-size: 16px;
-    margin-right: 2%;
-    font-family:Arial, Helvetica, sans-serif;
-  }
+.titulo2 {
+  color: var(--dark);
+  margin-left: 10px;
+}
 
-  .titulo2 {
-    color: var(--dark);
-    margin-left: 10px ;
-  }
+.donations{
+  border-radius: 10px;
+}
 
-  .donations-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+.donations-list {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-direction: row;
+}
 
-  .donations-list>* {
-        flex: 1 1 90px;
-        margin-bottom: 1px;
-    }
+.donations-list > * {
+  flex: 1 1 90px;
+  margin-bottom: 1px;
+}
 
-  .donation-item button {
-    border: 1px solid var(--back);
-    cursor: pointer;
-    font-size: 20px;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: var(--continuos-white);
-    border:none;
-    color: var(--primary);
-    font-weight: bold;
-    
-  }
+.donation-item button {
+  border: 1px solid var(--back);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: var(--continuos-white);
+  border: none;
+  color: var(--primary);
+  font-weight: bold;
+}
 
-    #redes_sociais span .icone{
-      margin: 0;
-      padding: 0;
-      width: 80%;
-    }
-    
-    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-      color: var(--continuos-white);
-    }
+#redes_sociais span .icone {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+}
 
-     /*Responsividade*/
- @media screen and (min-width: 376px) {
-  mat-form-field + mat-form-field{
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--continuos-white);
+}
+
+/*Responsividade*/
+@media screen and (min-width: 376px) {
+  mat-form-field + mat-form-field {
     margin-left: 2%;
-    }
-    mat-form-field + mat-form-field + mat-form-field{
-      margin-left: 0%;
-      }
-      
-      
+  }
+  mat-form-field + mat-form-field + mat-form-field {
+    margin-left: 0%;
+  }
 }
 
 @media screen and (min-width: 880px) {
-  mat-form-field + mat-form-field + mat-form-field{
+  mat-form-field + mat-form-field + mat-form-field {
     flex-basis: 40%;
-    }  
+  }
 }
 
 @media screen and (min-width: 900px) {
-  mat-form-field + mat-form-field + mat-form-field{
+  mat-form-field + mat-form-field + mat-form-field {
     flex-basis: 0%;
     margin-left: 2%;
   }
- 
 }
