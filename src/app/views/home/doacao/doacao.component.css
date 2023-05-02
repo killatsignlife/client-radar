@@ -87,17 +87,6 @@ mat-toolbar {
   height: auto;
 }
 
-#voluntario,
-#Cadastrar {
-  margin-top: 1%;
-  font-size: 20px;
-  padding: 1%;
-}
-
-.Fundo_verde h1 {
-  font-size: 30px;
-}
-
 .Fundo_verde h2 {
   font-weight: bold;
 }
@@ -105,21 +94,6 @@ mat-toolbar {
 .Fundo_verde input {
   color: var(--dark);
   font-size: 1rem;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  height: 50px;
-}
-
-.Fundo_verde input[type="checkbox"] {
-  margin-right: 0.5%;
-  padding: 0;
-  height: 12px;
-}
-
-.Fundo_verde label {
-  font-size: 16px;
-  margin-right: 2%;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .titulo2 {
@@ -133,7 +107,7 @@ mat-toolbar {
 
 .donations-list {
   display: flex;
-  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -162,7 +136,7 @@ mat-toolbar {
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: var(--continuos-white);
+  color: var(--dark);
 }
 
 /*Responsividade*/
