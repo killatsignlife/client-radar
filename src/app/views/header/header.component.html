@@ -5,14 +5,14 @@
       <span><button mat-menu-item routerLink="/acessibilidade" >Acessibilidade</button></span>
       <span><button mat-menu-item (click)="toogle()">{{nome}}</button></span>
       <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
-      <span><button mat-menu-item (click)="setFontSize('a')">A</button></span>
+      <span><button mat-menu-item (click)="setFontSize('a')">A</button></span> 
       <span><button mat-menu-item (click)="setFontSize('a+')">A+</button></span>
     </div>
     <mat-toolbar-row >
       <a routerLink="/home"><img mat-card-image id="logo" src="assets/img/Branco.png" ></a>
       <span class="example-spacer"></span>
 
-      <div fxFlex  fxLayout="row" class="grupo_botao" fxLayoutAlign="space-between center" >
+    <div class="grupo_botao">
         <span><a routerLink="/blogs" id="cadastro" mat-raised-button>Blog</a></span>
       <span><a routerLink="/formulario" id="cadastro" mat-raised-button>Cadastre-se</a></span>
       <span><a routerLink="/voluntarios" id="cadastro" mat-raised-button>Voluntarios</a></span>

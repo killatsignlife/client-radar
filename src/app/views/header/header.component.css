@@ -1,140 +1,141 @@
-*{
+* {
   color: var(--primary);
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-mat-toolbar-row #logo2{
+mat-toolbar-row #logo2 {
   display: none;
-   
- }
+}
 
-mat-toolbar-row{
-    font-size: 1.5rem;
-    height: 80px;
-  }
+mat-toolbar-row {
+  font-size: 1.5rem;
+  height: 80px;
+}
 
-  mat-toolbar-row #logo{
-    width: 80%;
-    height: auto;
-    display: block;
-    margin-top: -5%;
-      }
+mat-toolbar-row #logo {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-top: -5%;
+}
 
-      .grupo_botao{
-        flex: 0 0 0%;
-      }
-      
-  .example-spacer{
-    width: 50%;
-  }
+.grupo_botao {
+  flex: 0 0 0%;
+}
 
-  .cadastro{
-    width: 100%;
-    height: auto;
-    font-size: 70%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: var(--primary);
-    border:none;
-    color: var(--white);
-  }
+.example-spacer {
+  width: 50%;
+}
 
-  mat-toolbar{
-      background-color: var(--gray);
-  }
+.grupo_botao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  #Acessibilidade_header{
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    justify-self: center;
-  }
+.cadastro {
+  width: 100%;
+  height: auto;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  color: var(--white);
+  background-color: var(--gray) !important;
+}
 
-  mat-toolbar-row span {
-    margin: 2px;
-  }
+mat-toolbar {
+  background-color: var(--gray);
+}
 
-  #Acessibilidade_header span .button{
-    margin: 0;
-    padding: 0;
-    width: 60%;
-    height: auto;
-  }
+#Acessibilidade_header {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
 
-  #atalhos {
-    list-style: none;
-    padding-left: 2%;
-  }
+mat-toolbar-row span {
+  margin: 2px;
+}
 
-  #atalhos li {
-    display: inline;
-    margin: 1px;
-    font-size: 12px;
+#Acessibilidade_header span .button {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  height: auto;
+}
+
+#atalhos {
+  list-style: none;
+  padding-left: 2%;
+}
+
+#atalhos li {
+  display: inline;
+  margin: 1px;
+  font-size: 12px;
 }
 
 #atalhos li a {
-    color: var(--white);
+  color: var(--white);
 }
 
-span a{
+span a {
   color: var(--primary);
 }
 /*Responsividade*/
-  @media screen and (max-width: 900px) {
-    header{
-      width: 100%;
-    }
-
-mat-toolbar-row{
-    font-size: 1.5rem;
-    height: 100px;
-
-  }
-
-  mat-toolbar-row #logo{
-   display: none;
-    
-  }
-  
-  mat-toolbar-row #logo2{
-    display: block;
-     
-   }
-
-  #topo div:nth-child(3){
-    display: flex !important;
-    flex-direction: column !important;
-   }
-
-  mat-toolbar-row{
+@media screen and (max-width: 900px) {
+  header {
     width: 100%;
   }
 
-  mat-toolbar-row #logo2{
-  width: 100% !important;
-  height: auto;
-  margin: auto;
-  
-}
-  
-  #cadastro{
+  mat-toolbar-row {
+    font-size: 1.5rem;
+    height: 100px;
+  }
+
+  mat-toolbar-row #logo {
+    display: none;
+  }
+
+  mat-toolbar-row #logo2 {
+    display: block;
+  }
+
+  #topo div:nth-child(3) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  mat-toolbar-row {
+    width: 100%;
+  }
+
+  mat-toolbar-row #logo2 {
+    width: 100% !important;
+    height: auto;
+    margin: auto;
+  }
+
+  #cadastro {
     width: 5rem;
     height: 50%;
     font-size: 0.5rem;
     text-align: center;
   }
 
-  .example-spacer{
-  position: absolute;
+  .example-spacer {
+    position: absolute;
   }
 
   mat-toolbar-row span {
     margin: 2px;
   }
 
-  #Acessibilidade_header span .button{
+  #Acessibilidade_header span .button {
     margin: 0;
     padding: 0;
     width: 60%;
@@ -143,89 +144,72 @@ mat-toolbar-row{
 }
 
 @media screen and (min-width: 1024px) {
- 
-  mat-toolbar-row{
-      font-size: 2rem;
-    }
-  
-    mat-toolbar-row #logo{
-      width: 100%;
-      height: 100%;
-    }
-  
-    #cadastro{
-      width: 100%;
-      height: auto;
-      font-size: 50%;
-      text-align: center;
-      border-radius: 10px;
-    }
-
+  mat-toolbar-row {
+    font-size: 2rem;
   }
 
-  @media screen and (max-width: 900px) {
- 
+  mat-toolbar-row #logo {
+    width: 100%;
+    height: 100%;
+  }
 
-    mat-toolbar {
-      height:250px;
-      align-items: none;
-     
-    }
+  #cadastro {
+    width: 100%;
+    height: auto;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
 
-    mat-toolbar-row{
-        font-size: 1.5rem;
-        width: 300px;
-        flex-wrap: wrap-reverse;
-        align-items: none;
-        margin-bottom: 1%; 
-        
-      }
+@media screen and (max-width: 900px) {
+  mat-toolbar {
+    height: 250px;
+    align-items: none;
+  }
 
-    
+  mat-toolbar-row {
+    font-size: 1.5rem;
+    width: 300px;
+    flex-wrap: wrap-reverse;
+    align-items: none;
+    margin-bottom: 1%;
+  }
 
-      #cadastro{
-        width: 150px;
-        height: auto;
-        font-size: 50%;
-        text-align: center;
-        border-radius: 10px;
-      }
-  
-    }
+  #cadastro {
+    width: 150px;
+    height: auto;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
 
-    @media screen and (max-width: 599px) {
- 
+@media screen and (max-width: 599px) {
+  mat-toolbar {
+    height: 200px;
+    padding: 20%;
+  }
 
-      mat-toolbar {
-        height:200px;
-        padding: 20%;
+  mat-toolbar-row {
+    font-size: 1.5rem;
+    width: 150px;
+  }
 
-      }
-  
-      mat-toolbar-row{
-          font-size: 1.5rem;
-          width: 150px;
-     
-        }
+  mat-toolbar-row #logo2 {
+    width: 110px;
+    flex-direction: row-reverse;
+  }
 
-        mat-toolbar-row #logo2 {
-          width: 110px;
-          flex-direction: row-reverse;
-        }
+  .mat-icon-button {
+    width: 0;
+  }
 
-        .mat-icon-button  {
-          width: 0;
-        }
-
-  
-        #cadastro{
-          width: 135px;
-          height: auto;
-          font-size: 50%;
-          text-align: center;
-          border-radius: 10px;
-        }
-
-        
-    
-      }
+  #cadastro {
+    width: 135px;
+    height: auto;
+    font-size: 50%;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
