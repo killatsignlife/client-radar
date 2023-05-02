@@ -5,6 +5,20 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.toolbar-acess {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+
+#acessibilidade_header{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 mat-toolbar-row #logo2 {
   display: none;
 }
@@ -43,7 +57,7 @@ mat-toolbar-row #logo {
   border-radius: 10px;
   border: none;
   color: var(--white);
-  background-color: var(--gray) !important;
+  background-color: var(--gray) !important; 
 }
 
 mat-toolbar {
@@ -139,7 +153,6 @@ span a {
     margin: 0;
     padding: 0;
     width: 60%;
-    height: auto;
   }
 }
 
@@ -188,7 +201,9 @@ span a {
 @media screen and (max-width: 599px) {
   mat-toolbar {
     height: 200px;
-    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   mat-toolbar-row {
