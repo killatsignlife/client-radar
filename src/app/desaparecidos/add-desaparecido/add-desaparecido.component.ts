@@ -1,3 +1,5 @@
+import { DomSanitizer } from '@angular/platform-browser';
+import { FileHandle } from './../../model/image-handle.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
@@ -15,7 +17,7 @@ export class AddDesaparecidoComponent implements OnInit {
   desaparecido: Desaparecido = new Desaparecido();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router) { }
+  constructor(private service: ApiService, private router: Router, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
   }
@@ -41,6 +43,22 @@ export class AddDesaparecidoComponent implements OnInit {
 
   gotoAgradecimentos() {
     this.router.navigate(['/sucesso'])
+  }
+
+  ImageSelected(event){
+    if(event.target.files){
+      const file = event.target.files[0];
+
+      const fileHandle: FileHandle = {
+        file: file,
+        url: this.sanitizer.bypassSecurityTrustUrl(
+          window.URL.createObjectURL(file)
+        )
+      }
+      
+      this.desaparecido.urlFotoPrincipal.push(fileHandle);
+
+    }
   }
 
 }

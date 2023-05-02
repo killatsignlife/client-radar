@@ -1,7 +1,9 @@
+import { FileHandle } from "./model/image-handle.model";
+
 export class Desaparecido {
   id: number;
   dataEHoraDesaparecimento?: string;
-  urlFotoPrincipal?: string;
+  urlFotoPrincipal?: FileHandle[];
   altTxtFotoPrincipal?: string;
   descricaoDesaparecimento?: string;
   nomeCompletoDesaparecido?: string;
