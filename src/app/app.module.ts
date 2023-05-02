@@ -40,6 +40,7 @@ import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/updat
 import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
 import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
 import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-voluntario.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +65,7 @@ import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-volunta
     DeleteVoluntarioComponent,
     ListVoluntarioComponent,
     AddVoluntarioComponent,
+    
   ],
   imports: [
     BrowserModule,
