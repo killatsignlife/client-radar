@@ -1,0 +1,129 @@
+*{
+    color: var(--continuos-white);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .example-icon {
+      padding: 0 14px;
+    }
+    .example-spacer {
+      flex: 1 1 auto;
+  }
+
+
+  #voluntario{
+    margin-top: 1%;
+    font-size: 20px;
+    padding: 1%;
+  }
+
+  .Fundo_cinza{
+    text-align: center;
+    align-items: center;
+    background-color: var(--continuos-white);
+    padding-bottom: 4%;
+  }
+
+  .Fundo_branco{
+    padding-top: 2%;
+    color: var(--white);
+    background-color: var(--continuos-white);
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+  }
+
+  .Fundo_branco h1{
+    font-size: 30px;
+      padding-top: 2%;
+      color: var(--dark);
+
+  }
+
+  .mat-card-title{
+    color: var(--dark);
+  }
+  #mais{
+    border:none;
+    color: var(--back);
+    background-color: var(--secondary);
+    font-weight: bold;
+  }
+
+    .example-card {
+      height: 25%;
+      margin-left:5%;
+      margin-right: 5%;
+      background-color: var(--continuos-white);
+      margin-bottom:6%;
+
+    }
+
+    .example-card img{
+      height: 25rem;
+      width: 100%;
+      margin-top: 1px;
+      margin-bottom: 5px;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    }
+
+    mat-card-content{
+      border-bottom-style: solid;
+      border-bottom-color: var(--primary);
+    }
+    .mat-card>:first-child{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mat-card{
+      border-radius: 5%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+    .example-header-image {
+      background-size: cover;
+    }
+
+    #voluntario, #Cadastrar{
+      background-color: var(--white);
+      border:none;
+      color: var(--white);
+    }
+    .Fundo_branco h2{
+      padding-left: 2%;
+    }
+
+button {
+  margin-top: -6%;
+  font-size: 20px;
+  padding: 1%;
+  background-color: var(--primary);
+  border:none;
+  color: var(--white);
+  margin-left: 90% !important;
+  position:absolute;
+  border-radius: 4%;
+}
+
+    /*Responsividade*/
+ @media screen and (min-width: 376px) and (max-width: 599px){
+  .example-card img{
+    height: 300px;;
+    width: 100%;
+    margin-top: 1px;
+    margin-bottom: 5px;
+      }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1240px){
+  .example-card img{
+    height: 120px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+      }
+}

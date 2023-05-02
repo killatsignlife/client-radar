@@ -27,15 +27,15 @@ export class ListVoluntarioComponent implements OnInit {
   }
 
   addVoluntario() {
-    this.router.navigate(['/formulario'])
+    this.router.navigate(['voluntarios'])
   }
 
   atualizar(id: number) {
-    this.router.navigate(['/voluntarios/atualizar', id]);
+    this.router.navigate(['voluntarios/atualizar', id]);
   }
 
   deletar(id: number) {
-    this.router.navigate(['/voluntarios/deletar', id]);
+    this.router.navigate(['voluntarios/deletar', id]);
   }
 
 }
