@@ -5,11 +5,51 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-    .example-icon {
+  /*  .example-icon {
       padding: 0 14px;
     }
     .example-spacer {
       flex: 1 1 auto;
+  }*/
+
+  .Fundo_verde{
+    padding-top: 4%;
+    color: var(--white);
+    background-color: var(--white);
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4%;
+  }
+
+  #formulario{
+    box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
+  }
+
+  .titulo{
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-container{
+    display: flex;
+    justify-content: center;
+    color: #000;
+  }
+
+  .form-group{
+    padding: 7px;
+    margin: 5px;
+  }
+
+
+
+  .form-group .control-label {
+    color: var(--back);
+    border-color: var(--back );
   }
 
   mat-toolbar-row{
@@ -20,7 +60,7 @@
   mat-toolbar-row .logo{
     padding-top: 8%;
     width: 70%;
-  height: auto;
+    height: auto;
   }
 
   #cadastro{
@@ -40,9 +80,9 @@
 
    #Cadastrar{
     background-color:  var(--primary);
-    border:none;
-    color: var(--white);
+
   }
+  
   #Acessibilidade_header span .icone{
     margin: 0;
     padding: 0;
@@ -62,23 +102,9 @@
     padding: 1%;
   }
 
-  .Fundo_verde{
-    padding-top: 4%;
-    color: var(--white);
-    background-color: var(--primary);
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4%;
-  }
+
   .Fundo_verde h1{
     font-size: 30px;
-    margin-bottom: 5%;
-  }
-
-  #formulario{
-    width: 70%;
-    margin-left: 10%;
   }
 
   .Fundo_verde h2{
@@ -86,7 +112,7 @@
   }
 
   .Fundo_verde input{
-    color: var(--tertiary);
+    color: var(--back);
     font-size: 150%;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -104,6 +130,11 @@
     font-size: 16px;
     margin-right: 2%;
     font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .titulo2 {
+    color: var(--dark);
+    margin-left: 10px ;
   }
 
   .donations-list {
