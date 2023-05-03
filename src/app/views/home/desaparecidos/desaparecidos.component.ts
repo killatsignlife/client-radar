@@ -26,7 +26,6 @@ export class DesaparecidosComponent implements OnInit {
   data() {
     this.desaparecidos = this.service.getDesaparecidos();
     console.log(this.desaparecidos);
-
   }
 
   addDesaparecido() {

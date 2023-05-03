@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Desaparecido } from 'src/app/desaparecido.model';
+import { ɵunwrapSafeValue } from "@angular/core";
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -45,9 +46,11 @@ export class AddDesaparecidoComponent implements OnInit {
     this.router.navigate(['/sucesso'])
   }
 
-  ImageSelected(event){
+  ImageSelected(event: any){
     if(event.target.files){
-      const file = event.target.files[0];
+      const file = event.target.files.item(0);
+      this.sanitizer.bypassSecurityTrustUrl(
+        window.URL.createObjectURL(file));
 
       const fileHandle: FileHandle = {
         file: file,
@@ -55,9 +58,13 @@ export class AddDesaparecidoComponent implements OnInit {
           window.URL.createObjectURL(file)
         )
       }
-      
-      this.desaparecido.urlFotoPrincipal.push(fileHandle);
 
+      let safeURL = ɵunwrapSafeValue(fileHandle.url);
+      this.desaparecido.urlFotoPrincipal?.push(safeURL);
+   
+      this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
+        console.log(el);
+      })
     }
   }
 
