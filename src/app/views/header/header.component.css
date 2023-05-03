@@ -30,8 +30,8 @@ mat-toolbar-row {
 }
 
 mat-toolbar-row #logo {
-  width: 80%;
-  height: auto;
+  width: 250px;
+  height: 100px;
   margin-top: -5%;
 }
 
@@ -39,8 +39,7 @@ mat-toolbar-row #logo {
   width: 180px;
 }
 
-
-mat-toolbar-row #logo2 {
+.logo-box2{
   display: none;
 }
 
@@ -126,25 +125,32 @@ span a {
 }
 
 @media screen and (max-width: 599px) {
-  mat-toolbar {
-    width: 100%;
+  .toolbar-acess {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+  }
+
+  #Acessibilidade_header{
+    display: flex;
+  }
+
+  #Acessibilidade_header button{
+    font-size: 0.654rem;
   }
 
   .logo-box{
     display: none;
   }
 
-  .menu-hamb-container{
+  .logo-box2{
     display: flex;
     justify-content: space-around;
   }
 
-  .logo2-container{
+  .menu-hamb-container{
     display: flex;
-    justify-content: space-around;
+    padding: 3px;
+    margin-right: 25px;
   }
 
   .matMenu-container{
@@ -154,7 +160,6 @@ span a {
 
   mat-toolbar-row {
     font-size: 1.5rem;
-    width: 150px;
   }
 
   mat-toolbar-row #logo {
@@ -163,6 +168,8 @@ span a {
 
   mat-toolbar-row #logo2 {
     display: flex;
+    width: 50px;
+    height: 55px;
   }
    
   .grupo_botao{
@@ -176,9 +183,7 @@ span a {
   #cadastro {
     width: 135px;
     height: auto;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
-    border:none;
-    text-decoration: none;
   }
 }
