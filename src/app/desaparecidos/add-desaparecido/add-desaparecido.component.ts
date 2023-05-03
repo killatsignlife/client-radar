@@ -49,18 +49,17 @@ export class AddDesaparecidoComponent implements OnInit {
   ImageSelected(event: any){
     if(event.target.files){
       const file = event.target.files.item(0);
-      this.sanitizer.bypassSecurityTrustUrl(
+      const fileUrl = this.sanitizer.bypassSecurityTrustUrl(
         window.URL.createObjectURL(file));
 
       const fileHandle: FileHandle = {
         file: file,
-        url: this.sanitizer.bypassSecurityTrustUrl(
-          window.URL.createObjectURL(file)
-        )
+        url: fileUrl
       }
 
       let safeURL = ɵunwrapSafeValue(fileHandle.url);
-      this.desaparecido.urlFotoPrincipal?.push(safeURL);
+      console.log(safeURL)
+      console.log(this.desaparecido.urlFotoPrincipal?.push(safeURL));
    
       this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
         console.log(el);
