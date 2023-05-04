@@ -58,12 +58,14 @@ export class AddDesaparecidoComponent implements OnInit {
       }
 
       let safeURL = ɵunwrapSafeValue(fileHandle.url);
-      console.log(safeURL)
-      console.log(this.desaparecido.urlFotoPrincipal?.push(safeURL));
+  
+      this.desaparecido.urlFotoPrincipal = [];
+
+      this.desaparecido.urlFotoPrincipal?.push(safeURL);
    
-      this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
+     /* this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
         console.log(el);
-      })
+      })*/
     }
   }
 
