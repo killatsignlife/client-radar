@@ -63,9 +63,9 @@ export class AddDesaparecidoComponent implements OnInit {
 
       this.desaparecido.urlFotoPrincipal?.push(safeURL);
    
-     /* this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
+      this.desaparecido.urlFotoPrincipal?.forEach(function(el) {
         console.log(el);
-      })*/
+      })
     }
   }
 

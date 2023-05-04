@@ -136,7 +136,10 @@
 
         <div  class="form-group" fxLayout="row wrap" fxLayoutAlign="space-around center">
           <input type="file" accept="image/*" value="select" #selectFile
-          (change)="ImageSelected($event)">
+          (change)="ImageSelected($event)"
+          name="urlFotoPrincipal"
+          id="UrlFotoPrincipal"
+          required>
         </div>
 
         <div class="campo-checkboxes">

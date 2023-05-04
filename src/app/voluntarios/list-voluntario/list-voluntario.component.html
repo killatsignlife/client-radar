@@ -7,13 +7,14 @@
 
   <!--Cards-->
       <div class="Fundo_branco" >
-        <button (click)="addVoluntario()">Adicionar</button>
+        <button class="Btn_adicionar" (click)="addVoluntario()">Adicionar</button>
         <div fxLayout="row wrap" fxLayoutAlign="center center" >
           
           <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let voluntario of voluntarios | async">
-            <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
+            <mat-card fxLayout="column"  class="example-card">
               <mat-card-title style="font-size: 1rem">{{voluntario.name}} {{voluntario.lastname}}</mat-card-title>
-              <mat-card-actions>
+              <mat-card-subtitle fxLayoutAlign="center center">{{voluntario.email}}</mat-card-subtitle>
+              <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
                 <button (click)="atualizar(voluntario.id)">Atualizar</button>
                 <button (click)="deletar(voluntario.id)">Deletar</button>
               </mat-card-actions>
