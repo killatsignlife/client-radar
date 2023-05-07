@@ -25,9 +25,9 @@
   <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%"   *ngFor="let desaparecido of desaparecidos | slice:0:3">
     <mat-card (click)="detailDesaparecido(desaparecido.id)" fxLayout="column" fxLayoutAlign="center center" class="example-card">
             <mat-card-content>
-              <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}">
+              <!-- <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}"> -->
             </mat-card-content>
-            <mat-card-title style="font-size: 1rem">{{desaparecido.nomeCompletoDesaparecido}}</mat-card-title>
+            <mat-card-title style="font-size: 1rem">{{desaparecido.nomeDesaparecido}} {{desaparecido.sobrenomeDesaparecido}}</mat-card-title>
       </mat-card>
 </div>
 </div>

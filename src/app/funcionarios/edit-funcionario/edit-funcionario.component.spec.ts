@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DesaparecidosComponent } from './desaparecidos.component';
+import { EditFuncionarioComponent } from './edit-funcionario.component';
 
-describe('DesaparecidosComponent', () => {
-  let component: DesaparecidosComponent;
-  let fixture: ComponentFixture<DesaparecidosComponent>;
+describe('EditFuncionarioComponent', () => {
+  let component: EditFuncionarioComponent;
+  let fixture: ComponentFixture<EditFuncionarioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DesaparecidosComponent ]
+      declarations: [ EditFuncionarioComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DesaparecidosComponent);
+    fixture = TestBed.createComponent(EditFuncionarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

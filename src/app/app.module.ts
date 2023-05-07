@@ -40,6 +40,10 @@ import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/updat
 import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
 import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
 import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-voluntario.component';
+import { AddFuncionarioComponent } from './funcionarios/add-funcionario/add-funcionario.component';
+import { EditFuncionarioComponent } from './funcionarios/edit-funcionario/edit-funcionario.component';
+import { DeleteFuncionarioComponent } from './funcionarios/delete-funcionario/delete-funcionario.component';
+import { ListFuncionarioComponent } from './funcionarios/list-funcionario/list-funcionario.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,10 @@ import { AddVoluntarioComponent } from './voluntarios/add-voluntario/add-volunta
     DeleteVoluntarioComponent,
     ListVoluntarioComponent,
     AddVoluntarioComponent,
+    AddFuncionarioComponent,
+    EditFuncionarioComponent,
+    DeleteFuncionarioComponent,
+    ListFuncionarioComponent,
     
   ],
   imports: [

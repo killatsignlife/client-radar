@@ -1,19 +1,19 @@
 <section>
     <!--Cards-->
         <div class="Fundo_branco" >
-          <h1 style="font-size: 3rem" id="nome_desaparecido">{{desaparecido.nomeCompletoDesaparecido}}</h1>
+          <h1 style="font-size: 3rem" id="nome_desaparecido">{{desaparecido.nomeDesaparecido}} {{desaparecido.sobrenomeDesaparecido}}</h1>
 
           <div class="quebra_linha" fxLayout="column" fxLayoutAlign="center center" >
             <div fxLayout="row" fxLayoutAlign="center center" >
-              <img id="foto_principal" src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}" >
+              <!-- <img id="foto_principal" src={{desaparecido.}} alt="{{desaparecido.altTxtFotoPrincipal}}" > -->
           </div>
               <span class="caption"><ul id="Descricoes">
                 <li><strong>Data de Nascimento: </strong>{{desaparecido.dataDeNascimento}}</li>
                 <!--<li>Endereço onde morava: {{desaparecido.logradouro}} , {{desaparecido.bairro}}, {{desaparecido.cep}}, {{desaparecido.cidade}} - SP</li>-->
-                <li><strong>Sexo: </strong> {{desaparecido.sexo}}</li>
-                <li><strong>Cor de Pele: </strong> {{desaparecido.corDePele}}</li>
-                <li><strong>Possui alguma doença? </strong>{{desaparecido.doenca}} </li>
-                <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataEHoraDesaparecimento}}</li>
+                <li><strong>Sexo: </strong> {{desaparecido.sexoDesaparecido}}</li>
+                <li><strong>Cor de Pele: </strong> {{desaparecido.corDePeleDesaparecido}}</li>
+                <li><strong>Possui alguma doença? </strong>{{desaparecido.possuiDoenca}} </li>
+                <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataDesaparecimento}} às {{desaparecido.horaDesaparecimento}}</li>
               </ul></span>
 
               <button style="font-size: 1rem" id="voluntario" (click)="detailDesaparecido(desaparecido.id)">Reportar</button>
@@ -29,7 +29,7 @@
             <div fxLayout="row wrap" fxLayoutAlign="center center" >
              <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of [1,2,3]">
            <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
-                   <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="Foto da criança, adolescente ou adulto em um lugar tipico, usando roupas tipicas, no geral, realizando atividades tipicas">
+                   <!-- <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="Foto da criança, adolescente ou adulto em um lugar tipico, usando roupas tipicas, no geral, realizando atividades tipicas"> -->
            </mat-card>
            </div>
            <br />

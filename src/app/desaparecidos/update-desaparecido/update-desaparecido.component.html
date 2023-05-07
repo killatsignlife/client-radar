@@ -27,10 +27,24 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.nomeCompletoDesaparecido"
+              [(ngModel)]="desaparecido.nomeDesaparecido"
               name="name"
               id="nome"
-              placeholder="Nome completo"
+              placeholder="Nome"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
+              >Sobrenome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.sobrenomeDesaparecido"
+              name="sobrenome"
+              id="sobrenome"
+              placeholder="Sobrenome"
               required
             />
           </mat-form-field>
@@ -38,17 +52,89 @@
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
-              for="lastname"
+              for="dataDesaparecimento"
               class="control-label"
-              >Data e Hora do Desaparecimento</mat-label
+              >Data do Desaparecimento</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.dataEHoraDesaparecimento"
-              name="lastname"
-              id="Sobrenome"
-              placeholder="Data e Hora desaparecimento"
+              [(ngModel)]="desaparecido.dataDesaparecimento"
+              name="dataDesaparecimento"
+              id="dataDesaparecimento"
+              placeholder="Data do desaparecimento"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="horaDesaparecimento"
+              class="control-label"
+              >Hora do Desaparecimento</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.dataDesaparecimento"
+              name="horaDesaparecimento"
+              id="horaDesaparecimento"
+              placeholder="Hora do desaparecimento"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="dataDeNascimento"
+              class="control-label"
+              >Data de Nascimento</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.dataDeNascimento"
+              name="dataDeNascimento"
+              id="dataDeNascimento"
+              placeholder="Data de Nascimento do Desaparecido"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="recompensa"
+              class="control-label"
+              >Recompensa</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.recompensa"
+              name="recompensa"
+              id="recompensa"
+              placeholder="Recompensa"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="possuiDoenca"
+              class="control-label"
+              >Possui Doença</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.possuiDoenca"
+              name="possuiDoenca"
+              id="possuiDoenca"
+              placeholder="Possui alguma doença?"
               required
             />
           </mat-form-field>
@@ -60,13 +146,104 @@
           fxLayoutAlign="space-around center"
         >
           <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="corDePeleDesaparecido"
+              class="control-label"
+              >Cor de pele</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.corDePeleDesaparecido"
+              name="corDePeleDesaparecido"
+              id="corDePeleDesaparecido"
+              placeholder="Cor de pele do desaparecido"
+              required
+            />
+          </mat-form-field>
+
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="tatuagemDesaparecido"
+              class="control-label"
+              >Tatuagem</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.tatuagemDesaparecido"
+              name="tatuagemDesaparecido"
+              id="tatuagemDesaparecido"
+              placeholder="Descreva a tatuagem, se possuir"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="cicatriz"
+              class="control-label"
+              >Cicatriz</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.cicatriz"
+              name="cicatriz"
+              id="cicatriz"
+              placeholder="Descreva a cicatriz, se possuir"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="tamanhoDesaparecido"
+              class="control-label"
+              >Tamanho do Desaparecido</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.tamanhoDesaparecido"
+              name="tamanhoDesaparecido"
+              id="tamanhoDesaparecido"
+              placeholder="Tamanho do desaparecido"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="sexoDesaparecido"
+              class="control-label"
+              >Sexo do Desaparecido</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.sexoDesaparecido"
+              name="sexoDesaparecido"
+              id="sexoDesaparecido"
+              placeholder="Sexo do Desaparecido"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label"
               >CEP</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.cep"
+              [(ngModel)]="desaparecido.endereco.cep"
               name="cep"
               id="CEP"
               placeholder="CEP"
@@ -83,7 +260,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.cidade"
+              [(ngModel)]="desaparecido.endereco.cidade"
               name="cidade"
               id="Cidade"
               placeholder="Cidade"
@@ -107,7 +284,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.bairro"
+              [(ngModel)]="desaparecido.endereco.bairro"
               name="bairro"
               id="Bairro"
               placeholder="Bairro"
@@ -124,7 +301,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.logradouro"
+              [(ngModel)]="desaparecido.endereco.logradouro"
               name="logradouro"
               id="Logradouro"
               placeholder="Logradouro"

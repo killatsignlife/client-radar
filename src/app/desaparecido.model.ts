@@ -1,19 +1,21 @@
-import { FileHandle } from "./model/image-handle.model";
+import { Endereco } from "./endereco.model";
+import { Foto } from "./foto.model";
 
 export class Desaparecido {
   id: number;
-  dataEHoraDesaparecimento?: string;
-  urlFotoPrincipal?: Array<string>;
-  altTxtFotoPrincipal?: string;
+  nomeDesaparecido?: string;
+  sobrenomeDesaparecido?: string;
+  dataDesaparecimento?: string;
+  horaDesaparecimento?: string;
   descricaoDesaparecimento?: string;
-  nomeCompletoDesaparecido?: string;
   dataDeNascimento?: string;
   recompensa?: string;
-  doenca?: string;
-  sexo?: string;
-  corDePele?: string;
-  logradouro?: string;
-  bairro?: string;
-  cidade?: string;
-  cep?: string;
+  endereco?: Endereco;
+  fotos?: Foto[];
+  possuiDoenca?: string;
+  corDePeleDesaparecido?: string;
+  tatuagemDesaparecido?: string;
+  cicatriz?: string;
+  tamanhoDesaparecido?: string;
+  sexoDesaparecido?: string;
 }

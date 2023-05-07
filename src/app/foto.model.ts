@@ -1,4 +1,7 @@
 export class Foto {
-  urlFoto?: string;
-  altTxtFoto?: string;
+  idFoto?: number;
+  altText?: string;
+  name?: string;
+  type?: string;
+  imageBytes?: Blob;
 }

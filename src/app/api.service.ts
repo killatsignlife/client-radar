@@ -2,22 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Desaparecido } from './desaparecido.model';
+import { Voluntario } from './voluntario.model';
+import { Functionario } from './funcionario.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  //private desaparecidoUrl = 'https://pi-radar.herokuapp.com/api/v1/desaparecidos';
-  //private desaparecidoUrl = 'https://radar-hsjh.onrender.com/api/v1/desaparecidos';
-  //private voluntarioUrl = 'https://pi-radar.herokuapp.com/api/v1/voluntarios';
-  //private voluntarioUrl = 'https://radar-hsjh.onrender.com/api/v1/voluntarios';
-  private voluntarioUrl = 'http://localhost:5000/api/v1/voluntarios';
-  private desaparecidoUrl = 'http://localhost:5000/api/v1/desaparecidos';
+  private voluntarioUrl = 'http://localhost:8080/api/v1/voluntarios';
+  private desaparecidoUrl = 'http://localhost:8080/api/v1/desaparecidos';
+  private funcionarioUrl = 'http://localhost:8080/api/v1/funcionarios';
 
   constructor(private http: HttpClient) { }
 
   // Desaparecidos  
-  createDesaparecido(desaparecido: Object): Observable<Object> {
+  createDesaparecido(desaparecido: Desaparecido): Observable<any> {
     return this.http.post(`${this.desaparecidoUrl}`, desaparecido);
   }
 
@@ -29,7 +28,7 @@ export class ApiService {
     return this.http.get(`${this.desaparecidoUrl}/${id}`);
   }
 
-  updateDesaparecido(id: number, desaparecido: Object) : Observable<any> {
+  updateDesaparecido(id: number, desaparecido: Desaparecido) : Observable<any> {
     return this.http.put(`${this.desaparecidoUrl}/${id}`, desaparecido);
   }
 
@@ -43,7 +42,7 @@ export class ApiService {
 
   
   // Voluntarios
-  createVoluntario(voluntario: Object) : Observable<Object> {
+  createVoluntario(voluntario: Voluntario) : Observable<any> {
     return this.http.post(`${this.voluntarioUrl}`, voluntario);
   }
 
@@ -52,15 +51,36 @@ export class ApiService {
   }
 
   getVoluntarioById(id: number) : Observable<any> {
-    return this.http.get(`${this.desaparecidoUrl}/${id}`);
+    return this.http.get(`${this.voluntarioUrl}/${id}`);
   }
 
-  updateVoluntario(id: number, voluntario: Object) : Observable<any> {
+  updateVoluntario(id: number, voluntario: Voluntario) : Observable<any> {
     return this.http.put(`${this.voluntarioUrl}/${id}`, voluntario);
   }
 
   deleteVoluntario(id: number) {
     return this.http.delete(`${this.voluntarioUrl}/${id}`);
+  }
+
+  // Funcionarios
+  createFuncionario(funcionario: Functionario) : Observable<any> {
+    return this.http.post(`${this.funcionarioUrl}`, funcionario);
+  }
+
+  getFuncionario(): Observable<any> {
+    return this.http.get(`${this.funcionarioUrl}`);
+  }
+
+  getFuncionarioById(id: number) : Observable<any> {
+    return this.http.get(`${this.funcionarioUrl}/${id}`);
+  }
+
+  updateFuncionario(id: number, funcionario: Functionario) : Observable<any> {
+    return this.http.put(`${this.funcionarioUrl}/${id}`, funcionario);
+  }
+
+  deleteFuncionario(id: number) {
+    return this.http.delete(`${this.funcionarioUrl}/${id}`);
   }
 
   // Mensagem

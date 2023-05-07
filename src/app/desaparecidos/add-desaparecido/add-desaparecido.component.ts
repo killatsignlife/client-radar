@@ -46,7 +46,7 @@ export class AddDesaparecidoComponent implements OnInit {
     this.router.navigate(['/sucesso'])
   }
 
-  ImageSelected(event: any){
+  /* ImageSelected(event: any){
     if(event.target.files){
       const file = event.target.files.item(0);
       const fileUrl = this.sanitizer.bypassSecurityTrustUrl(
@@ -67,6 +67,6 @@ export class AddDesaparecidoComponent implements OnInit {
         console.log(el);
       })
     }
-  }
+  } */
 
 }
