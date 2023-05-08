@@ -81,7 +81,6 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   populaForm(dados, form){
-    console.log(dados)
     form.setValue({
       cep: dados.cep,
       logradouro: dados.logradouro,
