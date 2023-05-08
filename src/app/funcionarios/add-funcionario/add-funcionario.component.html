@@ -1,1 +1,123 @@
-<p>add-funcionario works!</p>
+<section>
+    <!--Segunda Grid-->
+    <div
+      [hidden]="submitted"
+      fxFlex
+      fxLayoutGap="0px"
+      class="Fundo_verde"
+      fxLayout="column"
+      fxLayoutAlign=" center"
+    >
+      <div class="container-forms">
+        <h1 style="font-size: 2rem">Cadastre um funcionario</h1>
+        <form
+          (ngSubmit)="onSubmit()"
+          id="formulario"
+          fxLayout="column"
+          fxLayoutAlign="center"
+        >
+          <div
+            class="form-group"
+            fxLayout="row wrap center"
+            fxLayoutAlign="space-around center"
+          >
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="name" class="control-label"
+              >Nome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.nome"
+              name="name"
+              id="nome"
+              placeholder="Nome"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
+              >Sobrenome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.sobrenome"
+              name="sobrenome"
+              id="sobrenome"
+              placeholder="Sobrenome"
+              required
+            />
+          </mat-form-field>
+  
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="cpf"
+              class="control-label"
+              >CPF</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.cpf"
+              name="cpf"
+              id="cpf"
+              placeholder="CPF do funcionario"
+              required
+            />
+          </mat-form-field>
+  
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="email"
+              class="control-label"
+              >Email do funcionario</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.email"
+              name="email"
+              id="email"
+              placeholder="Email do funcionario"
+              required
+            />
+          </mat-form-field>
+  
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="funcao"
+              class="control-label"
+              >Função do Funcionario</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.funcao"
+              name="funcao"
+              id="funcao"
+              placeholder="Função do Funcionario (Cargo)"
+              required
+            />
+          </mat-form-field>
+        </div>
+      
+          <button
+            type="submit"
+            style="font-size: 1rem"
+            id="Cadastrar"
+            mat-raised-button
+          >
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div [hidden]="!submitted">
+    <button id="Cadastrar" (click)="newFuncionario()">Cadastrar</button>
+  </div>
+  

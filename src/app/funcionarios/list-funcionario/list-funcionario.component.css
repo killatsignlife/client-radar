@@ -1,0 +1,125 @@
+.componente {
+    padding: 4vh 10.5vw;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .panel-body table {
+    width: 100%;
+    /* margin: auto; */
+    text-align: left;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+  }
+  
+  th {
+    color: var(--primary-text-color);
+  }
+  
+  td {
+    color: var(--primary-text-color);
+  }
+  
+  .panel-body {
+    margin: 4vh 0;
+    width: 100%;
+  }
+  
+  h1 {
+    /* padding: 0 0 1vw 6vw; */
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--primary-text-color);
+  }
+  
+  /*Sidenav*/
+  
+  .example-container {
+    min-height: 80vh;
+    background: var(--primary-background-color);
+  }
+  
+  mat-sidenav {
+    width: 10vw;
+  }
+  
+  li {
+    padding-top: 2em;
+    list-style: none;
+  }
+  
+  
+  /*Inputs*/
+  
+  label {
+    margin-bottom: 0.4em;
+    font-weight: 500;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .dados__nascimento,
+  .dados__ingresso,
+  .dados__curso,
+  .dados__periodo,
+  .dados__perfil {
+    width: 15w;
+  }
+  
+  .campos {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .dados_escolares {
+    margin-top: 3em;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .campos p {
+    font-weight: bold;
+  }
+  
+  .buttons button{
+    width: 100px;
+    margin: .5rem;
+  }
+  
+  
+  /*Media Queries*/
+  @media (max-width: 676px) {
+    .panel-body {
+      overflow-x: scroll;
+    }
+    .panel-body th, .panel-body td {
+      min-width: 30vw;
+      min-height: 25vh;
+    }
+    .panel-body table{
+      background-color: var(--perfil-input-background);
+      width: 70vw;
+      height: auto;
+      margin: 2rem;
+    }
+    h1 {
+      color: var(--secondary-text-color);
+    }
+  }
+  
+  @media (max-width: 768px) {
+  }

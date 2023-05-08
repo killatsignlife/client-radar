@@ -5,4 +5,5 @@ export class Functionario {
   cpf?: string;
   email?: string;
   dataNascimento?: string;
+  funcao?: string;
 }
