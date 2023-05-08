@@ -81,12 +81,9 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   populaForm(dados, form){
-    form.setValue({
-      cep: dados.cep,
-      logradouro: dados.logradouro,
-      bairro: dados.bairro,
-      cidade: dados.localidade
-    })
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
   }
 
 }
