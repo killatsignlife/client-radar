@@ -18,6 +18,7 @@ import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delet
 import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
 import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
 import { SucessoComponent } from './components/sucesso/sucesso.component';
+import { AddFuncionarioComponent } from './funcionarios/add-funcionario/add-funcionario.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -38,7 +39,8 @@ const routes: Routes = [
   { path: 'voluntarios', component: ListVoluntarioComponent},
   { path: 'voluntarios/deletar/:id', component: DeleteVoluntarioComponent},
   { path: 'voluntarios/atualizar/:id', component: UpdateVoluntarioComponent},
-  { path: 'voluntarios/adicionar', component: AddVoluntarioComponent}
+  { path: 'voluntarios/adicionar', component: AddVoluntarioComponent},
+  { path: 'funcionario/adicionar', component: AddFuncionarioComponent}
 ];
 
 @NgModule({

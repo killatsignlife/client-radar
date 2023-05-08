@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Desaparecido } from './desaparecido.model';
 import { Voluntario } from './voluntario.model';
-import { Functionario } from './funcionario.model';
+import { Funcionario } from './funcionario.model';
 
 @Injectable({
   providedIn: 'root'
@@ -63,7 +63,7 @@ export class ApiService {
   }
 
   // Funcionarios
-  createFuncionario(funcionario: Functionario) : Observable<any> {
+  createFuncionario(funcionario: Funcionario) : Observable<any> {
     return this.http.post(`${this.funcionarioUrl}`, funcionario);
   }
 
@@ -75,7 +75,7 @@ export class ApiService {
     return this.http.get(`${this.funcionarioUrl}/${id}`);
   }
 
-  updateFuncionario(id: number, funcionario: Functionario) : Observable<any> {
+  updateFuncionario(id: number, funcionario: Funcionario) : Observable<any> {
     return this.http.put(`${this.funcionarioUrl}/${id}`, funcionario);
   }
 
