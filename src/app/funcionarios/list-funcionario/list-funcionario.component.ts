@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-list-funcionario',
@@ -10,7 +12,7 @@ export class ListFuncionarioComponent implements OnInit {
   displayedColumns: string[] = ['Nome', 'CPF', 'Username', 'Ações'];
 
    // @ts-ignore: Object is possibly 'undefined'.
-   usuarios: Observable<Funcionario[]>;
+   funcionarios: Observable<Funcionario[]>;
 
   constructor(private api: ApiService, private router: Router) { }
 
@@ -19,8 +21,8 @@ export class ListFuncionarioComponent implements OnInit {
   }
 
   reloadData() {
-    this.usuarios = this.api.getFuncionarios();
-    console.log(this.usuarios);
+    this.funcionarios = this.api.getFuncionario();
+    console.log(this.funcionarios);
   }
 
   deletaUsuario(id : number) {

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { Functionario } from 'src/app/funcionario.model';
 
 @Component({
   selector: 'app-delete-funcionario',
@@ -16,10 +19,10 @@ export class DeleteFuncionarioComponent implements OnInit {
 
   ngOnInit()  {
 
-    this.funcionario = new Desaparecido();
+    this.funcionario = new Functionario();
       this.funcionarioId = this.route.snapshot.params['id'];
   
-      this.api.getFuncionario(this.funcionarioId)
+      this.api.getFuncionarioById(this.funcionarioId)
         .subscribe(data => {
           console.log(data);
           this.funcionario = data;

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { Functionario } from 'src/app/funcionario.model';
 
 @Component({
   selector: 'app-edit-funcionario',
@@ -14,10 +17,10 @@ export class EditFuncionarioComponent implements OnInit {
   constructor(private api: ApiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.funcionario = new Funcionario();
+    this.funcionario = new Functionario();
       this.funcionarioId = this.route.snapshot.params['id'];
   
-      this.api.getFuncionario(this.funcionarioId)
+      this.api.getFuncionarioById(this.funcionarioId)
         .subscribe(data => {
           console.log(data);
           this.funcionario = data;
@@ -27,7 +30,7 @@ export class EditFuncionarioComponent implements OnInit {
   updateFuncionario() {
     this.api.updateFuncionario(this.funcionarioId, this.funcionario)
       .subscribe(data => console.log(data), error => console.log(error));
-      this.funcionario = new Funcionario();
+      this.funcionario = new Functionario();
 
       this.router.navigate(['funcionario/list']);
   }

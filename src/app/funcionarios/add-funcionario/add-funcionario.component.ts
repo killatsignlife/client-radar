@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+import { Functionario } from 'src/app/funcionario.model';
 @Component({
   selector: 'app-add-funcionario',
   templateUrl: './add-funcionario.component.html',
@@ -8,14 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class AddFuncionarioComponent implements OnInit {
 
   title = 'Cadastrar';
-  funcionario: Funcionario = new Funcionario();
+  funcionario: Functionario = new Functionario();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.submitted = false;
-    this.funcionario = new Funcionario();
+    this.funcionario = new Functionario();
   }
 
   save() {
