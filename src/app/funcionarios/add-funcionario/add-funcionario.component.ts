@@ -7,9 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFuncionarioComponent implements OnInit {
 
-  constructor() { }
+  title = 'Cadastrar';
+  funcionario: Funcionario = new Funcionario();
+  submitted = false;
+
+  constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit(): void {
+    this.submitted = false;
+    this.funcionario = new Funcionario();
+  }
+
+  save() {
+    this.service.createFuncionario(this.funcionario).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+    this.funcionario = new Funcionario();
+    this.gotoAgradecimentos();
+    this.gotoList();
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this.save();
+  }
+
+  gotoList() {
+    this.router.navigate(['funcionario/list'])
   }
 
 }

@@ -7,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteFuncionarioComponent implements OnInit {
 
-  constructor() { }
+  // @ts-ignore: Object is possibly 'undefined'.
+  funcionario: Funcionario;
+  // @ts-ignore: Object is possibly 'undefined'.
+  funcionarioId: number;
 
-  ngOnInit(): void {
+  constructor(private api: ApiService, private router: Router, private route: ActivatedRoute) { }
+
+  ngOnInit()  {
+
+    this.funcionario = new Desaparecido();
+      this.funcionarioId = this.route.snapshot.params['id'];
+  
+      this.api.getFuncionario(this.funcionarioId)
+        .subscribe(data => {
+          console.log(data);
+          this.funcionario = data;
+        }, error => console.log(error));
   }
 
+
+  deleteFuncionario(): void {
+    this.api.deleteFuncionario(this.funcionarioId).subscribe(() => {
+      this.router.navigate(["funcionario/list"]);
+    });
+  }
+
+  cancel(): void {
+    this.router.navigate(['funcionario/list']);
+  }
 }
