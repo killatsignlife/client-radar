@@ -15,6 +15,7 @@
         id="formulario"
         fxLayout="column"
         fxLayoutAlign="center"
+        #f="ngForm"
       >
         <div
           class="form-group"
@@ -68,6 +69,7 @@
               matInput
               type="text"
               [(ngModel)]="desaparecido.cep"
+              (blur)="consultaCep(applyFilter($event), f)"
               name="cep"
               id="CEP"
               placeholder="CEP"

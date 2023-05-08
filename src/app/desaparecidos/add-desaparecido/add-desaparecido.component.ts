@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Desaparecido } from 'src/app/desaparecido.model';
 import { ɵunwrapSafeValue } from "@angular/core";
+import { CepServiceService } from 'src/app/services/cep-service.service';
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -18,7 +19,8 @@ export class AddDesaparecidoComponent implements OnInit {
   desaparecido: Desaparecido = new Desaparecido();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router, private sanitizer: DomSanitizer) { }
+  constructor(private service: ApiService, private router: Router, private sanitizer: DomSanitizer,
+    private cepService: CepServiceService) { }
 
   ngOnInit() {
   }
@@ -67,6 +69,25 @@ export class AddDesaparecidoComponent implements OnInit {
         console.log(el);
       })
     }
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    console.log(dados)
+    form.setValue({
+      cep: dados.cep,
+      logradouro: dados.logradouro,
+      bairro: dados.bairro,
+      cidade: dados.localidade
+    })
   }
 
 }
