@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
@@ -83,6 +84,7 @@ import { ListFuncionarioComponent } from './funcionarios/list-funcionario/list-f
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
+    MatTableModule,
     MatButtonModule,
     MatDialogModule,
     MatCardModule,

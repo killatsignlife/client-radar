@@ -15,6 +15,11 @@ export class AddFuncionarioComponent implements OnInit {
 
   constructor(private service: ApiService, private router: Router) { }
 
+  newFuncionario(): void {
+    this.submitted = false;
+    this.funcionario = new Funcionario();
+  }
+
   ngOnInit(): void {
     this.submitted = false;
     this.funcionario = new Funcionario();

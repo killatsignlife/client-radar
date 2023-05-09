@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
+import { Funcionario } from 'src/app/funcionario.model';
+
 @Component({
   selector: 'app-list-funcionario',
   templateUrl: './list-funcionario.component.html',
