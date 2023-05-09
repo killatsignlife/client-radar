@@ -1,6 +1,7 @@
 <div class="componente">
     <h1>Lista de Usuários cadastrados</h1>
     <div class="panel-body">
+      <button (click)="addFuncionario()">Adicionar</button>
       <table mat-table [dataSource]="funcionarios" class="mat-elevation-z8">
         <ng-container matColumnDef="Nome">
           <th mat-header-cell *matHeaderCellDef>Nome</th>

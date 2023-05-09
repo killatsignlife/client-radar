@@ -19,6 +19,9 @@ import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/updat
 import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
 import { SucessoComponent } from './components/sucesso/sucesso.component';
 import { AddFuncionarioComponent } from './funcionarios/add-funcionario/add-funcionario.component';
+import { DeleteFuncionarioComponent } from './funcionarios/delete-funcionario/delete-funcionario.component';
+import { EditFuncionarioComponent } from './funcionarios/edit-funcionario/edit-funcionario.component';
+import { ListFuncionarioComponent } from './funcionarios/list-funcionario/list-funcionario.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -40,7 +43,10 @@ const routes: Routes = [
   { path: 'voluntarios/deletar/:id', component: DeleteVoluntarioComponent},
   { path: 'voluntarios/atualizar/:id', component: UpdateVoluntarioComponent},
   { path: 'voluntarios/adicionar', component: AddVoluntarioComponent},
-  { path: 'funcionario/adicionar', component: AddFuncionarioComponent}
+  { path: 'funcionario/adicionar', component: AddFuncionarioComponent},
+  { path: 'funcionario/deletar/:id', component: DeleteFuncionarioComponent },
+  { path: 'funcionario/atualizar/:id', component: EditFuncionarioComponent},
+  { path: 'funcionario/list', component: ListFuncionarioComponent},
 ];
 
 @NgModule({

@@ -22,13 +22,17 @@ export class ListFuncionarioComponent implements OnInit {
     this.reloadData();
   }
 
+  addFuncionario() {
+    this.router.navigate(['funcionario/adicionar']);
+  }
+
   reloadData() {
     this.funcionarios = this.api.getFuncionario();
     console.log(this.funcionarios);
   }
 
   deletaUsuario(id : number) {
-    this.router.navigate(['funcionarios/deletar', id]);
+    this.router.navigate(['funcionario/deletar', id]);
   }
 
   atualizaUsuario(id : number) {
