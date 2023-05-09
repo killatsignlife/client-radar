@@ -3,5 +3,5 @@ export class Foto {
   altText?: string;
   name?: string;
   type?: string;
-  imageBytes?: Blob;
+  imageBytes?: string;
 }

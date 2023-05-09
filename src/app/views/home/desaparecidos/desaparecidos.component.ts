@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { elementAt, Observable } from 'rxjs';
 import { Router } from '@angular/router'
 import { ApiService } from 'src/app/api.service';
 import { Desaparecido } from 'src/app/desaparecido.model';
@@ -16,6 +16,8 @@ import { Desaparecido } from 'src/app/desaparecido.model';
 export class DesaparecidosComponent implements OnInit {
   title = 'Desaparecidos';
   desaparecidos: Observable<Desaparecido[]>;
+
+  fotos: string;
 
   constructor(private service: ApiService, private router: Router) { }
 

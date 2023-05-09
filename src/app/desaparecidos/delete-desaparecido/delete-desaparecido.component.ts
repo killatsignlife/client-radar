@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Desaparecido } from 'src/app/desaparecido.model';
+import { Endereco } from 'src/app/endereco.model';
 import { Voluntario } from 'src/app/voluntario.model';
 
 @Component({
@@ -16,7 +17,9 @@ export class DeleteDesaparecidoComponent implements OnInit {
     desaparecido: Desaparecido;
     // @ts-ignore: Object is possibly 'undefined'.
     desaparecidoId: number;
-  
+
+    // @ts-ignore: Object is possibly 'undefined'.
+    enderecos: Observable<Endereco[]>;
   
     constructor(private api: ApiService, private router: Router, private route: ActivatedRoute) { }
   
@@ -27,8 +30,12 @@ export class DeleteDesaparecidoComponent implements OnInit {
   
       this.api.getDesaparecido(this.desaparecidoId)
         .subscribe(data => {
-          console.log(data);
+
           this.desaparecido = data;
+          console.log(this.desaparecido.endereco)
+          this.enderecos = this.desaparecido.endereco;
+          console.log(this.enderecos);
+
         }, error => console.log(error));
     }
   

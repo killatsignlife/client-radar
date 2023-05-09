@@ -48,7 +48,7 @@
   .Fundo_verde {
     padding-top: 4%;
     color: #000;
-    background-color: var(--continuos-white);
+    background-color: var(--primary);
     align-items: center;
     width: 100%;
     height: auto;
@@ -68,7 +68,7 @@
     color: #000;
     font-size: 150%;
     margin-right: 2%;
-    border-color: var(--secondary);
+    border-color: var(--primary);
   }
   
   .Fundo_verde input[type="checkbox"] {

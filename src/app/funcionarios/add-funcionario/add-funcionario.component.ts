@@ -26,6 +26,8 @@ export class AddFuncionarioComponent implements OnInit {
   }
 
   save() {
+    console.log(this.funcionario);
+
     this.service.createFuncionario(this.funcionario).subscribe(
       data => console.log(data),
       error => console.log(error)

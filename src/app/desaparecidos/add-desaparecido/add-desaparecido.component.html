@@ -78,7 +78,7 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.dataDesaparecimento"
+            [(ngModel)]="desaparecido.horaDesaparecimento"
             name="horaDesaparecimento"
             id="horaDesaparecimento"
             placeholder="Hora do desaparecimento"
@@ -96,7 +96,7 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.dataDeNascimento"
+            [(ngModel)]="desaparecido.dataNascimento"
             name="dataDeNascimento"
             id="dataDeNascimento"
             placeholder="Data de Nascimento do Desaparecido"
@@ -236,7 +236,24 @@
             required
           />
         </mat-form-field>
-
+        <span>Adicione Fotos</span>
+          <form id="form" [formGroup]="formRole">
+            <button mat-stroked-button type="button" color="primary" (click)="addRoles()">
+              <mat-icon>add</mat-icon>
+            </button>
+            <div formArrayName="roles" fxFlex="100" fxLayout="column">
+              <ng-container *ngFor="let roless of roles.controls; let i=index">
+                <div [formGroupName]="i">
+                  <mat-form-field fxFlex="100">
+                    <input formControlName="role" matInput type="text" class="form-control" placeholder="Url da Foto">
+                  </mat-form-field>
+                  <button mat-stroked-button type="button" color="primary" (click)="removeDoFormArray(roles, i)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </ng-container>
+            </div>
+          </form>
         <mat-form-field class="campo-form" appearance="outline">
           <mat-label style="font-size: 1rem" for="cep" class="control-label"
             >CEP</mat-label
@@ -244,7 +261,7 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.endereco.cep"
+            [(ngModel)]="endereco.cep"
             name="cep"
             id="CEP"
             placeholder="CEP"
@@ -261,7 +278,7 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.endereco.cidade"
+            [(ngModel)]="endereco.cidade"
             name="cidade"
             id="Cidade"
             placeholder="Cidade"
@@ -285,7 +302,7 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.endereco.bairro"
+            [(ngModel)]="endereco.bairro"
             name="bairro"
             id="Bairro"
             placeholder="Bairro"
@@ -302,10 +319,63 @@
           <input
             matInput
             type="text"
-            [(ngModel)]="desaparecido.endereco.logradouro"
+            [(ngModel)]="endereco.logradouro"
             name="logradouro"
             id="Logradouro"
             placeholder="Logradouro"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field class="campo-form" appearance="outline">
+          <mat-label
+            style="font-size: 1rem"
+            for="complemento"
+            class="control-label"
+            >Complemento</mat-label
+          >
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="endereco.complemento"
+            name="complemento"
+            id="complemento"
+            placeholder="Complemento"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field class="campo-form" appearance="outline">
+          <mat-label
+            style="font-size: 1rem"
+            for="uf"
+            class="control-label"
+            >UF</mat-label
+          >
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="endereco.uf"
+            name="uf"
+            id="uf"
+            placeholder="Estado (sigla)"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field class="campo-form" appearance="outline">
+          <mat-label
+            style="font-size: 1rem"
+            for="descricaoDesaparecimento"
+            class="control-label"
+            >Descrição Desaparecimento</mat-label
+          >
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="desaparecido.descricaoDesaparecido"
+            name="descricaoDesaparecimento"
+            id="descricaoDesaparecimento"
+            placeholder="Descrição Desaparecimento"
             required
           />
         </mat-form-field>

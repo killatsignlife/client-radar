@@ -8,7 +8,7 @@
               <!-- <img id="foto_principal" src={{desaparecido.}} alt="{{desaparecido.altTxtFotoPrincipal}}" > -->
           </div>
               <span class="caption"><ul id="Descricoes">
-                <li><strong>Data de Nascimento: </strong>{{desaparecido.dataDeNascimento}}</li>
+                <li><strong>Data de Nascimento: </strong>{{desaparecido.dataNascimento}}</li>
                 <!--<li>Endereço onde morava: {{desaparecido.logradouro}} , {{desaparecido.bairro}}, {{desaparecido.cep}}, {{desaparecido.cidade}} - SP</li>-->
                 <li><strong>Sexo: </strong> {{desaparecido.sexoDesaparecido}}</li>
                 <li><strong>Cor de Pele: </strong> {{desaparecido.corDePeleDesaparecido}}</li>
@@ -16,12 +16,12 @@
                 <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataDesaparecimento}} às {{desaparecido.horaDesaparecimento}}</li>
               </ul></span>
 
-              <button style="font-size: 1rem" id="voluntario" (click)="detailDesaparecido(desaparecido.id)">Reportar</button>
+              <button style="font-size: 1rem" id="voluntario" (click)="detailDesaparecido(desaparecido.idDesaparecido)">Reportar</button>
           </div>
 
           <h2  class="Titulo_Detalhes_desaparecimento">Detalhes do Desaparecimento</h2>
             <table id="Detalhes_desaparecimento" fxLayout="column" >
-            <p style="font-size: 1rem">{{desaparecido.descricaoDesaparecimento}}
+            <p style="font-size: 1rem">{{desaparecido.descricaoDesaparecido}}
             </p>
             </table>
 

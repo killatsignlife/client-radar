@@ -67,7 +67,25 @@
               required
             />
           </mat-form-field>
-  
+          
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="dataNascimento"
+              class="control-label"
+              >Data de Nascimento do funcionario</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.dataNascimento"
+              name="dataNascimento"
+              id="dataNascimento"
+              placeholder="Data de Nascimento do funcionario"
+              required
+            />
+          </mat-form-field>
+
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"

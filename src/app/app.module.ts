@@ -24,6 +24,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
 import { AgradecimentosComponent } from './views/home/agradecimentos/agradecimentos.component';
@@ -88,6 +89,7 @@ import { ListFuncionarioComponent } from './funcionarios/list-funcionario/list-f
     MatButtonModule,
     MatDialogModule,
     MatCardModule,
+    ReactiveFormsModule,
     MatMenuModule,
     FlexLayoutModule,
     MatStepperModule,

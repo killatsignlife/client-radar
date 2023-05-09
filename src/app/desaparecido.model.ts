@@ -2,16 +2,16 @@ import { Endereco } from "./endereco.model";
 import { Foto } from "./foto.model";
 
 export class Desaparecido {
-  id: number;
+  idDesaparecido: number;
   nomeDesaparecido?: string;
   sobrenomeDesaparecido?: string;
   dataDesaparecimento?: string;
   horaDesaparecimento?: string;
-  descricaoDesaparecimento?: string;
-  dataDeNascimento?: string;
+  descricaoDesaparecido?: string;
+  dataNascimento?: string;
   recompensa?: string;
   endereco?: Endereco;
-  fotos?: Foto[];
+  fotos?: Array<string>;
   possuiDoenca?: string;
   corDePeleDesaparecido?: string;
   tatuagemDesaparecido?: string;

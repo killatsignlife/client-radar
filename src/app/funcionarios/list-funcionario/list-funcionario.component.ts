@@ -11,7 +11,7 @@ import { Funcionario } from 'src/app/funcionario.model';
 })
 export class ListFuncionarioComponent implements OnInit {
 
-  displayedColumns: string[] = ['Nome', 'CPF', 'Username', 'Ações'];
+  displayedColumns: string[] = ['Nome', 'Sobrenome', 'CPF', 'Ações'];
 
    // @ts-ignore: Object is possibly 'undefined'.
    funcionarios: Observable<Funcionario[]>;
@@ -32,10 +32,12 @@ export class ListFuncionarioComponent implements OnInit {
   }
 
   deletaUsuario(id : number) {
+    console.log(id);
     this.router.navigate(['funcionario/deletar', id]);
   }
 
   atualizaUsuario(id : number) {
+    console.log(id);
     this.router.navigate(['funcionario/atualizar', id])
   }
 
