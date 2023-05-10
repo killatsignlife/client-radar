@@ -26,21 +26,34 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.nomeCompletoDesaparecido"
+              [(ngModel)]="desaparecido.nomeDesaparecido"
               name="name"
               id="nome"
               placeholder="Nome"
               required
             />
           </mat-form-field>
-
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
+              >Sobrenome</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="desaparecido.sobrenomeDesaparecido"
+              name="sobrenome"
+              id="sobrenome"
+              placeholder="Sobrenome"
+              required
+            />
+          </mat-form-field>
         </div>
 
         <div
           class="form-group"
           fxLayout="row wrap"
           fxLayoutAlign="space-around center"
-        >
+          *ngFor="let endereco of enderecos | async">
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label"
               >CEP</mat-label
@@ -48,7 +61,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.cep"
+              [(ngModel)]="endereco.cep"
               name="cep"
               id="CEP"
               placeholder="CEP"
@@ -65,20 +78,13 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.cidade"
+              [(ngModel)]="endereco.cidade"
               name="cidade"
               id="Cidade"
               placeholder="Cidade"
               required
             />
           </mat-form-field>
-        </div>
-
-        <div
-          class="form-group"
-          fxLayout="row wrap"
-          fxLayoutAlign="space-around center"
-        >
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
@@ -89,7 +95,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.bairro"
+              [(ngModel)]="endereco.bairro"
               name="bairro"
               id="Bairro"
               placeholder="Bairro"
@@ -106,7 +112,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="desaparecido.logradouro"
+              [(ngModel)]="endereco.logradouro"
               name="logradouro"
               id="Logradouro"
               placeholder="Logradouro"
@@ -114,7 +120,6 @@
             />
           </mat-form-field>
         </div>
-
         <button
           (click)="deleteDesaparecido()"
           style="font-size: 1rem"

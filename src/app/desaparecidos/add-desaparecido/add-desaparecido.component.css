@@ -1,147 +1,146 @@
 * {
-    color: #000;
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .container-forms {
-    width: 50%;
-    border-radius: 15px;
-    background-color: var(--continuos-white);
-    box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
-  }
-  
-  .container-forms h1 {
-    text-align: center;
-    color: var(--continuos-white);
-    background-color: var(--primary);
-    padding: 2rem 0 2rem 0;
-    border-radius: 15px 15px 0 0;
-  }
-  
-  form {
-    margin-top: 2%;
-  }
-  
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-forms {
+  width: 50%;
+  border-radius: 15px;
+  background-color: var(--continuos-white);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
+}
+
+.container-forms h1 {
+  text-align: center;
+  color: var(--continuos-white);
+  background-color: var(--primary);
+  padding: 2rem 0 2rem 0;
+  border-radius: 15px 15px 0 0;
+}
+
+form {
+  margin-top: 2%;
+}
+
+.campo-form {
+  width: 300px;
+}
+
+.form-group {
+  padding: 0 15px 0 15px;
+  border-radius: 15px;
+}
+
+#Cadastrar {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+  margin-top: 2%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 15px 0 20px 0;
+}
+
+.Fundo_verde {
+  padding-top: 4%;
+  color: #000;
+  background-color: var(--primary);
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4%;
+}
+
+.Fundo_verde h1 {
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+
+.Fundo_verde h2 {
+  font-weight: bold;
+}
+
+.Fundo_verde input {
+  color: #000;
+  font-size: 150%;
+  margin-right: 2%;
+  border-color: var(--primary);
+}
+
+.Fundo_verde input[type="checkbox"] {
+  margin-right: 0.5%;
+  padding: 0;
+  height: 12px;
+}
+
+.Fundo_verde label {
+  font-size: 16px;
+  margin-right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.campo-checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+
+mat-form-field + mat-form-field {
+  margin-left: 2%;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #000;
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 1400px) {
   .campo-form {
-    width: 300px;
+    width: 220px;
   }
-  
-  .form-group {
-    padding: 0 15px 0 15px;
-    border-radius: 15px;
-  }
-  
-  #Cadastrar {
-    background-color: var(--primary);
-    border: none;
-    color: var(--white);
-    margin-top: 2%;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 15px 0 20px 0;
-  }
-  
-  .Fundo_verde {
-    padding-top: 4%;
-    color: #000;
-    background-color: var(--continuos-white);
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4%;
-  }
-  
-  .Fundo_verde h1 {
-    font-size: 25px;
-    margin-bottom: 5%;
-  }
-  
-  .Fundo_verde h2 {
-    font-weight: bold;
-  }
-  
-  .Fundo_verde input {
-    color: #000;
-    font-size: 150%;
-    margin-right: 2%;
-    border-color: var(--secondary);
-  }
-  
-  .Fundo_verde input[type="checkbox"] {
-    margin-right: 0.5%;
-    padding: 0;
-    height: 12px;
-  }
-  
-  .Fundo_verde label {
-    font-size: 16px;
-    margin-right: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .campo-checkboxes {
+}
+
+@media screen and (max-width: 900px) {
+  form div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 0;
+    text-align: center;
   }
-  
-  .checkbox input:checked ~ .checkmark {
-    background-color: var(--primary);
+
+  h1 {
+    text-align: center;
+    justify-content: center;
+    line-height: 3rem;
   }
-  
+
+  #formulario {
+    display: flex;
+    margin: 0;
+    width: 90%;
+  }
+
   mat-form-field + mat-form-field {
-    margin-left: 2%;
+    margin-left: 0;
   }
-  
-  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: #000;
+}
+
+@media screen and (max-width: 610px) {
+  .campo-form {
+    width: 130px;
   }
-  
-  /*Responsividade*/
-  
-  @media screen and (max-width: 1400px) {
-    .campo-form {
-      width: 220px;
-    }
+  .checkbox {
+    font-size: 0.7rem;
   }
-  
-  @media screen and (max-width: 900px) {
-    form div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      text-align: center;
-    }
-  
-    h1 {
-      text-align: center;
-      justify-content: center;
-      line-height: 3rem;
-    }
-  
-    #formulario {
-      display: flex;
-      margin: 0;
-      width: 90%;
-    }
-  
-    mat-form-field + mat-form-field {
-      margin-left: 0;
-    }
-  }
-  
-  @media screen and (max-width: 610px) {
-    .campo-form {
-      width: 130px;
-    }
-    .checkbox {
-      font-size: 0.7rem;
-    }
-  }
-  
+}

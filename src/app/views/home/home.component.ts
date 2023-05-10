@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router'
 import { ApiService } from 'src/app/api.service';
-import { Desaparecido } from 'src/app/desaparecido.model';
+import { Desaparecido } from 'src/app/model/desaparecido.model';
 
 @Component({
   selector: 'app-home',

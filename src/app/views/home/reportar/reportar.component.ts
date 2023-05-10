@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Mensagem } from 'src/app/mensagem.model';
 import { ActivatedRoute,Router } from '@angular/router';
-import { Desaparecido } from 'src/app/desaparecido.model';
+import { Desaparecido } from 'src/app/model/desaparecido.model';
 @Component({
   selector: 'app-reportar',
   templateUrl: './reportar.component.html',
