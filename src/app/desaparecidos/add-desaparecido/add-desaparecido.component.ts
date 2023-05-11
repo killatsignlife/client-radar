@@ -56,15 +56,26 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   save() {
-    for (let value of this.roles.value) {
+    let arr: any[] = [];
+
+    for(let value of this.roles.value) {
       console.log(value.role);
-      this.desaparecido.fotos?.push(value.role);
+      arr.push(value.role);
     }
+
+    console.log(arr);
+
+    // for (let value of arr) {
+    //   this.desaparecido.fotos?.push(value);
+    // }
+    this.desaparecido.fotos = arr;
+    console.log(this.desaparecido.fotos);
 
     this.desaparecido.endereco = this.endereco;
     console.log(this.desaparecido.endereco);
 
     this.service.createDesaparecido(this.desaparecido).subscribe(
+
       data => console.log(data),
       error => console.log(error)
     );
