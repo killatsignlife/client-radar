@@ -103,7 +103,73 @@
               required
             />
           </mat-form-field>
-  
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cep" class="control-label"
+              >CEP</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.cep"
+              name="cep"
+              id="CEP"
+              placeholder="CEP"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="cidade"
+              class="control-label"
+              >Cidade</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.cidade"
+              name="cidade"
+              id="Cidade"
+              placeholder="Cidade"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="bairro"
+              class="control-label"
+              >Bairro</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.bairro"
+              name="bairro"
+              id="Bairro"
+              placeholder="Bairro"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="logradouro"
+              class="control-label"
+              >Logradouro</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.logradouro"
+              name="logradouro"
+              id="Logradouro"
+              placeholder="Logradouro"
+              required
+            />
+          </mat-form-field>
+    
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
@@ -122,7 +188,7 @@
             />
           </mat-form-field>
         </div>
-      
+                
           <button
             type="submit"
             style="font-size: 1rem"
