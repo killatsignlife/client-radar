@@ -1,41 +1,64 @@
-<section>
-<!--Primeira Grid-->
-  <div class="Fundo_bg" fxLayout="column" fxLayoutAlign="center center" >
-    <h3>Em média, duas pessoas desaparecem a cada hora em São Paulo</h3>
-    <h1 >Ajude-nos a encontra-los</h1>
-      <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
+<body>
+  <div class="landing">
+  <main id="conteudo">
+    <aside>
+      <h2 id="titulo1">Em média, duas pessoas desaparecem a cada hora em São Paulo</h2>
+      <div class="check-linha">
+        <p id="titulo2">Reporte a situação de uma criança, adolescentes ou adulto desaparecido</p>
+      </div>
+      <div class="check-linha">
+        <p id="titulo2">Seja notificado a respeito de crianças, adolescentes e adultos desaparecidos</p>
+      </div>
+      <div class="check-linha">
+        <p id="titulo2">Faça parte da comunidade de voluntarios</p>        
+      </div>
+      <button class="btn-registre" mat-raised-button>Registre-se</button>
+    </aside>
+    <article class="article-img-1">
+      <div class="size">
+        <img src="assets/imagens/Certification-cuate.svg" />
+      </div>
+    </article>
+  </main>
+  <img src="assets/imagens/wave (5).svg" id="wave" />
+  <div class="secao2">
+    <article>
+      <div class="size2">
+        <img src="assets/imagens/Thesis-pana.svg"
+          alt="Mulher sentada estudando em um notebook, apoiada em livros grandes e ao fundo temos um caderno de thesis" />
+      </div>
+    </article>
+    <aside>
+      <h2 id="titulo3">Fique alerta na sua região</h2>
+    </aside>
   </div>
-
-<!--Doacoes-->
-<div class="Fundo_verde">
-  <h2>Mantenha este ideal doando!</h2>
-    <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
-</div>
-
-<!--Segunda Grid-->
-<div class="Fundo_branco" >
-
-  <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="start start" >
-      <h2 style="font-size: 2rem">Desaparecidos</h2>
-  </div>
-
-<!--Cards-->
-<div class="Fundo_branco" >
-  <div fxLayout="row wrap" fxLayoutAlign="center center" >
-  <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%"   *ngFor="let desaparecido of desaparecidos | slice:0:3">
-    <mat-card (click)="detailDesaparecido(desaparecido.idDesaparecido)" fxLayout="column" fxLayoutAlign="center center" class="example-card">
-            <mat-card-content>
-              <!-- <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="{{desaparecido.altTxtFotoPrincipal}}"> -->
-            </mat-card-content>
-            <mat-card-title style="font-size: 1rem">{{desaparecido.nomeDesaparecido}} {{desaparecido.sobrenomeDesaparecido}}</mat-card-title>
-      </mat-card>
-</div>
-</div>
-</div>
-
-  <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="center center" >
-    <p style="font-size: 1rem" id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
+  <div class="secao3">
+    <h1>Voluntarie-se</h1>
+    <div class="row">
+      <div class="card card-color">
+        <h2>1. Cadastre-se</h2>
+        <p>Cadastre-se na plataforma e conheça as crianças, adolescentes e adultos 
+           desaparecidos em São Paulo.
+        </p>
+        <img class="image" src="assets/imagens/inscrever-se.png" alt="imagem de um mockup de um formulário" />
+      </div>
+      <div class="card card-color">
+        <h2>2. Seja notificado</h2>
+        <p>
+          Após o cadastro, o seus dados serão analisados para você ser notificado 
+          quando alguma criança, adolescente ou adulto desaparecer na sua região.
+        </p>
+        <img class="image" src="assets/imagens/desktop-computer.png" alt="imagem de um desktop com um capelo em cima" />
+      </div>
+      <div class="card card-color">
+        <h2>3. Reporte</h2>
+        <p>
+          Caso você possua informações que podem ajudar a encontrar uma alguma 
+          criança, adolescente ou adulto desaparecido; por favor, nos informe.
+        </p>
+        <img class="image" src="assets/imagens/certificate.png" alt="Imagem de um certificado" />
+      </div>
+    </div>
   </div>
 </div>
-
-  </section>
+</body>
