@@ -16,7 +16,7 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 :root {
   --primary: #3bbf4ddc;
   --tertiary: #494949;
-  --secondary: #2f8f48;
+  --secondary: #0ba835;
   --back: #010d01;
   --white:#FFF;
   --dark: #000;
@@ -31,7 +31,7 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --secondary: #000;
   --tertiary: #000;
   --back: #FFF;
-  --white: yellow;
+  --white: #000;
   --dark:#000;
   --continuos-white: white;
   --color-to-see: #010d01;

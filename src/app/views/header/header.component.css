@@ -1,5 +1,5 @@
 * {
-  color: var(--primary);
+  color: var(--continuos-white);
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -8,6 +8,14 @@
 #Acessibilidade_header{
   justify-content: center;
   display: flex;
+}
+
+#Acessibilidade_header span .mat-menu-item{
+  text-decoration: underline;
+}
+
+#Acessibilidade_header span .mat-menu-item:hover{
+  color: var(--primary);
 }
 
 #Acessibilidade_header button:hover{
@@ -62,7 +70,7 @@ mat-toolbar-row span {
 }
 
 span a {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 /*Responsividade*/

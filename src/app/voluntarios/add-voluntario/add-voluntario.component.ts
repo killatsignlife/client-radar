@@ -17,7 +17,7 @@ export class AddVoluntarioComponent implements OnInit {
   constructor(private service: ApiService, private router: Router, private maxLength: SharedDataService) { }
 
   ngOnInit(){
-    this.maxLength.maxCaracteres;
+    this.maxLength.maxCaracteres();
   }
 
   newVoluntario():void{

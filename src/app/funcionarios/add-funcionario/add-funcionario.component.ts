@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Funcionario } from 'src/app/funcionario.model';
+import { SharedDataService } from 'src/app/shared-data.service';
 @Component({
   selector: 'app-add-funcionario',
   templateUrl: './add-funcionario.component.html',
@@ -13,7 +14,7 @@ export class AddFuncionarioComponent implements OnInit {
   funcionario: Funcionario = new Funcionario();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router) { }
+  constructor(private service: ApiService, private router: Router, private maxLength: SharedDataService) { }
 
   newFuncionario(): void {
     this.submitted = false;
@@ -23,6 +24,7 @@ export class AddFuncionarioComponent implements OnInit {
   ngOnInit(): void {
     this.submitted = false;
     this.funcionario = new Funcionario();
+    this.maxLength.maxCaracteres();
   }
 
   save() {

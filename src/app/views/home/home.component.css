@@ -139,7 +139,7 @@ mat-card-content{
   #voluntario, #Cadastrar{
     background-color: var(--continuos-white);
     border:none;
-    color: var(--primary);
+    color: var(--secondary);
     box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
   .Fundo_branco h2{
