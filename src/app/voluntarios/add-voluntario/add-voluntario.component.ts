@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { SharedDataService } from 'src/app/shared-data.service';
 import { Voluntario } from 'src/app/voluntario.model';
 
 @Component({
@@ -13,9 +14,10 @@ export class AddVoluntarioComponent implements OnInit {
     voluntario: Voluntario = new Voluntario();
     submitted = false;
 
-  constructor(private service: ApiService, private router: Router) { }
+  constructor(private service: ApiService, private router: Router, private maxLength: SharedDataService) { }
 
   ngOnInit(){
+    this.maxLength.maxCaracteres;
   }
 
   newVoluntario():void{
