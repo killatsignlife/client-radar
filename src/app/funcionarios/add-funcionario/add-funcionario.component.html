@@ -11,6 +11,7 @@
       <div class="container-forms">
         <h1 style="font-size: 2rem">Cadastre um funcionario</h1>
         <form
+          #f = "ngForm"
           (ngSubmit)="onSubmit()"
           id="formulario"
           fxLayout="column"
@@ -110,6 +111,7 @@
             <input
               matInput
               type="text"
+              (blur)="consultaCep(applyFilter($event), f)"
               [(ngModel)]="funcionario.cep"
               name="cep"
               id="CEP"

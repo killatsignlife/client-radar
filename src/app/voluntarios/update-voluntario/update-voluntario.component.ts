@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { SharedDataService } from 'src/app/shared-data.service';
 import { Voluntario } from 'src/app/voluntario.model';
 
 @Component({
@@ -15,9 +16,11 @@ export class UpdateVoluntarioComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   voluntarioId: number;
 
-  constructor(private api: ApiService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private api: ApiService, private route: ActivatedRoute, private router: Router
+    ,private maxLength: SharedDataService,  private cepService: SharedDataService) { }
 
   ngOnInit() {
+    this.maxLength.maxCaracteres();
     this.voluntario = new Voluntario();
       this.voluntarioId = this.route.snapshot.params['id'];
   
@@ -39,6 +42,21 @@ export class UpdateVoluntarioComponent implements OnInit {
 
   onSubmit() {
     this.updateVoluntario();
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
   }
 
 }

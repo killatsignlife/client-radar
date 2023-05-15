@@ -57,6 +57,7 @@ export class AddVoluntarioComponent implements OnInit {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
+    form.controls['uf'].setValue(dados.uf)
   }
 
 }

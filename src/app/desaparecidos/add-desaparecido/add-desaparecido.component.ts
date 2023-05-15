@@ -8,6 +8,7 @@ import { ɵunwrapSafeValue } from "@angular/core";
 import { Foto } from 'src/app/foto.model';
 import { FormArray, FormBuilder } from '@angular/forms';
 import { Endereco } from 'src/app/endereco.model';
+import { SharedDataService } from 'src/app/shared-data.service';
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -25,7 +26,8 @@ export class AddDesaparecidoComponent implements OnInit {
   submitted = false;
   fotos: Foto = new Foto();
 
-  constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer) { }
+  constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer
+    , private cepService: SharedDataService) { }
 
   roles = this.formRole.get('roles') as FormArray;
 
@@ -90,6 +92,22 @@ export class AddDesaparecidoComponent implements OnInit {
 
   gotoAgradecimentos() {
     this.router.navigate(['/sucesso'])
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
+    form.controls['uf'].setValue(dados.uf)
+
   }
 
 }

@@ -11,6 +11,7 @@
     <div class="container-forms">
       <h1 style="font-size: 2rem">Cadastre uma criança, adolescente ou adulto desaparecido</h1>
       <form
+        #f = "ngForm"
         (ngSubmit)="onSubmit()"
         id="formulario"
         fxLayout="column"
@@ -264,6 +265,7 @@
             [(ngModel)]="endereco.cep"
             name="cep"
             id="CEP"
+            (blur)="consultaCep(applyFilter($event), f)"
             placeholder="CEP"
             required
           />

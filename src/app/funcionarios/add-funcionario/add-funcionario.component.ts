@@ -14,7 +14,8 @@ export class AddFuncionarioComponent implements OnInit {
   funcionario: Funcionario = new Funcionario();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router, private maxLength: SharedDataService) { }
+  constructor(private service: ApiService, private router: Router, 
+    private maxLength: SharedDataService, private cepService: SharedDataService) { }
 
   newFuncionario(): void {
     this.submitted = false;
@@ -52,4 +53,19 @@ export class AddFuncionarioComponent implements OnInit {
     this.router.navigate(['/sucesso'])
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
+    form.controls['uf'].setValue(dados.uf)
+  }
 }
