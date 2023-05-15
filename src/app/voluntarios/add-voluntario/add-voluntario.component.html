@@ -11,6 +11,7 @@
       <div class="container-forms">
         <h1 style="font-size: 2rem">Cadastre-se</h1>
         <form
+          #f = "ngForm"
           (ngSubmit)="onSubmit()"
           id="formulario"
           fxLayout="column"
@@ -144,6 +145,7 @@
                 name="cep"
                 id="CEP"
                 placeholder="CEP"
+                (blur)="consultaCep(applyFilter($event), f)"
                 required
               />
             </mat-form-field>

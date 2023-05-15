@@ -14,7 +14,8 @@ export class AddVoluntarioComponent implements OnInit {
     voluntario: Voluntario = new Voluntario();
     submitted = false;
 
-  constructor(private service: ApiService, private router: Router, private maxLength: SharedDataService) { }
+  constructor(private service: ApiService, private router: Router, 
+    private maxLength: SharedDataService,  private cepService: SharedDataService) { }
 
   ngOnInit(){
     this.maxLength.maxCaracteres();
@@ -41,6 +42,21 @@ export class AddVoluntarioComponent implements OnInit {
 
   gotoAgradecimentos(){
     this.router.navigate(['/sucesso'])
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
   }
 
 }
