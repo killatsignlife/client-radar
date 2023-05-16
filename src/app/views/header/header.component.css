@@ -69,8 +69,12 @@ mat-toolbar-row {
   padding: 0 0.2rem 0 0.2rem;
 }
 
-.grupo_botao:nth-child(2){
- 
+.grupo_botao:nth-child(3){
+  gap: 1rem;
+}
+
+.grupo_botao:nth-child(3) span{
+    margin: 0;
 }
 
 .lista a {
@@ -84,8 +88,17 @@ mat-toolbar-row {
   text-decoration: underline;
 }
 
-span a {
-  color: var(--secondary);
+span .mat-flat-button {
+  color: var(--continuos-white);
+  background-color: transparent;
+  border: var(--primary) solid 0.1rem;
+}
+
+span .mat-flat-button:hover{
+  background-color: var(--primary);
+
+  color: var(--continuos-white);
+  text-decoration: none;
 }
 
 /*Responsividade*/
