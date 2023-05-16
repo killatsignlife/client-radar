@@ -12,7 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './views/header/header.component';
-import { DesaparecidosComponent } from './views/home/desaparecidos/desaparecidos.component';
+import { DesaparecidosComponent } from './desaparecidos/list-desaparecidos/desaparecidos.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DescricaoComponent } from './views/home/descricao/descricao.component';

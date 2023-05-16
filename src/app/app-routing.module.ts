@@ -1,7 +1,7 @@
 import { HomeComponent } from './views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DesaparecidosComponent } from './views/home/desaparecidos/desaparecidos.component';
+import { DesaparecidosComponent } from './desaparecidos/list-desaparecidos/desaparecidos.component';
 import { DescricaoComponent } from './views/home/descricao/descricao.component';
 import { DoacaoComponent } from './views/home/doacao/doacao.component';
 import { ReportarComponent } from './views/home/reportar/reportar.component';
