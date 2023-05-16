@@ -80,6 +80,8 @@ mat-toolbar-row {
 .lista a:hover{
   text-decoration: none;
   filter: brightness(75%);
+  transition: 1s;
+  text-decoration: underline;
 }
 
 span a {
