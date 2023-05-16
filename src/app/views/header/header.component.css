@@ -8,6 +8,7 @@
 #Acessibilidade_header{
   justify-content: center;
   display: flex;
+  background-color: #282828;
 }
 
 #Acessibilidade_header span .mat-menu-item{
@@ -18,10 +19,6 @@
   color: var(--primary);
 }
 
-#Acessibilidade_header button:hover{
-  text-decoration: underline;
-}
-
 mat-toolbar {
   background-color: var(--gray);
 }
@@ -30,7 +27,6 @@ mat-toolbar-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .menu-hamb-container{
@@ -60,13 +56,30 @@ mat-toolbar-row {
   display: flex;
 }
 
-.cadastro {
-  background-color: var(--gray);
-  
+.grupo_botao span {
+  margin: 2px;
 }
 
-mat-toolbar-row span {
-  margin: 2px;
+.lista a {
+  color: var(--continuos-white);
+  font-size: 1rem;
+}
+
+.grupo_botao .lista{
+  padding: 0 0.2rem 0 0.2rem;
+}
+
+.grupo_botao:nth-child(2){
+ 
+}
+
+.lista a {
+  margin: 0px;
+}
+
+.lista a:hover{
+  text-decoration: none;
+  filter: brightness(75%);
 }
 
 span a {
