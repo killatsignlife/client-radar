@@ -19,6 +19,8 @@ export class DesaparecidosComponent implements OnInit {
 
   fotos: string;
 
+  displayedColumns: string[] = ['Nome', 'Sobrenome', 'CPF', 'Ações'];
+
   constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit(): void {

@@ -1,129 +1,146 @@
-*{
-    color: var(--continuos-white);
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+.componente {
+  padding: 4vh 10.5vw;
+  height: 800px;
+}
 
-  .example-icon {
-      padding: 0 14px;
-    }
-    .example-spacer {
-      flex: 1 1 auto;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-body table {
+  width: 100%;
+  /* margin: auto; */
+  text-align: left;
+  color: var(--primary-text-color);
+  box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 15%);
+
+}
+
+th {
+  color: var(--primary-text-color);
+  text-align: center !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+td {
+  color: var(--primary-text-color);
+  text-align: center !important;
+}
+
+.panel-body {
+  margin: 4vh 0;
+  width: 100%;
+}
+
+h1 {
+  /* padding: 0 0 1vw 6vw; */
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+/*Sidenav*/
+
+.example-container {
+  min-height: 80vh;
+}
+
+mat-sidenav {
+  width: 10vw;
+}
+
+li {
+  padding-top: 2em;
+  list-style: none;
+}
 
 
-  #voluntario{
-    margin-top: 1%;
-    font-size: 20px;
-    padding: 1%;
-  }
+/*Inputs*/
 
-  .Fundo_cinza{
-    text-align: center;
-    align-items: center;
-    background-color: var(--continuos-white);
-    padding-bottom: 4%;
-  }
+label {
+  margin-bottom: 0.4em;
+  font-weight: 500;
+}
 
-  .Fundo_branco{
-    padding-top: 2%;
-    color: var(--white);
-    background-color: var(--continuos-white);
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 1%;
-  }
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
 
-  .Fundo_branco h1{
-    font-size: 30px;
-      padding-top: 2%;
-      color: var(--dark);
+.dados__nascimento,
+.dados__ingresso,
+.dados__curso,
+.dados__periodo,
+.dados__perfil {
+  width: 15w;
+}
 
-  }
+.campos {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-  .mat-card-title{
-    color: var(--dark);
-  }
-  #mais{
-    border:none;
-    color: var(--back);
-    background-color: var(--secondary);
-    font-weight: bold;
-  }
+.dados_escolares {
+  margin-top: 3em;
+}
 
-    .example-card {
-      height: 25%;
-      margin-left:5%;
-      margin-right: 5%;
-      background-color: var(--continuos-white);
-      margin-bottom:6%;
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-    }
+.campos p {
+  font-weight: bold;
+  text-align: center;
+}
 
-    .example-card img{
-      height: 25rem;
-      width: 100%;
-      margin-top: 1px;
-      margin-bottom: 5px;
-      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    }
+.buttons{
+  text-align: center;
+}
 
-    mat-card-content{
-      border-bottom-style: solid;
-      border-bottom-color: var(--primary);
-    }
-    .mat-card>:first-child{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.buttons button{
+  width: 100px;
+  margin: .5rem;
+}
 
-    .mat-card{
-      border-radius: 5%;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        }
-
-    .example-header-image {
-      background-size: cover;
-    }
-
-    #voluntario, #Cadastrar{
-      background-color: var(--white);
-      border:none;
-      color: var(--white);
-    }
-    .Fundo_branco h2{
-      padding-left: 2%;
-    }
-
-button {
-  margin-top: -6%;
-  font-size: 20px;
-  padding: 1%;
+#btn_adicionar{
   background-color: var(--primary);
-  border:none;
+  border-radius: 5px;
+  border: none;
   color: var(--white);
-  margin-left: 90% !important;
-  position:absolute;
-  border-radius: 4%;
+  margin-top: 2%;
+  padding: 0.5%;
+  display: flex;
+  margin: 0 0 20px 0;
 }
 
-    /*Responsividade*/
- @media screen and (min-width: 376px) and (max-width: 599px){
-  .example-card img{
-    height: 300px;;
-    width: 100%;
-    margin-top: 1px;
-    margin-bottom: 5px;
-      }
+/*Media Queries*/
+@media (max-width: 676px) {
+  .panel-body {
+    overflow-x: scroll;
+  }
+  .panel-body th, .panel-body td {
+    min-width: 30vw;
+    min-height: 25vh;
+  }
+  .panel-body table{
+    background-color: var(--perfil-input-background);
+    width: 70vw;
+    height: auto;
+    margin: 2rem;
+  }
+  h1 {
+    color: var(--secondary-text-color);
+  }
 }
 
-@media screen and (min-width: 960px) and (max-width: 1240px){
-  .example-card img{
-    height: 120px;
-    margin-top: 1px;
-    margin-bottom: 5px;
-      }
+@media (max-width: 768px) {
 }

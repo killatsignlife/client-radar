@@ -14,6 +14,8 @@ export class ListVoluntarioComponent implements OnInit {
   title = 'Voluntarios';
   voluntarios: Observable<Voluntario[]>;
 
+  displayedColumns: string[] = ['Nome', 'Sobrenome', 'CPF', 'Ações'];
+
   constructor(private service: ApiService, private router: Router) { }
 
   ngOnInit(): void {
@@ -27,7 +29,7 @@ export class ListVoluntarioComponent implements OnInit {
   }
 
   addVoluntario() {
-    this.router.navigate(['voluntarios'])
+    this.router.navigate(['voluntarios/adicionar'])
   }
 
   atualizar(id: number) {
