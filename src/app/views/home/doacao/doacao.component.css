@@ -26,7 +26,8 @@
   box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
   border-radius: 15px;
   margin: 0 0 10% 0;
-  padding: 0 0 5% 0;
+  padding: 0 0 2rem 0;
+  width: 50rem;
 }
 
 .titulo {
@@ -39,13 +40,22 @@
 
 .form-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   color: #000;
+  padding-left: 5%;
 }
 
+
 .form-group {
-  padding: 7px;
-  margin: 5px;
+  padding: 7px 7px 0 7px;
+  margin: 5px 5px 0 5px;
+}
+
+.mat-form-field{
+  width: max-content;
+  align-items: start;
+  align-self: flex-start;
+  text-align: start;
 }
 
 .form-group .control-label {
@@ -102,12 +112,16 @@ mat-toolbar {
   color: var(--dark);
 }
 
+.donations{
+  text-align: center;
+}
+
 .donations-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2%;
-  margin: 0 12rem 0 12rem;
+  margin: 0 10rem 0 10rem;
 }
 
 
@@ -117,8 +131,9 @@ mat-toolbar {
   padding: 0.5rem;
   margin-top: 10px;
   border-radius: 10px;
+  border-color: var(--primary);
   background-color: var(--continuos-white);
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: bold;
 }
 
@@ -138,6 +153,7 @@ mat-toolbar {
   color: var(--dark);
 }
 
+
 /*Responsividade*/
 @media screen and (max-width: 768px) {
   #formulario .form-container{
@@ -151,7 +167,7 @@ mat-toolbar {
   }
   
   .form-group{
-    margin: 0 20% 0 20%;
+    margin: 0 20% 0 0;
     padding-top: 0;
     padding-bottom: 0;
   }

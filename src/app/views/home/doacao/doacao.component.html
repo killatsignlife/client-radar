@@ -4,7 +4,7 @@
 
     <form id="formulario">
       <h1 class="titulo">Realize uma doação</h1>
-      <div class="form-container">
+      <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
           <input matInput type="text" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
@@ -17,8 +17,7 @@
         </mat-form-field>
       </div>
 
-      <div class="form-container">
-
+      <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
           <input matInput type="text" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data"
@@ -39,7 +38,7 @@
 
       <div>
         <div class="donations">
-          <h2 class="titulo2">Escolha um valor abaixo:</h2><br />
+          <h2 class="titulo2">Escolha um valor abaixo:</h2>
           <div class="donations-list">
             <div class="donation-item" *ngFor="let donation of donation">
               <button style="font-size: 1rem" mat-stroked-button
