@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@stripe/stripe-js": "^1.31.0",
+    "@sweetalert2/ngx-sweetalert2": "^12.1.0",
     "angular-cli-ghpages": "^1.0.5",
     "angular-dark-mode": "^3.0.2",
     "bootstrap": "^3.4.1",
@@ -29,6 +30,7 @@
     "postcss-high-contrast": "^1.6.2",
     "rxjs": "~7.5.0",
     "stripe": "^9.6.0",
+    "sweetalert2": "^11.7.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

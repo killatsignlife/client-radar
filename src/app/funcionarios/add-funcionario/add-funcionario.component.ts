@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Funcionario } from 'src/app/funcionario.model';
 import { SharedDataService } from 'src/app/shared-data.service';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-add-funcionario',
   templateUrl: './add-funcionario.component.html',
@@ -67,5 +69,25 @@ export class AddFuncionarioComponent implements OnInit {
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
+  }
+
+  popup(){
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
   }
 }
