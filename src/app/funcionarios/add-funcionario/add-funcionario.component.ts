@@ -39,7 +39,6 @@ export class AddFuncionarioComponent implements OnInit {
       error => console.log(error)
     );
     this.funcionario = new Funcionario();
-    this.gotoAgradecimentos();
     this.gotoList();
   }
 
@@ -50,10 +49,6 @@ export class AddFuncionarioComponent implements OnInit {
 
   gotoList() {
     this.router.navigate(['funcionario/list'])
-  }
-
-  gotoAgradecimentos() {
-    this.router.navigate(['/sucesso'])
   }
 
   applyFilter(event: Event) {
