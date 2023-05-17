@@ -25,6 +25,8 @@
 #formulario {
   box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
   border-radius: 15px;
+  margin: 0 0 10% 0;
+  padding: 0 0 5% 0;
 }
 
 .titulo {
@@ -98,34 +100,31 @@ mat-toolbar {
 
 .titulo2 {
   color: var(--dark);
-  margin-left: 10px;
-}
-
-.donations{
-  border-radius: 10px;
 }
 
 .donations-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  gap: 2%;
+  margin: 0 12rem 0 12rem;
 }
 
-.donations-list > * {
-  flex: 1 1 90px;
-  margin-bottom: 1px;
-}
 
 .donation-item button {
-  border: 1px solid var(--back);
   cursor: pointer;
   font-size: 20px;
-  padding: 15px;
+  padding: 0.5rem;
   margin-top: 10px;
   border-radius: 10px;
   background-color: var(--continuos-white);
-  border: none;
   color: var(--primary);
+  font-weight: bold;
+}
+
+.donation-item button:hover {
+  background-color: var(--primary);
+  color: var(--continuos-white);
   font-weight: bold;
 }
 
@@ -140,12 +139,37 @@ mat-toolbar {
 }
 
 /*Responsividade*/
-@media screen and (min-width: 376px) {
-  mat-form-field + mat-form-field {
-    margin-left: 2%;
+@media screen and (max-width: 768px) {
+  #formulario .form-container{
+    display: flex;
+    flex-direction: column;
   }
-  mat-form-field + mat-form-field + mat-form-field {
+
+  #formulario {
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0%);
+    border-radius: 15px;
+  }
+  
+  .form-group{
+    margin: 0 20% 0 20%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  mat-form-field {
     margin-left: 0%;
+  }
+
+  .titulo {
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .danations-list{
+    flex-direction: column;
   }
 }
 

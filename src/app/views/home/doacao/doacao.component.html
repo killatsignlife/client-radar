@@ -1,53 +1,53 @@
-  <section>
+<section>
   <!--Segunda Grid-->
-    <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center" >
-  
-      <form id="formulario">
-        <h1 class="titulo">Realize uma doação</h1>
-        <div class="form-container" >
-          <mat-form-field appearance="outline"   class="form-group" >
-            <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
-            <input matInput type="text" [(ngModel)]="voluntario.name" name="name" id="nome"
-              placeholder="Nome" required> 
-          </mat-form-field> 
-  
-          <mat-form-field appearance="outline" class="form-group">
-            <mat-label for="lastname" class="control-label">Sobrenome</mat-label>
-            <input matInput  type="text"  [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome" placeholder="Sobrenome" required>
-          </mat-form-field>
+  <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center">
 
- 
+    <form id="formulario">
+      <h1 class="titulo">Realize uma doação</h1>
+      <div class="form-container">
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
+          <input matInput type="text" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
+        </mat-form-field>
 
-        </div>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label for="lastname" class="control-label">Sobrenome</mat-label>
+          <input matInput type="text" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome"
+            placeholder="Sobrenome" required>
+        </mat-form-field>
+      </div>
 
-        <div class="form-container" >
+      <div class="form-container">
 
-          <mat-form-field appearance="outline" class="form-group">
-            <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
-            <input matInput  type="text" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data" placeholder="Data de Nascimento" required>
-          </mat-form-field>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
+          <input matInput type="text" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data"
+            placeholder="Data de Nascimento" required>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="form-group">
-            <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
           <input matInput type="text" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
-          </mat-form-field>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="form-group">
-            <mat-label style="font-size: 1rem" for="phone" class="control-label">Telefone</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.phone" name="phone" id="Tel" placeholder="Telefone Celular" required>
-          </mat-form-field>
-        </div>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label style="font-size: 1rem" for="phone" class="control-label">Telefone</mat-label>
+          <input matInput type="text" [(ngModel)]="voluntario.phone" name="phone" id="Tel"
+            placeholder="Telefone Celular" required>
+        </mat-form-field>
+      </div>
 
-        <div>
-          <div class="donations">
-            <h2 class="titulo2">Escolha um valor abaixo:</h2><br />
-            <div class="donations-list">
-              <div class="donation-item" *ngFor="let donation of donation">
-                <button style="font-size: 1rem" (click)="triggerCreateCheckout(donation)">{{donation.price | currency }}</button>
-              </div>
+      <div>
+        <div class="donations">
+          <h2 class="titulo2">Escolha um valor abaixo:</h2><br />
+          <div class="donations-list">
+            <div class="donation-item" *ngFor="let donation of donation">
+              <button style="font-size: 1rem" mat-stroked-button
+                (click)="triggerCreateCheckout(donation)">R{{donation.price | currency }}</button>
             </div>
           </div>
         </div>
-      </form>
+      </div>
+    </form>
   </div>
 </section>
