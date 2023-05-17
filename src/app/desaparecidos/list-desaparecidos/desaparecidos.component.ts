@@ -39,7 +39,7 @@ export class DesaparecidosComponent implements OnInit {
   detailDesaparecido(id: number) {
     this.router.navigate(['descricao', id])
   }
-
+ 
   atualizarDesaparecido(id: number) {
     this.router.navigate(['desaparecido/atualizar', id]);
   }

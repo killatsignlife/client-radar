@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Funcionario } from 'src/app/funcionario.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-delete-funcionario',
@@ -38,5 +39,27 @@ export class DeleteFuncionarioComponent implements OnInit {
 
   cancel(): void {
     this.router.navigate(['funcionario/list']);
+  }
+
+  popup(){
+    Swal.fire({
+      title: 'Tem certeza que deseja excluir este cadastro?',
+      icon: 'warning',
+      confirmButtonColor: '#56c865',
+      cancelButtonColor: '#d33',
+      cancelButtonText:'Não',
+      confirmButtonText: 'Sim',
+      showCancelButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          confirmButtonColor: '#56c865',
+          text: 'Cadastro excluído',
+          confirmButtonText: 'ok',
+        })
+        this.deleteFuncionario() 
+      }
+    })
   }
 }

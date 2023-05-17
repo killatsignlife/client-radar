@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { SharedDataService } from 'src/app/shared-data.service';
 import { Voluntario } from 'src/app/voluntario.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-voluntario',
@@ -32,12 +33,16 @@ export class AddVoluntarioComponent implements OnInit {
       error => console.log(error)
     );
     this.voluntario = new Voluntario();
-    this.gotoAgradecimentos();
+    this.gotoList();
   }
 
   onSubmit(){
     this.submitted = true;
     this.save();
+  }
+
+  gotoList() {
+    this.router.navigate(['/voluntarios'])
   }
 
   gotoAgradecimentos(){
@@ -58,6 +63,28 @@ export class AddVoluntarioComponent implements OnInit {
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
+  }
+
+  popup(){
+    Swal.fire({
+      title: 'Deseja confimar o cadastro?',
+      icon: 'question',
+      confirmButtonColor: '#56c865',
+      cancelButtonColor: '#d33',
+      cancelButtonText:'Não',
+      confirmButtonText: 'Sim',
+      showCancelButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          confirmButtonColor: '#56c865',
+          text: 'Cadastro foi efetuado com sucesso',
+          confirmButtonText: 'ok',
+        })
+        this.onSubmit() 
+      }
+    })
   }
 
 }

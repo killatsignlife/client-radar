@@ -12,7 +12,6 @@
         <h1 style="font-size: 2rem">Cadastre-se</h1>
         <form
           #f = "ngForm"
-          (ngSubmit)="onSubmit()"
           id="formulario"
           fxLayout="column"
           fxLayoutAlign="center"
@@ -241,6 +240,7 @@
           style="font-size: 1rem"
           id="Cadastrar"
           mat-raised-button
+          (click)="popup()"
         >
           Cadastrar
         </button>
@@ -249,6 +249,6 @@
     </div>
   </section>
   <div [hidden]="!submitted">
-    <button (click)="newVoluntario()" id="Cadastrar"> Atualizar</button>
+    <button (click)="popup()" id="Cadastrar"> Atualizar</button>
   </div>
   

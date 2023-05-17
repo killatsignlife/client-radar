@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatButton } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Funcionario } from 'src/app/funcionario.model';
@@ -73,20 +74,22 @@ export class AddFuncionarioComponent implements OnInit {
 
   popup(){
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      title: 'Deseja confimar o cadastro?',
+      icon: 'question',
+      confirmButtonColor: '#56c865',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      cancelButtonText:'Não',
+      confirmButtonText: 'Sim',
+      showCancelButton: true
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
+        Swal.fire({
+          icon: 'success',
+          confirmButtonColor: '#56c865',
+          text: 'Cadastro foi efetuado com sucesso',
+          confirmButtonText: 'ok',
+        })
+        this.onSubmit() 
       }
     })
   }

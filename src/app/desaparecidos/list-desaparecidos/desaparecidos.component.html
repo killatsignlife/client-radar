@@ -30,10 +30,10 @@
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let desaparecido">
           <div class="buttons">
-            <button mat-flat-button color="warn">
+            <button mat-flat-button color="warn" (click)="deletarDesaparecido(desaparecido.id)" >
               Excluir
             </button>
-            <button mat-flat-button color="primary">
+            <button mat-flat-button color="primary" (click)="atualizarDesaparecido(desaparecido.id)">
               Atualizar
             </button>
           </div>
