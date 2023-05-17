@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButton } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Funcionario } from 'src/app/funcionario.model';

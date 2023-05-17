@@ -4,11 +4,8 @@ export class familiar {
     sobrenome?: string;
     cpf?: string;
     email?: string;
-    dataNascimento?: string;
     phone?: string;
-    funcao?: string;
-    logradouro?: string;
-    bairro?: string;
-    cidade?: string;
-    cep?: string;
+    grauDeParentesco?: string;
+    dataNascimento?: string;
+    desaparecido?: string;
   }
