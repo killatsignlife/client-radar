@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { Funcionario } from 'src/app/funcionario.model';
+import { familiar } from 'src/app/familiar';
 import { SharedDataService } from 'src/app/shared-data.service';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
 
 @Component({
-  selector: 'app-add-funcionario',
-  templateUrl: './add-funcionario.component.html',
-  styleUrls: ['./add-funcionario.component.css']
+  selector: 'app-add-familiar',
+  templateUrl: './add-familiar.component.html',
+  styleUrls: ['./add-familiar.component.css']
 })
-export class AddFuncionarioComponent implements OnInit {
-
+export class AddFamiliarComponent implements OnInit {
   title = 'Cadastrar';
-  funcionario: Funcionario = new Funcionario();
+  familiar: familiar = new familiar();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, 
@@ -21,23 +20,23 @@ export class AddFuncionarioComponent implements OnInit {
 
   newFuncionario(): void {
     this.submitted = false;
-    this.funcionario = new Funcionario();
+    this.familiar = new familiar();
   }
 
   ngOnInit(): void {
     this.submitted = false;
-    this.funcionario = new Funcionario();
+    this.familiar = new familiar();
     this.maxLength.maxCaracteres();
   }
 
   save() {
-    console.log(this.funcionario);
+    console.log(this.familiar);
 
-    this.service.createFuncionario(this.funcionario).subscribe(
+    this.service.createFuncionario(this.familiar).subscribe(
       data => console.log(data),
       error => console.log(error)
     );
-    this.funcionario = new Funcionario();
+    this.familiar = new familiar();
     this.gotoList();
   }
 
@@ -47,7 +46,7 @@ export class AddFuncionarioComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['funcionario/list'])
+    this.router.navigate(['familiar/list'])
   }
 
   applyFilter(event: Event) {

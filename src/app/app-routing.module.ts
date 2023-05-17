@@ -22,6 +22,12 @@ import { AddFuncionarioComponent } from './funcionarios/add-funcionario/add-func
 import { DeleteFuncionarioComponent } from './funcionarios/delete-funcionario/delete-funcionario.component';
 import { EditFuncionarioComponent } from './funcionarios/edit-funcionario/edit-funcionario.component';
 import { ListFuncionarioComponent } from './funcionarios/list-funcionario/list-funcionario.component';
+import { AddFamiliarComponent } from './familiares/add-familiar/add-familiar.component';
+import { DeleteFamiliarComponent } from './familiares/delete-familiar/delete-familiar.component';
+import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.component';
+import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
+
+
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -47,6 +53,10 @@ const routes: Routes = [
   { path: 'funcionario/deletar/:id', component: DeleteFuncionarioComponent },
   { path: 'funcionario/atualizar/:id', component: EditFuncionarioComponent},
   { path: 'funcionario/list', component: ListFuncionarioComponent},
+  { path: 'familiar/adicionar', component: AddFamiliarComponent},
+  { path: 'familiar/deletar', component: DeleteFamiliarComponent},
+  { path: 'familiar/list', component: ListFamiliarComponent},
+  { path: 'familiar/atualizar', component: UpdateFamiliarComponent},
 ];
 
 @NgModule({

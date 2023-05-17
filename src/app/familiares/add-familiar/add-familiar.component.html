@@ -9,7 +9,7 @@
       fxLayoutAlign=" center"
     >
       <div class="container-forms">
-        <h1 style="font-size: 2rem">Cadastre um funcionario</h1>
+        <h1 style="font-size: 2rem">Cadastre um familiar</h1>
         <form
           #f = "ngForm"
           id="formulario"
@@ -28,7 +28,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.nome"
+              [(ngModel)]="familiar.nome"
               name="name"
               id="nome"
               placeholder="Nome"
@@ -42,7 +42,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.sobrenome"
+              [(ngModel)]="familiar.sobrenome"
               name="sobrenome"
               id="sobrenome"
               placeholder="Sobrenome"
@@ -60,7 +60,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.cpf"
+              [(ngModel)]="familiar.cpf"
               name="cpf"
               id="CPF"
               placeholder="CPF do funcionario"
@@ -78,7 +78,7 @@
             <input
               matInput
               type="date"
-              [(ngModel)]="funcionario.dataNascimento"
+              [(ngModel)]="familiar.dataNascimento"
               name="dataNascimento"
               id="dataNascimento"
               placeholder="Data de Nascimento do funcionario"
@@ -96,7 +96,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.email"
+              [(ngModel)]="familiar.email"
               name="email"
               id="email"
               placeholder="Email do funcionario"
@@ -111,7 +111,7 @@
               matInput
               type="text"
               (blur)="consultaCep(applyFilter($event), f)"
-              [(ngModel)]="funcionario.cep"
+              [(ngModel)]="familiar"
               name="cep"
               id="CEP"
               placeholder="CEP"
@@ -128,7 +128,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.cidade"
+              [(ngModel)]="familiar"
               name="cidade"
               id="Cidade"
               placeholder="Cidade"
@@ -146,7 +146,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.bairro"
+              [(ngModel)]="familiar"
               name="bairro"
               id="Bairro"
               placeholder="Bairro"
@@ -163,7 +163,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.logradouro"
+              [(ngModel)]="familiar"
               name="logradouro"
               id="Logradouro"
               placeholder="Logradouro"
@@ -181,7 +181,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.funcao"
+              [(ngModel)]="familiar"
               name="funcao"
               id="funcao"
               placeholder="Função do Funcionario (Cargo)"
@@ -206,4 +206,3 @@
   <div [hidden]="!submitted">
     <button id="Cadastrar" >Cadastrar</button>
   </div>
-  
