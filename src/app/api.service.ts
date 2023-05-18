@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { Desaparecido } from './desaparecido.model';
 import { Voluntario } from './voluntario.model';
 import { Funcionario } from './funcionario.model';
+import { Doador } from './doador.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class ApiService {
   private voluntarioUrl = 'http://localhost:8080/api/v1/voluntarios';
   private desaparecidoUrl = 'http://localhost:8080/api/v1/desaparecidos';
   private funcionarioUrl = 'http://localhost:8080/api/v1/funcionarios';
-
+  private doadorUrl = 'http://localhost:8080/api/v1/doador'
+  
   constructor(private http: HttpClient) { }
 
   // Desaparecidos  
@@ -86,5 +88,13 @@ export class ApiService {
   // Mensagem
   createMensagem(id: number, mensagem: Object): Observable<Object> {
     return this.http.post(`${this.desaparecidoUrl}/${id}/mensagem`, mensagem);
+  }
+
+  createDoador(doador: Doador) : Observable<any> {
+    return this.http.post(`${this.doadorUrl}`, doador);
+  }
+
+  getDoador(): Observable<any> {
+    return this.http.get(`${this.doadorUrl}`);
   }
 }

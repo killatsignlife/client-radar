@@ -1,4 +1,4 @@
-export class doador {
+export class Doador {
     id?: number;
     nome?: string;
     sobrenome?: string;
