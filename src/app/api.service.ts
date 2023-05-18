@@ -13,8 +13,8 @@ export class ApiService {
   private voluntarioUrl = 'http://localhost:8080/api/v1/voluntarios';
   private desaparecidoUrl = 'http://localhost:8080/api/v1/desaparecidos';
   private funcionarioUrl = 'http://localhost:8080/api/v1/funcionarios';
-  private doadorUrl = 'http://localhost:8080/api/v1/doador'
-  
+  private doadorUrl = 'http://localhost:8080/api/v1/doadores'
+
   constructor(private http: HttpClient) { }
 
   // Desaparecidos  

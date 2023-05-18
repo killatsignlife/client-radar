@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { loadStripe } from '@stripe/stripe-js';
 import donations from './donations.json';
 import { Doador } from 'src/app/doador.model';
+import { SharedDataService } from 'src/app/shared-data.service';
 
 @Component({
   selector: 'app-doacao',
@@ -18,7 +19,8 @@ export class DoacaoComponent implements OnInit {
   doador: Doador = new Doador();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router, private http: HttpClient) { }
+  constructor(private service: ApiService, private router: Router, private http: HttpClient,
+    private maxLength: SharedDataService,  private cepService: SharedDataService) { }
 
   async triggerCreateCheckout(eventDonation: any) {
     this.response = await this.http
@@ -62,5 +64,21 @@ export class DoacaoComponent implements OnInit {
 
   gotoHome() {
     this.router.navigate(['/'])
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
+
+  consultaCep(val, form){
+    this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
+  }
+
+  populaForm(dados, form){
+    form.controls['cidade'].setValue(dados.localidade)
+    form.controls['bairro'].setValue(dados.bairro)
+    form.controls['logradouro'].setValue(dados.logradouro)
+    form.controls['uf'].setValue(dados.uf)
   }
 }

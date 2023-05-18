@@ -2,17 +2,18 @@
   <!--Segunda Grid-->
   <div [hidden]="submitted" class="Fundo_verde" fxLayout="column" fxLayoutAlign="space-between center">
 
-    <form id="formulario">
+    <form id="formulario"
+      #f = "ngForm">
       <h1 class="titulo">Realize uma doação</h1>
       <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.name" name="name" id="nome" placeholder="Nome" required>
+          <input matInput type="text" [(ngModel)]="doador.name" name="name" id="nome" placeholder="Nome" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label for="lastname" class="control-label">Sobrenome</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.lastname" name="lastname" id="Sobrenome"
+          <mat-label for="sobrenome" class="control-label">Sobrenome</mat-label>
+          <input matInput type="text" [(ngModel)]="doador.sobrenome" name="sobrenome" id="Sobrenome"
             placeholder="Sobrenome" required>
         </mat-form-field>
       </div>
@@ -20,21 +21,89 @@
       <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.dataNascimento" name="dataNascimento" id="Data"
+          <input matInput type="text" [(ngModel)]="doador.dataNascimento" name="dataNascimento" id="Data"
             placeholder="Data de Nascimento" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.cpf" name="cpf" id="CPF" placeholder="CPF" required>
+          <input matInput type="text" [(ngModel)]="doador.cpf" name="cpf" id="CPF" placeholder="CPF" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="phone" class="control-label">Telefone</mat-label>
-          <input matInput type="text" [(ngModel)]="voluntario.phone" name="phone" id="Tel"
+          <input matInput type="text" [(ngModel)]="doador.phone" name="phone" id="Tel"
             placeholder="Telefone Celular" required>
         </mat-form-field>
       </div>
+
+      <mat-form-field class="campo-form" appearance="outline">
+        <mat-label style="font-size: 1rem" for="cep" class="control-label"
+          >CEP</mat-label
+        >
+        <input
+          matInput
+          type="text"
+          (blur)="consultaCep(applyFilter($event), f)"
+          [(ngModel)]="doador.cep"
+          name="cep"
+          id="CEP"
+          placeholder="CEP"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="campo-form" appearance="outline">
+        <mat-label
+          style="font-size: 1rem"
+          for="cidade"
+          class="control-label"
+          >Cidade</mat-label
+        >
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="doador.cidade"
+          name="cidade"
+          id="Cidade"
+          placeholder="Cidade"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="campo-form" appearance="outline">
+        <mat-label
+          style="font-size: 1rem"
+          for="bairro"
+          class="control-label"
+          >Bairro</mat-label
+        >
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="doador.bairro"
+          name="bairro"
+          id="Bairro"
+          placeholder="Bairro"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="campo-form" appearance="outline">
+        <mat-label
+          style="font-size: 1rem"
+          for="logradouro"
+          class="control-label"
+          >Logradouro</mat-label
+        >
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="doador.logradouro"
+          name="logradouro"
+          id="Logradouro"
+          placeholder="Logradouro"
+          required
+        />
+      </mat-form-field>
 
       <div>
         <div class="donations">
