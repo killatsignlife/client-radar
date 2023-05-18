@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { loadStripe } from '@stripe/stripe-js';
 import donations from './donations.json';
 import { Doador } from 'src/app/doador.model';
+import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class DoacaoComponent implements OnInit {
   donation: any = donations;
   private response: any;
   doador: Doador = new Doador();
+  endereco: Endereco = new Endereco();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, private http: HttpClient,
@@ -47,6 +49,9 @@ export class DoacaoComponent implements OnInit {
   newDoador(): void {
     this.submitted = false;
     this.doador = new Doador();
+    this.endereco = new Endereco();
+
+  }
   }
 
   save() {
@@ -56,6 +61,9 @@ export class DoacaoComponent implements OnInit {
     );
     this.doador = new Doador();
     this.gotoHome();
+    this.desaparecido.endereco = this.endereco;
+
+console.log(this.desaparecido.endereco);
   }
 
   onSubmit() {
@@ -64,7 +72,7 @@ export class DoacaoComponent implements OnInit {
   }
 
   gotoHome() {
-    this.router.navigate(['/'])
+  this.router.navigate(['/home'])
   }
 
   applyFilter(event: Event) {
