@@ -12,12 +12,14 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label for="sobrenome" class="control-label">Sobrenome</mat-label>
-          <input matInput type="text" [(ngModel)]="doador.sobrenome" name="sobrenome" id="Sobrenome"
-            placeholder="Sobrenome" required>
+          <mat-label for="lastname" class="control-label">Sobrenome</mat-label>
+          <input matInput type="text" [(ngModel)]="doador.lastname" name="lastname" id="lastname"
+            placeholder="Digite seu Sobrenome" required>
         </mat-form-field>
       </div>
 
+
+    
       <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
@@ -36,8 +38,10 @@
             placeholder="Telefone Celular" required>
         </mat-form-field>
       </div>
+    
 
-      <mat-form-field class="campo-form" appearance="outline">
+      <div class="form-container" >
+      <mat-form-field class="form-group" appearance="outline">
         <mat-label style="font-size: 1rem" for="cep" class="control-label"
           >CEP</mat-label
         >
@@ -52,7 +56,7 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="campo-form" appearance="outline">
+      <mat-form-field class="form-group" appearance="outline">
         <mat-label
           style="font-size: 1rem"
           for="cidade"
@@ -70,7 +74,7 @@
         />
       </mat-form-field>
 
-      <mat-form-field class="campo-form" appearance="outline">
+      <mat-form-field class="form-group" appearance="outline">
         <mat-label
           style="font-size: 1rem"
           for="bairro"
@@ -87,7 +91,10 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="campo-form" appearance="outline">
+
+      </div>
+      <div class="form-container" fxLayout="center">
+      <mat-form-field class="form-group" appearance="outline">
         <mat-label
           style="font-size: 1rem"
           for="logradouro"
@@ -104,14 +111,15 @@
           required
         />
       </mat-form-field>
-
+      </div>
       <div>
         <div class="donations">
           <h2 class="titulo2">Escolha um valor abaixo:</h2>
           <div class="donations-list">
             <div class="donation-item" *ngFor="let donation of donation">
               <button style="font-size: 1rem" mat-stroked-button
-                (click)="triggerCreateCheckout(donation)">R{{donation.price | currency }}</button>
+                (click)="triggerCreateCheckout(donation)" id="Cadastrar"
+                type="submit">R{{donation.price | currency }}</button>
             </div>
           </div>
         </div>

@@ -88,9 +88,6 @@ mat-toolbar {
   width: 15%;
 }
 
-#Cadastrar {
-  background-color: var(--primary);
-}
 
 #Acessibilidade_header span .icone {
   margin: 0;
