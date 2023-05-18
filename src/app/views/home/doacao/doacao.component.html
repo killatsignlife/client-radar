@@ -88,7 +88,7 @@
         />
       </mat-form-field>
       <mat-form-field class="form-group" appearance="outline">
-        <mat-label
+        <mat-label 
           style="font-size: 1rem"
           for="logradouro"
           class="control-label"
@@ -112,7 +112,8 @@
           <div class="donations-list">
             <div class="donation-item" *ngFor="let donation of donation">
               <button style="font-size: 1rem" mat-stroked-button
-                (click)="triggerCreateCheckout(donation)" id="Cadastrar"
+                (click)="triggerCreateCheckout(donation)" 
+                id="Cadastrar"
                 type="submit">R{{donation.price | currency }}</button>
             </div>
           </div>
