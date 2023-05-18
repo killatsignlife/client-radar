@@ -40,7 +40,7 @@
             matInput
             type="text"
             (blur)="consultaCep(applyFilter($event), f)"
-            [(ngModel)]="doador.cep"
+            [(ngModel)]="endereco.cep"
             name="cep"
             id="CEP"
             placeholder="CEP"
@@ -62,7 +62,7 @@
         <input
           matInput
           type="text"
-          [(ngModel)]="doador.cidade"
+          [(ngModel)]="endereco.cidade"
           name="cidade"
           id="Cidade"
           placeholder="Cidade"
@@ -80,7 +80,7 @@
         <input
           matInput
           type="text"
-          [(ngModel)]="doador.bairro"
+          [(ngModel)]="endereco.bairro"
           name="bairro"
           id="Bairro"
           placeholder="Bairro"
@@ -97,7 +97,7 @@
         <input
           matInput
           type="text"
-          [(ngModel)]="doador.logradouro"
+          [(ngModel)]="endereco.logradouro"
           name="logradouro"
           id="Logradouro"
           placeholder="Logradouro"
