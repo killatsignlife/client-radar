@@ -36,21 +36,6 @@
             />
           </mat-form-field>
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
-              >Sobrenome</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="familiar.sobrenome"
-              name="sobrenome"
-              id="sobrenome"
-              placeholder="Sobrenome"
-              required
-            />
-          </mat-form-field>
-  
-          <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
               for="cpf"
@@ -73,12 +58,12 @@
               style="font-size: 1rem"
               for="dataNascimento"
               class="control-label"
-              >Data de Nascimento do funcionario</mat-label
+              >Data de Nascimento</mat-label
             >
             <input
               matInput
               type="date"
-              [(ngModel)]="familiar.dataNascimento"
+              [(ngModel)]="familiar.dataDeNascimento"
               name="dataNascimento"
               id="dataNascimento"
               placeholder="Data de Nascimento do funcionario"
@@ -103,35 +88,21 @@
               required
             />
           </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="cep" class="control-label"
-              >CEP</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              (blur)="consultaCep(applyFilter($event), f)"
-              [(ngModel)]="familiar"
-              name="cep"
-              id="CEP"
-              placeholder="CEP"
-              required
-            />
-          </mat-form-field>
+    
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
-              for="cidade"
+              for="phone"
               class="control-label"
-              >Cidade</mat-label
+              >Telefone</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="familiar"
-              name="cidade"
-              id="Cidade"
-              placeholder="Cidade"
+              [(ngModel)]="familiar.phone"
+              name="phone"
+              id="Tel"
+              placeholder="Telefone Celular"
               required
             />
           </mat-form-field>
@@ -139,52 +110,17 @@
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
-              for="bairro"
+              for="grauDeParentesco"
               class="control-label"
-              >Bairro</mat-label
+              >Grau de Parentesco</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="familiar"
-              name="bairro"
-              id="Bairro"
-              placeholder="Bairro"
-              required
-            />
-          </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="logradouro"
-              class="control-label"
-              >Logradouro</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="familiar"
-              name="logradouro"
-              id="Logradouro"
-              placeholder="Logradouro"
-              required
-            />
-          </mat-form-field>
-    
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="funcao"
-              class="control-label"
-              >Função do Funcionario</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="familiar"
-              name="funcao"
-              id="funcao"
-              placeholder="Função do Funcionario (Cargo)"
+              [(ngModel)]="familiar.grauDeParentesco"
+              name="grauDeParentesco"
+              id="grauDeParentesco"
+              placeholder="Grau de Parentesco"
               required
             />
           </mat-form-field>
