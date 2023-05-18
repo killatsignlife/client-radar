@@ -71,7 +71,7 @@ export class DoacaoComponent implements OnInit {
   }
 
   gotoHome() {
-  this.router.navigate(['/home'])
+  this.router.navigate(['/'])
   }
 
   applyFilter(event: Event) {

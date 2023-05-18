@@ -1,11 +1,12 @@
 import { Endereco } from "./endereco.model";
 
 export class Doador {
-    id?: number;
-    name?: string;
-    lastname?: string;
+    id: number;
+    nome?: string;
+    sobrenome?: string;
     cpf?: string;
-    phone?: string;
     endereco?: Endereco;
     valor?: number;
+    phone?: string;
+
   }
