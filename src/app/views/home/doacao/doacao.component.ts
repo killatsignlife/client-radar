@@ -41,6 +41,7 @@ export class DoacaoComponent implements OnInit {
   };
 
   ngOnInit() {
+    this.maxLength.maxCaracteres();
   }
 
   newDoador(): void {
