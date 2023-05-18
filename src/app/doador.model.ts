@@ -3,7 +3,6 @@ export class Doador {
     name?: string;
     lastname?: string;
     cpf?: string;
-    dataNascimento?:string;
     phone?: string;
     logradouro?: string;
     bairro?: string;

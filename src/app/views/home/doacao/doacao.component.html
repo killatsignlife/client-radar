@@ -22,12 +22,6 @@
     
       <div class="form-container" >
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento</mat-label>
-          <input matInput type="text" [(ngModel)]="doador.dataNascimento" name="dataNascimento" id="Data"
-            placeholder="Data de Nascimento" required>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="form-group">
           <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
           <input matInput type="text" [(ngModel)]="doador.cpf" name="cpf" id="CPF" placeholder="CPF" required>
         </mat-form-field>
@@ -37,25 +31,27 @@
           <input matInput type="text" [(ngModel)]="doador.phone" name="phone" id="Tel"
             placeholder="Telefone Celular" required>
         </mat-form-field>
+
+        <mat-form-field class="form-group" appearance="outline">
+          <mat-label style="font-size: 1rem" for="cep" class="control-label"
+            >CEP</mat-label
+          >
+          <input
+            matInput
+            type="text"
+            (blur)="consultaCep(applyFilter($event), f)"
+            [(ngModel)]="doador.cep"
+            name="cep"
+            id="CEP"
+            placeholder="CEP"
+            required
+          />
+        </mat-form-field>
       </div>
     
 
       <div class="form-container" >
-      <mat-form-field class="form-group" appearance="outline">
-        <mat-label style="font-size: 1rem" for="cep" class="control-label"
-          >CEP</mat-label
-        >
-        <input
-          matInput
-          type="text"
-          (blur)="consultaCep(applyFilter($event), f)"
-          [(ngModel)]="doador.cep"
-          name="cep"
-          id="CEP"
-          placeholder="CEP"
-          required
-        />
-      </mat-form-field>
+
       <mat-form-field class="form-group" appearance="outline">
         <mat-label
           style="font-size: 1rem"
@@ -91,9 +87,6 @@
           required
         />
       </mat-form-field>
-
-      </div>
-      <div class="form-container" fxLayout="center">
       <mat-form-field class="form-group" appearance="outline">
         <mat-label
           style="font-size: 1rem"
@@ -112,6 +105,7 @@
         />
       </mat-form-field>
       </div>
+
       <div>
         <div class="donations">
           <h2 class="titulo2">Escolha um valor abaixo:</h2>
