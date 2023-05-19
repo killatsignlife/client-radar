@@ -7,7 +7,7 @@ html {
 
 
 html, body { height: 100%; }
-body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  background-color: #Ececeb;}
 
 .material-icons{
     font-family: 'Material Icons' !important;
@@ -36,4 +36,13 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --continuos-white: white;
   --color-to-see: #010d01;
   --menu: yellow;
+}
+
+.Fundo_verde {
+  padding-top: 4%;
+  color: #000;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 4%;
 }

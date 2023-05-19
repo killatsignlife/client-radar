@@ -15,7 +15,6 @@
 .Fundo_verde {
   padding-top: 4%;
   color: var(--white);
-  background-color: var(--white);
   align-items: center;
   width: 100%;
   height: auto;
@@ -155,18 +154,24 @@ mat-toolbar {
 @media screen and (max-width: 768px) {
   #formulario .form-container{
     display: flex;
-    flex-direction: column;
   }
 
   #formulario {
     box-shadow: 0 10px 25px rgb(0 0 0 / 0%);
     border-radius: 15px;
+    width: 100%;
+  }
+  
+
+  .form-container{
+    flex-wrap: wrap;
+    padding-left: 0;
   }
   
   .form-group{
-    margin: 0 20% 0 0;
     padding-top: 0;
     padding-bottom: 0;
+    align-items: center;
   }
 
   mat-form-field {
@@ -184,6 +189,15 @@ mat-toolbar {
   .danations-list{
     flex-direction: column;
   }
+}
+
+@media screen and (max-width: 466px) {
+  .form-container{
+    justify-content: center;
+  }
+  .donations-list{
+    margin: 0 2rem 0 2rem;
+}
 }
 
 @media screen and (min-width: 880px) {
