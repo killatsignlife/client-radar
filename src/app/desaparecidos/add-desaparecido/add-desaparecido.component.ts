@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-desaparecido',
   templateUrl: './add-desaparecido.component.html',
-  styleUrls: ['./add-desaparecido.component.css']
+  styleUrls: ['./add-desaparecido.component.css','../../../styles.css']
 })
 
 export class AddDesaparecidoComponent implements OnInit {

@@ -45,7 +45,7 @@
     margin: 15px 0 20px 0;
   }
   
-  .Fundo_verde {
+  .Formulario_padrao {
     padding-top: 4%;
     color: #000;
     align-items: center;
@@ -54,29 +54,29 @@
     padding-bottom: 4%;
   }
   
-  .Fundo_verde h1 {
+  .Formulario_padrao h1 {
     font-size: 25px;
     margin-bottom: 5%;
   }
   
-  .Fundo_verde h2 {
+  .Formulario_padrao h2 {
     font-weight: bold;
   }
   
-  .Fundo_verde input {
+  .Formulario_padrao input {
     color: #000;
     font-size: 150%;
     margin-right: 2%;
     border-color: var(--secondary);
   }
   
-  .Fundo_verde input[type="checkbox"] {
+  .Formulario_padrao input[type="checkbox"] {
     margin-right: 0.5%;
     padding: 0;
     height: 12px;
   }
   
-  .Fundo_verde label {
+  .Formulario_padrao label {
     font-size: 16px;
     margin-right: 2%;
     font-family: Arial, Helvetica, sans-serif;

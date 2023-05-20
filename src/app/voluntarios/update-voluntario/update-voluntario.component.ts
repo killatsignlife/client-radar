@@ -7,7 +7,7 @@ import { Voluntario } from 'src/app/voluntario.model';
 @Component({
   selector: 'app-update-voluntario',
   templateUrl: './update-voluntario.component.html',
-  styleUrls: ['./update-voluntario.component.css']
+  styleUrls: ['./update-voluntario.component.css','../../../styles.css']
 })
 export class UpdateVoluntarioComponent implements OnInit {
 

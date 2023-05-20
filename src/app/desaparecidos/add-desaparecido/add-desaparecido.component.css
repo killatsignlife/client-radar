@@ -45,31 +45,6 @@
     margin: 15px 0 20px 0;
   }
   
-  .Fundo_verde {
-    padding-top: 4%;
-    color: #000;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 4%;
-  }
-  
-  .Fundo_verde h1 {
-    font-size: 25px;
-    margin-bottom: 5%;
-  }
-  
-  .Fundo_verde h2 {
-    font-weight: bold;
-  }
-  
-  .Fundo_verde input {
-    color: #000;
-    font-size: 150%;
-    margin-right: 2%;
-    border-color: var(--primary);
-  }
-  
   .Fundo_verde input[type="checkbox"] {
     margin-right: 0.5%;
     padding: 0;

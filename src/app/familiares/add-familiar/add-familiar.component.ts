@@ -4,11 +4,10 @@ import { ApiService } from 'src/app/api.service';
 import { Familiar } from 'src/app/familiar.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2'
-
 @Component({
   selector: 'app-add-familiar',
   templateUrl: './add-familiar.component.html',
-  styleUrls: ['./add-familiar.component.css']
+  styleUrls: ['./add-familiar.component.css','../../../styles.css']
 })
 export class AddFamiliarComponent implements OnInit {
   title = 'Cadastrar';

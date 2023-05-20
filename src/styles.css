@@ -38,11 +38,40 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  backgroun
   --menu: yellow;
 }
 
-.Fundo_verde {
+/*Formulario*/
+.Formulario_padrao {
   padding-top: 4%;
   color: #000;
   align-items: center;
   width: 100%;
   height: auto;
   padding-bottom: 4%;
+}
+
+.Formulario_padrao h1 {
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+
+.Formulario_padrao h2 {
+  font-weight: bold;
+}
+
+.Formulario_padrao input {
+  color: #000;
+  font-size: 150%;
+  margin-right: 2%;
+  border-color: var(--secondary);
+}
+
+.Formulario_padrao input[type="checkbox"] {
+  margin-right: 0.5%;
+  padding: 0;
+  height: 12px;
+}
+
+.Formulario_padrao label {
+  font-size: 16px;
+  margin-right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
 }

@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-voluntario',
   templateUrl: './add-voluntario.component.html',
-  styleUrls: ['./add-voluntario.component.css']
+  styleUrls: ['./add-voluntario.component.css','../../../styles.css']
 })
 export class AddVoluntarioComponent implements OnInit {
     title = 'Cadastra-se';

@@ -7,7 +7,7 @@ import { SharedDataService } from 'src/app/shared-data.service';
 @Component({
   selector: 'app-update-desaparecido',
   templateUrl: './update-desaparecido.component.html',
-  styleUrls: ['./update-desaparecido.component.css']
+  styleUrls: ['./update-desaparecido.component.css','../../../styles.css']
 })
 export class UpdateDesaparecidoComponent implements OnInit {
 
