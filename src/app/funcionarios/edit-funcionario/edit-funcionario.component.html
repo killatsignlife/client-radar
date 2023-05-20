@@ -13,7 +13,8 @@
           #f = "ngForm"
           (ngSubmit)="onSubmit()"
           id="formulario"
-                                                                                                                                                                                                
+          fxLayout="column"
+          fxLayoutAlign=" center"                                                                                                                                                                     
         >
           <div
             class="form-group"
@@ -54,14 +55,13 @@
               style="font-size: 1rem"
               for="cpf"
               class="control-label"
-              >CPF</mat-label
-            >
+              >CPF</mat-label>
             <input
               matInput
               type="text"
               [(ngModel)]="funcionario.cpf"
               name="cpf"
-              id="cpf"
+              id="CPF"
               placeholder="CPF do funcionario"
               required
             />
@@ -92,15 +92,13 @@
               class="control-label"
               >Função do Funcionario</mat-label
             >
-            <input
-              matInput
+            <textarea matInput 
               type="text"
               [(ngModel)]="funcionario.funcao"
               name="funcao"
               id="funcao"
               placeholder="Função do Funcionario (Cargo)"
-              required
-            />
+              required></textarea>
           </mat-form-field>
         </div>
       

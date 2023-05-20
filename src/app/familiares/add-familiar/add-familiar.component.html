@@ -124,6 +124,24 @@
               required
             />
           </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="desaparecido"
+              class="control-label"
+              >Desaparecido</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="familiar.desaparecido"
+              name="desaparecido"
+              id="desaparecido"
+              placeholder="Desaparecido"
+              required
+            />
+          </mat-form-field>
         </div>
                 
           <button

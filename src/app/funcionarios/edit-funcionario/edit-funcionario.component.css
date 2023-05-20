@@ -48,7 +48,6 @@ form {
 .Fundo_verde {
   padding-top: 4%;
   color: #000;
-  background-color: var(--continuos-white);
   align-items: center;
   width: 100%;
   height: auto;
@@ -91,10 +90,6 @@ form {
 
 .checkbox input:checked ~ .checkmark {
   background-color: var(--primary);
-}
-
-mat-form-field + mat-form-field {
-  margin-left: 2%;
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
-import { familiar } from 'src/app/familiar';
+import { Familiar } from 'src/app/familiar.model';
 
 @Component({
   selector: 'app-list-familiar',
@@ -12,7 +12,7 @@ import { familiar } from 'src/app/familiar';
 export class ListFamiliarComponent implements OnInit {
 
   // @ts-ignore: Object is possibly 'undefined'.
-  familiares: Observable<familiar[]>;
+  familiares: Observable<Familiar[]>;
 
   displayedColumns: string[] = ['Nome', 'Sobrenome', 'CPF', 'Ações'];
 

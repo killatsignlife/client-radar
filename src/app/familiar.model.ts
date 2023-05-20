@@ -1,4 +1,4 @@
-export class familiar {
+export class Familiar {
     id?: number;
     nome?: string;
     cpf?: string;

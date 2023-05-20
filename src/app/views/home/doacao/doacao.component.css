@@ -5,13 +5,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*  .example-icon {
-      padding: 0 14px;
-    }
-    .example-spacer {
-      flex: 1 1 auto;
-  }*/
-
 .Fundo_verde {
   padding-top: 4%;
   color: var(--white);
@@ -165,17 +158,12 @@ mat-toolbar {
 
   .form-container{
     flex-wrap: wrap;
-    padding-left: 0;
   }
   
   .form-group{
     padding-top: 0;
     padding-bottom: 0;
     align-items: center;
-  }
-
-  mat-form-field {
-    margin-left: 0%;
   }
 
   .titulo {
@@ -189,15 +177,23 @@ mat-toolbar {
   .danations-list{
     flex-direction: column;
   }
+
+  .donations-list{
+    margin: 0 2rem 0 2rem;
+}
 }
 
 @media screen and (max-width: 466px) {
   .form-container{
     justify-content: center;
   }
-  .donations-list{
-    margin: 0 2rem 0 2rem;
+
 }
+
+@media screen and (max-width: 320px) {
+  .form-container{
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 880px) {

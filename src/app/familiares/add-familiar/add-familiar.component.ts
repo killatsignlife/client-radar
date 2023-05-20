@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { familiar } from 'src/app/familiar';
+import { Familiar } from 'src/app/familiar.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2'
 
@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 })
 export class AddFamiliarComponent implements OnInit {
   title = 'Cadastrar';
-  familiar: familiar = new familiar();
+  familiar: Familiar = new Familiar();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, 
@@ -20,23 +20,23 @@ export class AddFamiliarComponent implements OnInit {
 
   newFuncionario(): void {
     this.submitted = false;
-    this.familiar = new familiar();
+    this.familiar = new Familiar();
   }
 
   ngOnInit(): void {
     this.submitted = false;
-    this.familiar = new familiar();
+    this.familiar = new Familiar();
     this.maxLength.maxCaracteres();
   }
 
   save() {
     console.log(this.familiar);
 
-    this.service.createFuncionario(this.familiar).subscribe(
+    this.service.createFamiliar(this.familiar).subscribe(
       data => console.log(data),
       error => console.log(error)
     );
-    this.familiar = new familiar();
+    this.familiar = new Familiar();
     this.gotoList();
   }
 

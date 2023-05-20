@@ -5,6 +5,7 @@ import { Desaparecido } from './desaparecido.model';
 import { Voluntario } from './voluntario.model';
 import { Funcionario } from './funcionario.model';
 import { Doador } from './doador.model';
+import { Familiar } from './familiar.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class ApiService {
   private desaparecidoUrl = 'http://localhost:8080/api/v1/desaparecidos';
   private funcionarioUrl = 'http://localhost:8080/api/v1/funcionarios';
   private doadorUrl = 'http://localhost:8080/api/v1/doadores'
+  private familiarUrl = 'http://localhost:8080/api/v1/familiares'
 
   constructor(private http: HttpClient) { }
 
@@ -96,5 +98,14 @@ export class ApiService {
 
   getDoador(): Observable<any> {
     return this.http.get(`${this.doadorUrl}`);
+  }
+
+   // Familiar
+   createFamiliar(familiar: Familiar) : Observable<any> {
+    return this.http.post(`${this.familiarUrl}`, familiar);
+  }
+
+  getFamiliar(): Observable<any> {
+    return this.http.get(`${this.familiarUrl}`);
   }
 }
