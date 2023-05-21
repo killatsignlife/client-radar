@@ -34,19 +34,16 @@
   background-color: var(--primary);
   padding-top: 6% ;
   padding-bottom: 6%;
- 
-  ;
 }
 
 .Fundo_bg{
   text-align: center;
   align-items: center;
   background-image: url("../../../assets/img/bg.jpg");
-  padding-bottom: 4%;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 900px;
+  background-position-y: 20%;
 }
 
 .Fundo_bg h1{
@@ -96,6 +93,13 @@
   margin-top: -2%;
 }
 
+.mat-card:first-of-type{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0px;
+  margin: 10%;
+  width: 30%;
+}
+
 .example-card {
   height: 25%;
   margin-left:5%;
@@ -113,7 +117,7 @@
   margin-bottom: 5px;
 }
 
-.mat-card{
+.card-desaparecido{
     border-radius: 5%;
 }
 
@@ -127,6 +131,10 @@ mat-card-content{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mat-card-title:first-of-type{
+  color: var(--continuos-white);
 }
 
 .mat-card-title{
@@ -180,13 +188,11 @@ mat-card-content{
 
 @media screen and (min-width: 600px) {
   .Fundo_bg{
+  background-image: url("../../../assets/img/bg.jpg");
   text-align: center;
   align-items: center;
-  background-image: url("../../../assets/img/bg.jpg");
-  padding-bottom: 4%;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
 }
 
 .Fundo_bg h1{

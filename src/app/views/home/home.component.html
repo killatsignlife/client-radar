@@ -1,13 +1,17 @@
 <section>
   <!--Primeira Grid-->
     <div class="Fundo_bg" fxLayout="column" fxLayoutAlign="center center" >
-      <h3>Em média, duas pessoas desaparecem a cada hora em São Paulo</h3>
-      <h1 >Ajude-nos a encontra-los</h1>
-        <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-subtitle><h2>Em média, duas pessoas desaparecem a cada hora em São Paulo</h2></mat-card-subtitle>
+          <mat-card-title>Ajude-nos a encontra-los</mat-card-title>
+        </mat-card-header>
+          <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
+      </mat-card>
     </div>
   
   <!--Doacoes-->
-  <div class="Formulario_padrao">
+  <div class="Fundo_verde">
     <h2>Mantenha este ideal doando!</h2>
       <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
   </div>
@@ -23,7 +27,7 @@
   <div class="Fundo_branco" >
     <div fxLayout="row wrap" fxLayoutAlign="center center" >
     <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%"   *ngFor="let desaparecido of desaparecidos | slice:0:3">
-      <mat-card  fxLayout="column" fxLayoutAlign="center center" class="example-card">
+      <mat-card  fxLayout="column" fxLayoutAlign="center center" class="example-card card-desaparecido">
               <mat-card-content>
                 <img mat-card-image>
               </mat-card-content>
