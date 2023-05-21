@@ -15,7 +15,7 @@
 #voluntario{
   margin-top: 1%;
   font-size: 20px;
-  padding: 1%;
+  padding: 2%;
 }
 
 #voluntario:hover{
@@ -97,7 +97,11 @@
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0px;
   margin: 10%;
-  width: 30%;
+  width: 40%;
+}
+
+.mat-card-subtitle:first-of-type{
+  text-align: left;
 }
 
 .example-card {
@@ -150,6 +154,7 @@ mat-card-content{
     color: var(--secondary);
     box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
+
   .Fundo_branco h2{
     color: var(--dark);
     padding-left: 2%;
@@ -211,7 +216,7 @@ mat-card-content{
 #voluntario{
   margin-top: 1%;
   font-size: 15px;
-  padding: 1%;
+  padding: 2%;
 }
 }
 
