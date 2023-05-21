@@ -75,3 +75,43 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  backgroun
   margin-right: 2%;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Responsividade*/
+@media screen and (max-width: 768px) {
+  #formulario .form-container{
+    display: flex;
+  }
+
+  #formulario {
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0%);
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .container-forms{
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .container-forms h1{
+    border-radius: 0px;
+  }
+  
+  .form-group{
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .titulo {
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mat-checkbox-layout .mat-checkbox-label {
+    font-size: 90%;
+  }
+}
