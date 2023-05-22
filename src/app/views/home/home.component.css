@@ -15,7 +15,7 @@
 #voluntario{
   margin-top: 1%;
   font-size: 20px;
-  padding: 2%;
+  padding: 1%;
 }
 
 #voluntario:hover{
@@ -59,6 +59,10 @@
   font-size: 1rem;
   width: 90%;
   font-weight: light;
+}
+
+.Fundo_bg #voluntario{
+  padding: 2%;
 }
 
 .Fundo_verde h2{
@@ -213,10 +217,12 @@ mat-card-content{
   font-size: 14px;
   font-weight: light;
 }
+
+
 #voluntario{
   margin-top: 1%;
   font-size: 15px;
-  padding: 2%;
+  padding: 1%;
 }
 }
 
