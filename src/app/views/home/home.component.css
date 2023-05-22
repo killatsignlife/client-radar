@@ -43,7 +43,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  background-position-y: 20%;
+  background-position-y: 30%;
 }
 
 .Fundo_bg h1{
@@ -100,8 +100,9 @@
 .mat-card:first-of-type{
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0px;
-  margin: 10%;
+  margin: 10% 0 20% 0;
   width: 40%;
+  padding: 2%;
 }
 
 .mat-card-subtitle:first-of-type{
