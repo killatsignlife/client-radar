@@ -1,3 +1,5 @@
+import { Endereco } from "./endereco.model";
+
 export class Voluntario {
   id: number;
   name?: string;
@@ -6,10 +8,7 @@ export class Voluntario {
   email?: string;
   phone?: string;
   cpf?: string;
-  logradouro?: string;
-  bairro?: string;
-  cidade?: string;
-  cep?: string;
+  endereco?: Endereco;
   condicoes?: boolean;
   legitimidade?: boolean;
 }

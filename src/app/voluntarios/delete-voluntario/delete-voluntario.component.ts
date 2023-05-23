@@ -14,6 +14,8 @@ export class DeleteVoluntarioComponent implements OnInit {
   voluntario: Voluntario;
   // @ts-ignore: Object is possibly 'undefined'.
   voluntarioId: number;
+    // @ts-ignore: Object is possibly 'undefined'.
+    endereco: Observable<Endereco[]>;
 
 
   constructor(private api: ApiService, private router: Router, private route: ActivatedRoute) { }
@@ -25,8 +27,10 @@ export class DeleteVoluntarioComponent implements OnInit {
 
     this.api.getVoluntarioById(this.voluntarioId)
       .subscribe(data => {
-        console.log(data);
         this.voluntario = data;
+        console.log(this.voluntario.endereco)
+        this.endereco = this.voluntario.endereco;
+        console.log(this.endereco);
       }, error => console.log(error));
   }
 

@@ -15,6 +15,8 @@ export class UpdateVoluntarioComponent implements OnInit {
   voluntario: Voluntario;
   // @ts-ignore: Object is possibly 'undefined'.
   voluntarioId: number;
+  // @ts-ignore: Object is possibly 'undefined'.
+  endereco: Observable<Endereco[]>;
 
   constructor(private api: ApiService, private route: ActivatedRoute, private router: Router
     ,private maxLength: SharedDataService,  private cepService: SharedDataService) { }
