@@ -9,6 +9,7 @@ import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import { FormBuilder } from '@angular/forms';
 import { DecimalPipe } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-doacao',
@@ -53,11 +54,11 @@ export class DoacaoComponent implements OnInit {
   ngOnInit() {
     this.maxLength.maxCaracteres();
 
-    this.myForm.valueChanges.subscribe((form) => {
+    /*this.myForm.valueChanges.subscribe((form) => {
       const formattedValue = this.getFormattedValue(form.preco);
       console.log(formattedValue);
       this.myForm.patchValue({ preco: formattedValue }, { emitEvent: false });
-    });
+    });*/
   }
 
   getFormattedValue(value: any): string {
@@ -116,5 +117,27 @@ export class DoacaoComponent implements OnInit {
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
+  }
+
+  popup(){
+    Swal.fire({
+      title: 'Deseja confimar o cadastro?',
+      icon: 'question',
+      confirmButtonColor: '#56c865',
+      cancelButtonColor: '#d33',
+      cancelButtonText:'Não',
+      confirmButtonText: 'Sim',
+      showCancelButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          confirmButtonColor: '#56c865',
+          text: 'Cadastro foi efetuado com sucesso',
+          confirmButtonText: 'ok',
+        })
+        this.onSubmit() 
+      }
+    })
   }
 }

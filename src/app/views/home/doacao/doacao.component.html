@@ -85,7 +85,7 @@
               id="Val"
               placeholder="$0" matInput>
             </mat-form-field>
-            <button type="submit" style="font-size: 1rem" id="Cadastrar" mat-raised-button>
+            <button type="submit" style="font-size: 1rem" id="Cadastrar" (click) = "popup()" mat-raised-button>
               Cadastrar
             </button>
           </div>
@@ -95,7 +95,7 @@
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button type="submit" style="font-size: 1rem" id="Cadastrar" mat-raised-button>
+  <button id="Cadastrar">
     Cadastrar
   </button>
 </div>
