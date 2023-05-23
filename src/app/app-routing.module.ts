@@ -28,7 +28,6 @@ import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
 
 
-
 const routes: Routes = [
   { path:'home', component: HomeComponent},
   { path:'', redirectTo: 'home',pathMatch: 'full'},

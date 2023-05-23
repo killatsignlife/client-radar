@@ -7,12 +7,15 @@ import donations from './donations.json';
 import { Doador } from 'src/app/doador.model';
 import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
+import { FormBuilder } from '@angular/forms';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-doacao',
   templateUrl: './doacao.component.html',
   styleUrls: ['./doacao.component.css']
 })
+
 export class DoacaoComponent implements OnInit {
   title = 'Doar';
   donation: any = donations;
@@ -22,9 +25,10 @@ export class DoacaoComponent implements OnInit {
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, private http: HttpClient,
-    private maxLength: SharedDataService,  private cepService: SharedDataService) { }
+    private maxLength: SharedDataService,  private cepService: SharedDataService, 
+    private formBuilder: FormBuilder, private decimalPipe: DecimalPipe) { }
 
-  async triggerCreateCheckout(eventDonation: any) {
+  /*async triggerCreateCheckout(eventDonation: any) {
     this.response = await this.http
       .post('/.netlify/functions/createCheckout', eventDonation, {
         headers: {
@@ -40,17 +44,40 @@ export class DoacaoComponent implements OnInit {
     const { error } = await stripe!.redirectToCheckout({
       sessionId: stripeParams.sessionId,
     });
-  };
+  };*/
+
+  myForm = this.formBuilder.group({
+    preco: '$0',
+  });
 
   ngOnInit() {
     this.maxLength.maxCaracteres();
+
+    this.myForm.valueChanges.subscribe((form) => {
+      const formattedValue = this.getFormattedValue(form.preco);
+      console.log(formattedValue);
+      this.myForm.patchValue({ preco: formattedValue }, { emitEvent: false });
+    });
   }
 
+  getFormattedValue(value: any): string {
+    const stringToTransform = String(value ?? '')
+      .replace(/\D/g, '')
+      .replace(/^0+/, '');
+    return (
+      '$' +
+      this.decimalPipe.transform(
+        stringToTransform === '' ? '0' : stringToTransform,
+        '1.0'
+      )
+    );
+  }
+
+  //-----------------------------------------------------
   newDoador(): void {
     this.submitted = false;
     this.doador = new Doador();
     this.endereco = new Endereco();
-
   }
 
   save() {
@@ -60,8 +87,8 @@ export class DoacaoComponent implements OnInit {
     );
     this.doador = new Doador();
     this.gotoHome();
-    this.doador.endereco = this.endereco;
 
+    this.doador.endereco = this.endereco;
     console.log(this.doador.endereco);
   }
 
@@ -71,8 +98,9 @@ export class DoacaoComponent implements OnInit {
   }
 
   gotoHome() {
-  this.router.navigate(['/'])
+  this.router.navigate(['/sucesso'])
   }
+  //---------------------------------------------------
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

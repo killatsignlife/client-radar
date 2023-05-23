@@ -50,6 +50,7 @@ import { AddFamiliarComponent } from './familiares/add-familiar/add-familiar.com
 import { DeleteFamiliarComponent } from './familiares/delete-familiar/delete-familiar.component';
 import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.component';
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
+import { DecimalPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,7 @@ import { UpdateFamiliarComponent } from './familiares/update-familiar/update-fam
     MatCheckboxModule,
   ],
   exports: [MatToolbarModule, MatIconModule, MatButtonModule],
-  providers: [],
+  providers: [DecimalPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
