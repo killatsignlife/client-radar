@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import { Voluntario } from 'src/app/voluntario.model';
 import Swal from 'sweetalert2';
@@ -13,6 +14,7 @@ import Swal from 'sweetalert2';
 export class AddVoluntarioComponent implements OnInit {
     title = 'Cadastra-se';
     voluntario: Voluntario = new Voluntario();
+    endereco: Endereco = new Endereco();
     submitted = false;
 
   constructor(private service: ApiService, private router: Router, 
@@ -25,6 +27,7 @@ export class AddVoluntarioComponent implements OnInit {
   newVoluntario():void{
     this.submitted = false;
     this.voluntario = new Voluntario();
+    this.endereco = new Endereco();
   }
 
   save(){
