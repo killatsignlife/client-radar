@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { Endereco } from 'src/app/endereco.model';
 import { Funcionario } from 'src/app/funcionario.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2';
@@ -14,14 +15,16 @@ export class AddFuncionarioComponent implements OnInit {
 
   title = 'Cadastrar';
   funcionario: Funcionario = new Funcionario();
+  endereco: Endereco = new Endereco();
   submitted = false;
 
-  constructor(private service: ApiService, private router: Router, 
+  constructor(private service: ApiService, private router: Router,
     private maxLength: SharedDataService, private cepService: SharedDataService) { }
 
   newFuncionario(): void {
     this.submitted = false;
     this.funcionario = new Funcionario();
+    this.endereco = new Endereco();
   }
 
   ngOnInit(): void {
@@ -31,8 +34,8 @@ export class AddFuncionarioComponent implements OnInit {
   }
 
   save() {
+    this.funcionario.endereco = this.endereco;
     console.log(this.funcionario);
-
     this.service.createFuncionario(this.funcionario).subscribe(
       data => console.log(data),
       error => console.log(error)
@@ -55,24 +58,24 @@ export class AddFuncionarioComponent implements OnInit {
     return filterValue;
   }
 
-  consultaCep(val, form){
+  consultaCep(val, form) {
     this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
   }
 
-  populaForm(dados, form){
+  populaForm(dados, form) {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
   }
 
-  popup(){
+  popup() {
     Swal.fire({
       title: 'Deseja confimar o cadastro?',
       icon: 'question',
       confirmButtonColor: '#56c865',
       cancelButtonColor: '#d33',
-      cancelButtonText:'Não',
+      cancelButtonText: 'Não',
       confirmButtonText: 'Sim',
       showCancelButton: true
     }).then((result) => {
@@ -83,7 +86,7 @@ export class AddFuncionarioComponent implements OnInit {
           text: 'Cadastro foi efetuado com sucesso',
           confirmButtonText: 'ok',
         })
-        this.onSubmit() 
+        this.onSubmit()
       }
     })
   }

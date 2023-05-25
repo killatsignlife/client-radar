@@ -1,3 +1,5 @@
+import { Endereco } from "./endereco.model";
+
 export class Funcionario {
   id?: number;
   nome?: string;
@@ -7,8 +9,5 @@ export class Funcionario {
   dataNascimento?: string;
   phone?: string;
   funcao?: string;
-  logradouro?: string;
-  bairro?: string;
-  cidade?: string;
-  cep?: string;
+  endereco?: Endereco;
 }

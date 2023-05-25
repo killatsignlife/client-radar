@@ -103,6 +103,25 @@
               required
             />
           </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="phone"
+              class="control-label"
+              >Telefone do funcionario</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="funcionario.phone"
+              name="phone"
+              id="phone"
+              placeholder="Telefone do funcionario"
+              required
+            />
+          </mat-form-field>
+
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label"
               >CEP</mat-label
@@ -111,7 +130,7 @@
               matInput
               type="text"
               (blur)="consultaCep(applyFilter($event), f)"
-              [(ngModel)]="funcionario.cep"
+              [(ngModel)]="endereco.cep"
               name="cep"
               id="CEP"
               placeholder="CEP"
@@ -128,7 +147,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.cidade"
+              [(ngModel)]="endereco.cidade"
               name="cidade"
               id="Cidade"
               placeholder="Cidade"
@@ -146,7 +165,7 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.bairro"
+              [(ngModel)]="endereco.bairro"
               name="bairro"
               id="Bairro"
               placeholder="Bairro"
@@ -163,10 +182,28 @@
             <input
               matInput
               type="text"
-              [(ngModel)]="funcionario.logradouro"
+              [(ngModel)]="endereco.logradouro"
               name="logradouro"
               id="Logradouro"
               placeholder="Logradouro"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label
+              style="font-size: 1rem"
+              for="complemento"
+              class="control-label"
+              >Complemento</mat-label
+            >
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="endereco.complemento"
+              name="complemento"
+              id="Complemento"
+              placeholder="Complemento"
               required
             />
           </mat-form-field>
