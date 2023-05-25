@@ -82,6 +82,7 @@ export class DoacaoComponent implements OnInit {
   }
 
   save() {
+    this.doador.endereco = this.endereco;
     this.service.createDoador(this.doador).subscribe(
       data => console.log(data),
       error => console.log(error)
@@ -89,9 +90,7 @@ export class DoacaoComponent implements OnInit {
     
     this.doador = new Doador();
     console.log(this.doador);
-    this.gotoHome();
-
-    this.doador.endereco = this.endereco;
+    this.gotoHome(); 
   }
 
   onSubmit() {
