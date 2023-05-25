@@ -1,246 +1,96 @@
 <section>
-    <!--Segunda Grid-->
-    <div
-      [hidden]="submitted"
-      fxFlex
-      fxLayoutGap="0px"
-      class="Formulario_padrao"
-      fxLayout="column"
-      fxLayoutAlign=" center"
-    >
-      <div class="container-forms">
-        <h1 style="font-size: 2rem">Cadastre um funcionario</h1>
-        <form
-          #f = "ngForm"
-          id="formulario"
-          fxLayout="column"
-          fxLayoutAlign="center"
-        >
-          <div
-            class="form-group"
-            fxLayout="row wrap center"
-            fxLayoutAlign="space-around center"
-          >
+  <!--Segunda Grid-->
+  <div [hidden]="submitted" fxFlex fxLayoutGap="0px" class="Formulario_padrao" fxLayout="column"
+    fxLayoutAlign=" center">
+    <div class="container-forms">
+      <h1 style="font-size: 2rem">Cadastre um funcionario</h1>
+      <form #f="ngForm" id="formulario" fxLayout="column" fxLayoutAlign="center">
+        <div class="form-group" fxLayout="row wrap center" fxLayoutAlign="space-around center">
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="name" class="control-label"
-              >Nome</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.nome"
-              name="name"
-              id="nome"
-              placeholder="Nome"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.nome" name="name" id="nome" placeholder="Nome"
+              required />
           </mat-form-field>
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
-              >Sobrenome</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.sobrenome"
-              name="sobrenome"
-              id="sobrenome"
-              placeholder="Sobrenome"
-              required
-            />
-          </mat-form-field>
-  
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="cpf"
-              class="control-label"
-              >CPF</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.cpf"
-              name="cpf"
-              id="CPF"
-              placeholder="CPF do funcionario"
-              required
-            />
-          </mat-form-field>
-          
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="dataNascimento"
-              class="control-label"
-              >Data de Nascimento do funcionario</mat-label
-            >
-            <input
-              matInput
-              type="date"
-              [(ngModel)]="funcionario.dataNascimento"
-              name="dataNascimento"
-              id="dataNascimento"
-              placeholder="Data de Nascimento do funcionario"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label">Sobrenome</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.sobrenome" name="sobrenome" id="sobrenome"
+              placeholder="Sobrenome" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="email"
-              class="control-label"
-              >Email do funcionario</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.email"
-              name="email"
-              id="email"
-              placeholder="Email do funcionario"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.cpf" name="cpf" id="CPF"
+              placeholder="CPF do funcionario" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="phone"
-              class="control-label"
-              >Telefone do funcionario</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.phone"
-              name="phone"
-              id="phone"
-              placeholder="Telefone do funcionario"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="dataNascimento" class="control-label">Data de Nascimento do
+              funcionario</mat-label>
+            <input matInput type="date" [(ngModel)]="funcionario.dataNascimento" name="dataNascimento"
+              id="dataNascimento" placeholder="Data de Nascimento do funcionario" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="cep" class="control-label"
-              >CEP</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              (blur)="consultaCep(applyFilter($event), f)"
-              [(ngModel)]="endereco.cep"
-              name="cep"
-              id="CEP"
-              placeholder="CEP"
-              required
-            />
-          </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="cidade"
-              class="control-label"
-              >Cidade</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="endereco.cidade"
-              name="cidade"
-              id="Cidade"
-              placeholder="Cidade"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="email" class="control-label">Email do funcionario</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.email" name="email" id="email"
+              placeholder="Email do funcionario" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="bairro"
-              class="control-label"
-              >Bairro</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="endereco.bairro"
-              name="bairro"
-              id="Bairro"
-              placeholder="Bairro"
-              required
-            />
-          </mat-form-field>
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="logradouro"
-              class="control-label"
-              >Logradouro</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="endereco.logradouro"
-              name="logradouro"
-              id="Logradouro"
-              placeholder="Logradouro"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="phone" class="control-label">Telefone do funcionario</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.phone" name="phone" id="phone"
+              placeholder="Telefone do funcionario" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="complemento"
-              class="control-label"
-              >Complemento</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="endereco.complemento"
-              name="complemento"
-              id="Complemento"
-              placeholder="Complemento"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>
+            <input matInput type="text" (blur)="consultaCep(applyFilter($event), f)" [(ngModel)]="enderecoF.cep"
+              name="cep" id="CEP" placeholder="CEP" required />
           </mat-form-field>
-    
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="funcao"
-              class="control-label"
-              >Função do Funcionario</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              [(ngModel)]="funcionario.funcao"
-              name="funcao"
-              id="funcao"
-              placeholder="Função do Funcionario (Cargo)"
-              required
-            />
+            <mat-label style="font-size: 1rem" for="cidade" class="control-label">Cidade</mat-label>
+            <input matInput type="text" [(ngModel)]="enderecoF.cidade" name="cidade" id="Cidade" placeholder="Cidade"
+              required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="bairro" class="control-label">Bairro</mat-label>
+            <input matInput type="text" [(ngModel)]="enderecoF.bairro" name="bairro" id="Bairro" placeholder="Bairro"
+              required />
+          </mat-form-field>
+
+          <mat-form-field class="form-group" appearance="outline">
+            <mat-label style="font-size: 1rem" for="uf" class="control-label">UF</mat-label>
+            <input matInput type="text" [(ngModel)]="enderecoF.uf" name="uf" id="uf" placeholder="Estado (sigla)"
+              required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="logradouro" class="control-label">Logradouro</mat-label>
+            <input matInput type="text" [(ngModel)]="enderecoF.logradouro" name="logradouro" id="Logradouro"
+              placeholder="Logradouro" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="complemento" class="control-label">Complemento</mat-label>
+            <input matInput type="text" [(ngModel)]="enderecoF.complemento" name="complemento" id="Complemento"
+              placeholder="Complemento" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="funcao" class="control-label">Função do Funcionario</mat-label>
+            <input matInput type="text" [(ngModel)]="funcionario.funcao" name="funcao" id="funcao"
+              placeholder="Função do Funcionario (Cargo)" required />
           </mat-form-field>
         </div>
-                
-          <button
-            type="submit"
-            style="font-size: 1rem"
-            id="Cadastrar"
-            mat-raised-button
-            (click)="popup()" 
-          >
-            Cadastrar
-          </button>
-        </form>
-      </div>
+
+        <button type="submit" style="font-size: 1rem" id="Cadastrar" mat-raised-button (click)="popup()">
+          Cadastrar
+        </button>
+      </form>
     </div>
-  </section>
-  <div [hidden]="!submitted">
-    <button id="Cadastrar" >Cadastrar</button>
   </div>
-  
+</section>
+<div [hidden]="!submitted">
+  <button id="Cadastrar">Cadastrar</button>
+</div>

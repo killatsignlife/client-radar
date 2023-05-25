@@ -9,5 +9,5 @@ export class Funcionario {
   dataNascimento?: string;
   phone?: string;
   funcao?: string;
-  endereco?: Endereco;
+  enderecoF?: Endereco;
 }

@@ -15,26 +15,25 @@ export class AddFuncionarioComponent implements OnInit {
 
   title = 'Cadastrar';
   funcionario: Funcionario = new Funcionario();
-  endereco: Endereco = new Endereco();
+  enderecoF: Endereco = new Endereco();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router,
     private maxLength: SharedDataService, private cepService: SharedDataService) { }
 
+  //--------------------------------------------------------------------
   newFuncionario(): void {
     this.submitted = false;
     this.funcionario = new Funcionario();
-    this.endereco = new Endereco();
+    this.enderecoF = new Endereco();
   }
 
-  ngOnInit(): void {
-    this.submitted = false;
-    this.funcionario = new Funcionario();
+  ngOnInit(){
     this.maxLength.maxCaracteres();
   }
 
   save() {
-    this.funcionario.endereco = this.endereco;
+    this.funcionario.enderecoF = this.enderecoF;
     console.log(this.funcionario);
     this.service.createFuncionario(this.funcionario).subscribe(
       data => console.log(data),
