@@ -26,13 +26,13 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label style="font-size: 1rem" for="phone" class="control-label">Telefone</mat-label>
-          <input matInput type="text" [(ngModel)]="doador.phone" name="phone" id="Tel" placeholder="Telefone Celular"
+          <mat-label style="font-size: 1rem" for="telefone" class="control-label">Telefone</mat-label>
+          <input matInput type="text" [(ngModel)]="doador.telefone" name="telefone" id="Tel" placeholder="Telefone Celular"
             required>
         </mat-form-field>
 
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>
+          <mat-label style="font-size: 1rem" class="control-label">CEP</mat-label>
           <input matInput type="text" (blur)="consultaCep(applyFilter($event), f)" [(ngModel)]="endereco.cep" name="cep"
             id="CEP" placeholder="CEP" required />
         </mat-form-field>
@@ -80,12 +80,9 @@
           <div class="donations-list">
             <mat-form-field>
               <mat-label>Valor</mat-label>
-              <input type="number" name="valor" 
-              [(ngModel)]="doador.valor"
-              id="Val"
-              placeholder="$0" matInput>
+              <input type="number" name="valor" [(ngModel)]="doador.valor" id="Val" placeholder="$0" matInput>
             </mat-form-field>
-            <button type="submit" style="font-size: 1rem" id="Cadastrar" (click) = "popup()" mat-raised-button>
+            <button type="submit" style="font-size: 1rem" id="Cadastrar" (click)="popup()" mat-raised-button>
               Cadastrar
             </button>
           </div>

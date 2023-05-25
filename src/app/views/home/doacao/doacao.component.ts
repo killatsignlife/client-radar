@@ -26,7 +26,7 @@ export class DoacaoComponent implements OnInit {
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, private http: HttpClient,
-    private maxLength: SharedDataService,  private cepService: SharedDataService, 
+    private maxLength: SharedDataService, private cepService: SharedDataService,
     private formBuilder: FormBuilder, private decimalPipe: DecimalPipe) { }
 
   /*async triggerCreateCheckout(eventDonation: any) {
@@ -86,20 +86,22 @@ export class DoacaoComponent implements OnInit {
       data => console.log(data),
       error => console.log(error)
     );
+    
     this.doador = new Doador();
+    console.log(this.doador);
     this.gotoHome();
 
     this.doador.endereco = this.endereco;
-    console.log(this.doador.endereco);
   }
 
   onSubmit() {
     this.submitted = true;
     this.save();
+  
   }
 
   gotoHome() {
-  this.router.navigate(['/sucesso'])
+    this.router.navigate(['/sucesso'])
   }
   //---------------------------------------------------
 
@@ -108,24 +110,24 @@ export class DoacaoComponent implements OnInit {
     return filterValue;
   }
 
-  consultaCep(val, form){
+  consultaCep(val, form) {
     this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
   }
 
-  populaForm(dados, form){
+  populaForm(dados, form) {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
   }
 
-  popup(){
+  popup() {
     Swal.fire({
       title: 'Deseja confimar o cadastro?',
       icon: 'question',
       confirmButtonColor: '#56c865',
       cancelButtonColor: '#d33',
-      cancelButtonText:'Não',
+      cancelButtonText: 'Não',
       confirmButtonText: 'Sim',
       showCancelButton: true
     }).then((result) => {
@@ -136,7 +138,7 @@ export class DoacaoComponent implements OnInit {
           text: 'Cadastro foi efetuado com sucesso',
           confirmButtonText: 'ok',
         })
-        this.onSubmit() 
+        this.onSubmit()
       }
     })
   }
