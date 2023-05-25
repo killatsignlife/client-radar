@@ -32,7 +32,6 @@
 
 .form-container {
   display: flex;
-  justify-content: start;
   color: #000;
   padding-left: 5%;
 }
