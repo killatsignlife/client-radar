@@ -6,7 +6,7 @@
 }
 
 .Fundo_bg{
-  height: 800px;
+  height: 850px;
   background-image: url("../../../assets/img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 
 .container-callToAction p{
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 650;
   padding-top: 2%;
   color: var(--continuos-white);
