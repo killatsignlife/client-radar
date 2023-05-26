@@ -2,11 +2,11 @@ import { Endereco } from "./endereco.model";
 
 export class Voluntario {
   id: number;
-  name?: string;
-  lastname?: string;
+  nome?: string;
+  sobrenome?: string;
   dataNascimento?:string
   email?: string;
-  phone?: string;
+  telefone?: string;
   cpf?: string;
   endereco?: Endereco;
   condicoes?: boolean;

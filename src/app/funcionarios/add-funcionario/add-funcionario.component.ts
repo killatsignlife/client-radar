@@ -11,11 +11,12 @@ import Swal from 'sweetalert2';
   templateUrl: './add-funcionario.component.html',
   styleUrls: ['./add-funcionario.component.css']
 })
+
 export class AddFuncionarioComponent implements OnInit {
 
   title = 'Cadastrar';
   funcionario: Funcionario = new Funcionario();
-  enderecoF: Endereco = new Endereco();
+  endereco: Endereco = new Endereco();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router,
@@ -25,15 +26,15 @@ export class AddFuncionarioComponent implements OnInit {
   newFuncionario(): void {
     this.submitted = false;
     this.funcionario = new Funcionario();
-    this.enderecoF = new Endereco();
+    this.endereco = new Endereco();
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.maxLength.maxCaracteres();
   }
 
   save() {
-    this.funcionario.enderecoF = this.enderecoF;
+    this.funcionario.endereco = this.endereco;
     console.log(this.funcionario);
     this.service.createFuncionario(this.funcionario).subscribe(
       data => console.log(data),

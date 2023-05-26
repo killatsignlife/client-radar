@@ -21,14 +21,14 @@
           fxLayoutAlign="space-around center"
         >
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="name" class="control-label"
+            <mat-label style="font-size: 1rem" for="nome" class="control-label"
               >Nome</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.name"
-              name="name"
+              [(ngModel)]="voluntario.nome"
+              name="nome"
               id="nome"
               placeholder="Nome"
               required
@@ -38,15 +38,15 @@
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label
               style="font-size: 1rem"
-              for="lastname"
+              for="sobrenome"
               class="control-label"
               >Sobrenome</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.lastname"
-              name="lastname"
+              [(ngModel)]="voluntario.sobrenome"
+              name="sobrenome"
               id="Sobrenome"
               placeholder="Sobrenome"
               required
@@ -112,14 +112,14 @@
             />
           </mat-form-field>
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="phone" class="control-label"
+            <mat-label style="font-size: 1rem" for="telefone" class="control-label"
               >Telefone</mat-label
             >
             <input
               matInput
               type="text"
-              [(ngModel)]="voluntario.phone"
-              name="phone"
+              [(ngModel)]="voluntario.telefone"
+              name="telefone"
               id="Tel"
               placeholder="Telefone Celular"
               required

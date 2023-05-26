@@ -9,28 +9,30 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-voluntario',
   templateUrl: './add-voluntario.component.html',
-  styleUrls: ['./add-voluntario.component.css','../../../styles.css']
+  styleUrls: ['./add-voluntario.component.css', '../../../styles.css']
 })
+
 export class AddVoluntarioComponent implements OnInit {
-    title = 'Cadastra-se';
-    voluntario: Voluntario = new Voluntario();
-    endereco: Endereco = new Endereco();
-    submitted = false;
+  title = 'Cadastra-se';
+  voluntario: Voluntario = new Voluntario();
+  endereco: Endereco = new Endereco();
+  submitted = false;
 
-  constructor(private service: ApiService, private router: Router, 
-    private maxLength: SharedDataService,  private cepService: SharedDataService) { }
+  constructor(private service: ApiService, private router: Router,
+    private maxLength: SharedDataService, private cepService: SharedDataService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.maxLength.maxCaracteres();
   }
 
-  newVoluntario():void{
+  newVoluntario(): void {
     this.submitted = false;
     this.voluntario = new Voluntario();
     this.endereco = new Endereco();
   }
 
-  save(){
+  save() {
+    this.voluntario.endereco = this.endereco;
     this.service.createVoluntario(this.voluntario).subscribe(
       data => console.log(data),
       error => console.log(error)
@@ -39,7 +41,7 @@ export class AddVoluntarioComponent implements OnInit {
     this.gotoList();
   }
 
-  onSubmit(){
+  onSubmit() {
     this.submitted = true;
     this.save();
   }
@@ -48,7 +50,7 @@ export class AddVoluntarioComponent implements OnInit {
     this.router.navigate(['/voluntarios'])
   }
 
-  gotoAgradecimentos(){
+  gotoAgradecimentos() {
     this.router.navigate(['/sucesso'])
   }
 
@@ -57,24 +59,24 @@ export class AddVoluntarioComponent implements OnInit {
     return filterValue;
   }
 
-  consultaCep(val, form){
+  consultaCep(val, form) {
     this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
   }
 
-  populaForm(dados, form){
+  populaForm(dados, form) {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
     form.controls['uf'].setValue(dados.uf)
   }
 
-  popup(){
+  popup() {
     Swal.fire({
       title: 'Deseja confimar o cadastro?',
       icon: 'question',
       confirmButtonColor: '#56c865',
       cancelButtonColor: '#d33',
-      cancelButtonText:'Não',
+      cancelButtonText: 'Não',
       confirmButtonText: 'Sim',
       showCancelButton: true
     }).then((result) => {
@@ -85,7 +87,7 @@ export class AddVoluntarioComponent implements OnInit {
           text: 'Cadastro foi efetuado com sucesso',
           confirmButtonText: 'ok',
         })
-        this.onSubmit() 
+        this.onSubmit()
       }
     })
   }

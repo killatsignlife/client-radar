@@ -44,36 +44,36 @@
 
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>
-            <input matInput type="text" (blur)="consultaCep(applyFilter($event), f)" [(ngModel)]="enderecoF.cep"
+            <input matInput type="text" (blur)="consultaCep(applyFilter($event), f)" [(ngModel)]="endereco.cep"
               name="cep" id="CEP" placeholder="CEP" required />
           </mat-form-field>
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cidade" class="control-label">Cidade</mat-label>
-            <input matInput type="text" [(ngModel)]="enderecoF.cidade" name="cidade" id="Cidade" placeholder="Cidade"
+            <input matInput type="text" [(ngModel)]="endereco.cidade" name="cidade" id="Cidade" placeholder="Cidade"
               required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="bairro" class="control-label">Bairro</mat-label>
-            <input matInput type="text" [(ngModel)]="enderecoF.bairro" name="bairro" id="Bairro" placeholder="Bairro"
+            <input matInput type="text" [(ngModel)]="endereco.bairro" name="bairro" id="Bairro" placeholder="Bairro"
               required />
           </mat-form-field>
 
           <mat-form-field class="form-group" appearance="outline">
             <mat-label style="font-size: 1rem" for="uf" class="control-label">UF</mat-label>
-            <input matInput type="text" [(ngModel)]="enderecoF.uf" name="uf" id="uf" placeholder="Estado (sigla)"
+            <input matInput type="text" [(ngModel)]="endereco.uf" name="uf" id="uf" placeholder="Estado (sigla)"
               required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="logradouro" class="control-label">Logradouro</mat-label>
-            <input matInput type="text" [(ngModel)]="enderecoF.logradouro" name="logradouro" id="Logradouro"
+            <input matInput type="text" [(ngModel)]="endereco.logradouro" name="logradouro" id="Logradouro"
               placeholder="Logradouro" required />
           </mat-form-field>
 
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="complemento" class="control-label">Complemento</mat-label>
-            <input matInput type="text" [(ngModel)]="enderecoF.complemento" name="complemento" id="Complemento"
+            <input matInput type="text" [(ngModel)]="endereco.complemento" name="complemento" id="Complemento"
               placeholder="Complemento" required />
           </mat-form-field>
 
