@@ -1,45 +1,50 @@
 <section>
   <!--Primeira Grid-->
-    <div class="Fundo_bg" fxLayout="column" fxLayoutAlign="center center" >
-      <mat-card>
-        <mat-card-header>
-          <mat-card-subtitle><h2>Em média, duas pessoas desaparecem a cada hora em São Paulo</h2></mat-card-subtitle>
-          <mat-card-title>Ajude-nos a encontra-los</mat-card-title>
-        </mat-card-header>
-          <button routerLink="/formulario" id="voluntario" mat-raised-button>Torne-se um voluntário</button>
-      </mat-card>
+  <div class="Fundo_bg">
+    <div class="container-main">
+      <div class="container-callToAction">
+        <div class="box-title">
+          <h1>183 pessoas desaparecem a cada 24 horas no Brasil</h1>
+        </div>
+        <p>No Brasil, uma pessoa desaparece a cada 3 minutos. São mais de 200 mil desaparecidos por ano.
+          Nós ajude a trazer esperança para as famílias que estão em busca dessas pessoas.</p>
+      </div>
+      <span class="botao"><button routerLink="/formulario" id="voluntario" mat-flat-button>COMO AJUDAR</button></span>
     </div>
-  
+  </div>
+  <!--Fim Primeira Grid-->
+
   <!--Doacoes-->
   <div class="Fundo_verde">
     <h2>Mantenha este ideal doando!</h2>
-      <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
+    <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
   </div>
-  
+  <!--Fim Doacoes-->
+
   <!--Segunda Grid-->
-  <div class="Fundo_branco" >
-  
-    <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="start start" >
-        <h2 style="font-size: 2rem">Desaparecidos</h2>
+  <div class="Fundo_branco">
+
+    <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="start start">
+      <h2 style="font-size: 2rem">Desaparecidos</h2>
     </div>
-  
-  <!--Cards-->
-  <div class="Fundo_branco" >
-    <div fxLayout="row wrap" fxLayoutAlign="center center" >
-    <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%"   *ngFor="let desaparecido of desaparecidos | slice:0:3">
-      <mat-card  fxLayout="column" fxLayoutAlign="center center" class="example-card card-desaparecido">
-              <mat-card-content>
-                <img mat-card-image>
-              </mat-card-content>
-              <mat-card-title style="font-size: 1rem"></mat-card-title>
-        </mat-card>
-  </div>
-  </div>
-  </div>
-  
-    <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="center center" >
+
+    <!--Cards-->
+    <div class="Fundo_branco">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let desaparecido of desaparecidos | slice:0:3">
+          <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card card-desaparecido">
+            <mat-card-content>
+              <img mat-card-image>
+            </mat-card-content>
+            <mat-card-title style="font-size: 1rem"></mat-card-title>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="center center">
       <p style="font-size: 1rem" id="mais"><a routerLink="/desaparecidos">Ver Mais</a></p>
     </div>
   </div>
-  
-    </section>
+
+</section>
