@@ -16,17 +16,33 @@
 
   <!--Doacoes-->
   <div class="Fundo_verde">
-    <h2>Como AJudar!</h2>
+    <h2 class="help-title">COMO AJUDAR</h2>
 
-    <div>
-      <h3>Doe Qualquer Valor</h3>
-      <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
-    </div>
+    <article class="help-box">
+      <div class="box-help">
+        <div class="box-doar">
+          <h3>Doe Qualquer Valor</h3>
+          <div>
+            <p>O ato de doar contribui para a transformação da sociedade e principalmente das pessoas. Quem doa, beneficia a si próprio. </p>
+          </div>
+          <span>
+            <button routerLink="/doacao" id="doador" class="btn" mat-raised-button>Doar</button>
+          </span>
+        </div>
+    
 
-    <div>
-      <h3></h3>
-      <button style="font-size: 1rem" routerLink="/doacao" id="voluntario" class="doar" mat-raised-button>Doar</button>
-    </div>
+      
+        <div class="box-voluntario">
+          <h3>Vire um voluntario</h3>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore iusto reprehenderit, perspiciatis accusamus commodi dicta ducimus voluptas repellendus corrupti eaque natus reiciendis, id quod, eveniet debitis praesentium nisi quisquam.</p>
+          </div>
+          <span>
+            <button routerLink="/voluntarios/adicionar" id="voluntario" class="btn" mat-raised-button>Quero me voluntariar</button>
+          </span>
+        </div>
+      </div>
+    </article>
     
   </div>
   <!--Fim Doacoes-->

@@ -75,22 +75,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: var(--primary);
+  width: 100%;
+  background-color: #010d01;
   padding-top: 6% ;
   padding-bottom: 6%;
 }
 
-
-.Fundo_verde h2{
-  padding-top: 2%;
-  font-size: 2rem;
-  color: var(--continuos-white);
+.help-title{
+  font-size: 4rem;
+  padding: 8px;
+  padding: 10px;
 }
 
-.doar{
-  width: 6%;
+.help-box{
+  padding-top: 35px;
+  width: 100%;
+}
+
+.box-help{
+  display: flex;
+  justify-content: center;
+}
+
+.box-help .box-doar, .box-voluntario{
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  width: 570px;
+  padding: 25px 55px;
+}
+
+.box-help .box-doar h3, .box-voluntario h3{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.box-help .box-doar div, .box-voluntario div{
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.btn{
+  font-size: 1.3rem;
+  padding: 3px;
   background-color: transparent;
+  border: var(--primary) solid 0.1rem;
+}
+
+.btn:hover{
+  outline: none;
+  background-color: var(--primary);
+  color: var(--continuos-white);
+  text-decoration: none;
 }
 
 .Fundo_branco{
@@ -235,11 +271,6 @@ mat-card-content{
 }
 
 
-#voluntario{
-  margin-top: 1%;
-  font-size: 15px;
-  padding: 1%;
-}
 }
 
 @media screen and (min-width: 600px) and (max-width: 768px){
