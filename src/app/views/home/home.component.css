@@ -5,25 +5,70 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.example-icon {
-    padding: 0 14px;
-  }
-  .example-spacer {
-    flex: 1 1 auto;
+.Fundo_bg{
+  height: 800px;
+  background-image: url("../../../assets/img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply; /* Modo de blend para escurecer */
+  background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo que escurece a imagem */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-main{
+  width: 70%;
+}
+
+.container-callAction{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-title{
+  padding: 10px;
+}
+
+.box-title h1{
+  font-weight: 650;
+  margin: 0px;
+}
+
+.container-callToAction p{
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  padding-top: 2%;
+  color: var(--continuos-white);
+  font-weight: bold;
+}
+
+
+.botao .mat-flat-button {
+  color: var(--continuos-white);
+  background-color: transparent;
+  border: var(--primary) solid 0.1rem;
+  font-weight: 700;
+  transition: 400ms;
+  outline: none;
+}
+
+.botao .mat-flat-button:hover{
+  background-color: var(--primary);
+  color: var(--continuos-white);
+  text-decoration: none;
 }
 
 #voluntario{
   margin-top: 1%;
   font-size: 20px;
   padding: 1%;
-}
-
-#voluntario:hover{
-  text-decoration: underline;
-}
-
-.doar{
-  width: 6%;
 }
 
 .Fundo_verde{
@@ -36,39 +81,16 @@
   padding-bottom: 6%;
 }
 
-.Fundo_bg{
-  text-align: center;
-  align-items: center;
-  background-image: url("../../../assets/img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position-y: 30%;
-}
-
-.Fundo_bg h1{
-  padding-top: 2%;
-  color: var(--continuos-white);
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-.Fundo_bg h3{
-  padding-top: 2%;
-  color: var(--continuos-white);
-  font-size: 1rem;
-  width: 90%;
-  font-weight: light;
-}
-
-.Fundo_bg #voluntario{
-  padding: 2%;
-}
 
 .Fundo_verde h2{
   padding-top: 2%;
   font-size: 2rem;
   color: var(--continuos-white);
+}
+
+.doar{
+  width: 6%;
+  background-color: transparent;
 }
 
 .Fundo_branco{
@@ -106,7 +128,7 @@
 }
 
 .mat-card-subtitle:first-of-type{
-  text-align: left;
+  text-align: center;
 }
 
 .example-card {
@@ -151,13 +173,6 @@ mat-card-content{
 }
   .example-header-image {
     background-size: cover;
-  }
-
-  #voluntario, #Cadastrar{
-    background-color: var(--continuos-white);
-    border:none;
-    color: var(--secondary);
-    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
 
   .Fundo_branco h2{
