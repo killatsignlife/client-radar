@@ -1,24 +1,3 @@
-* {
-  color: #000;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container-forms {
-  width: 50%;
-  border-radius: 15px;
-  background-color: var(--continuos-white);
-  box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
-}
-
-.container-forms h1 {
-  text-align: center;
-  color: var(--continuos-white);
-  background-color: var(--primary);
-  padding: 2rem 0 2rem 0;
-  border-radius: 15px 15px 0 0;
-}
 
 form {
   margin-top: 2%;
@@ -45,42 +24,6 @@ form {
   margin: 15px 0 20px 0;
 }
 
-.Formulario_padrao {
-  padding-top: 4%;
-  color: #000;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  padding-bottom: 4%;
-}
-
-.Formulario_padrao h1 {
-  font-size: 25px;
-  margin-bottom: 5%;
-}
-
-.Formulario_padrao h2 {
-  font-weight: bold;
-}
-
-.Formulario_padrao input {
-  color: #000;
-  font-size: 150%;
-  margin-right: 2%;
-  border-color: var(--secondary);
-}
-
-.Formulario_padrao input[type="checkbox"] {
-  margin-right: 0.5%;
-  padding: 0;
-  height: 12px;
-}
-
-.Formulario_padrao label {
-  font-size: 16px;
-  margin-right: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .campo-checkboxes {
   display: flex;

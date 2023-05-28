@@ -7,7 +7,7 @@ import { SharedDataService } from 'src/app/shared-data.service';
 @Component({
   selector: 'app-edit-funcionario',
   templateUrl: './edit-funcionario.component.html',
-  styleUrls: ['./edit-funcionario.component.css']
+  styleUrls: ['./edit-funcionario.component.css','../../../styles.css']
 })
 export class EditFuncionarioComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
