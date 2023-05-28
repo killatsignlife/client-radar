@@ -11,23 +11,23 @@
   
       <ng-container matColumnDef="Sobrenome">
         <th mat-header-cell *matHeaderCellDef> Sobrenome </th>
-        <td mat-cell *matCellDef="let voluntario"> {{voluntario.Sobrenome}} </td>
+        <td mat-cell *matCellDef="let voluntario"> {{voluntario.sobrenome}} </td>
       </ng-container>
     
 
       <ng-container matColumnDef="CPF">
         <th mat-header-cell *matHeaderCellDef> CPF </th>
-        <td mat-cell *matCellDef="let voluntario"> {{voluntario.CPF}} </td>
+        <td mat-cell *matCellDef="let voluntario"> {{voluntario.cpf}} </td>
       </ng-container>
     
       <ng-container matColumnDef="Ações">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let voluntario">
           <div class="buttons">
-            <button mat-flat-button color="warn">
+            <button mat-flat-button color="warn" (click)="deletar(voluntario.id)">
               Excluir
             </button>
-            <button mat-flat-button color="primary">
+            <button mat-flat-button color="primary" (click)="atualizar(voluntario.id)">
               Atualizar
             </button>
           </div>

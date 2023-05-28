@@ -300,6 +300,7 @@ mat-card-content{
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #707070;
 }
 
 .Fundo_bg h1{

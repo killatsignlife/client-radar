@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-delete-funcionario',
   templateUrl: './delete-funcionario.component.html',
-  styleUrls: ['./delete-funcionario.component.css']
+  styleUrls: ['./delete-funcionario.component.css', '../../../styles.css']
 })
 export class DeleteFuncionarioComponent implements OnInit {
 

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Voluntario } from 'src/app/voluntario.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-delete-voluntario',
   templateUrl: './delete-voluntario.component.html',
-  styleUrls: ['./delete-voluntario.component.css']
+  styleUrls: ['./delete-voluntario.component.css', '../../../styles.css']
 })
 
 export class DeleteVoluntarioComponent implements OnInit {
@@ -42,6 +43,28 @@ export class DeleteVoluntarioComponent implements OnInit {
 
   cancel(): void {
     this.router.navigate(['/voluntarios']);
+  }
+
+  popup(){
+    Swal.fire({
+      title: 'Tem certeza que deseja excluir este cadastro?',
+      icon: 'warning',
+      confirmButtonColor: '#56c865',
+      cancelButtonColor: '#d33',
+      cancelButtonText:'Não',
+      confirmButtonText: 'Sim',
+      showCancelButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          confirmButtonColor: '#56c865',
+          text: 'Cadastro excluído',
+          confirmButtonText: 'ok',
+        })
+        this.deleteVoluntario() 
+      }
+    })
   }
 
 }
