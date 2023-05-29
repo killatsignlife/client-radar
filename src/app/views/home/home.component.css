@@ -303,8 +303,15 @@ mat-card-content{
 .list-contatos{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   list-style: none;
   margin-bottom: 15px;
+}
+
+.list-contatos li{
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .forms{ 
@@ -315,6 +322,12 @@ mat-card-content{
 .forms .box-input{
   width: 500px;
   color: var(--continuos-white);
+  font-size: 1.1rem;
+}
+
+.btn-contato{
+  display: flex;
+  justify-content: center;
 }
 
 .btn-contato button{
@@ -322,6 +335,8 @@ mat-card-content{
   padding: 3px;
   background-color: transparent;
   border: var(--primary) solid 0.1rem;
+  padding: 5px;
+  text-align: center;
 }
 
 .btn-contato button:hover{

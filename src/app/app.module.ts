@@ -85,6 +85,7 @@ import { DecimalPipe } from '@angular/common';
     DeleteFamiliarComponent,
     ListFamiliarComponent,
     UpdateFamiliarComponent,
+    
 
     
   ],
