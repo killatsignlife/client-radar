@@ -54,6 +54,12 @@ mat-toolbar-row {
 
 .grupo_botao {
   display: flex;
+  align-items: center;
+}
+
+.grupo_botao a{
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .grupo_botao span {
@@ -65,9 +71,7 @@ mat-toolbar-row {
   font-size: 1rem;
 }
 
-.grupo_botao .lista{
-  padding: 0 0.2rem 0 0.2rem;
-}
+
 
 .grupo_botao:nth-child(3){
   gap: 1rem;
@@ -86,6 +90,8 @@ mat-toolbar-row {
   filter: brightness(75%);
   transition: 1s;
   text-decoration: underline;
+  color: var(--primary);
+  transition: 300ms;
 }
 
 span .mat-flat-button {
@@ -96,19 +102,11 @@ span .mat-flat-button {
 
 span .mat-flat-button:hover{
   background-color: var(--primary);
-
   color: var(--continuos-white);
   text-decoration: none;
 }
 
 /*Responsividade*/
-
-@media screen and (min-width: 1024px) {
-
-
-
-}
-
 
 @media screen and (max-width: 900px) {
   header {
