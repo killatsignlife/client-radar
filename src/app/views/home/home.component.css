@@ -175,6 +175,7 @@
 
 /*Fim Doações*/
 
+/*Desaparecidos*/
 .Fundo_branco{
   padding-top: 2%;
   color: var(--back);
@@ -261,6 +262,76 @@ mat-card-content{
     color: var(--dark);
     padding-left: 2%;
   }
+
+/*Fim Desaparecidos*/
+
+/*Contato*/
+
+.section-contato{
+  height: 930px;
+  padding: 70px 0;
+  background-color: var(--back);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+}
+
+.container-contato h2{
+  color: var(--continuos-white);
+  width: max-content;
+  font-size: 3.7rem;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+.box-contatos span{
+  color: var(--continuos-white);
+  margin-bottom:5px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.list-contatos{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.forms{ 
+  display: flex;
+  flex-direction: column;
+}
+
+.forms .box-input{
+  width: 500px;
+  color: var(--continuos-white);
+}
+
+.btn-contato button{
+  font-size: 1.3rem;
+  padding: 3px;
+  background-color: transparent;
+  border: var(--primary) solid 0.1rem;
+}
+
+.btn-contato button:hover{
+  outline: none;
+  background-color: var(--primary);
+  color: var(--continuos-white);
+  text-decoration: none;
+}
+
+/*Fim Contato*/
 
   /*Responsividade*/
   @media screen and (max-width: 376px) {

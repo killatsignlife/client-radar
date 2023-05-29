@@ -50,6 +50,7 @@ import { AddFamiliarComponent } from './familiares/add-familiar/add-familiar.com
 import { DeleteFamiliarComponent } from './familiares/delete-familiar/delete-familiar.component';
 import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.component';
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
+import {Component} from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
 @NgModule({
