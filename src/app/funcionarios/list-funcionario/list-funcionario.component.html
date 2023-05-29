@@ -2,6 +2,8 @@
     <h1>Lista de Funcionarios cadastrados</h1>
     <div class="panel-body">
       <button id="btn_adicionar" (click)="addFuncionario()">Adicionar</button>
+
+      <button id="btn_adicionar"><a routerLink="/grafico">GRÁFICO</a></button>
       
       <table mat-table [dataSource]="funcionarios" >
         <ng-container matColumnDef="Nome">
