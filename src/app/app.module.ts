@@ -53,6 +53,7 @@ import { UpdateFamiliarComponent } from './familiares/update-familiar/update-fam
 import {Component} from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
+import { GraficoComponent } from './views/grafico/grafico.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     DeleteFamiliarComponent,
     ListFamiliarComponent,
     UpdateFamiliarComponent,
+    GraficoComponent,
     
 
     
