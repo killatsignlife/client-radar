@@ -53,8 +53,6 @@ import { UpdateFamiliarComponent } from './familiares/update-familiar/update-fam
 import {Component} from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
-import { GraficoComponent } from './views/grafico/grafico.component';
-import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -88,7 +86,6 @@ import { NgChartsModule } from 'ng2-charts';
     DeleteFamiliarComponent,
     ListFamiliarComponent,
     UpdateFamiliarComponent,
-    GraficoComponent,
     
 
     
@@ -117,7 +114,6 @@ import { NgChartsModule } from 'ng2-charts';
     MatDividerModule,
     MatCheckboxModule,
     LayoutModule,
-    NgChartsModule
   ],
   exports: [MatToolbarModule, MatIconModule, MatButtonModule],
   providers: [DecimalPipe],

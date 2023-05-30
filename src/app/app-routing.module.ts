@@ -27,7 +27,6 @@ import { AddFamiliarComponent } from './familiares/add-familiar/add-familiar.com
 import { DeleteFamiliarComponent } from './familiares/delete-familiar/delete-familiar.component';
 import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.component';
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
-import { GraficoComponent } from './views/grafico/grafico.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent},
@@ -57,7 +56,6 @@ const routes: Routes = [
   { path: 'familiar/deletar', component: DeleteFamiliarComponent},
   { path: 'familiar/list', component: ListFamiliarComponent},
   { path: 'familiar/atualizar', component: UpdateFamiliarComponent},
-  { path: 'grafico', component: GraficoComponent},
 ];
 
 @NgModule({
