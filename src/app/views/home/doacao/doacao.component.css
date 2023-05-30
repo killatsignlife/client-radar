@@ -120,8 +120,8 @@ mat-toolbar {
   margin-top: 10px;
   border-radius: 10px;
   border-color: var(--primary);
-  background-color: var(--continuos-white);
-  color: var(--secondary);
+  background-color: var(--primary);
+  color: var(--continuos-white);
   font-weight: bold;
 }
 

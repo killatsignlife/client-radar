@@ -74,7 +74,7 @@
         <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let desaparecido of desaparecidos | slice:0:3">
           <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card card-desaparecido">
             <mat-card-content>
-              <img mat-card-image src="">
+              <img mat-card-image src="{{desaparecido.fotos}}">
             </mat-card-content>
             <mat-card-title style="font-size: 1rem">{{desaparecido.dataDesaparecimento}}</mat-card-title>
           </mat-card>
