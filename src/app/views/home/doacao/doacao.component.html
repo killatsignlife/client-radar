@@ -6,7 +6,7 @@
       <h1 class="titulo">Realize uma doação</h1>
       <div class="form-container">
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
+          <mat-label for="name" class="control-label">Nome</mat-label>
           <input matInput type="text" [(ngModel)]="doador.nome" name="name" id="nome" placeholder="Nome" required>
         </mat-form-field>
 
@@ -21,40 +21,45 @@
 
       <div class="form-container">
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label style="font-size: 1rem" for="cpf" class="control-label">CPF</mat-label>
+          <mat-label for="cpf" class="control-label">CPF</mat-label>
           <input matInput type="text" [(ngModel)]="doador.cpf" name="cpf" id="CPF" placeholder="CPF" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="form-group">
-          <mat-label style="font-size: 1rem" for="telefone" class="control-label">Telefone</mat-label>
+          <mat-label for="telefone" class="control-label">Telefone</mat-label>
           <input matInput type="text" [(ngModel)]="doador.telefone" name="telefone" id="Tel"
             placeholder="Telefone Celular" required>
         </mat-form-field>
 
+      </div>
+
+      <div class="form-container">
+
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" class="control-label">CEP</mat-label>
+          <mat-label  class="control-label">CEP</mat-label>
           <input matInput type="text" (blur)="consultaCep(applyFilter($event), f)" [(ngModel)]="endereco.cep" name="cep"
             id="CEP" placeholder="CEP" required />
         </mat-form-field>
+
+        <mat-form-field class="form-group" appearance="outline">
+          <mat-label for="cidade" class="control-label">Cidade</mat-label>
+          <input matInput type="text" [(ngModel)]="endereco.cidade" name="cidade" id="Cidade" placeholder="Cidade"
+            required />
+        </mat-form-field>
+
       </div>
 
 
       <div class="form-container">
 
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="cidade" class="control-label">Cidade</mat-label>
-          <input matInput type="text" [(ngModel)]="endereco.cidade" name="cidade" id="Cidade" placeholder="Cidade"
-            required />
-        </mat-form-field>
-
-        <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="bairro" class="control-label">Bairro</mat-label>
+          <mat-label for="bairro" class="control-label">Bairro</mat-label>
           <input matInput type="text" [(ngModel)]="endereco.bairro" name="bairro" id="Bairro" placeholder="Bairro"
             required />
         </mat-form-field>
 
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="uf" class="control-label">UF</mat-label>
+          <mat-label for="uf" class="control-label">UF</mat-label>
           <input matInput type="text" [(ngModel)]="endereco.uf" name="uf" id="uf" placeholder="Estado (sigla)"
             required />
         </mat-form-field>
@@ -63,27 +68,27 @@
 
       <div class="form-container">
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="complemento" class="control-label">Complemento</mat-label>
+          <mat-label for="complemento" class="control-label">Complemento</mat-label>
           <input matInput type="text" [(ngModel)]="endereco.complemento" name="complemento" id="complemento"
             placeholder="Complemento" required />
         </mat-form-field>
 
         <mat-form-field class="form-group" appearance="outline">
-          <mat-label style="font-size: 1rem" for="logradouro" class="control-label">Logradouro</mat-label>
+          <mat-label for="logradouro" class="control-label">Logradouro</mat-label>
           <input matInput type="text" [(ngModel)]="endereco.logradouro" name="logradouro" id="Logradouro"
             placeholder="Logradouro" required />
         </mat-form-field>
       </div>
       <div>
         <div class="donations" fxLayout="column wrap">
-          <h2 class="titulo2">Escolha um valor abaixo:</h2>
+          <h2 class="titulo2">Qualquer valor é de grande ajuda:</h2>
           <div class="donations-list">
             <mat-form-field>
               <mat-label>Valor</mat-label>
               <input type="number" name="valor" [(ngModel)]="doador.valor" id="Val" placeholder="$0" matInput>
             </mat-form-field>
             <button type="submit" style="font-size: 1rem" id="Cadastrar" (click)="popup()" mat-raised-button>
-              Cadastrar
+              Doar
             </button>
           </div>
         </div>

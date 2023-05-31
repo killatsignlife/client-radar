@@ -1,5 +1,4 @@
 * {
-  color: var(--continuos-white);
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +6,6 @@
 
 .Fundo_verde {
   padding-top: 4%;
-  color: var(--white);
   align-items: center;
   width: 100%;
   height: auto;
@@ -18,13 +16,13 @@
   box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
   border-radius: 15px;
   margin: 0 0 10% 0;
-  padding: 0 0 2rem 0;
-  width: 50rem;
+  width: 60%;
 }
 
 .titulo {
   text-align: center;
   background-color: var(--primary);
+  color: var(--white);
   border-radius: 15px 15px 0 0;
   width: 100%;
   padding: 10px;
@@ -32,6 +30,7 @@
 
 .form-container {
   display: flex;
+  justify-content: center;
   color: #000;
   padding-left: 5%;
 }
@@ -39,19 +38,27 @@
 
 .form-group {
   padding: 7px 7px 0 7px;
+  font-size: 1.1rem;
   margin: 5px 5px 0 5px;
 }
 
 .mat-form-field{
-  width: max-content;
-  align-items: start;
+  display: flex;
   align-self: flex-start;
   text-align: start;
+  justify-content: center;
+  width: 300px;
 }
+
 
 .form-group .control-label {
   color: var(--dark);
   border-color: var(--dark);
+}
+
+.form-group input {
+  color: var(--dark);
+  width: 300px;
 }
 
 mat-toolbar-row {
@@ -65,13 +72,6 @@ mat-toolbar-row .logo {
   height: auto;
 }
 
-#cadastro {
-  width: 10%;
-  height: auto;
-  font-size: 70%;
-  text-align: center;
-  border-radius: 0px;
-}
 mat-toolbar {
   background-color: var(--dark);
 }
@@ -91,13 +91,9 @@ mat-toolbar {
   font-weight: bold;
 }
 
-.Fundo_verde input {
-  color: var(--dark);
-  font-size: 1rem;
-}
-
 .titulo2 {
   color: var(--dark);
+
 }
 
 .donations{
@@ -107,26 +103,32 @@ mat-toolbar {
 .donations-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  align-content: center;
+  flex-direction: column;
   gap: 2%;
   margin: 0 10rem 0 10rem;
 }
 
+.donations-list mat-label{
+  font-size: 1.1rem;
+}
 
-.donation-item button {
-  cursor: pointer;
-  font-size: 20px;
-  padding: 0.5rem;
-  margin-top: 10px;
-  border-radius: 10px;
-  border-color: var(--primary);
+
+.donations-list button {
   background-color: var(--primary);
-  color: var(--continuos-white);
-  font-weight: bold;
+    border: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 10px;
+    width: 30%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 15px 0 20px 0;
 }
 
 .donation-item button:hover {
-  background-color: var(--primary);
   color: var(--continuos-white);
   font-weight: bold;
 }
