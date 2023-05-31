@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SucessoComponent } from './sucesso.component';
+import { MenuVerticalComponent } from './menu-vertical.component';
 
-describe('SucessoComponent', () => {
-  let component: SucessoComponent;
-  let fixture: ComponentFixture<SucessoComponent>;
+describe('MenuVerticalComponent', () => {
+  let component: MenuVerticalComponent;
+  let fixture: ComponentFixture<MenuVerticalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SucessoComponent ]
+      declarations: [ MenuVerticalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SucessoComponent);
+    fixture = TestBed.createComponent(MenuVerticalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

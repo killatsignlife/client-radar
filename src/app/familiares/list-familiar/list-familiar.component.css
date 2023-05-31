@@ -1,6 +1,6 @@
 .componente {
-    padding: 4vh 10.5vw;
-    height: 800px;
+    height: 900px;
+    display: flex;
   }
   
   .container {

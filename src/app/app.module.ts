@@ -37,7 +37,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddDesaparecidoComponent } from './desaparecidos/add-desaparecido/add-desaparecido.component';
 import { UpdateDesaparecidoComponent } from './desaparecidos/update-desaparecido/update-desaparecido.component';
 import { DeleteDesaparecidoComponent } from './desaparecidos/delete-desaparecido/delete-desaparecido.component';
-import { SucessoComponent } from './components/sucesso/sucesso.component';
 import { UpdateVoluntarioComponent } from './voluntarios/update-voluntario/update-voluntario.component';
 import { DeleteVoluntarioComponent } from './voluntarios/delete-voluntario/delete-voluntario.component';
 import { ListVoluntarioComponent } from './voluntarios/list-voluntario/list-voluntario.component';
@@ -50,11 +49,11 @@ import { AddFamiliarComponent } from './familiares/add-familiar/add-familiar.com
 import { DeleteFamiliarComponent } from './familiares/delete-familiar/delete-familiar.component';
 import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.component';
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
-import {Component} from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 import { GraficoComponent } from './views/grafico/grafico.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { MenuVerticalComponent } from './views/dashboard/menu-vertical/menu-vertical.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +74,6 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     AddDesaparecidoComponent,
     UpdateDesaparecidoComponent,
     DeleteDesaparecidoComponent,
-    SucessoComponent,
     UpdateVoluntarioComponent,
     DeleteVoluntarioComponent,
     ListVoluntarioComponent,
@@ -90,6 +88,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     UpdateFamiliarComponent,
     GraficoComponent,
     DashboardComponent,
+    MenuVerticalComponent,
     
 
     
