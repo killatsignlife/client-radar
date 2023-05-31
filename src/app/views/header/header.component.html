@@ -11,11 +11,14 @@
     <mat-toolbar-row>
 
       <div class="logo-box">
-        <a href="#main-fundo" (click)="scrollToSection($event, '#main-fundo')"><img mat-card-image id="logo" src="assets/img/Branco.png"></a>
+        <a routerLink="/home"><img mat-card-image id="logo" src="assets/img/Branco.png"></a>
         <span class="example-spacer"></span>
       </div>
 
       <div class="grupo_botao">
+        <span mat-menu-item class="lista">
+          <a (click)="scrollToSection($event, '#main-fundo')">Início</a>
+        </span>
         <span mat-menu-item class="lista">
           <a (click)="scrollToSection($event, '#sobre')">Sobre</a>
         </span>

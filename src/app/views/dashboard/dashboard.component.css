@@ -1,6 +1,7 @@
 .container-dashboard {
     display: flex;
-    height: 900px;
+    padding-top: 130px;
+    height: 1000px;
 }
 
 /*RELATORIO*/

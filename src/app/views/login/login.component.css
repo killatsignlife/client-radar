@@ -7,25 +7,25 @@
 
 section{
   height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-forms {
-  width: 50%;
-  border-radius: 15px;
-  background-color: var(--continuos-white);
-  box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
+.container-forms{
+  height: 550px;
+  width: 500px;
 }
 
-.container-forms h1 {
-  text-align: center;
-  color: var(--continuos-white);
-  background-color: var(--primary);
-  padding: 2rem 0 2rem 0;
-  border-radius: 15px 15px 0 0;
+.container-forms h1{
+  font-size: 2rem;
 }
+
 
 form {
-  margin-top: 2%;
+  margin-top:2%;
+  padding: 10px;
 }
 
 .campo-form {
@@ -34,7 +34,7 @@ form {
 
 .form-group {
   padding: 0 15px 0 15px;
-  border-radius: 15px;
+ 
 }
 
 #Cadastrar {
