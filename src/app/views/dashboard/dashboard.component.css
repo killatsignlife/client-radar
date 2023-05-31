@@ -57,6 +57,13 @@
 
 /*Fim lista lateral*/
 
+
+/*RELATORIO*/
+
+.container-relatorio{
+    margin: 10px;
+}
+
 #card {
     color: var(--continuos-white);
     background-color: var(--primary);
@@ -75,14 +82,17 @@
 
 .conteiner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+    width: max-content;
     margin-top: 10px;
 }
 
 #second {
     margin-left: 10px;
 }
+
+/*FIM RELATORIO*/
 
 @media screen and (max-width: 600px) {
     .conteiner {

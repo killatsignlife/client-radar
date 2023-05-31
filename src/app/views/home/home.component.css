@@ -1,5 +1,5 @@
-*{
-  color:var(--continuos-white);
+* {
+  color: var(--continuos-white);
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,43 +7,45 @@
 
 /*Primeira Grid*/
 
-.Fundo_bg{
+.Fundo_bg {
   height: 930px;
   background-image: url("../../../assets/img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-blend-mode: multiply; /* Modo de blend para escurecer */
-  background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo que escurece a imagem */
+  background-blend-mode: multiply;
+  /* Modo de blend para escurecer */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Cor de fundo que escurece a imagem */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container-main{
+.container-main {
   width: 70%;
 }
 
-.container-callAction{
+.container-callAction {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.box-title{
+.box-title {
   padding: 10px;
 }
 
-.box-title h1{
+.box-title h1 {
   font-size: 4rem;
   font-weight: 650;
   margin: 0px;
 }
 
-.container-callToAction p{
+.container-callToAction p {
   padding: 10px;
   font-size: 1.2rem;
   font-weight: 650;
@@ -64,7 +66,7 @@
   outline: none;
 }
 
-.botao .mat-flat-button:hover{
+.botao .mat-flat-button:hover {
   background-color: var(--primary);
   color: var(--continuos-white);
   text-decoration: none;
@@ -75,7 +77,7 @@
 
 /*QUEM SOMOS*/
 
-.section-quemSomos{
+.section-quemSomos {
   height: 930px;
   padding: 70px 0;
   background-color: #Ececeb;
@@ -84,7 +86,7 @@
   align-items: center;
 }
 
-.container-quemSomos{
+.container-quemSomos {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +94,7 @@
   width: 700px;
 }
 
-.container-quemSomos h2{
+.container-quemSomos h2 {
   color: var(--dark);
   width: max-content;
   font-size: 3.7rem;
@@ -101,7 +103,7 @@
   padding-bottom: 30px;
 }
 
-.container-quemSomos p{
+.container-quemSomos p {
   color: var(--dark);
   font-size: 1.1rem;
   line-height: 2;
@@ -113,34 +115,34 @@
 
 /*Doações*/
 
-.Fundo_verde{
+.Fundo_verde {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 930px;
   width: 100%;
   background-color: #010d01;
-  padding-top: 6% ;
+  padding-top: 6%;
   padding-bottom: 6%;
 }
 
-.help-title{
+.help-title {
   font-size: 4rem;
   padding: 8px;
   padding: 10px;
 }
 
-.help-box{
+.help-box {
   padding-top: 35px;
   width: 100%;
 }
 
-.box-help{
+.box-help {
   display: flex;
   justify-content: center;
 }
 
-.box-help .box-doar, .box-voluntario{
+.box-help .box-doar, .box-voluntario {
   display: flex;
   flex-direction: column;
   height: 380px;
@@ -148,25 +150,25 @@
   padding: 25px 55px;
 }
 
-.box-help .box-doar h3, .box-voluntario h3{
+.box-help .box-doar h3, .box-voluntario h3 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.box-help .box-doar div, .box-voluntario div{
+.box-help .box-doar div, .box-voluntario div {
   font-size: 1.1rem;
   margin-bottom: 15px;
   line-height: 1.3;
 }
 
-.btn{
+.btn {
   font-size: 1.3rem;
   padding: 3px;
   background-color: transparent;
   border: var(--primary) solid 0.1rem;
 }
 
-.btn:hover{
+.btn:hover {
   outline: none;
   background-color: var(--primary);
   color: var(--continuos-white);
@@ -176,98 +178,120 @@
 /*Fim Doações*/
 
 /*Desaparecidos*/
-.Fundo_branco{
+.Fundo_branco {
   padding-top: 2%;
   color: var(--back);
   background-color: var(--white);
   align-items: center;
   width: 100%;
   height: auto;
-  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 
-.Fundo_branco h2{
-  font-weight:bold;
+.Fundo_branco h2 {
+  font-weight: bold;
   color: var(--dark);
+  font-size: 4rem;
+  padding: 8px;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
-.Fundo_branco a{
+.container-img {
+  width: 60%;
+}
+
+.Fundo_branco a {
   color: black;
 }
 
-#mais{
-  border:none;
-  font-weight: bold;
-  margin-top: -2%;
-}
-
-.mat-card:first-of-type{
+.mat-card:first-of-type {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0px;
   margin: 10% 0 20% 0;
-  width: 40%;
+  width: 100%;
   padding: 2%;
 }
 
-.mat-card-subtitle:first-of-type{
+.mat-card-subtitle:first-of-type {
   text-align: center;
 }
 
 .example-card {
-  height: 25%;
-  margin-left:5%;
+  margin-left: 5%;
   margin-right: 5%;
   background-color: var(--white);
-  margin-bottom:6%;
+  margin-bottom: 6%;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.15);
 
 }
 
-.example-card img{
+.example-card img {
   height: 400px;
   width: 100%;
   margin-top: 1px;
   margin-bottom: 5px;
 }
 
-.card-desaparecido{
-    border-radius: 5%;
+.card-desaparecido {
+  border-radius: 5%;
 }
 
-mat-card-content{
+mat-card-content {
   border-bottom-style: solid;
   border-bottom-color: var(--primary);
 }
 
-.mat-card>:first-child{
+.mat-card>:first-child {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.mat-card-title:first-of-type{
+.mat-card-title:first-of-type {
   color: var(--continuos-white);
 }
 
-.mat-card-title{
+.mat-card-title {
   color: var(--dark);
 }
-  .example-header-image {
-    background-size: cover;
-  }
 
-  .Fundo_branco h2{
-    color: var(--dark);
-    padding-left: 2%;
-  }
+.example-header-image {
+  background-size: cover;
+}
+
+.Fundo_branco h2 {
+  color: var(--dark);
+  padding-left: 2%;
+}
+
+#mais {
+  background-color: transparent;
+  border: var(--primary) solid 0.1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: 400ms;
+  outline: none;
+  margin-bottom: 40px;
+  ;
+}
+
+#mais:hover {
+  outline: none;
+  background-color: var(--primary);
+  color: var(--continuos-white);
+  text-decoration: none;
+}
 
 /*Fim Desaparecidos*/
 
 /*Contato*/
 
-.section-contato{
+.section-contato {
   height: 930px;
   padding: 70px 0;
   background-color: var(--back);
@@ -276,7 +300,7 @@ mat-card-content{
   align-items: center;
 }
 
-.container-contato{
+.container-contato {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,7 +308,7 @@ mat-card-content{
   width: 700px;
 }
 
-.container-contato h2{
+.container-contato h2 {
   color: var(--continuos-white);
   width: max-content;
   font-size: 3.7rem;
@@ -293,14 +317,14 @@ mat-card-content{
   padding-bottom: 30px;
 }
 
-.box-contatos span{
+.box-contatos span {
   color: var(--continuos-white);
-  margin-bottom:5px;
+  margin-bottom: 5px;
   font-size: 1rem;
   line-height: 2;
 }
 
-.list-contatos{
+.list-contatos {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -308,29 +332,29 @@ mat-card-content{
   margin-bottom: 15px;
 }
 
-.list-contatos li{
+.list-contatos li {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.forms{ 
+.forms {
   display: flex;
   flex-direction: column;
 }
 
-.forms .box-input{
+.forms .box-input {
   width: 500px;
   color: var(--continuos-white);
   font-size: 1.1rem;
 }
 
-.btn-contato{
+.btn-contato {
   display: flex;
   justify-content: center;
 }
 
-.btn-contato button{
+.btn-contato button {
   font-size: 1.3rem;
   padding: 3px;
   background-color: transparent;
@@ -339,7 +363,7 @@ mat-card-content{
   text-align: center;
 }
 
-.btn-contato button:hover{
+.btn-contato button:hover {
   outline: none;
   background-color: var(--primary);
   color: var(--continuos-white);
@@ -348,66 +372,66 @@ mat-card-content{
 
 /*Fim Contato*/
 
-  /*Responsividade*/
-  @media screen and (max-width: 376px) {
-    .example-card img{
-      height: 120px;
-      margin-top: 1px;
-      margin-bottom: 5px;
-        }
-
-    .Fundo_bg h1{
-      padding-top: 2%;
-      color: var(--continuos-white);
-      font-size:2em;
-      font-weight: bold;
-    }
-
-    .Fundo_bg #voluntario{
-      width: 45%;
-      font-size: 1em;
-    }
-
-    .Fundo_verde h2{
-      font-size: 1.5em;
-    }
+/*Responsividade*/
+@media screen and (max-width: 376px) {
+  .example-card img {
+    height: 120px;
+    margin-top: 1px;
+    margin-bottom: 5px;
   }
 
-  @media screen and (max-width: 599px) {
-  .Fundo_bg h1:first-of-type{
+  .Fundo_bg h1 {
+    padding-top: 2%;
+    color: var(--continuos-white);
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .Fundo_bg #voluntario {
+    width: 45%;
+    font-size: 1em;
+  }
+
+  .Fundo_verde h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .Fundo_bg h1:first-of-type {
     line-height: 4rem;
   }
-  }
+}
 
 @media screen and (min-width: 600px) {
-  .Fundo_bg{
-  background-image: url("../../../assets/img/bg.jpg");
-  text-align: center;
-  align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #707070;
+  .Fundo_bg {
+    background-image: url("../../../assets/img/bg.jpg");
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #707070;
+  }
+
+  .Fundo_bg h1 {
+    padding-top: 2%;
+    color: var(--continuos-white);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .Fundo_bg h3 {
+    padding-top: 2%;
+    color: var(--continuos-white);
+    font-size: 14px;
+    font-weight: light;
+  }
+
+
 }
 
-.Fundo_bg h1{
-  padding-top: 2%;
-  color: var(--continuos-white);
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.Fundo_bg h3{
-  padding-top: 2%;
-  color: var(--continuos-white);
-  font-size: 14px;
-  font-weight: light;
-}
-
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 768px){
-  .example-card img{
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .example-card img {
     height: 400px;
   }
 }
@@ -419,35 +443,36 @@ mat-card-content{
     width: 94%;
   }
 
-  .example-card img{
+  .example-card img {
     height: 200px;
     margin-top: 1px;
     margin-bottom: 5px;
   }
 
-  .Fundo_verde h2{
+  .Fundo_verde h2 {
     font-size: 3em;
   }
+}
+
+@media screen and (min-width: 1280px) {
+  .Fundo_branco {
+    height: 10%;
   }
 
-  @media screen and (min-width: 1280px) {
-    .Fundo_branco{
-      height: 10%;
-    }
-    .example-card img{
-      height: 300px;
-    }
+  .example-card img {
+    height: 300px;
+  }
 
-    .Fundo_bg h3{
-      font-size: 1.5rem;
-    }
+  .Fundo_bg h3 {
+    font-size: 1.5rem;
+  }
 
-    }
+}
 
-    @media screen and (min-width: 1440px) {
-      .example-card img{
-        height: 400px;
+@media screen and (min-width: 1440px) {
+  .example-card img {
+    height: 400px;
 
-      }
+  }
 
-      }
+}

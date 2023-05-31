@@ -64,15 +64,15 @@
   <!--Segunda Grid-->
   <div class="Fundo_branco">
 
-    <div class="Fundo_branco" fxLayout="column" fxLayoutAlign="start start">
-      <h2 style="font-size: 2rem">Desaparecidos</h2>
+    <div class="Fundo_branco">
+      <h2>Desaparecidos</h2>
     </div>
 
     <!--Cards-->
     <div class="Fundo_branco">
-      <div fxLayout="row wrap" fxLayoutAlign="center center">
-        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let desaparecido of desaparecidos | slice:0:3">
-          <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card card-desaparecido">
+      <div class="container-img">
+        <div *ngFor="let desaparecido of desaparecidos | slice:0:3">
+          <mat-card class="example-card card-desaparecido">
             <mat-card-content>
               <img mat-card-image src="{{desaparecido.fotos}}">
             </mat-card-content>
