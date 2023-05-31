@@ -54,6 +54,7 @@ import {Component} from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 import { GraficoComponent } from './views/grafico/grafico.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { GraficoComponent } from './views/grafico/grafico.component';
     ListFamiliarComponent,
     UpdateFamiliarComponent,
     GraficoComponent,
+    DashboardComponent,
     
 
     

@@ -1,0 +1,44 @@
+#card {
+    color: var(--continuos-white);
+    background-color: var(--primary);
+}
+
+.home .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.home .subtitle {
+    font-size: 1.1rem;
+    color: var(--back);
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+}
+
+#second {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #second {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+   #card {
+     width: 350px;
+     height: auto;
+   }
+}

@@ -16,23 +16,28 @@ export class GraficoComponent {
     this.chart = new Chart("MyChart", {
       type: 'bar',
       data: {
-        labels: ['2022-05-10', '2022-05-11', '2022-05-12', '2022-05-13',
-          '2022-05-14', '2022-05-15', '2022-05-16', '2022-05-17'],
+        labels: ['JAN', 'FEV', 'MAR', 'ABR',
+          'MAI', 'JUN', 'JUL'],
         datasets: [
           {
-            label: "Sales",
-            data: [467, 576, 572, 79, 92, 574, 573, 576], // Valores numéricos
-            backgroundColor: 'blue'
+            label: "Funcionarios",
+            data: [350, 576, 122, 79, 92, 574, 111, 453], // Valores numéricos
+            backgroundColor: 'red'
           },
           {
-            label: "Profit",
-            data: [542, 542, 536, 327, 17, 0.00, 538, 541], // Valores numéricos
-            backgroundColor: 'limegreen'
+            label: "Voluntarios",
+            data: [467, 250, 572, 79, 80, 234, 573, 576], // Valores numéricos
+            backgroundColor: 'green'
+          },
+          {
+            label: "Desaparecidos",
+            data: [500, 400, 572, 20, 92, 574, 222, 576], // Valores numéricos
+            backgroundColor: 'blue'
           }
         ]
       },
       options: {
-        aspectRatio: 2.5
+        aspectRatio: 2
       }
 
     });

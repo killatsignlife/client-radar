@@ -1,0 +1,40 @@
+.container{
+    height: 900px;
+}
+
+.titulo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    height: 90px;
+}
+
+.icon{
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.titulo{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.chart-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 900px;
+    align-content: center;
+}
+
+canvas{
+    width: 100% !important;
+    height:600px !important;
+    margin: 0 auto;
+  }

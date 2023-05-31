@@ -1,9 +1,11 @@
 <div class="componente" >
     <h1>Lista de Funcionarios cadastrados</h1>
     <div class="panel-body">
-      <button id="btn_adicionar" (click)="addFuncionario()">Adicionar</button>
 
-      <button id="btn_adicionar"><a routerLink="/grafico">GRÁFICO</a></button>
+      <div class="btns" style="display: flex; gap: 15px;">
+        <button id="btn_adicionar" (click)="addFuncionario()">Adicionar</button>
+        <button id="btn_adicionar"><a routerLink="/grafico">GRÁFICO</a></button>
+      </div>
       
       <table mat-table [dataSource]="funcionarios" >
         <ng-container matColumnDef="Nome">
