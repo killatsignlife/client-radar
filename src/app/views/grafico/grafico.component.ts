@@ -37,7 +37,7 @@ export class GraficoComponent {
         ]
       },
       options: {
-        aspectRatio: 2
+        aspectRatio: 1
       }
 
     });

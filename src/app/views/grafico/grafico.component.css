@@ -1,5 +1,9 @@
 .container{
-    height: 900px;
+    display: flex;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0;
+    height: 1200px;
 }
 
 .titulo-container{
@@ -34,7 +38,7 @@
 }
 
 canvas{
-    width: 100% !important;
+    width: 600px !important;
     height:600px !important;
     margin: 0 auto;
   }

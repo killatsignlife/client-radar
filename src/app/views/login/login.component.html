@@ -1,69 +1,41 @@
 <section>
   <!--Segunda Grid-->
-  <div class="Container"
-    [hidden]="submitted"
-  >
+  <div class="Container" [hidden]="submitted">
     <div class="container-forms">
       <h1>Se torne um voluntário</h1>
-      <form
-        id="formulario"
-      >
+      <form id="formulario">
 
-        <div
-          class="form-group"
-        >
+        <div class="form-group">
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label style="font-size: 1rem" for="email" class="control-label"
-              >Email</mat-label
-            >
-            <input
-              matInput
-              type="email"
-              name="email"
-              id="Email"
-              placeholder="Email"
-              required
-            />
+            <mat-label for="email" class="control-label">Email</mat-label>
+            <input matInput type="email" name="email" id="Email" placeholder="Email" required />
           </mat-form-field>
-      
+
         </div>
 
-        <div
-          class="form-group"
-        >
-         
+        <div class="form-group">
+
           <mat-form-field class="campo-form" appearance="outline">
-            <mat-label
-              style="font-size: 1rem"
-              for="senha"
-              class="control-label"
-              >Senha</mat-label
-            >
-            <input
-              matInput
-              type="text"
-              name="senha"
-              id="Senha"
-              placeholder="Senha"
-              required
-            />
+            <mat-label for="senha" class="control-label">Senha</mat-label>
+            <input matInput type="text" name="senha" id="Senha" placeholder="Senha" required />
           </mat-form-field>
         </div>
-        
-        <button
-          type="submit"
-          style="font-size: 1rem"
-          id="Cadastrar"
-          mat-raised-button
-        >
-        <a routerLink="/dashboard">
-          Cadastrar
-        </a>
+
+        <button type="submit" id="Cadastrar" mat-raised-button>
+          <a routerLink="/dashboard">
+            Cadastrar
+          </a>
         </button>
+
+        <ul class="chamada-acoes">
+          <li><a href="#">Cadastra-se!</a></li>
+          <li><a href="">Esqueci a senha</a></li>
+        </ul>
+
       </form>
     </div>
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button id="Cadastrar" >Cadastrar</button>
+  <button id="Cadastrar">Cadastrar</button>
 </div>
