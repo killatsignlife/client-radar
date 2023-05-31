@@ -1,30 +1,73 @@
-<mat-card id="card" class="home mat-elevation-z3">
-    <mat-card-title class="title">
-        Bem Vindo ao Radar!
-    </mat-card-title>
-    <mat-card-subtitle class="subtitle">
-        Sistema para divulgar crianças e adultos desaparecidos em São Paulo; E cadastrar voluntarios :)
-    </mat-card-subtitle>
-</mat-card>
-<div class="conteiner">
-    <div class="item">
-        <mat-card id="card" class="home mat-elevation-z3">
-            <mat-card-title class="title">
-                Desaparecidos
-            </mat-card-title>
-            <mat-card-subtitle class="subtitle">
-                Relatorios com a quantidade de pessoas que ainda não foram encontradas
-            </mat-card-subtitle>
-        </mat-card>
+<div class="container-dashboard">
+
+
+    <div class="dashboard-list">
+
+        <div class="box-logo">
+            <img src="/assets/img/Branco.png" class="logo">
+        </div>
+
+        <h6 class="titulos">Menu</h6>
+
+        <div class="box-home">
+            <mat-icon>home</mat-icon>
+            <a routerLink="/dashboard">Dashboard</a>
+        </div>
+
+        <h6 class="titulos">Tabelas</h6>
+
+        <div class="box-home">
+            <mat-icon>badge</mat-icon>
+            <a routerLink="/dashboard">Funcionarios</a>
+        </div>
+        <div class="box-home">
+            <mat-icon>person_off</mat-icon>
+            <a routerLink="/dashboard">Desaparecidos</a>
+        </div>
+        <div class="box-home">
+            <mat-icon>person</mat-icon>
+            <a routerLink="/dashboard">voluntarios</a>
+        </div>
+        <div class="box-home">
+            <mat-icon>family_restroom</mat-icon>
+            <a routerLink="/dashboard">Familiares</a>
+        </div>
+
     </div>
-    <div id="second">
+
+
+    <div>
+
+        <h2 class="logo">Visão Geral</h2>
         <mat-card id="card" class="home mat-elevation-z3">
             <mat-card-title class="title">
-                Encontrados
+                Bem Vindo ao Radar!
             </mat-card-title>
             <mat-card-subtitle class="subtitle">
-                Relatorio com a quantidade de pessoas que já foram encontradas
+                Sistema para divulgar crianças e adultos desaparecidos em São Paulo; E cadastrar voluntarios :)
             </mat-card-subtitle>
         </mat-card>
+        <div class="conteiner">
+            <div class="item">
+                <mat-card id="card" class="home mat-elevation-z3">
+                    <mat-card-title class="title">
+                        Desaparecidos
+                    </mat-card-title>
+                    <mat-card-subtitle class="subtitle">
+                        Relatorios com a quantidade de pessoas que ainda não foram encontradas
+                    </mat-card-subtitle>
+                </mat-card>
+            </div>
+            <div id="second">
+                <mat-card id="card" class="home mat-elevation-z3">
+                    <mat-card-title class="title">
+                        Encontrados
+                    </mat-card-title>
+                    <mat-card-subtitle class="subtitle">
+                        Relatorio com a quantidade de pessoas que já foram encontradas
+                    </mat-card-subtitle>
+                </mat-card>
+            </div>
+        </div>
     </div>
 </div>

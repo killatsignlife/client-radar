@@ -30,6 +30,7 @@ import { UpdateFamiliarComponent } from './familiares/update-familiar/update-fam
 import { GraficoComponent } from './views/grafico/grafico.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 
+
 const routes: Routes = [
   { path:'home', component: HomeComponent},
   { path:'', redirectTo: 'home',pathMatch: 'full'},
