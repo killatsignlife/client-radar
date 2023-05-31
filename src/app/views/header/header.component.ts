@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener  } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ETheme } from './enums/ETheme.enum';
+import { DOCUMENT } from '@angular/common';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -35,7 +37,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
 
    }
 
@@ -72,4 +74,11 @@ export class HeaderComponent implements OnInit {
     return (this.nome = ETheme.NOME_COM_CONTRASTE)
   }
 
-}
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+    const section = this.document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+} }

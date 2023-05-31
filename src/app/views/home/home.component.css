@@ -8,7 +8,7 @@
 /*Primeira Grid*/
 
 .Fundo_bg {
-  height: 930px;
+  height: 1050px;
   background-image: url("../../../assets/img/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -99,6 +99,7 @@
   width: max-content;
   font-size: 3.7rem;
   padding-top: 30px;
+  margin-top: 25px;
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
@@ -130,6 +131,7 @@
   font-size: 4rem;
   padding: 8px;
   padding: 10px;
+  margin-top: 25px;
 }
 
 .help-box {
@@ -195,6 +197,7 @@
   color: var(--dark);
   font-size: 4rem;
   padding: 8px;
+  margin-top: 25px;
   padding: 10px;
   text-transform: uppercase;
 }
@@ -313,6 +316,7 @@ mat-card-content {
   width: max-content;
   font-size: 3.7rem;
   padding-top: 30px;
+  margin-top: 25px;
   margin-bottom: 20px;
   padding-bottom: 30px;
 }
@@ -329,6 +333,7 @@ mat-card-content {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 

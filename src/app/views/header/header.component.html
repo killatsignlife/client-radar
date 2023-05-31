@@ -1,7 +1,7 @@
 <!--Cabeçalho-->
-<header id="topo">
+<header id="topo" class="fixed-header">
   <mat-toolbar class="toolbar-acess">
-    <div fxLayout="row" id="Acessibilidade_header" >
+    <div fxLayout="row" id="Acessibilidade_header">
       <span><button mat-menu-item routerLink="/acessibilidade">Acessibilidade</button></span>
       <span><button mat-menu-item (click)="toogle()">{{nome}}</button></span>
       <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
@@ -11,25 +11,26 @@
     <mat-toolbar-row>
 
       <div class="logo-box">
-        <a routerLink="/home"><img mat-card-image id="logo" src="assets/img/Branco.png"></a>
+        <a href="#main-fundo" (click)="scrollToSection($event, '#main-fundo')"><img mat-card-image id="logo" src="assets/img/Branco.png"></a>
         <span class="example-spacer"></span>
       </div>
 
-      <!--div class="grupo_botao">
-          <span mat-menu-item class="lista"><a routerLink="/voluntarios" id="cadastro">Voluntarios</a></span>
-          <span mat-menu-item class="lista"><a routerLink="/funcionario/list" id="cadastro">Funcionarios</a></span>
-          <span mat-menu-item class="lista"><a routerLink="/desaparecidos" id="cadastro">Desaparecidos</a></span>
-          <span mat-menu-item class="lista"><a routerLink="familiar/list" id="cadastro">Familiares</a></span>
-      </div-->
-
       <div class="grupo_botao">
-        <span mat-menu-item class="lista"><a href="#sobre">Sobre</a></span>
-        <span mat-menu-item class="lista"><a href="#campos-ajuda">COMO AJUDAR</a></span>
-        <span mat-menu-item class="lista"><a href="#desaparecidos">Desaparecidos</a></span>
-        <span mat-menu-item class="lista"><a href="#contato">Contato</a></span>
-        <span mat-menu-item class="lista"><a routerLink="/blogs">Blog</a></span>
+        <span mat-menu-item class="lista">
+          <a (click)="scrollToSection($event, '#sobre')">Sobre</a>
+        </span>
+        <span mat-menu-item class="lista">
+          <a href="#campos-ajuda" (click)="scrollToSection($event, '#campos-ajuda')">COMO AJUDAR</a>
+        </span>
+        <span mat-menu-item class="lista">
+          <a href="#desaparecidos" (click)="scrollToSection($event, '#desaparecidos')">Desaparecidos</a>
+        </span>
+        <span mat-menu-item class="lista">
+          <a href="#contato" (click)="scrollToSection($event, '#contato')">Contato</a>
+        </span>
         <span class="lista"><a routerLink="/login" id="cadastro" mat-flat-button>Cadastre-se</a></span>
       </div>
+
 
 
 

@@ -5,17 +5,24 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#Acessibilidade_header{
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#Acessibilidade_header {
   justify-content: center;
   display: flex;
   background-color: var(--gray);
 }
 
-#Acessibilidade_header span .mat-menu-item{
+#Acessibilidade_header span .mat-menu-item {
   text-decoration: underline;
 }
 
-#Acessibilidade_header span .mat-menu-item:hover{
+#Acessibilidade_header span .mat-menu-item:hover {
   color: var(--primary);
 }
 
@@ -29,7 +36,7 @@ mat-toolbar-row {
   justify-content: space-between;
 }
 
-.menu-hamb-container{
+.menu-hamb-container {
   display: none;
 }
 
@@ -39,17 +46,17 @@ mat-toolbar-row #logo {
   margin-top: -5%;
 }
 
-.logo-box{
+.logo-box {
   width: 180px;
 }
 
-.logo-box2{
+.logo-box2 {
   display: none;
 }
 
 mat-toolbar-row {
   font-size: 1.5rem;
-  height: 70px;
+  height: 60px;
 }
 
 .grupo_botao {
@@ -57,7 +64,7 @@ mat-toolbar-row {
   align-items: center;
 }
 
-.grupo_botao a{
+.grupo_botao a {
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -73,19 +80,19 @@ mat-toolbar-row {
 
 
 
-.grupo_botao:nth-child(3){
+.grupo_botao:nth-child(3) {
   gap: 1rem;
 }
 
-.grupo_botao:nth-child(3) span{
-    margin: 0;
+.grupo_botao:nth-child(3) span {
+  margin: 0;
 }
 
 .lista a {
   margin: 0px;
 }
 
-.lista a:hover{
+.lista a:hover {
   text-decoration: none;
   filter: brightness(75%);
   transition: 1s;
@@ -100,7 +107,7 @@ span .mat-flat-button {
   border: var(--primary) solid 0.1rem;
 }
 
-span .mat-flat-button:hover{
+span .mat-flat-button:hover {
   background-color: var(--primary);
   color: var(--continuos-white);
   text-decoration: none;
@@ -142,10 +149,7 @@ span .mat-flat-button:hover{
 
 
 @media screen and (max-width: 900px) {
-  mat-toolbar {
-    
-     
-  }
+  mat-toolbar {}
 
   mat-toolbar-row {
     width: 100%;
@@ -164,30 +168,30 @@ span .mat-flat-button:hover{
     align-items: center;
   }
 
-  #Acessibilidade_header{
+  #Acessibilidade_header {
     display: flex;
   }
 
-  #Acessibilidade_header button{
+  #Acessibilidade_header button {
     font-size: 0.654rem;
   }
 
-  .logo-box{
+  .logo-box {
     display: none;
   }
 
-  .logo-box2{
+  .logo-box2 {
     display: flex;
     justify-content: space-around;
   }
 
-  .menu-hamb-container{
+  .menu-hamb-container {
     display: flex;
     padding: 3px;
     margin-right: 25px;
   }
 
-  .matMenu-container{
+  .matMenu-container {
     display: flex;
     justify-content: space-around;
   }
@@ -205,8 +209,8 @@ span .mat-flat-button:hover{
     width: 50px;
     height: 55px;
   }
-   
-  .grupo_botao{
+
+  .grupo_botao {
     display: none;
   }
 
