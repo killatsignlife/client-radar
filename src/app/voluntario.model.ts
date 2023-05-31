@@ -4,10 +4,10 @@ export class Voluntario {
   id: number;
   nome?: string;
   sobrenome?: string;
-  dataNascimento?:string
   email?: string;
   telefone?: string;
   cpf?: string;
+  dataNascimento?:string
   endereco?: Endereco;
   condicoes?: boolean;
   legitimidade?: boolean;
