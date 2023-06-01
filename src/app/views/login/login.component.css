@@ -35,8 +35,12 @@ form {
 }
 
 .form-group {
+  font-size: 1rem;
   padding: 0 15px 0 15px;
- 
+}
+
+.form-group input {
+  font-size: 1.1rem;
 }
 
 #Cadastrar {

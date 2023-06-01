@@ -7,31 +7,12 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.example-icon {
-  padding: 0 14px;
-}
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-#voluntario {
-  margin-top: 1%;
-  font-size: 20px;
-  padding: 1%;
-}
-
-.Fundo_cinza {
-  text-align: center;
-  align-items: center;
-  background-color: var(--secondary);
-  padding-bottom: 4%;
-}
-
 .Fundo_branco {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 2%;
+  height: 1000px;
+  padding-top: 100px;
   color: var(--white);
   background-color: var(--white);
   padding-bottom: 1%;
@@ -66,6 +47,27 @@
 .Fundo_branco p {
   font-size: 1.2rem;
 }
+
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+#voluntario {
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 1%;
+}
+
+.Fundo_cinza {
+  text-align: center;
+  align-items: center;
+  background-color: var(--secondary);
+  padding-bottom: 4%;
+}
+
 #mais {
   border: none;
   color: var(--back);
