@@ -87,7 +87,7 @@
               <mat-label>Valor</mat-label>
               <input type="number" name="valor" [(ngModel)]="doador.valor" id="Val" placeholder="$0" matInput>
             </mat-form-field>
-            <button type="submit" style="font-size: 1rem" id="Cadastrar" (click)="popup()" mat-raised-button>
+            <button  type="submit" style="font-size: 1rem" id="Cadastrar" (click)="popup()" mat-raised-button>
               Doar
             </button>
           </div>
@@ -97,7 +97,9 @@
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button id="Cadastrar">
+  <button id="Cadastrar" >
+    <a routerLink="/home">
     Cadastrar
+    </a>
   </button>
 </div>

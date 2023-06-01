@@ -100,7 +100,7 @@ export class DoacaoComponent implements OnInit {
   }
 
   gotoHome() {
-    this.router.navigate(['/sucesso'])
+    this.router.navigate(['/home'])
   }
   //---------------------------------------------------
 
