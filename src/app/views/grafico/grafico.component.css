@@ -1,7 +1,6 @@
 .container{
     display: flex;
     height: 1000px;
-    padding-top: 130px;
     margin: 0 !important;
     margin-top:0;
 }
@@ -13,7 +12,9 @@
     padding: 10px;
     height: 90px;
 }
-
+.container{
+    padding:0;
+}
 .icon{
     font-size: 2rem;
     color: var(--dark);
@@ -36,5 +37,6 @@
 
 canvas{
     width: 800px !important;
+    margin-left: 80px;
     height:600px !important;
   }
