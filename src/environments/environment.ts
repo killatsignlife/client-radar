@@ -3,8 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  api_url:'http://localhost:8080/'
+  //'http://18.223.115.200:8080'
+  //'https://fatecflix.herokuapp.com'
+  // https://fatecflix.onrender.com
 };
+
+// https://fatecflix.onrender.com
 
 /*
  * For easier debugging in development mode, you can import the following file
