@@ -78,7 +78,6 @@
 /*QUEM SOMOS*/
 
 .section-quemSomos {
-  height: 930px;
   padding: 70px 0;
   background-color: #Ececeb;
   display: flex;
@@ -120,7 +119,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 930px;
   width: 100%;
   background-color: #010d01;
   padding-top: 6%;
@@ -295,7 +293,6 @@ mat-card-content {
 /*Contato*/
 
 .section-contato {
-  height: 930px;
   padding: 70px 0;
   background-color: var(--back);
   display: flex;

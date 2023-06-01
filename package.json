@@ -32,6 +32,7 @@
     "chart.js": "^4.3.0",
     "chartjs-plugin-annotation": "^3.0.1",
     "dotenv": "^16.0.1",
+    "jwt-decode": "^3.1.2",
     "postcss-high-contrast": "^1.6.2",
     "rxjs": "~7.5.0",
     "stripe": "^9.6.0",

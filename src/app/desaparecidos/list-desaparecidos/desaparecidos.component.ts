@@ -9,7 +9,7 @@ import { Desaparecido } from 'src/app/desaparecido.model';
 @Component({
   selector: 'app-desaparecidos',
   templateUrl: './desaparecidos.component.html',
-  styleUrls: ['./desaparecidos.component.css']
+  styleUrls: ['./desaparecidos.component.css','../../../styles.css']
 })
 
 //----------------------------------------------------------------------------

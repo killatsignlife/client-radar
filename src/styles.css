@@ -38,7 +38,12 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  backgroun
   --menu: yellow;
 }
 
+/*Component*/
+.componente{
+  margin-top: 5rem;
+}
 /*Formulario*/
+
 .Formulario_padrao {
   padding-top: 4%;
   color: #000;
@@ -77,6 +82,7 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  backgroun
 }
 
 .container-forms {
+  margin-top: 10%;
   width: 50%;
   border-radius: 15px;
   background-color: var(--continuos-white);

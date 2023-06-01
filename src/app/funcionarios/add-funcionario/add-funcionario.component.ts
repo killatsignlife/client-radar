@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-funcionario',
   templateUrl: './add-funcionario.component.html',
-  styleUrls: ['./add-funcionario.component.css']
+  styleUrls: ['./add-funcionario.component.css','../../../styles.css']
 })
 
 export class AddFuncionarioComponent implements OnInit {
