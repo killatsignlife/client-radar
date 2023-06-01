@@ -15,7 +15,7 @@
 #formulario {
   box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
   border-radius: 15px;
-  margin: 0 0 10% 0;
+  margin: 10% 0 10% 0;
   width: 60%;
 }
 
@@ -32,7 +32,6 @@
   display: flex;
   justify-content: center;
   color: #000;
-  padding-left: 5%;
 }
 
 
