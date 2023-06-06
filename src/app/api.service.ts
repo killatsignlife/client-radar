@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+<<<<<<< HEAD
 import { Desaparecido } from './desaparecido.model';
 import { Voluntario } from './voluntario.model';
 import { Funcionario } from './funcionario.model';
 import { Doador } from './doador.model';
 import { Familiar } from './familiar.model';
+=======
+import { Desaparecido } from './model/desaparecido.model';
+>>>>>>> origin/main
 
 @Injectable({
   providedIn: 'root'

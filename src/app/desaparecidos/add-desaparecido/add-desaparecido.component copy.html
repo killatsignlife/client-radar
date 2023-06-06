@@ -4,18 +4,17 @@
     [hidden]="submitted"
     fxFlex
     fxLayoutGap="0px"
-    class="Formulario_padrao"
+    class="Fundo_verde"
     fxLayout="column"
     fxLayoutAlign=" center"
   >
     <div class="container-forms">
       <h1 style="font-size: 2rem">Cadastre uma criança, adolescente ou adulto desaparecido</h1>
       <form
-        #f = "ngForm"
+        (ngSubmit)="onSubmit()"
         id="formulario"
         fxLayout="column"
         fxLayoutAlign="center"
-        #f="ngform"
       >
         <div
           class="form-group"
@@ -265,10 +264,6 @@
             [(ngModel)]="endereco.cep"
             name="cep"
             id="CEP"
-<<<<<<< HEAD
-            (blur)="consultaCep(applyFilter($event), f)"
-=======
->>>>>>> origin/main
             placeholder="CEP"
             required
           />
@@ -418,7 +413,6 @@
           style="font-size: 1rem"
           id="Cadastrar"
           mat-raised-button
-          (click) = "popup()"
         >
           Cadastrar
         </button>
@@ -427,5 +421,5 @@
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button id="Cadastrar" >Cadastrar</button>
+  <button id="Cadastrar" (click)="newDesaparecido()">Cadastrar</button>
 </div>
