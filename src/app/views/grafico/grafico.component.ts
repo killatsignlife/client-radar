@@ -22,17 +22,17 @@ export class GraficoComponent {
           {
             label: "Funcionarios",
             data: [350, 576, 122, 79, 92, 574, 111, 453], // Valores numéricos
-            backgroundColor: 'red'
+            backgroundColor: 'yellow'
           },
           {
             label: "Voluntarios",
             data: [467, 250, 572, 79, 80, 234, 573, 576], // Valores numéricos
-            backgroundColor: 'green'
+            backgroundColor: 'black'
           },
           {
             label: "Desaparecidos",
             data: [500, 400, 572, 20, 92, 574, 222, 576], // Valores numéricos
-            backgroundColor: 'blue'
+            backgroundColor: 'gray'
           }
         ]
       },
