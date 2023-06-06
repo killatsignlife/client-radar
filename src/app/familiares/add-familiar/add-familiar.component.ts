@@ -31,7 +31,7 @@ export class AddFamiliarComponent implements OnInit {
   }
 
   save() {
-    this.funcionario.desaparecido = this.desaparecido;
+    this.familiar.desaparecido = this.desaparecido;
     console.log(this.familiar);
 
     this.service.createFamiliar(this.familiar).subscribe(

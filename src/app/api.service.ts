@@ -105,7 +105,19 @@ export class ApiService {
     return this.http.post(`${this.familiarUrl}`, familiar);
   }
 
+  getFamiliarById(id: number) : Observable<any> {
+    return this.http.get(`${this.familiarUrl}/${id}`);
+  }
+
+  updateFamiliar(id: number, familiar: Familiar) : Observable<any> {
+    return this.http.put(`${this.familiarUrl}/${id}`, familiar);
+  }
+
   getFamiliar(): Observable<any> {
     return this.http.get(`${this.familiarUrl}`);
+  }
+
+  deleteFamiliar(id: number) {
+    return this.http.delete(`${this.familiarUrl}/${id}`);
   }
 }

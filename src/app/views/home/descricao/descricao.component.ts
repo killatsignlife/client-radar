@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Desaparecido } from 'src/app/desaparecido.model';
+import { Observable } from 'rxjs/internal/Observable';
+
 @Component({
   selector: 'app-descricao',
   templateUrl: './descricao.component.html',
@@ -11,6 +13,8 @@ export class DescricaoComponent implements OnInit {
 
   id: number;
   desaparecido: Desaparecido;
+  //endereco: Observable<Endereco[]>;
+
   title = 'Descrição'
 
   constructor(private route: ActivatedRoute, private router: Router, private service: ApiService) { }
@@ -21,6 +25,7 @@ export class DescricaoComponent implements OnInit {
     this.service.getDesaparecido(this.id).subscribe(data => {
       console.log(data);
       this.desaparecido = data;
+    //  this.endereco = this.desaparecido.endereco;
     }, error => console.log(error));
   }
 

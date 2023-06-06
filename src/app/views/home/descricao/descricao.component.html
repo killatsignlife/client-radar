@@ -1,38 +1,38 @@
 <section>
-    <!--Cards-->
-        <div class="Fundo_branco" >
-          <h1 style="font-size: 3rem" id="nome_desaparecido">{{desaparecido.nomeDesaparecido}} {{desaparecido.sobrenomeDesaparecido}}</h1>
+  <!--Cards-->
+      <div class="Fundo_branco" >
+        <h1 style="font-size: 3rem" id="nome_desaparecido">{{desaparecido.nomeDesaparecido}} {{desaparecido.sobrenomeDesaparecido}}</h1>
 
-          <div class="quebra_linha" fxLayout="column" fxLayoutAlign="center center" >
-            <div fxLayout="row" fxLayoutAlign="center center" >
-              <!-- <img id="foto_principal" src={{desaparecido.}} alt="{{desaparecido.altTxtFotoPrincipal}}" > -->
-          </div>
-              <span class="caption"><ul id="Descricoes">
-                <li><strong>Data de Nascimento: </strong>{{desaparecido.dataNascimento}}</li>
-                <!--<li>Endereço onde morava: {{desaparecido.logradouro}} , {{desaparecido.bairro}}, {{desaparecido.cep}}, {{desaparecido.cidade}} - SP</li>-->
-                <li><strong>Sexo: </strong> {{desaparecido.sexoDesaparecido}}</li>
-                <li><strong>Cor de Pele: </strong> {{desaparecido.corDePeleDesaparecido}}</li>
-                <li><strong>Possui alguma doença? </strong>{{desaparecido.possuiDoenca}} </li>
-                <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataDesaparecimento}} às {{desaparecido.horaDesaparecimento}}</li>
-              </ul></span>
-
-              <button style="font-size: 1rem" id="voluntario" (click)="detailDesaparecido(desaparecido.idDesaparecido)">Reportar</button>
-          </div>
-
-          <h2  class="Titulo_Detalhes_desaparecimento">Detalhes do Desaparecimento</h2>
-            <table id="Detalhes_desaparecimento" fxLayout="column" >
-            <p style="font-size: 1rem">{{desaparecido.descricaoDesaparecido}}
-            </p>
-            </table>
-
-            <h2 class="Titulo_Detalhes_desaparecimento">Imagens do desaparecido</h2>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" >
-             <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of [1,2,3]">
-           <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
-                   <!-- <img mat-card-image src={{desaparecido.urlFotoPrincipal}} alt="Foto da criança, adolescente ou adulto em um lugar tipico, usando roupas tipicas, no geral, realizando atividades tipicas"> -->
-           </mat-card>
-           </div>
-           <br />
-           </div>
+        <div class="quebra_linha" fxLayout="column" fxLayoutAlign="center center" >
+          <div fxLayout="row" fxLayoutAlign="center center" >
+            <img id="foto_principal" src={{desaparecido.fotos}} > 
         </div>
-      </section>
+            <span class="caption"><ul id="Descricoes">
+              <li><strong>Data de Nascimento: </strong>{{desaparecido.dataNascimento}}</li>
+          <!-- <li>Endereço onde morava: {{endereco.logradouro}} , {{endereco.bairro}}, {{endereco.cep}}, {{endereco.cidade}} - SP</li>-->
+              <li><strong>Sexo: </strong> {{desaparecido.sexoDesaparecido}}</li>
+              <li><strong>Cor de Pele: </strong> {{desaparecido.corDePeleDesaparecido}}</li>
+              <li><strong>Possui alguma doença? </strong>{{desaparecido.possuiDoenca}} </li>
+              <li><strong>Ultima vez visto(a): </strong>{{desaparecido.dataDesaparecimento}} às {{desaparecido.horaDesaparecimento}}</li>
+            </ul></span>
+
+            <button style="font-size: 1rem" id="voluntario" (click)="detailDesaparecido(desaparecido.idDesaparecido)">Reportar</button>
+        </div>
+
+        <h2  class="Titulo_Detalhes_desaparecimento">Detalhes do Desaparecimento</h2>
+          <table id="Detalhes_desaparecimento" fxLayout="column" >
+          <p style="font-size: 1rem">{{desaparecido.descricaoDesaparecido}}
+          </p>
+          </table>
+
+          <h2 class="Titulo_Detalhes_desaparecimento">Imagens do desaparecido</h2>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" >
+           <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let num of [1,2,3]">
+         <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
+                 <img mat-card-image src={{desaparecido.fotos}} alt="Foto da criança, adolescente ou adulto em um lugar tipico, usando roupas tipicas, no geral, realizando atividades tipicas"> 
+         </mat-card>
+         </div>
+         <br />
+         </div>
+      </div>
+    </section>
