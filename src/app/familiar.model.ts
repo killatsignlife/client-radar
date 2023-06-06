@@ -1,3 +1,5 @@
+import { Desaparecido } from "./desaparecido.model";
+
 export class Familiar {
     id?: number;
     nome?: string;
@@ -6,5 +8,5 @@ export class Familiar {
     phone?: string;
     grauDeParentesco?: string;
     dataDeNascimento?: string;
-    desaparecido?: string;
+    desaparecido?: Desaparecido;
   }
