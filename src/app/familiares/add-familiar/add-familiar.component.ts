@@ -13,12 +13,13 @@ import Swal from 'sweetalert2'
 export class AddFamiliarComponent implements OnInit {
   title = 'Cadastrar';
   familiar: Familiar = new Familiar();
+  desaparecido: Desaparecido = new Desaparecido();
   submitted = false;
 
   constructor(private service: ApiService, private router: Router, 
     private maxLength: SharedDataService, private cepService: SharedDataService) { }
 
-  newFuncionario(): void {
+  newFamiliar(): void {
     this.submitted = false;
     this.familiar = new Familiar();
   }
@@ -30,6 +31,7 @@ export class AddFamiliarComponent implements OnInit {
   }
 
   save() {
+    this.funcionario.desaparecido = this.desaparecido;
     console.log(this.familiar);
 
     this.service.createFamiliar(this.familiar).subscribe(
