@@ -7,14 +7,9 @@ import { Desaparecido } from 'src/app/model/desaparecido.model';
 import { ɵunwrapSafeValue } from "@angular/core";
 import { Foto } from 'src/app/foto.model';
 import { FormArray, FormBuilder } from '@angular/forms';
-<<<<<<< HEAD
 import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2';
-=======
-import { Endereco } from 'src/app/model/endereco.model';
-import { CepServiceService } from 'src/app/services/cep-service.service';
->>>>>>> origin/main
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -32,19 +27,11 @@ export class AddDesaparecidoComponent implements OnInit {
   submitted = false;
   fotos: Foto = new Foto();
 
-<<<<<<< HEAD
   constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer
     , private cepService: SharedDataService) { }
 
   roles = this.formRole.get('roles') as FormArray;
 
-=======
-  constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer,
-    private cepService: CepServiceService) { }
-
-  roles = this.formRole.get('roles') as FormArray;
-
->>>>>>> origin/main
   addRoles() {
     this.roles.push(
       this.fb.group({
@@ -72,7 +59,6 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   save() {
-<<<<<<< HEAD
     let arr: any[] = [];
 
     for(let value of this.roles.value) {
@@ -88,13 +74,6 @@ export class AddDesaparecidoComponent implements OnInit {
     this.desaparecido.fotos = arr;
     console.log(this.desaparecido.fotos);
 
-=======
-    for (let value of this.roles.value) {
-      console.log(value.role);
-      this.desaparecido.fotos?.push(value.role);
-    }
-
->>>>>>> origin/main
     this.desaparecido.endereco = this.endereco;
     console.log(this.desaparecido.endereco);
 
@@ -124,14 +103,6 @@ export class AddDesaparecidoComponent implements OnInit {
     return filterValue;
   }
 
-<<<<<<< HEAD
-=======
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    return filterValue;
-  }
-
->>>>>>> origin/main
   consultaCep(val, form){
     this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
   }
@@ -140,7 +111,6 @@ export class AddDesaparecidoComponent implements OnInit {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
-<<<<<<< HEAD
     form.controls['uf'].setValue(dados.uf)
 
   }
@@ -165,8 +135,6 @@ export class AddDesaparecidoComponent implements OnInit {
         this.onSubmit() 
       }
     })
-=======
->>>>>>> origin/main
   }
 
 }

@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-<<<<<<< HEAD
 import { Desaparecido } from 'src/app/desaparecido.model';
 import { Observable } from 'rxjs/internal/Observable';
 
-=======
-import { Desaparecido } from 'src/app/model/desaparecido.model';
->>>>>>> origin/main
 @Component({
   selector: 'app-descricao',
   templateUrl: './descricao.component.html',
