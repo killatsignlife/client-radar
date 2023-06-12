@@ -2,11 +2,12 @@
   <!--Segunda Grid-->
   <div class="Container" (ngSubmit)="login()" [hidden]="submitted">
     <div class="container-forms">
-      <h1>Se torne um voluntário</h1>
+      <a routerLink="/home"><mat-icon>radar</mat-icon></a>
+      <h1>Entrar no sistema</h1>
       <form id="formulario">
 
         <div class="form-group">
-          <mat-form-field  class="campo-form" appearance="outline">
+          <mat-form-field class="campo-form" appearance="outline">
             <mat-label for="email" class="control-label">Email</mat-label>
             <input matInput type="email" name="email" id="Email" placeholder="Email" required />
           </mat-form-field>
@@ -21,19 +22,25 @@
           </mat-form-field>
         </div>
 
-        <button type="submit" id="Cadastrar" mat-raised-button>
-          <a routerLink="/dashboard">
-            Cadastrar
-          </a>
-        </button>
 
-        <ul class="chamada-acoes">
-          <li><a href="#">Cadastra-se!</a></li>
-          <li><a href="">Esqueci a senha</a></li>
-        </ul>
+
+        <div class="box-btn">
+          <a routerLink="/dashboard">
+            <button type="submit" id="Cadastrar" mat-raised-button>
+              Entrar
+            </button>
+          </a>
+        </div>
+
+        <a href="" id="forgot">Esqueceu a senha?</a>
 
       </form>
     </div>
+
+    <div class="box-chamada">
+      <p>Não possui conta? <a href="#">Cadastra-se</a></p>
+    </div>
+
   </div>
 </section>
 <div [hidden]="!submitted">

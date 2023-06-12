@@ -1,3 +1,4 @@
+<app-header></app-header>
 <section>
   <!--Primeira Grid-->
   <div class="Fundo_bg" id="main-fundo">
@@ -9,7 +10,8 @@
         <p>No Brasil, uma pessoa desaparece a cada 3 minutos. São mais de 200 mil desaparecidos por ano.
           Nós ajude a trazer esperança para as famílias que estão em busca dessas pessoas.</p>
       </div>
-      <span class="botao"><a href="#campos-ajuda"><button id="voluntario" mat-flat-button>COMO AJUDAR</button></a></span>
+      <span class="botao"><a href="#campos-ajuda"><button id="voluntario" mat-flat-button>COMO
+            AJUDAR</button></a></span>
     </div>
   </div>
   <!--Fim Primeira Grid-->
@@ -19,17 +21,21 @@
   <div class="section-quemSomos" id="sobre">
     <div class="container-quemSomos">
       <h2>SOBRE NÓS</h2>
-      <p>O sistema RADAR proverá a divulgação de pessoas desaparecidas e cadastrar voluntários. Esses voluntários irão receber mensagens a respeito de desaparecimentos próximos da região de onde ele mora e na página onde será divulgado 
-        os desaparecidos haverá além dos detalhes sobre a criança, adolescente ou adulto desaparecido; quem o voluntario deve contatar para reportar novas informações. Será integrado back-end ao sistema junto com um banco de dados com 
+      <p>O sistema RADAR proverá a divulgação de pessoas desaparecidas e cadastrar voluntários. Esses voluntários irão
+        receber mensagens a respeito de desaparecimentos próximos da região de onde ele mora e na página onde será
+        divulgado
+        os desaparecidos haverá além dos detalhes sobre a criança, adolescente ou adulto desaparecido; quem o voluntario
+        deve contatar para reportar novas informações. Será integrado back-end ao sistema junto com um banco de dados
+        com
         as informações necessárias para entrar nas conformidades do projeto</p>
     </div>
   </div>
-  
+
 
   <!--Fim Quem Somos-->
 
   <!--Doacoes-->
-  <div class="Fundo_verde"  id="campos-ajuda">
+  <div class="Fundo_verde" id="campos-ajuda">
     <h2 class="help-title">COMO AJUDAR</h2>
 
     <article class="help-box">
@@ -37,27 +43,29 @@
         <div class="box-doar">
           <h3>Doe Qualquer Valor</h3>
           <div>
-            <p>O ato de doar contribui para a transformação da sociedade e principalmente das pessoas. Quem doa, beneficia a si próprio. </p>
+            <p>O ato de doar contribui para a transformação da sociedade e principalmente das pessoas. Quem doa,
+              beneficia a si próprio. </p>
           </div>
           <span>
             <button routerLink="/doacao" id="doador" class="btn" mat-raised-button>Doar</button>
           </span>
         </div>
-    
 
-      
+
+
         <div class="box-voluntario">
           <h3>Vire um voluntario</h3>
           <div>
             <p>Torne-se um voluntario para receber notificações de desaparecidos avistados próximos a sua região.</p>
           </div>
           <span>
-            <button routerLink="/voluntarios/adicionar" id="voluntario" class="btn" mat-raised-button>Quero me voluntariar</button>
+            <button routerLink="/voluntarios/adicionar" id="voluntario" class="btn" mat-raised-button>Quero me
+              voluntariar</button>
           </span>
         </div>
       </div>
     </article>
-    
+
   </div>
   <!--Fim Doacoes-->
 
@@ -94,7 +102,7 @@
   <div class="section-contato" id="contato">
     <div class="container-contato">
       <h2>CONTATO</h2>
-      
+
       <div class="box-contatos">
         <span>Entre em contato conosco por telefone, e-mail ou mande uma mensagem pelo formulário abaixo.</span>
         <ul class="list-contatos">
@@ -115,17 +123,22 @@
             <mat-label>Email</mat-label>
             <input matInput placeholder="seuEmail@gmail.com">
           </mat-form-field>
-        
+
           <mat-form-field class="box-input">
             <mat-label>Mensagem</mat-label>
             <textarea matInput placeholder=""></textarea>
           </mat-form-field>
-          
+
           <div class="btn-contato">
             <button>ENVIAR</button>
           </div>
         </form>
+      </div>
     </div>
   </div>
+
+  <app-footer></app-footer>
+
+</section>
 
   <!--FIM ENTRE EM CONTATO-->

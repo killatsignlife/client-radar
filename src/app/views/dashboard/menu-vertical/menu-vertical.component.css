@@ -3,14 +3,14 @@
 .dashboard-list {
     background-color: var(--back);
     padding: 2px 1.5rem 1.5rem;
-    height: 800px;
+    height: 900px;
 }
 
 .box-logo {
     padding: 10px;
 }
 
-.box-logo img {
+.logo {
     height: 85px;
     width: 235px;
 }

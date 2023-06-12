@@ -78,7 +78,7 @@ body {  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  backgroun
 }
 
 .container-forms {
-  width: 50%;
+  width: max-content;
   border-radius: 15px;
   background-color: var(--continuos-white);
   box-shadow: 0 10px 25px rgb(0 0 0 / 70%);

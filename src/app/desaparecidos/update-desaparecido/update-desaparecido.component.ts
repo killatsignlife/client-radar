@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-<<<<<<< HEAD
 import { Desaparecido } from 'src/app/desaparecido.model';
 import { SharedDataService } from 'src/app/shared-data.service';
-=======
-import { Desaparecido } from 'src/app/model/desaparecido.model';
->>>>>>> origin/main
 
 @Component({
   selector: 'app-update-desaparecido',

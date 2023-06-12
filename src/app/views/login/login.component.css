@@ -1,12 +1,13 @@
 * {
   color: #000;
+  /*background-color: #010d01;*/
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section{
-  height: 1000px;
+  height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +15,20 @@ section{
 }
 
 .container-forms{
-  width: 500px;
+  width: max-content;
+  padding: 10px;
+}
+
+.container-forms mat-icon{
+  text-align: center;
+  width: 100%;
+  font-size: 80px;
 }
 
 .container-forms h1{
   font-size: 2rem;
+  color: #000;
+  background-color: #fff;
 }
 
 
@@ -30,47 +40,55 @@ form {
   padding: 10px;
 }
 
-.campo-form {
-  width: 300px;
-}
-
 .form-group {
   font-size: 1rem;
   padding: 0 15px 0 15px;
 }
 
-.form-group input {
-  font-size: 1.1rem;
+.campo-form {
+  width:400px;
+}
+
+.box-btn:hover{
+  opacity: 0.8;
 }
 
 #Cadastrar {
   background-color: var(--primary);
-  border: none;
+  font-size: 1.3rem;
   color: var(--white);
-  margin-top: 2%;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  margin: 15px 0 20px 0;
+  width: 400px;
+  padding: 4px;
+  border-radius: 8px;
 }
 
-.chamada-acoes{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+#Cadastrar:hover{
+  text-decoration: none;
+}
+
+#forgot{
+  padding: 0 15px 0 15px;
+  margin-top: 12px;
   font-size: 1.1rem;
-  padding: 8px;
-  color: var(--primary);
-  list-style: none;
+  color: #3a3ae1;
 }
 
-.chamada-acoes a{
-  color:  #0000EE;
+.box-chamada{
+  padding: 16px 16px;
+  text-align: center;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin: 20px 0px 0px 0px;
 }
 
-.chamada-acoes a:hover{
-  color:  #000;
+.box-chamada p{
+  margin: 0px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.box-chamada a{
+  color:  #3a3ae1;
 }
 
 mat-form-field + mat-form-field {
