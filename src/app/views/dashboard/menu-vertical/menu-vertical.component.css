@@ -4,6 +4,7 @@
     background-color: var(--back);
     padding: 2px 1.5rem 1.5rem;
     height: 900px;
+    width: 235px;
 }
 
 .box-logo {
@@ -12,7 +13,10 @@
 
 .logo {
     height: 85px;
-    width: 235px;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 80px;
 }
 
 .titulos {

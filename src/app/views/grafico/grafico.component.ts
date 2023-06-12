@@ -6,15 +6,38 @@ import 'chartjs-plugin-annotation';
   selector: 'app-grafico',
   templateUrl: './grafico.component.html',
   styleUrls: ['./grafico.component.css']
+
 })
+
 export class GraficoComponent {
 
   public chart: any;
 
+  dados = [
+
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
   createChart() {
 
     this.chart = new Chart("MyChart", {
+
       type: 'bar',
+      options: {
+        maintainAspectRatio: true,
+        animation: false,
+        plugins: {
+          legend: {
+            display: true
+          }
+        }
+      },
       data: {
         labels: ['JAN', 'FEV', 'MAR', 'ABR',
           'MAI', 'JUN', 'JUL'],
@@ -36,9 +59,6 @@ export class GraficoComponent {
           }
         ]
       },
-      options: {
-        aspectRatio: 1
-      }
 
     });
   }

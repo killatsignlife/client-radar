@@ -1,41 +1,46 @@
 .container{
     display: flex;
+    align-items: center;
     margin: 0 !important;
     margin-top:0;
 }
-
+    
 .titulo-container{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
     padding: 10px;
     height: 90px;
+    width: 100%;
+    text-align: center;
 }
+    
 .container{
     padding:0;
+
 }
+    
 .icon{
     font-size: 2rem;
     color: var(--dark);
 }
-
+    
 .icon:hover{
     cursor: pointer;
 }
-
+    
 .titulo{
     margin: 0;
     font-size: 2.5rem;
 }
-
+    
 .chart-container{
     display: flex;
     flex-wrap: wrap;
-    height: 900px;
 }
-
+    
+    
+    
+    
 canvas{
-    width: 800px !important;
+    width: 60vw !important;
     margin-left: 80px;
-    height:600px !important;
-  }
+    height:60vh !important;
+}
