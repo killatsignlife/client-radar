@@ -8,11 +8,13 @@
   .container-forms {
     width: 50%;
     border-radius: 15px;
+    font-size: 0.9rem;
     background-color: var(--continuos-white);
     box-shadow: 0 10px 25px rgb(0 0 0 / 70%);
   }
   
   .container-forms h1 {
+    font-size: 2rem;
     text-align: center;
     color: var(--continuos-white);
     background-color: var(--primary);
@@ -31,6 +33,13 @@
   .form-group {
     padding: 0 15px 0 15px;
     border-radius: 15px;
+    width: 100%;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-around;
+    align-items: center;
+    justify-content: space-evenly;
   }
   
   #Cadastrar {
@@ -98,37 +107,16 @@
   
   /*Responsividade*/
   
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1270px) {
     .campo-form {
-      width: 220px;
+      width: 230px;
+      font-size: 0.8rem;
     }
+    
   }
   
   @media screen and (max-width: 900px) {
-    form div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      text-align: center;
-    }
-  
-    h1 {
-      text-align: center;
-      justify-content: center;
-      line-height: 3rem;
-    }
-  
-    #formulario {
-      display: flex;
-      margin: 0;
-      width: 90%;
-    }
-  
-    mat-form-field + mat-form-field {
-      margin-left: 0;
-    }
+    
   }
   
   @media screen and (max-width: 610px) {

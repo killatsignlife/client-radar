@@ -1,242 +1,98 @@
 <section>
   <!--Segunda Grid-->
-  <div
-    [hidden]="submitted"
-    fxFlex
-    fxLayoutGap="0px"
-    class="Formulario_padrao"
-    fxLayout="column"
-    fxLayoutAlign=" center"
-  >
+  <div [hidden]="submitted" fxFlex fxLayoutGap="0px" class="Formulario_padrao" fxLayout="column"
+    fxLayoutAlign=" center">
+
     <div class="container-forms">
+
       <h1 style="font-size: 2rem">Cadastre uma criança, adolescente ou adulto desaparecido</h1>
-      <form
-        #f = "ngForm"
-        id="formulario"
-        fxLayout="column"
-        fxLayoutAlign="center"
-      >
-        <div
-          class="form-group"
-          fxLayout="row wrap center"
-          fxLayoutAlign="space-around center"
-        >
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label style="font-size: 1rem" for="name" class="control-label"
-            >Nome</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.nomeDesaparecido"
-            name="name"
-            id="nome"
-            placeholder="Nome"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label style="font-size: 1rem" for="sobrenome" class="control-label"
-            >Sobrenome</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.sobrenomeDesaparecido"
-            name="sobrenome"
-            id="sobrenome"
-            placeholder="Sobrenome"
-            required
-          />
-        </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="dataDesaparecimento"
-            class="control-label"
-            >Data do Desaparecimento</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.dataDesaparecimento"
-            name="dataDesaparecimento"
-            id="dataDesaparecimento"
-            placeholder="Data do desaparecimento"
-            required
-          />
-        </mat-form-field>
+      <form #f="ngForm" id="formulario" fxLayout="column" fxLayoutAlign="center">
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="horaDesaparecimento"
-            class="control-label"
-            >Hora do Desaparecimento</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.horaDesaparecimento"
-            name="horaDesaparecimento"
-            id="horaDesaparecimento"
-            placeholder="Hora do desaparecimento"
-            required
-          />
-        </mat-form-field>
+        <div class="form-group" fxLayout="row wrap center" fxLayoutAlign="space-around center">
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="dataDeNascimento"
-            class="control-label"
-            >Data de Nascimento</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.dataNascimento"
-            name="dataDeNascimento"
-            id="dataDeNascimento"
-            placeholder="Data de Nascimento do Desaparecido"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="name" class="control-label">Nome</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.nomeDesaparecido" name="name" id="nome"
+              placeholder="Nome" required />
+          </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="recompensa"
-            class="control-label"
-            >Recompensa</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.recompensa"
-            name="recompensa"
-            id="recompensa"
-            placeholder="Recompensa"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="sobrenome" class="control-label">Sobrenome</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.sobrenomeDesaparecido" name="sobrenome" id="sobrenome"
+              placeholder="Sobrenome" required />
+          </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="possuiDoenca"
-            class="control-label"
-            >Possui Doença</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.possuiDoenca"
-            name="possuiDoenca"
-            id="possuiDoenca"
-            placeholder="Possui alguma doença?"
-            required
-          />
-        </mat-form-field>
-      </div>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="dataDesaparecimento" class="control-label">Data do
+              Desaparecimento</mat-label>
+            <input matInput type="date" [(ngModel)]="desaparecido.dataDesaparecimento" name="dataDesaparecimento"
+              id="dataDesaparecimento" placeholder="Data do desaparecimento" required />
+          </mat-form-field>
 
-      <div
-        class="form-group"
-        fxLayout="row wrap"
-        fxLayoutAlign="space-around center"
-      >
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="corDePeleDesaparecido"
-            class="control-label"
-            >Cor de pele</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.corDePeleDesaparecido"
-            name="corDePeleDesaparecido"
-            id="corDePeleDesaparecido"
-            placeholder="Cor de pele do desaparecido"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="horaDesaparecimento" class="control-label">Hora do
+              Desaparecimento</mat-label>
+            <input matInput type="time" [(ngModel)]="desaparecido.horaDesaparecimento" name="horaDesaparecimento"
+              id="horaDesaparecimento" placeholder="Hora do desaparecimento" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="dataDeNascimento" class="control-label">Data de
+              Nascimento</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.dataNascimento" name="dataDeNascimento"
+              id="dataDeNascimento" placeholder="Data de Nascimento do Desaparecido" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="recompensa" class="control-label">Recompensa</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.recompensa" name="recompensa" id="recompensa"
+              placeholder="Recompensa" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="possuiDoenca" class="control-label">Possui Doença</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.possuiDoenca" name="possuiDoenca" id="possuiDoenca"
+              placeholder="Possui alguma doença?" required />
+          </mat-form-field>
+        </div>
+
+        <div class="form-group" fxLayout="row wrap" fxLayoutAlign="space-around center">
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="corDePeleDesaparecido" class="control-label">Cor de pele</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.corDePeleDesaparecido" name="corDePeleDesaparecido"
+              id="corDePeleDesaparecido" placeholder="Cor de pele do desaparecido" required />
+          </mat-form-field>
 
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="tatuagemDesaparecido"
-            class="control-label"
-            >Tatuagem</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.tatuagemDesaparecido"
-            name="tatuagemDesaparecido"
-            id="tatuagemDesaparecido"
-            placeholder="Descreva a tatuagem, se possuir"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="tatuagemDesaparecido" class="control-label">Tatuagem</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.tatuagemDesaparecido" name="tatuagemDesaparecido"
+              id="tatuagemDesaparecido" placeholder="Descreva a tatuagem, se possuir" required />
+          </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="cicatriz"
-            class="control-label"
-            >Cicatriz</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.cicatriz"
-            name="cicatriz"
-            id="cicatriz"
-            placeholder="Descreva a cicatriz, se possuir"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cicatriz" class="control-label">Cicatriz</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.cicatriz" name="cicatriz" id="cicatriz"
+              placeholder="Descreva a cicatriz, se possuir" required />
+          </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="tamanhoDesaparecido"
-            class="control-label"
-            >Tamanho do Desaparecido</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.tamanhoDesaparecido"
-            name="tamanhoDesaparecido"
-            id="tamanhoDesaparecido"
-            placeholder="Tamanho do desaparecido"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="tamanhoDesaparecido" class="control-label">Tamanho do
+              Desaparecido</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.tamanhoDesaparecido" name="tamanhoDesaparecido"
+              id="tamanhoDesaparecido" placeholder="Tamanho do desaparecido" required />
+          </mat-form-field>
 
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="sexoDesaparecido"
-            class="control-label"
-            >Sexo do Desaparecido</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.sexoDesaparecido"
-            name="sexoDesaparecido"
-            id="sexoDesaparecido"
-            placeholder="Sexo do Desaparecido"
-            required
-          />
-        </mat-form-field>
-        <span>Adicione Fotos</span>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="sexoDesaparecido" class="control-label">Sexo do
+              Desaparecido</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.sexoDesaparecido" name="sexoDesaparecido"
+              id="sexoDesaparecido" placeholder="Sexo do Desaparecido" required />
+          </mat-form-field>
+
+          <span>Adicione Fotos</span>
+
           <form id="form" [formGroup]="formRole">
             <button mat-stroked-button type="button" color="primary" (click)="addRoles()">
               <mat-icon>add</mat-icon>
@@ -254,167 +110,69 @@
               </ng-container>
             </div>
           </form>
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label style="font-size: 1rem" for="cep" class="control-label"
-            >CEP</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.cep"
-            name="cep"
-            id="CEP"
-            placeholder="CEP"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="cidade"
-            class="control-label"
-            >Cidade</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.cidade"
-            name="cidade"
-            id="Cidade"
-            placeholder="Cidade"
-            required
-          />
-        </mat-form-field>
-      </div>
+          
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.cep" name="cep" id="CEP" placeholder="CEP" required />
+          </mat-form-field>
 
-      <div
-        class="form-group"
-        fxLayout="row wrap"
-        fxLayoutAlign="space-around center"
-      >
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="bairro"
-            class="control-label"
-            >Bairro</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.bairro"
-            name="bairro"
-            id="Bairro"
-            placeholder="Bairro"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="logradouro"
-            class="control-label"
-            >Logradouro</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.logradouro"
-            name="logradouro"
-            id="Logradouro"
-            placeholder="Logradouro"
-            required
-          />
-        </mat-form-field>
-
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="complemento"
-            class="control-label"
-            >Complemento</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.complemento"
-            name="complemento"
-            id="complemento"
-            placeholder="Complemento"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="uf"
-            class="control-label"
-            >UF</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="endereco.uf"
-            name="uf"
-            id="uf"
-            placeholder="Estado (sigla)"
-            required
-          />
-        </mat-form-field>
-
-        <mat-form-field class="campo-form" appearance="outline">
-          <mat-label
-            style="font-size: 1rem"
-            for="descricaoDesaparecimento"
-            class="control-label"
-            >Descrição Desaparecimento</mat-label
-          >
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="desaparecido.descricaoDesaparecido"
-            name="descricaoDesaparecimento"
-            id="descricaoDesaparecimento"
-            placeholder="Descrição Desaparecimento"
-            required
-          />
-        </mat-form-field>
-      </div>
-
-      <div class="campo-checkboxes">
-        <div
-          class="form-group"
-          fxLayout="row wrap"
-          fxLayoutAlign="space-around center"
-        >
-          <mat-checkbox 
-
-            name="condicoes"
-            id="Condicoes"
-            required 
-            class="checkbox">
-             Aceito as CONDIÇÕES DO TERMO DE USO
-          </mat-checkbox>
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="cidade" class="control-label">Cidade</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.cidade" name="cidade" id="Cidade" placeholder="Cidade"
+              required />
+          </mat-form-field>
         </div>
 
-        <div class="form-group" fxLayout="row wrap">
-          <mat-checkbox 
-            name="legitimidade"
-            id="Legitimidade"
-            required 
-            class="checkbox">
-           Declaro legitimidade nas informações
-          </mat-checkbox>
+        <div class="form-group" fxLayout="row wrap" fxLayoutAlign="space-around center">
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="bairro" class="control-label">Bairro</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.bairro" name="bairro" id="Bairro" placeholder="Bairro"
+              required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="logradouro" class="control-label">Logradouro</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.logradouro" name="logradouro" id="Logradouro"
+              placeholder="Logradouro" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="complemento" class="control-label">Complemento</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.complemento" name="complemento" id="complemento"
+              placeholder="Complemento" required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="uf" class="control-label">UF</mat-label>
+            <input matInput type="text" [(ngModel)]="endereco.uf" name="uf" id="uf" placeholder="Estado (sigla)"
+              required />
+          </mat-form-field>
+
+          <mat-form-field class="campo-form" appearance="outline">
+            <mat-label style="font-size: 1rem" for="descricaoDesaparecimento" class="control-label">Descrição
+              Desaparecimento</mat-label>
+            <input matInput type="text" [(ngModel)]="desaparecido.descricaoDesaparecido" name="descricaoDesaparecimento"
+              id="descricaoDesaparecimento" placeholder="Descrição Desaparecimento" required />
+          </mat-form-field>
+
         </div>
-      </div>
-    
-        <button
-          type="submit"
-          style="font-size: 1rem"
-          id="Cadastrar"
-          mat-raised-button
-          (click) = "popup()"
-        >
+
+        <div class="campo-checkboxes">
+          <div class="form-group" fxLayout="row wrap" fxLayoutAlign="space-around center">
+            <mat-checkbox name="condicoes" id="Condicoes" required class="checkbox">
+              Aceito as CONDIÇÕES DO TERMO DE USO
+            </mat-checkbox>
+          </div>
+
+          <div class="form-group" fxLayout="row wrap">
+            <mat-checkbox name="legitimidade" id="Legitimidade" required class="checkbox">
+              Declaro legitimidade nas informações
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <button type="submit" style="font-size: 1rem" id="Cadastrar" mat-raised-button (click)="popup()">
           Cadastrar
         </button>
       </form>
@@ -422,5 +180,5 @@
   </div>
 </section>
 <div [hidden]="!submitted">
-  <button id="Cadastrar" >Cadastrar</button>
+  <button id="Cadastrar">Cadastrar</button>
 </div>
