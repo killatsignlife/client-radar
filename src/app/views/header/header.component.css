@@ -161,7 +161,7 @@ span .mat-flat-button:hover {
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 720px) {
   .toolbar-acess {
     display: flex;
     align-items: center;

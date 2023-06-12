@@ -22,6 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #707070;
+
 }
 
 .container-main {
@@ -90,7 +92,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 700px;
+  width: 50%;
 }
 
 .container-quemSomos h2 {
@@ -400,9 +402,22 @@ mat-card-content {
 }
 
 @media screen and (max-width: 599px) {
-  .Fundo_bg h1:first-of-type {
-    line-height: 4rem;
+
+  .container-main{
+    text-align: center;
+    width: 80%;
   }
+
+  .box-title h1{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    }
+
+    .list-contatos{
+      flex-direction: column;
+      display: flex;
+      gap: 1rem
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -412,7 +427,6 @@ mat-card-content {
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #707070;
   }
 
   .Fundo_bg h1 {
