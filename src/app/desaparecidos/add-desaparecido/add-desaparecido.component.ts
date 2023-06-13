@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-desaparecido',
   templateUrl: './add-desaparecido.component.html',
-  styleUrls: ['./add-desaparecido.component.css','../../../styles.css']
+  styleUrls: ['./add-desaparecido.component.css', '../../../styles.css']
 })
 
 export class AddDesaparecidoComponent implements OnInit {
@@ -59,9 +59,11 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   save() {
+    const fd = new FormData();
+    fd.append('image', this.selectedFile, this.selectedFile.name);
     let arr: any[] = [];
 
-    for(let value of this.roles.value) {
+    for (let value of this.roles.value) {
       console.log(value.role);
       arr.push(value.role);
     }
@@ -91,6 +93,13 @@ export class AddDesaparecidoComponent implements OnInit {
     this.save();
   }
 
+  selectedFile = null;
+  //--------------------------------------------------
+  onFileSelected(event) {
+    this.selectedFile = event.target.files[0];
+  }
+  //---------------------------------------------------
+
   gotoList() {
     this.router.navigate(['/desaparecidos'])
   }
@@ -103,11 +112,11 @@ export class AddDesaparecidoComponent implements OnInit {
     return filterValue;
   }
 
-  consultaCep(val, form){
+  consultaCep(val, form) {
     this.cepService.buscar(val).subscribe((dados) => this.populaForm(dados, form));
   }
 
-  populaForm(dados, form){
+  populaForm(dados, form) {
     form.controls['cidade'].setValue(dados.localidade)
     form.controls['bairro'].setValue(dados.bairro)
     form.controls['logradouro'].setValue(dados.logradouro)
@@ -115,13 +124,13 @@ export class AddDesaparecidoComponent implements OnInit {
 
   }
 
-  popup(){
+  popup() {
     Swal.fire({
       title: 'Deseja confimar o cadastro?',
       icon: 'question',
       confirmButtonColor: '#56c865',
       cancelButtonColor: '#d33',
-      cancelButtonText:'Não',
+      cancelButtonText: 'Não',
       confirmButtonText: 'Sim',
       showCancelButton: true
     }).then((result) => {
@@ -132,7 +141,7 @@ export class AddDesaparecidoComponent implements OnInit {
           text: 'Cadastro foi efetuado com sucesso',
           confirmButtonText: 'ok',
         })
-        this.onSubmit() 
+        this.onSubmit()
       }
     })
   }

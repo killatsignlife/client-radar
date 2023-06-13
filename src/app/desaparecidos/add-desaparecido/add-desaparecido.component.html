@@ -101,7 +101,8 @@
               <ng-container *ngFor="let roless of roles.controls; let i=index">
                 <div [formGroupName]="i">
                   <mat-form-field fxFlex="100">
-                    <input formControlName="role" matInput type="text" class="form-control" placeholder="Url da Foto">
+                    <input formControlName="role" matInput type="file"  (change)="onFileSelected($event)" 
+                    class="form-control" placeholder="Url da Foto">
                   </mat-form-field>
                   <button mat-stroked-button type="button" color="primary" (click)="removeDoFormArray(roles, i)">
                     <mat-icon>delete</mat-icon>
@@ -110,7 +111,7 @@
               </ng-container>
             </div>
           </form>
-          
+
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>
             <input matInput type="text" [(ngModel)]="endereco.cep" name="cep" id="CEP" placeholder="CEP" required />
