@@ -1,7 +1,7 @@
 /*lista lateral*/
 
 .dashboard-list {
-    background-color: var(--back);
+    background-color: #0f1910;
     padding: 2px 1.5rem 1.5rem;
     height: 960px;
     width: 235px;

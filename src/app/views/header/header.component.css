@@ -42,7 +42,6 @@ mat-toolbar-row {
 mat-toolbar-row #logo {
   width: 250px;
   height: 100px;
-  margin-top: -5%;
 }
 
 .logo-box {
