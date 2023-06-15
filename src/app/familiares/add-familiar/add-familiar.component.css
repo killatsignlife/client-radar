@@ -5,6 +5,10 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   
+  .altura{
+    height: 70vh;
+  }
+
   .container-forms {
     width: 50%;
     border-radius: 15px;
