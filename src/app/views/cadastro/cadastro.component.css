@@ -6,7 +6,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section{
+section {
   height: 900px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ section{
   align-items: center;
 }
 
-.container-forms{
+.container-forms {
   width: max-content;
   padding: 10px;
 }
@@ -25,7 +25,7 @@ section{
   font-size: 80px;
 }
 
-.container-forms h1{
+.container-forms h1 {
   font-size: 2rem;
   color: #000;
   background-color: #fff;
@@ -36,7 +36,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:2%;
+  margin-top: 2%;
   padding: 10px;
 }
 
@@ -53,16 +53,27 @@ form {
   font-size: 25px;
 }
 
+.senha{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.senha .campo-form{
+  width: 200px;
+  display: flex;
+}
+
 .form-group {
   font-size: 1rem;
   padding: 0 15px 0 15px;
 }
 
 .campo-form {
-  width:400px;
+  width: 400px;
 }
 
-.box-btn:hover{
+.box-btn:hover {
   opacity: 0.8;
 }
 
@@ -75,18 +86,18 @@ form {
   border-radius: 8px;
 }
 
-#Cadastrar:hover{
+#Cadastrar:hover {
   text-decoration: none;
 }
 
-#forgot{
+#forgot {
   padding: 0 15px 0 15px;
   margin-top: 12px;
   font-size: 1.1rem;
   color: #3a3ae1;
 }
 
-.box-chamada{
+.box-chamada {
   padding: 16px 16px;
   text-align: center;
   border: 1px solid #30363d;
@@ -94,17 +105,17 @@ form {
   margin: 20px 0px 0px 0px;
 }
 
-.box-chamada p{
+.box-chamada p {
   margin: 0px;
   font-weight: 400;
   font-size: 1.2rem;
 }
 
-.box-chamada a{
-  color:  #3a3ae1;
+.box-chamada a {
+  color: #3a3ae1;
 }
 
-mat-form-field + mat-form-field {
+mat-form-field+mat-form-field {
   margin-left: 2%;
 }
 
@@ -142,7 +153,7 @@ mat-form-field + mat-form-field {
     width: 90%;
   }
 
-  mat-form-field + mat-form-field {
+  mat-form-field+mat-form-field {
     margin-left: 0;
   }
 }
@@ -151,6 +162,7 @@ mat-form-field + mat-form-field {
   .campo-form {
     width: 130px;
   }
+
   .checkbox {
     font-size: 0.7rem;
   }

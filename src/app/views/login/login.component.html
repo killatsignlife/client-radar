@@ -2,24 +2,31 @@
   <!--Segunda Grid-->
   <div class="Container" (ngSubmit)="login()" [hidden]="submitted">
     <div class="container-forms">
-      <a routerLink="/home"><mat-icon>radar</mat-icon></a>
+      <a routerLink="/home"><mat-icon class="radar">radar</mat-icon></a>
       <h1>Entrar no sistema</h1>
       <form id="formulario">
 
-        <div class="form-group">
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label for="email" class="control-label">Email</mat-label>
-            <input matInput type="email" name="email" id="Email" placeholder="Email" required />
-          </mat-form-field>
+        <div class="campo">
+
+          <span><mat-icon>email</mat-icon>Email:</span>
+          <div class="form-group">
+            <mat-form-field class="campo-form" appearance="outline">
+              <mat-label for="email" class="control-label">Email</mat-label>
+              <input matInput type="email" name="email" id="Email" placeholder="Email" required />
+            </mat-form-field>
+          </div>
 
         </div>
 
-        <div class="form-group">
+        <div class="campo">
+          <span><mat-icon>lock</mat-icon>Senha:</span>
+          <div class="form-group">
 
-          <mat-form-field class="campo-form" appearance="outline">
-            <mat-label for="senha" class="control-label">Senha</mat-label>
-            <input matInput type="password" name="senha" id="Senha" placeholder="Senha" required />
-          </mat-form-field>
+            <mat-form-field class="campo-form" appearance="outline">
+              <mat-label for="senha" class="control-label">Senha</mat-label>
+              <input matInput type="password" name="senha" id="Senha" placeholder="Senha" required />
+            </mat-form-field>
+          </div>
         </div>
 
 
@@ -38,7 +45,7 @@
     </div>
 
     <div class="box-chamada">
-      <p>Não possui conta? <a href="#">Cadastra-se</a></p>
+      <p>Não possui conta? <a routerLink="/cadastro">Cadastra-se</a></p>
     </div>
 
   </div>

@@ -55,6 +55,7 @@ import { GraficoComponent } from './views/grafico/grafico.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { MenuVerticalComponent } from './views/dashboard/menu-vertical/menu-vertical.component';
 import { HeaderSecundarioComponent } from './views/header-secundario/header-secundario.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { HeaderSecundarioComponent } from './views/header-secundario/header-secu
     DashboardComponent,
     MenuVerticalComponent,
     HeaderSecundarioComponent,
+    CadastroComponent,
     
 
     

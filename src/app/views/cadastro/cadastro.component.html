@@ -1,0 +1,78 @@
+<section>
+    <!--Segunda Grid-->
+    <div class="Container" (ngSubmit)="login()" [hidden]="submitted">
+        <div class="container-forms">
+            <a routerLink="/home"><mat-icon class="radar">radar</mat-icon></a>
+            <h1>Cadastro</h1>
+            <form id="formulario">
+
+                <div class="campo">
+                    <span><mat-icon>person</mat-icon>Nome:</span>
+                    <div class="form-group">
+                        <mat-form-field class="campo-form" appearance="outline">
+                            <mat-label for="nome" class="control-label">Nome</mat-label>
+                            <input matInput type="nome" name="nome" id="nome" placeholder="Email" required />
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <span><mat-icon>email</mat-icon>Email:</span>
+                    <div class="form-group">
+
+                        <mat-form-field class="campo-form" appearance="outline">
+                            <mat-label for="email" class="control-label">Email</mat-label>
+                            <input matInput type="email" name="email" id="Email" placeholder="Email" required />
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                
+                <div class="campo">
+                    <span><mat-icon>lock</mat-icon>Senha:</span>
+                    <div class="form-group senha">
+
+                        <mat-form-field class="campo-form" appearance="outline">
+                            <mat-label for="email" class="control-label">Senha</mat-label>
+                            <input matInput type="password" name="senha" id="Senha" placeholder="Senha" required />
+                        </mat-form-field>
+
+                        <mat-form-field class="campo-form" appearance="outline">
+                            <mat-label for="email" class="control-label">Confirmar Senha</mat-label>
+                            <input matInput type="password" name="senha" id="Senha" placeholder="Senha" required />
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <span><mat-icon>cake</mat-icon>Data de Nascimento:</span>
+                    <div class="form-group">
+
+                        <mat-form-field class="campo-form" appearance="outline">
+                            <mat-label for="email" class="control-label">Data nascimento</mat-label>
+                            <input matInput type="password" name="senha" id="Senha" placeholder="Senha" required />
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+                <div class="box-btn">
+                    <a routerLink="/dashboard">
+                        <button type="submit" id="Cadastrar" mat-raised-button>
+                            Cadastrar
+                        </button>
+                    </a>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+</section>
+<div [hidden]="!submitted">
+    <button id="Cadastrar">Cadastrar</button>
+</div>

@@ -1,6 +1,7 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, OnInit  } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import 'chartjs-plugin-annotation';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-grafico',
@@ -66,4 +67,64 @@ export class GraficoComponent {
   ngOnInit(): void {
     this.createChart();
   }
+
+
+  /*
+  dados: any[];
+
+  ngOnInit(): void {
+    this.service.getDados().subscribe(
+      (data: any[]) => {
+        this.dados = data;
+        this.updateChart();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  
+  
+  constructor(private service: ApiService){}
+
+  updateChart() {
+    if (this.chart) {
+      this.chart.data.labels = this.dados.map((item) => item.year);
+      this.chart.data.datasets[0].data = this.dados.map((item) => item.count);
+      this.chart.update();
+    }
+  }
+  
+
+  public chart: any;
+
+  createChart() {
+    this.chart = new Chart("MyChart", {
+      type: 'bar',
+      options: {
+        maintainAspectRatio: true,
+        animation: false,
+        plugins: {
+          legend: {
+            display: true
+          }
+        }
+      },
+      data: {
+        labels: this.dados.map((item) => item.year), // Use os anos como rótulos
+        datasets: [
+          {
+            label: "Funcionarios",
+            data: this.dados.map((item) => item.count), // Use os valores numéricos
+            backgroundColor: 'yellow'
+          },
+          // ... outros datasets ...
+        ]
+      },
+
+    });
+  }
+
+  */ 
+
 }

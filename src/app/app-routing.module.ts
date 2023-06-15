@@ -28,6 +28,7 @@ import { ListFamiliarComponent } from './familiares/list-familiar/list-familiar.
 import { UpdateFamiliarComponent } from './familiares/update-familiar/update-familiar.component';
 import { GraficoComponent } from './views/grafico/grafico.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'familiar/atualizar', component: UpdateFamiliarComponent},
   { path: 'grafico', component: GraficoComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'cadastro', component: CadastroComponent},
 ];
 
 @NgModule({
