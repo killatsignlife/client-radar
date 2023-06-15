@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpEvent, HttpRequest } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Desaparecido } from './model/desaparecido.model';
 import { Voluntario } from './voluntario.model';
@@ -19,6 +19,22 @@ export class ApiService {
   private familiarUrl = 'http://localhost:8080/api/v1/familiares'
 
   constructor(private http: HttpClient) { }
+    
+  /*upload(file: File): Observable<HttpEvent<any>>{
+    const formData: FormData = new FormData();
+    formData.append('file', file);
+
+    const req = new HttpRequest('POST', `${this.desaparecidoUrl}`, formData, {
+      reportProgress: true,
+      responseType: 'json'
+    });
+
+    return this.http.request(req);
+  }
+
+  getFiles(): Observable<any> {
+    return this.http.get(`${this.desaparecidoUrl}`);
+  }*/
 
   // Desaparecidos  
   createDesaparecido(desaparecido: Desaparecido): Observable<any> {

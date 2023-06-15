@@ -26,6 +26,7 @@ export class AddDesaparecidoComponent implements OnInit {
   endereco: Endereco = new Endereco();
   submitted = false;
   fotos: Foto = new Foto();
+  byteArray: any;
 
 
   constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer
@@ -52,18 +53,21 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   selectedFile = null;
+  imagem = null;
   fileName = '';
 
   //--------------------------------------------------
+
   onFileSelected(event) {
-    this.selectedFile = event.target.files[0];
+    this.selectedFile = event.target.files.item(0)
+    console.log(this.selectedFile)
     if (this.selectedFile) {
 
       this.fileName = this.selectedFile.name;
-
     }
 
   }
+
   //---------------------------------------------------
 
   removeDoFormArray(controls: FormArray, index: number) {
@@ -80,22 +84,44 @@ export class AddDesaparecidoComponent implements OnInit {
     let arr: any[] = [];
     this.desaparecido.fotos = [];
 
+    const reader = new FileReader();
+
+    function convertDataURIToBinary(dataURI) {
+      var base64Index = dataURI.indexOf(';base64,') + ';base64,'.length;
+      var base64 = dataURI.substring(base64Index);
+      var raw = window.atob(base64);
+      var rawLength = raw.length;
+      var array = new Uint8Array(new ArrayBuffer(rawLength));
+
+      for (let i = 0; i < rawLength; i++) {
+        array[i] = raw.charCodeAt(i);
+      }
+      return dataURI;
+    }
+
+    reader.onload = (e: any) => {
+      this.byteArray = convertDataURIToBinary(reader.result);
+      console.log(this.byteArray)
+
+    };
+
+    if (this.selectedFile) {
+      reader.readAsDataURL(this.selectedFile);
+    }
+
     for (let value of this.roles.value) {
       console.log("valor do role: " + value.role);
       arr.push(value.role);
-      
-      const conversao = new Int8Array(this.selectedFile);
-      console.log("Conversao: "+ conversao)
 
-        this.fotos.imageBytes = conversao;
-        this.fotos.altText = this.fileName;
-        this.desaparecido.fotos?.push(this.fotos);
+      this.fotos.imageBytes = this.imagem;
+      this.fotos.caminho = this.fileName;
+      this.fotos.altText = this.fileName;
+      this.desaparecido.fotos?.push(this.fotos);
 
-        console.log("fotos: " + JSON.stringify(this.desaparecido.fotos));
+      console.log(JSON.stringify(this.desaparecido.fotos[0].imageBytes));
 
     }
 
-    //console.log("fotos: " + JSON.stringify(formData));
 
     this.desaparecido.endereco = this.endereco;
     console.log(this.desaparecido.endereco);
