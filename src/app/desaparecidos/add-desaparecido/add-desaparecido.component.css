@@ -93,10 +93,6 @@ form {
   background-color: var(--primary);
 }
 
-mat-form-field + mat-form-field {
-  margin-left: 2%;
-}
-
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   color: #000;
 }

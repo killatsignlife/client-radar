@@ -1,4 +1,4 @@
-import { Desaparecido } from "./desaparecido.model";
+import { Desaparecido } from "./model/desaparecido.model";
 
 export class Familiar {
     id?: number;

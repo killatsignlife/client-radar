@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { Desaparecido } from 'src/app/desaparecido.model';
+import { Desaparecido } from 'src/app/model/desaparecido.model';
 import { Endereco } from 'src/app/endereco.model';
 import { Voluntario } from 'src/app/voluntario.model';
 

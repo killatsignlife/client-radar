@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Familiar } from 'src/app/familiar.model';
-import { Desaparecido } from 'src/app/desaparecido.model';
+import { Desaparecido } from 'src/app/model/desaparecido.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2'
 @Component({

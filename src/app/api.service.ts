@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Desaparecido } from './desaparecido.model';
+import { Desaparecido } from './model/desaparecido.model';
 import { Voluntario } from './voluntario.model';
 import { Funcionario } from './funcionario.model';
 import { Doador } from './doador.model';
 import { Familiar } from './familiar.model';
+import { Foto } from './foto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,7 @@ export class ApiService {
 
   // Desaparecidos  
   createDesaparecido(desaparecido: Desaparecido): Observable<any> {
+
     return this.http.post(`${this.desaparecidoUrl}`, desaparecido);
   }
 

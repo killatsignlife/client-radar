@@ -1,7 +1,6 @@
+import { Byte } from '@angular/compiler/src/util';
 export class Foto {
   idFoto?: number;
   altText?: string;
-  name?: string;
-  type?: string;
-  imageBytes?: string;
+  imageBytes?: Int8Array;
 }

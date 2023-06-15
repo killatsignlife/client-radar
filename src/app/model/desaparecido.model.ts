@@ -1,3 +1,4 @@
+import { Byte } from "@angular/compiler/src/util";
 import { Endereco } from "./endereco.model";
 import { Foto } from "./foto.model";
 
@@ -11,7 +12,7 @@ export class Desaparecido {
   dataNascimento?: string;
   recompensa?: string;
   endereco?: Endereco;
-  fotos?: Array<string>;
+  fotos?: Array<Foto>;
   possuiDoenca?: string;
   corDePeleDesaparecido?: string;
   tatuagemDesaparecido?: string;

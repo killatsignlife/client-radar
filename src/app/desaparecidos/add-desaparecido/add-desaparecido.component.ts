@@ -27,6 +27,7 @@ export class AddDesaparecidoComponent implements OnInit {
   submitted = false;
   fotos: Foto = new Foto();
 
+
   constructor(private fb: FormBuilder, private service: ApiService, private router: Router, private sanitizer: DomSanitizer
     , private cepService: SharedDataService) { }
 
@@ -47,34 +48,54 @@ export class AddDesaparecidoComponent implements OnInit {
     this.submitted = false;
     this.desaparecido = new Desaparecido();
     this.endereco = new Endereco();
+    this.fotos = new Foto();
   }
+
+  selectedFile = null;
+  fileName = '';
+
+  //--------------------------------------------------
+  onFileSelected(event) {
+    this.selectedFile = event.target.files[0];
+    if (this.selectedFile) {
+
+      this.fileName = this.selectedFile.name;
+
+    }
+
+  }
+  //---------------------------------------------------
 
   removeDoFormArray(controls: FormArray, index: number) {
     controls.removeAt(index);
-    this.desaparecido.fotos?.pop()?.charAt(index);
+    this.desaparecido.fotos?.pop()?.toString().charAt(index);
   }
 
   remove(index: number) {
-    this.desaparecido.fotos?.pop()?.charAt(index);
+    this.desaparecido.fotos?.pop()?.toString().charAt(index);
   }
 
   save() {
-    const fd = new FormData();
-    fd.append('image', this.selectedFile, this.selectedFile.name);
+
     let arr: any[] = [];
+    this.desaparecido.fotos = [];
 
     for (let value of this.roles.value) {
-      console.log(value.role);
+      console.log("valor do role: " + value.role);
       arr.push(value.role);
+      
+      const conversao = new Int8Array(this.selectedFile);
+      console.log("Conversao: "+ conversao)
+
+        this.fotos.imageBytes = conversao;
+        this.fotos.altText = this.fileName;
+        this.desaparecido.fotos?.push(this.fotos);
+
+        console.log("fotos: " + JSON.stringify(this.desaparecido.fotos));
+
     }
 
-    console.log(arr);
-
-    // for (let value of arr) {
-    //   this.desaparecido.fotos?.push(value);
-    // }
-    this.desaparecido.fotos = arr;
-    console.log(this.desaparecido.fotos);
+    //console.log("fotos: " + JSON.stringify(formData));
 
     this.desaparecido.endereco = this.endereco;
     console.log(this.desaparecido.endereco);
@@ -93,12 +114,6 @@ export class AddDesaparecidoComponent implements OnInit {
     this.save();
   }
 
-  selectedFile = null;
-  //--------------------------------------------------
-  onFileSelected(event) {
-    this.selectedFile = event.target.files[0];
-  }
-  //---------------------------------------------------
 
   gotoList() {
     this.router.navigate(['/desaparecidos'])
