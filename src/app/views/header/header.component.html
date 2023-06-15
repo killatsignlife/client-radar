@@ -17,16 +17,16 @@
 
       <div class="grupo_botao">
         <span mat-menu-item class="lista">
-          <a (click)="scrollToSection($event, '#main-fundo')">Início</a>
+          <a routerLink="/desaparecidos">Início</a>
         </span>
         <span mat-menu-item class="lista">
-          <a (click)="scrollToSection($event, '#sobre')">Sobre</a>
+          <a routerLink="/voluntarios">Sobre</a>
         </span>
         <span mat-menu-item class="lista">
-          <a href="#campos-ajuda" (click)="scrollToSection($event, '#campos-ajuda')">COMO AJUDAR</a>
+          <a routerLink="/funcionario/list">COMO AJUDAR</a>
         </span>
         <span mat-menu-item class="lista">
-          <a href="#desaparecidos" (click)="scrollToSection($event, '#desaparecidos')">Desaparecidos</a>
+          <a routerLink="/familiar/list">Desaparecidos</a>
         </span>
         <span mat-menu-item class="lista">
           <a href="#contato" (click)="scrollToSection($event, '#contato')">Contato</a>
