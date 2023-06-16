@@ -7,6 +7,7 @@ import { Funcionario } from './funcionario.model';
 import { Doador } from './doador.model';
 import { Familiar } from './familiar.model';
 import { Foto } from './foto.model';
+import { FileDetails } from './desaparecidos/add-desaparecido/FileDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ import { Foto } from './foto.model';
 export class ApiService {
   private voluntarioUrl = 'http://localhost:8080/api/v1/voluntarios';
   private desaparecidoUrl = 'http://localhost:8080/api/v1/desaparecidos';
+  private fotoUrl = 'http://localhost:8080/api/v1/desaparecido';
   private funcionarioUrl = 'http://localhost:8080/api/v1/funcionarios';
   private doadorUrl = 'http://localhost:8080/api/v1/doadores'
   private familiarUrl = 'http://localhost:8080/api/v1/familiares'
@@ -40,6 +42,13 @@ export class ApiService {
   createDesaparecido(desaparecido: Desaparecido): Observable<any> {
 
     return this.http.post(`${this.desaparecidoUrl}`, desaparecido);
+  }
+
+  upload(file: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('file', file);
+
+    return this.http.post(`${this.fotoUrl}/fotos`, formData);
   }
 
   getDesaparecidos() : Observable<any> {

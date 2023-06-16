@@ -93,24 +93,7 @@
 
           <span>Adicione Fotos</span>
 
-          <form id="form" [formGroup]="formRole">
-            <button mat-stroked-button type="button" color="primary" (click)="addRoles()">
-              <mat-icon>add</mat-icon>
-            </button>
-            <div formArrayName="roles" fxFlex="100" fxLayout="column">
-              <ng-container *ngFor="let roless of roles.controls; let i=index">
-                <div [formGroupName]="i">
-                  <mat-form-field fxFlex="100">
-                    <input formControlName="role" matInput type="file"  (change)="onFileSelected($event)" 
-                    class="form-control" placeholder="Url da Foto">
-                  </mat-form-field>
-                  <button mat-stroked-button type="button" color="primary" (click)="removeDoFormArray(roles, i)">
-                    <mat-icon>delete</mat-icon>
-                  </button>
-                </div>
-              </ng-container>
-            </div>
-          </form>
+          <input type="file" (change)="selectFile($event)" />
 
           <mat-form-field class="campo-form" appearance="outline">
             <mat-label style="font-size: 1rem" for="cep" class="control-label">CEP</mat-label>

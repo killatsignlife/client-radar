@@ -10,6 +10,7 @@ import { FormArray, FormBuilder } from '@angular/forms';
 import { Endereco } from 'src/app/endereco.model';
 import { SharedDataService } from 'src/app/shared-data.service';
 import Swal from 'sweetalert2';
+import { FileDetails } from './FileDetails';
 
 @Component({
   selector: 'app-add-desaparecido',
@@ -52,21 +53,16 @@ export class AddDesaparecidoComponent implements OnInit {
     this.fotos = new Foto();
   }
 
-  selectedFile = null;
-  imagem = null;
-  fileName = '';
+  file!: File;
+  fileDetails!: FileDetails;
+  fileUris: Array<string> = [];
 
   //--------------------------------------------------
 
-  onFileSelected(event) {
-    this.selectedFile = event.target.files.item(0)
-    console.log(this.selectedFile)
-    if (this.selectedFile) {
-
-      this.fileName = this.selectedFile.name;
-    }
-
+  selectFile(event: any) {
+    this.file = event.target.files.item(0);
   }
+  
 
   //---------------------------------------------------
 
@@ -80,49 +76,6 @@ export class AddDesaparecidoComponent implements OnInit {
   }
 
   save() {
-
-    let arr: any[] = [];
-    this.desaparecido.fotos = [];
-
-    const reader = new FileReader();
-
-    function convertDataURIToBinary(dataURI) {
-      var base64Index = dataURI.indexOf(';base64,') + ';base64,'.length;
-      var base64 = dataURI.substring(base64Index);
-      var raw = window.atob(base64);
-      var rawLength = raw.length;
-      var array = new Uint8Array(new ArrayBuffer(rawLength));
-
-      for (let i = 0; i < rawLength; i++) {
-        array[i] = raw.charCodeAt(i);
-      }
-      return dataURI;
-    }
-
-    reader.onload = (e: any) => {
-      this.byteArray = convertDataURIToBinary(reader.result);
-      console.log(this.byteArray)
-
-    };
-
-    if (this.selectedFile) {
-      reader.readAsDataURL(this.selectedFile);
-    }
-
-    for (let value of this.roles.value) {
-      console.log("valor do role: " + value.role);
-      arr.push(value.role);
-
-      this.fotos.imageBytes = this.imagem;
-      this.fotos.caminho = this.fileName;
-      this.fotos.altText = this.fileName;
-      this.desaparecido.fotos?.push(this.fotos);
-
-      console.log(JSON.stringify(this.desaparecido.fotos[0].imageBytes));
-
-    }
-
-
     this.desaparecido.endereco = this.endereco;
     console.log(this.desaparecido.endereco);
 
@@ -131,6 +84,23 @@ export class AddDesaparecidoComponent implements OnInit {
       data => console.log(data),
       error => console.log(error)
     );
+
+    this.service.upload(this.file).subscribe({
+      next: (data) => {
+        this.fileDetails = data;
+        this.fileUris.push(this.fileDetails.fileUri);
+
+        this.fileUris.forEach(element => {
+          console.log(element);
+        });
+        alert("Imagem salva com sucesso")
+      },
+      error: (e) => {
+        console.log(e);
+      }
+    });
+
+
     this.desaparecido = new Desaparecido();
     this.gotoList();
   }
