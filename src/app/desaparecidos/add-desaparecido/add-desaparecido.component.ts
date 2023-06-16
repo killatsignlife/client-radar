@@ -86,28 +86,18 @@ export class AddDesaparecidoComponent implements OnInit {
 
     const reader = new FileReader();
 
-    function convertDataURIToBinary(dataURI) {
-      var base64Index = dataURI.indexOf(';base64,') + ';base64,'.length;
-      var base64 = dataURI.substring(base64Index);
-      var raw = window.atob(base64);
-      var rawLength = raw.length;
-      var array = new Uint8Array(new ArrayBuffer(rawLength));
-
-      for (let i = 0; i < rawLength; i++) {
-        array[i] = raw.charCodeAt(i);
-      }
-      return dataURI;
+    function getBase64(selectedFile) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(selectedFile);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
     }
-
-    reader.onload = (e: any) => {
-      this.byteArray = convertDataURIToBinary(reader.result);
-      console.log(this.byteArray)
-
-    };
-
-    if (this.selectedFile) {
-      reader.readAsDataURL(this.selectedFile);
-    }
+    
+   getBase64(this.selectedFile).then(
+      data => console.log(data)
+    );
 
     for (let value of this.roles.value) {
       console.log("valor do role: " + value.role);
